@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="sv">
+    <html lang="sv" className="antialiased">
       <head>
-        {/* GA4 — replace GA_MEASUREMENT_ID with real ID */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <script
@@ -45,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body className="flex min-h-screen flex-col bg-white text-slate-900 font-sans">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

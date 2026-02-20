@@ -80,7 +80,7 @@ export default function PlanteringsuppfoljningPage() {
         <h2>Leverans</h2>
         <p>
           Ortofoton och eventuella kartlager levereras digitalt. Se{' '}
-          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-skog-700 underline hover:text-skog-900">
+          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
             Leveranser &amp; format
           </Link>{' '}
           för mer information om filformat och leveransrutiner.

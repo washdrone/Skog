@@ -79,7 +79,7 @@ export default function InventeringPage() {
         <h2>Leverans</h2>
         <p>
           Kartlager och ortofoton levereras i överenskommet format. Se{' '}
-          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-skog-700 underline hover:text-skog-900">
+          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
             Leveranser &amp; format
           </Link>{' '}
           för detaljer om filformat och leveransrutiner.

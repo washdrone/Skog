@@ -9,30 +9,30 @@ interface FAQItem {
 
 function FAQAccordion({ item, isOpen, toggle }: { item: FAQItem; isOpen: boolean; toggle: () => void }) {
   return (
-    <div className="border-b border-skog-100">
+    <div className="border-b border-slate-100 last:border-0">
       <button
         type="button"
-        className="flex w-full items-center justify-between py-5 text-left"
+        className="flex w-full items-center justify-between py-6 text-left group"
         onClick={toggle}
         aria-expanded={isOpen}
       >
-        <span className="pr-4 text-base font-medium text-terrain-900">{item.question}</span>
-        <svg
-          className={`h-5 w-5 flex-shrink-0 text-terrain-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-        </svg>
-      </button>
-      {isOpen && (
-        <div className="pb-5 pr-8 text-sm leading-relaxed text-terrain-600">
-          {item.answer}
+        <span className="pr-6 text-base font-medium text-slate-900 group-hover:text-forest-700 transition-colors">{item.question}</span>
+        <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-forest-600 rotate-180' : 'bg-slate-100 group-hover:bg-forest-50'}`}>
+          <svg
+            className={`h-4 w-4 transition-colors ${isOpen ? 'text-white' : 'text-slate-500'}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2.5}
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
         </div>
-      )}
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
+        <p className="pr-12 text-sm leading-relaxed text-slate-500">{item.answer}</p>
+      </div>
     </div>
   )
 }
@@ -44,24 +44,23 @@ export default function FAQ({ items, showHeading = true }: { items: FAQItem[]; s
     <section className="section-padding">
       <div className="container-page max-w-3xl">
         {showHeading && (
-          <>
-            <h2 className="text-center text-2xl font-bold text-terrain-900 sm:text-3xl">
-              Vanliga frågor
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-terrain-600">
-              Svar på de vanligaste frågorna om drönarbaserade mättjänster för skogsbruk.
-            </p>
-          </>
+          <div className="text-center mb-12">
+            <span className="badge">FAQ</span>
+            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Vanliga frågor</h2>
+            <p className="mt-4 text-slate-500">Svar på de vanligaste frågorna om drönarbaserade mättjänster för skogsbruk.</p>
+          </div>
         )}
-        <div className="mt-10">
-          {items.map((item, i) => (
-            <FAQAccordion
-              key={i}
-              item={item}
-              isOpen={openIndex === i}
-              toggle={() => setOpenIndex(openIndex === i ? null : i)}
-            />
-          ))}
+        <div className="rounded-2xl border border-slate-200 bg-white p-2 shadow-sm sm:p-4">
+          <div className="px-4">
+            {items.map((item, i) => (
+              <FAQAccordion
+                key={i}
+                item={item}
+                isOpen={openIndex === i}
+                toggle={() => setOpenIndex(openIndex === i ? null : i)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -78,7 +78,7 @@ export default function SkadeinventeringPage() {
         <h2>Snabb mobilisering</h2>
         <p>
           Vid akuta behov prioriterar vi snabb utryckning. Kontakta oss direkt via{' '}
-          <Link href="/areamatning-och-skogsbruk/kontakt" className="text-skog-700 underline hover:text-skog-900">
+          <Link href="/areamatning-och-skogsbruk/kontakt" className="text-forest-600 underline hover:text-forest-800">
             kontaktformuläret
           </Link>{' '}
           eller telefon så diskuterar vi tidsplan och genomförande.

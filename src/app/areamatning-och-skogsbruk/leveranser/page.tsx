@@ -75,12 +75,13 @@ export default function LeveranserPage() {
       />
 
       {/* Header */}
-      <header className="bg-terrain-950 py-14 sm:py-20">
-        <div className="container-page max-w-3xl">
+      <header className="relative overflow-hidden gradient-hero py-14 sm:py-20">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="relative container-page max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Leveranser &amp; format
           </h1>
-          <p className="mt-4 text-lg leading-relaxed text-terrain-300">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Alla underlag levereras digitalt i branschstandardformat, redo att importeras
             i era GIS-system eller användas som beslutsunderlag. Varje leverans är
             georefererad, kvalitetskontrollerad och dokumenterad.
@@ -91,8 +92,8 @@ export default function LeveranserPage() {
       <DeliverablesList items={DELIVERABLES} />
 
       {/* Quality section */}
-      <section className="bg-skog-50 section-padding">
-        <div className="container-page max-w-3xl prose-skog">
+      <section className="bg-slate-50 section-padding">
+        <div className="container-page max-w-3xl prose-forest">
           <h2>Kvalitetssäkring</h2>
           <p>
             Varje leverans genomgår kvalitetskontroll innan den skickas. Vi kontrollerar
@@ -122,7 +123,7 @@ export default function LeveranserPage() {
           </ul>
           <p>
             Kontakta oss via{' '}
-            <Link href="/areamatning-och-skogsbruk/kontakt" className="text-skog-700 underline hover:text-skog-900">
+            <Link href="/areamatning-och-skogsbruk/kontakt" className="text-forest-600 underline hover:text-forest-800">
               offertformuläret
             </Link>{' '}
             om ni vill diskutera specifika leveransbehov.

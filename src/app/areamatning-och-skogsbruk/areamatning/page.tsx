@@ -80,7 +80,7 @@ export default function AreamatningPage() {
           Färdiga kartlager levereras digitalt i överenskommet format. Alla leveranser
           inkluderar metadata med mätdatum, koordinatsystem och upplösning.
           Läs mer på sidan{' '}
-          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-skog-700 underline hover:text-skog-900">
+          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
             Leveranser &amp; format
           </Link>.
         </p>

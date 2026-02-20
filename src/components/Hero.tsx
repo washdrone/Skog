@@ -1,70 +1,74 @@
 import Link from 'next/link'
 
 interface HeroProps {
+  badge?: string
   headline: string
   subheadline: string
   ctaLabel?: string
   ctaHref?: string
   secondaryCtaLabel?: string
   secondaryCtaHref?: string
-  proofItems?: string[]
+  stats?: { value: string; label: string }[]
 }
 
 export default function Hero({
+  badge,
   headline,
   subheadline,
   ctaLabel = 'Begär offert',
   ctaHref = '/areamatning-och-skogsbruk/kontakt',
   secondaryCtaLabel,
   secondaryCtaHref,
-  proofItems,
+  stats,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-terrain-950">
-      {/* Background topo texture overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="topo-hero" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-              <path d="M40 40c40 0 60 40 100 40s60-30 100-30" fill="none" stroke="#5e804f" strokeWidth="1" opacity="0.6" />
-              <path d="M-20 80c40 10 60 50 100 50s60-40 100-40" fill="none" stroke="#5e804f" strokeWidth="1" opacity="0.4" />
-              <path d="M20 120c30 0 50 30 90 30s70-20 110-20" fill="none" stroke="#5e804f" strokeWidth="1" opacity="0.3" />
-              <path d="M0 160c40 0 70 30 110 30s50-20 90-20" fill="none" stroke="#5e804f" strokeWidth="1" opacity="0.2" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#topo-hero)" />
-        </svg>
-      </div>
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden gradient-hero">
+      {/* Grid background */}
+      <div className="absolute inset-0 bg-grid" />
+      {/* Topographic overlay */}
+      <div className="absolute inset-0 topo-pattern" />
+      {/* Radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-forest-500/10 blur-[120px]" />
 
-      <div className="container-page relative py-20 sm:py-28 lg:py-32">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+      <div className="container-page relative z-10 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <div className="max-w-4xl">
+          {badge && (
+            <div className="mb-6 inline-flex items-center rounded-full bg-forest-500/10 border border-forest-500/20 px-4 py-1.5">
+              <div className="mr-2 h-1.5 w-1.5 rounded-full bg-forest-400 animate-pulse-slow" />
+              <span className="text-xs font-semibold text-forest-300 tracking-wide uppercase">{badge}</span>
+            </div>
+          )}
+
+          <h1 className="text-display text-white sm:text-display-lg lg:text-display-xl">
             {headline}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-terrain-300 sm:text-xl">
+
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/60 sm:text-xl">
             {subheadline}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link href={ctaHref} className="btn-primary text-base">
               {ctaLabel}
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
             </Link>
             {secondaryCtaLabel && secondaryCtaHref && (
-              <Link href={secondaryCtaHref} className="btn-secondary border-terrain-500 text-terrain-300 hover:bg-terrain-900 text-base">
+              <Link href={secondaryCtaHref} className="btn-secondary text-base">
                 {secondaryCtaLabel}
               </Link>
             )}
           </div>
         </div>
 
-        {/* Proof bar */}
-        {proofItems && proofItems.length > 0 && (
-          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-terrain-800 pt-8">
-            {proofItems.map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-sm text-terrain-400">
-                <svg className="h-4 w-4 flex-shrink-0 text-skog-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-                {item}
+        {/* Stats bar */}
+        {stats && stats.length > 0 && (
+          <div className="mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-8">
+            {stats.map((stat, i) => (
+              <div key={i} className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-5 text-center">
+                <p className="text-2xl font-bold text-white sm:text-3xl">{stat.value}</p>
+                <p className="mt-1 text-xs font-medium text-white/50 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>

@@ -80,7 +80,7 @@ export default function AvverkningsunderlagPage() {
         <p>
           Kartlager med avgränsningar, hinder och infrastruktur levereras digitalt.
           Se{' '}
-          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-skog-700 underline hover:text-skog-900">
+          <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
             Leveranser &amp; format
           </Link>{' '}
           för detaljer om filformat.

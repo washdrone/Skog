@@ -93,12 +93,13 @@ export default function FAQPage() {
         ]}
       />
 
-      <header className="bg-terrain-950 py-14 sm:py-20">
-        <div className="container-page max-w-3xl">
+      <header className="relative overflow-hidden gradient-hero py-14 sm:py-20">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="relative container-page max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Vanliga frågor
           </h1>
-          <p className="mt-4 text-lg leading-relaxed text-terrain-300">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Svar på de vanligaste frågorna om drönarbaserade mättjänster för skogsbruk
             och markförvaltning.
           </p>

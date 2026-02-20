@@ -1,66 +1,123 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+const SERVICE_ITEMS = [
+  { label: 'Areamätning', href: '/areamatning-och-skogsbruk/areamatning' },
+  { label: 'Inventering', href: '/areamatning-och-skogsbruk/inventering' },
+  { label: 'Avverkningsunderlag', href: '/areamatning-och-skogsbruk/avverkningsunderlag' },
+  { label: 'Skadeinventering', href: '/areamatning-och-skogsbruk/skadeinventering' },
+  { label: 'Planteringsuppföljning', href: '/areamatning-och-skogsbruk/planteringsuppfoljning' },
+]
 
 const NAV_ITEMS = [
-  { label: 'Tjänster', href: '/areamatning-och-skogsbruk' },
   { label: 'Leveranser', href: '/areamatning-och-skogsbruk/leveranser' },
-  { label: 'Vanliga frågor', href: '/areamatning-och-skogsbruk/faq' },
-  { label: 'Referenscase', href: '/areamatning-och-skogsbruk/case' },
-  { label: 'Kontakt', href: '/areamatning-och-skogsbruk/kontakt' },
+  { label: 'Case', href: '/areamatning-och-skogsbruk/case' },
+  { label: 'FAQ', href: '/areamatning-och-skogsbruk/faq' },
 ]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-skog-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="container-page flex h-16 items-center justify-between">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-night-950/95 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/10'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container-page flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-heading text-lg font-bold text-skog-800">
-          <svg
-            className="h-8 w-8 text-skog-600"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path d="M16 2L8 14h4l-5 10h6l-5 8h16l-5-8h6l-5-10h4L16 2z" fill="currentColor" />
-          </svg>
-          WashDrone
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-forest-600 shadow-lg shadow-forest-600/30 transition-transform group-hover:scale-105">
+            <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" />
+            </svg>
+          </div>
+          <span className="text-xl font-bold text-white tracking-tight">
+            Wash<span className="text-forest-400">Drone</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Huvudnavigation">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
+          {/* Tjänster with dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <Link
+              href="/areamatning-och-skogsbruk"
+              className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white hover:bg-white/5"
+            >
+              Tjänster
+              <svg className={`h-3.5 w-3.5 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </Link>
+            {dropdownOpen && (
+              <div className="absolute left-0 top-full pt-2">
+                <div className="w-64 rounded-2xl bg-night-950/95 backdrop-blur-xl border border-white/10 p-2 shadow-2xl">
+                  {SERVICE_ITEMS.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className="block rounded-xl px-4 py-2.5 text-sm text-white/70 transition-colors hover:text-white hover:bg-white/5"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-terrain-700 transition-colors hover:bg-skog-50 hover:text-skog-800"
+              className="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white hover:bg-white/5"
             >
               {item.label}
             </Link>
           ))}
-          <Link href="/areamatning-och-skogsbruk/kontakt" className="btn-primary ml-3 text-sm">
+
+          <Link
+            href="/areamatning-och-skogsbruk/kontakt"
+            className="ml-4 btn-primary text-sm !py-2.5 !px-5"
+          >
             Begär offert
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
           </Link>
         </nav>
 
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-terrain-700 md:hidden"
+          className="inline-flex items-center justify-center rounded-xl p-2.5 text-white/80 hover:text-white hover:bg-white/5 lg:hidden transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label="Öppna meny"
         >
           {mobileOpen ? (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           )}
@@ -69,24 +126,47 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-skog-100 bg-white px-4 pb-4 pt-2 md:hidden" aria-label="Mobilmeny">
-          {NAV_ITEMS.map((item) => (
+        <nav className="lg:hidden bg-night-950/98 backdrop-blur-xl border-t border-white/5" aria-label="Mobilmeny">
+          <div className="container-page py-6 space-y-1">
             <Link
-              key={item.href}
-              href={item.href}
-              className="block rounded-md px-3 py-2 text-base font-medium text-terrain-700 hover:bg-skog-50 hover:text-skog-800"
+              href="/areamatning-och-skogsbruk"
+              className="block rounded-xl px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
-              {item.label}
+              Alla tjänster
             </Link>
-          ))}
-          <Link
-            href="/areamatning-och-skogsbruk/kontakt"
-            className="btn-primary mt-3 block w-full text-center"
-            onClick={() => setMobileOpen(false)}
-          >
-            Begär offert
-          </Link>
+            <div className="ml-4 space-y-1 border-l border-white/10 pl-4">
+              {SERVICE_ITEMS.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="block rounded-xl px-4 py-2 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block rounded-xl px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="pt-4">
+              <Link
+                href="/areamatning-och-skogsbruk/kontakt"
+                className="btn-primary w-full text-center"
+                onClick={() => setMobileOpen(false)}
+              >
+                Begär offert
+              </Link>
+            </div>
+          </div>
         </nav>
       )}
     </header>
