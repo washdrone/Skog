@@ -4,6 +4,7 @@ import ServiceCard from '@/components/ServiceCard'
 import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import RevealSection from '@/components/RevealSection'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
@@ -83,66 +84,74 @@ export default function HubPage() {
       />
 
       {/* Services */}
-      <section className="section-padding">
-        <div className="container-page">
-          <div className="text-center">
-            <span className="badge">Tjänster</span>
-            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Våra tjänster</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-slate-500">Varje tjänst anpassas efter era behov. Vi levererar det underlag som krävs — varken mer eller mindre.</p>
+      <RevealSection>
+        <section className="relative section-padding">
+          <div className="absolute inset-0 bg-dots opacity-50" />
+          <div className="container-page relative">
+            <div className="text-center reveal">
+              <span className="badge">Tjänster</span>
+              <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Våra tjänster</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-slate-500">Varje tjänst anpassas efter era behov. Vi levererar det underlag som krävs — varken mer eller mindre.</p>
+            </div>
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((svc, i) => (
+                <ServiceCard key={svc.href} {...svc} index={i} />
+              ))}
+            </div>
           </div>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((svc, i) => (
-              <ServiceCard key={svc.href} {...svc} index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </RevealSection>
 
       {/* Benefits */}
-      <section className="bg-slate-50 section-padding">
-        <div className="container-page">
-          <div className="text-center">
-            <span className="badge">Fördelar</span>
-            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Varför drönarbaserade underlag?</h2>
-          </div>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: 'Minskad fältid', desc: 'Kartlägg stora arealer utan att behöva gå varje beståndsgräns till fots. Effektivare planering.' },
-              { title: 'Bättre beslutsunderlag', desc: 'Georefererade ortofoton och kartlager ger en aktuell och detaljerad bild av skog och mark.' },
-              { title: 'Spårbarhet & dokumentation', desc: 'Varje leverans är daterad, georefererad och arkiverbar för uppföljning och revision.' },
-              { title: 'Snabb mobilisering', desc: 'Vid storm, skador eller akuta behov kan vi snabbt vara på plats och leverera underlag.' },
-              { title: 'Branschstandardformat', desc: 'Shapefile, GeoPackage, GeoTIFF — kan importeras direkt i era GIS-system.' },
-              { title: 'Datadrivet skogsbruk', desc: 'Kombinera drönardata med era befintliga system för ett faktabaserat arbetssätt.' },
-            ].map((item) => (
-              <div key={item.title} className="flex gap-4">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-forest-50 text-forest-600 ring-1 ring-forest-100">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+      <RevealSection>
+        <section className="relative bg-slate-50 section-padding overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/[0.03] blur-[100px]" />
+          <div className="container-page relative">
+            <div className="text-center reveal">
+              <span className="badge">Fördelar</span>
+              <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Varför drönarbaserade underlag?</h2>
+            </div>
+            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { title: 'Minskad fältid', desc: 'Kartlägg stora arealer utan att behöva gå varje beståndsgräns till fots. Effektivare planering.' },
+                { title: 'Bättre beslutsunderlag', desc: 'Georefererade ortofoton och kartlager ger en aktuell och detaljerad bild av skog och mark.' },
+                { title: 'Spårbarhet & dokumentation', desc: 'Varje leverans är daterad, georefererad och arkiverbar för uppföljning och revision.' },
+                { title: 'Snabb mobilisering', desc: 'Vid storm, skador eller akuta behov kan vi snabbt vara på plats och leverera underlag.' },
+                { title: 'Branschstandardformat', desc: 'Shapefile, GeoPackage, GeoTIFF — kan importeras direkt i era GIS-system.' },
+                { title: 'Datadrivet skogsbruk', desc: 'Kombinera drönardata med era befintliga system för ett faktabaserat arbetssätt.' },
+              ].map((item, i) => (
+                <div key={item.title} className={`group flex gap-4 reveal reveal-delay-${i + 1}`}>
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-forest-50 text-forest-600 ring-1 ring-forest-100 transition-all duration-500 group-hover:bg-forest-600 group-hover:text-white group-hover:ring-forest-600 group-hover:shadow-lg group-hover:shadow-forest-600/20">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900">{item.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-500">{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900">{item.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-500">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </RevealSection>
 
       {/* Target audiences */}
-      <section className="section-padding">
-        <div className="container-page">
-          <div className="text-center">
-            <span className="badge">Målgrupper</span>
-            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Vilka vi arbetar med</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-slate-500">Vi levererar underlag till aktörer inom skogsbruk och markförvaltning i hela Sverige.</p>
+      <RevealSection>
+        <section className="section-padding">
+          <div className="container-page">
+            <div className="text-center reveal">
+              <span className="badge">Målgrupper</span>
+              <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Vilka vi arbetar med</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-slate-500">Vi levererar underlag till aktörer inom skogsbruk och markförvaltning i hela Sverige.</p>
+            </div>
+            <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {['Skogsbolag & skogsbrukskoncerner', 'Skogsentreprenörer', 'Skogsförvaltare & fastighetsförvaltning', 'Kommuner & markägare', 'Virkesköpare & planerare', 'Försäkringsbolag & skadebesiktning'].map((a, i) => (
+                <div key={a} className={`card-shine rounded-2xl border border-slate-200/80 bg-white p-5 text-center text-sm font-medium text-slate-700 transition-all duration-500 hover:border-forest-200 hover:shadow-lg hover:shadow-forest-500/[0.05] hover:-translate-y-0.5 reveal reveal-delay-${i + 1}`}>{a}</div>
+              ))}
+            </div>
           </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {['Skogsbolag & skogsbrukskoncerner', 'Skogsentreprenörer', 'Skogsförvaltare & fastighetsförvaltning', 'Kommuner & markägare', 'Virkesköpare & planerare', 'Försäkringsbolag & skadebesiktning'].map((a) => (
-              <div key={a} className="rounded-2xl border border-slate-200 bg-white p-5 text-center text-sm font-medium text-slate-700 transition-all hover:border-forest-200 hover:shadow-sm">{a}</div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </RevealSection>
 
       <ProcessSteps steps={PROCESS_STEPS} />
       <CTABand />
