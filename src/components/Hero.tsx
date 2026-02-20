@@ -15,7 +15,7 @@ export default function Hero({
   badge,
   headline,
   subheadline,
-  ctaLabel = 'Begär offert',
+  ctaLabel = 'Boka en fri konsultation',
   ctaHref = '/areamatning-och-skogsbruk/kontakt',
   secondaryCtaLabel,
   secondaryCtaHref,

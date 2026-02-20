@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { organizationSchema } from '@/lib/schema'
 import Hero from '@/components/Hero'
+import FeatureShowcase from '@/components/FeatureShowcase'
 import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import RevealSection from '@/components/RevealSection'
@@ -81,7 +82,7 @@ export default function HomePage() {
         badge="Drönarbaserade mättjänster"
         headline="Exakta underlag för skogsbruk och markförvaltning"
         subheadline="Areamätning, inventering och dokumentation — levererat som kartlager, ortofoton och rapporter redo att importera i era system."
-        ctaLabel="Begär offert"
+        ctaLabel="Boka en fri konsultation"
         ctaHref="/areamatning-och-skogsbruk/kontakt"
         secondaryCtaLabel="Se våra tjänster"
         secondaryCtaHref="/areamatning-och-skogsbruk"
@@ -161,6 +162,11 @@ export default function HomePage() {
         </section>
       </RevealSection>
 
+      {/* Feature showcase with checkmarks + image (Deep Forestry-style) */}
+      <RevealSection>
+        <FeatureShowcase />
+      </RevealSection>
+
       {/* Benefits section */}
       <RevealSection>
         <section className="relative bg-slate-50 section-padding overflow-hidden">
@@ -219,6 +225,7 @@ export default function HomePage() {
 
       <ProcessSteps steps={PROCESS_STEPS} />
 
+      {/* Contact CTA with background image — Deep Forestry-style */}
       <CTABand />
     </>
   )
