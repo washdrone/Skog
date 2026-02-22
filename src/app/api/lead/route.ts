@@ -9,7 +9,8 @@ interface LeadData {
   fastighetsbeteckning: string
   uppdragstyp: string
   areal: string
-  leverans: string
+  leverans: string[]
+  tillagg: string[]
   tidsram: string
   meddelande: string
 }
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
     const data: LeadData = await request.json()
 
     // Validate required fields
-    if (!data.foretag || !data.kontaktperson || !data.epost || !data.uppdragstyp) {
+    if (!data.foretag || !data.kontaktperson || !data.epost || !data.telefon || !data.uppdragstyp) {
       return NextResponse.json(
         { error: 'Obligatoriska fält saknas.' },
         { status: 400 }
@@ -50,7 +51,8 @@ export async function POST(request: Request) {
       fastighetsbeteckning: data.fastighetsbeteckning || '-',
       uppdragstyp: data.uppdragstyp,
       areal: data.areal || '-',
-      leverans: data.leverans || '-',
+      leverans: data.leverans?.length ? data.leverans.join(', ') : '-',
+      tillagg: data.tillagg?.length ? data.tillagg.join(', ') : '-',
       tidsram: data.tidsram || '-',
       meddelande: data.meddelande || '-',
     })

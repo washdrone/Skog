@@ -17,7 +17,20 @@ const LEVERANS_OPTIONS = [
   'Georefererade ortofoton',
   'PDF-rapport',
   'Bilder/video',
-  'Vet ej ännu',
+]
+
+const TILLAGG_OPTIONS = [
+  'Höjdmodell (DTM/DSM)',
+  '3D-modell av terräng/objekt',
+  'Volymberäkning',
+]
+
+const TIDSRAM_OPTIONS = [
+  'Akut (1–3 dagar)',
+  'Inom 1 vecka',
+  'Inom 2 veckor',
+  'Inom en månad',
+  'Flexibelt',
 ]
 
 interface FormData {
@@ -29,7 +42,8 @@ interface FormData {
   fastighetsbeteckning: string
   uppdragstyp: string
   areal: string
-  leverans: string
+  leverans: string[]
+  tillagg: string[]
   tidsram: string
   meddelande: string
 }
@@ -41,7 +55,7 @@ export default function LeadForm() {
   const [formData, setFormData] = useState<FormData>({
     foretag: '', kontaktperson: '', epost: '', telefon: '',
     omrade: '', fastighetsbeteckning: '', uppdragstyp: '',
-    areal: '', leverans: '', tidsram: '', meddelande: '',
+    areal: '', leverans: [], tillagg: [], tidsram: '', meddelande: '',
   })
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [hasStarted, setHasStarted] = useState(false)
@@ -49,6 +63,16 @@ export default function LeadForm() {
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     if (!hasStarted) { setHasStarted(true); events.formStart() }
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  function handleCheckbox(field: 'leverans' | 'tillagg', value: string) {
+    if (!hasStarted) { setHasStarted(true); events.formStart() }
+    setFormData((prev) => ({
+      ...prev,
+      [field]: prev[field].includes(value)
+        ? prev[field].filter((v) => v !== value)
+        : [...prev[field], value],
+    }))
   }
 
   async function handleSubmit(e: FormEvent) {
@@ -98,8 +122,8 @@ export default function LeadForm() {
           <input type="email" id="epost" name="epost" required value={formData.epost} onChange={handleChange} className={inputClass} />
         </div>
         <div>
-          <label htmlFor="telefon" className={labelClass}>Telefonnummer</label>
-          <input type="tel" id="telefon" name="telefon" value={formData.telefon} onChange={handleChange} className={inputClass} />
+          <label htmlFor="telefon" className={labelClass}>Telefonnummer <span className="text-red-500">*</span></label>
+          <input type="tel" id="telefon" name="telefon" required value={formData.telefon} onChange={handleChange} className={inputClass} />
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
@@ -119,22 +143,40 @@ export default function LeadForm() {
           {UPPDRAG_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
         </select>
       </div>
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor="areal" className={labelClass}>Uppskattad areal (ha)</label>
-          <input type="text" id="areal" name="areal" value={formData.areal} onChange={handleChange} placeholder="t.ex. 50 ha eller 'vet ej'" className={inputClass} />
+      <div>
+        <label htmlFor="areal" className={labelClass}>Uppskattad areal (ha)</label>
+        <input type="text" id="areal" name="areal" value={formData.areal} onChange={handleChange} placeholder="t.ex. 50 ha eller 'vet ej'" className={inputClass} />
+      </div>
+      <div>
+        <span className={labelClass}>Önskad leverans</span>
+        <p className="mt-1 text-xs text-slate-400">Välj ett eller flera format</p>
+        <div className="mt-2 grid gap-2 sm:grid-cols-2">
+          {LEVERANS_OPTIONS.map((opt) => (
+            <label key={opt} className="flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm transition-all hover:border-forest-300 hover:bg-forest-50/50 has-[:checked]:border-forest-500 has-[:checked]:bg-forest-50 cursor-pointer">
+              <input type="checkbox" checked={formData.leverans.includes(opt)} onChange={() => handleCheckbox('leverans', opt)} className="h-4 w-4 rounded border-slate-300 text-forest-600 focus:ring-forest-500/20" />
+              {opt}
+            </label>
+          ))}
         </div>
-        <div>
-          <label htmlFor="leverans" className={labelClass}>Önskad leverans</label>
-          <select id="leverans" name="leverans" value={formData.leverans} onChange={handleChange} className={inputClass}>
-            <option value="">Välj leveransformat</option>
-            {LEVERANS_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
-          </select>
+      </div>
+      <div>
+        <span className={labelClass}>Tilläggstjänster</span>
+        <p className="mt-1 text-xs text-slate-400">Valfritt — välj eventuella tillägg</p>
+        <div className="mt-2 grid gap-2 sm:grid-cols-2">
+          {TILLAGG_OPTIONS.map((opt) => (
+            <label key={opt} className="flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm transition-all hover:border-forest-300 hover:bg-forest-50/50 has-[:checked]:border-forest-500 has-[:checked]:bg-forest-50 cursor-pointer">
+              <input type="checkbox" checked={formData.tillagg.includes(opt)} onChange={() => handleCheckbox('tillagg', opt)} className="h-4 w-4 rounded border-slate-300 text-forest-600 focus:ring-forest-500/20" />
+              {opt}
+            </label>
+          ))}
         </div>
       </div>
       <div>
         <label htmlFor="tidsram" className={labelClass}>Önskad tidsram</label>
-        <input type="text" id="tidsram" name="tidsram" value={formData.tidsram} onChange={handleChange} placeholder="t.ex. Inom 2 veckor, Flexibelt, Akut" className={inputClass} />
+        <select id="tidsram" name="tidsram" value={formData.tidsram} onChange={handleChange} className={inputClass}>
+          <option value="">Välj tidsram</option>
+          {TIDSRAM_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
+        </select>
       </div>
       <div>
         <label htmlFor="meddelande" className={labelClass}>Övrig information</label>
