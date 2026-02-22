@@ -1,5 +1,22 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { organizationSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: 'WashDrone – Drönarbaserade mättjänster för skogsbruk',
+  description:
+    'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och markförvaltning i hela Sverige. Areamätning, inventering, avverkningsunderlag och skadedokumentation.',
+  alternates: { canonical: 'https://washdrone.se' },
+  openGraph: {
+    title: 'WashDrone – Drönarbaserade mättjänster för skogsbruk',
+    description:
+      'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och markförvaltning i hela Sverige.',
+    url: 'https://washdrone.se',
+    siteName: 'WashDrone',
+    locale: 'sv_SE',
+    type: 'website',
+  },
+}
 import Hero from '@/components/Hero'
 import FeatureShowcase from '@/components/FeatureShowcase'
 import ProcessSteps from '@/components/ProcessSteps'
@@ -89,7 +106,7 @@ export default function HomePage() {
         stats={[
           { value: '2–5 cm', label: 'Markupplösning' },
           { value: '24h', label: 'Offert' },
-          { value: '100+ ha', label: 'Per flygning' },
+          { value: '10–100 ha', label: 'Per flygning' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}
       />

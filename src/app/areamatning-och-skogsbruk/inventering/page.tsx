@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Skogsinventering med drönare – beståndsgränser, hyggen & infrastruktur',
+  title: 'Skogsinventering med drönare – beståndsgränser & hyggen',
   description:
     'Drönarbaserad skogsinventering med kartläggning av beståndsgränser, hyggen, vägar, upplag och kantzoner. Visuellt beslutsunderlag för skogsförvaltning.',
   alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/inventering' },

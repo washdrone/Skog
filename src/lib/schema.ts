@@ -8,13 +8,23 @@ export function organizationSchema() {
     url: SITE_URL,
     description:
       'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och fastighetsförvaltning.',
+    email: 'info@washdrone.se',
+    /* MÅSTE VERIFIERAS: telefonnummer — lägg till när bekräftat */
+    /* telephone: '+46-XX-XXX XX XX', */
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SE',
+      /* MÅSTE VERIFIERAS: ort och gatuadress */
     },
     areaServed: {
       '@type': 'Country',
       name: 'Sweden',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'info@washdrone.se',
+      contactType: 'customer service',
+      availableLanguage: 'Swedish',
     },
   }
 }

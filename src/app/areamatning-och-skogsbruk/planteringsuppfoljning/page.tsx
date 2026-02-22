@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Planteringsuppföljning med drönare – dokumentation av ungskog & planteringar',
+  title: 'Planteringsuppföljning med drönare – ungskog & planteringar',
   description:
     'Drönarbaserad planteringsuppföljning för översikt och dokumentation av planteringar och ungskog. Identifiera luckor och bedöm etableringsgrad effektivt.',
   alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/planteringsuppfoljning' },

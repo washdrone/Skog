@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/case' },
 }
 
+/*
+ * MÅSTE VERIFIERAS: Alla case-beskrivningar nedan är exempeltexter.
+ * Innan publicering måste varje case bekräftas med:
+ * - Faktisk kund (eller anonymiserad hänvisning med godkännande)
+ * - Korrekt areal, antal avdelningar, region
+ * - Faktisk tjänst utförd och leveransformat
+ * Ta bort denna kommentar när case är verifierade.
+ */
 const CASES = [
   {
     title: 'Areamätning av skogsinnehav',
@@ -18,7 +26,6 @@ const CASES = [
     description:
       'Uppdaterade arealuppgifter för 12 avdelningar över 180 hektar. Georefererade polygoner levererades som Shapefile för import i skogsbruksplan. Uppdraget effektiviserade planeringen av kommande gallring.',
     tags: ['Areamätning', 'Skogsbruksplan'],
-    href: '/areamatning-och-skogsbruk/case',
   },
   {
     title: 'Skadeinventering efter storm',
@@ -26,7 +33,6 @@ const CASES = [
     description:
       'Snabb kartläggning av stormskadade bestånd efter höststorm. Skadade ytor avgränsades i kartlager med ytberäkning. Underlaget användes för försäkringsanmälan och åtgärdsplanering.',
     tags: ['Skadeinventering', 'Storm'],
-    href: '/areamatning-och-skogsbruk/case',
   },
   {
     title: 'Planteringsuppföljning ungskog',
@@ -34,7 +40,6 @@ const CASES = [
     description:
       'Flygning av 95 hektar planterad yta för bedömning av etableringsgrad. Högupplösta ortofoton visade luckor och variationer i tillväxt. Resultatet gav underlag för beslut om kompletteringsplantering.',
     tags: ['Planteringsuppföljning', 'Ungskog'],
-    href: '/areamatning-och-skogsbruk/case',
   },
 ]
 

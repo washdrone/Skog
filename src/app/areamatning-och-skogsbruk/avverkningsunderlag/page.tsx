@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Avverkningsunderlag med drönare – kartlager för avverkningsplanering',
+  title: 'Avverkningsunderlag med drönare – kartlager & planering',
   description:
     'Drönarbaserade avverkningsunderlag med kartlagda ytor, avgränsningar, åtkomstvägar och hinder. Ger planerare och maskinförare ett komplett visuellt underlag.',
   alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/avverkningsunderlag' },

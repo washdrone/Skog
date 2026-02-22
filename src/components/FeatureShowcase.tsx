@@ -67,7 +67,7 @@ export default function FeatureShowcase() {
               {/* Stats overlay in bottom corner */}
               <div className="absolute bottom-4 left-4 right-4 flex gap-3">
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
-                  <p className="text-lg font-bold text-white">100+ ha</p>
+                  <p className="text-lg font-bold text-white">10–100 ha</p>
                   <p className="text-[10px] text-white/50 uppercase tracking-wider">Per flygning</p>
                 </div>
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">

@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Skadeinventering med drönare – dokumentation efter storm, snö & insekter',
+  title: 'Skadeinventering med drönare – storm, snö & insekter',
   description:
     'Snabb skadeinventering med drönare efter storm, snöbrott eller insektsangrepp. Georefererad dokumentation och kartlager för beslutsunderlag och försäkringsärenden.',
   alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/skadeinventering' },

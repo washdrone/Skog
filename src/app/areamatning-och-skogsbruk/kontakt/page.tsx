@@ -88,9 +88,10 @@ export default function KontaktPage() {
                       info@washdrone.se
                     </a>
                   </p>
+                  {/* MÅSTE VERIFIERAS: Lägg till telefonnummer här när bekräftat */}
                   <p>
                     <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">Telefon</span>
-                    Kontakta oss via e-post för telefonnummer
+                    <span className="text-slate-400">Anges i offerten</span>
                   </p>
                 </div>
               </div>

@@ -1,35 +1,25 @@
-import Link from 'next/link'
-
 interface CaseCardProps {
   title: string
   customer: string
   description: string
   tags: string[]
-  href: string
 }
 
-export default function CaseCard({ title, customer, description, tags, href }: CaseCardProps) {
+export default function CaseCard({ title, customer, description, tags }: CaseCardProps) {
   return (
-    <Link
-      href={href}
-      className="card-shine group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5"
+    <div
+      className="card-shine group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1"
     >
       <div className="flex flex-wrap gap-2 mb-4">
         {tags.map((tag) => (
           <span key={tag} className="badge">{tag}</span>
         ))}
       </div>
-      <h3 className="text-lg font-semibold text-slate-900 group-hover:text-forest-700 transition-colors duration-300">
+      <h3 className="text-lg font-semibold text-slate-900">
         {title}
       </h3>
       <p className="mt-1 text-sm font-medium text-slate-400">{customer}</p>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-500">{description}</p>
-      <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-forest-600 opacity-80 group-hover:opacity-100 transition-all duration-300">
-        Läs case
-        <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-        </svg>
-      </div>
-    </Link>
+    </div>
   )
 }

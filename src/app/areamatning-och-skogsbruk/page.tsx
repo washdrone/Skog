@@ -78,7 +78,7 @@ export default function HubPage() {
         stats={[
           { value: '2–5 cm', label: 'Markupplösning' },
           { value: '24h', label: 'Offert' },
-          { value: '100+ ha', label: 'Per flygning' },
+          { value: '10–100 ha', label: 'Per flygning' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}
       />
