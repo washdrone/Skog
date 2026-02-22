@@ -31,11 +31,11 @@ export default function ServicePageLayout({
         <header className="relative overflow-hidden gradient-hero pt-8 pb-16 sm:pt-12 sm:pb-24">
           <div className="absolute inset-0 bg-grid" />
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/5 blur-[100px]" />
-          <div className="container-page relative max-w-3xl">
+          <div className="container-page relative max-w-3xl mx-auto text-center">
             <h1 className="text-display text-white sm:text-display-lg">
               {headline}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-white/60">
+            <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
               {intro}
             </p>
             <div className="mt-8">

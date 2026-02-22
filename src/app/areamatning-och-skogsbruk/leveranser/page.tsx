@@ -77,11 +77,11 @@ export default function LeveranserPage() {
       {/* Header */}
       <header className="relative overflow-hidden gradient-hero py-14 sm:py-20">
         <div className="absolute inset-0 bg-grid" />
-        <div className="relative container-page max-w-3xl">
+        <div className="relative container-page max-w-3xl mx-auto text-center">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Leveranser &amp; format
           </h1>
-          <p className="mt-4 text-lg leading-relaxed text-white/60">
+          <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
             Alla underlag levereras digitalt i branschstandardformat, redo att importeras
             i era GIS-system eller användas som beslutsunderlag. Varje leverans är
             georefererad, kvalitetskontrollerad och dokumenterad.
