@@ -4,6 +4,21 @@ import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 
+/*
+ * EJ VERIFIERAD: Alla FAQ-svar nedan kräver intern bekräftelse.
+ * Specifika verifieringspunkter:
+ * - B2: "10–100 hektar" per flygning
+ * - B1: "2–5 cm" GSD
+ * - B4: filformat (Shapefile, GeoPackage, GeoJSON, GeoTIFF, KML, JPEG2000)
+ * - B3: "SWEREF99 TM" som standard
+ * - A2: "3–5 arbetsdagar" leveranstid
+ * - A4: "bokar vi om utan extra kostnad" (väder)
+ * - C1–C3: Transportstyrelsens regler, tillstånd, anmälningar
+ * - A6: "hela Sverige"
+ * - B8: kompatibilitet med "QGIS, ArcGIS" och "de flesta skogsbruksprogram"
+ * - A1: "prisindikation inom 24 timmar"
+ * - A5: "kostnadsfri prisuppskattning"
+ */
 const FAQ_ITEMS = [
   {
     question: 'Hur stor areal kan ni kartlägga med drönare?',

@@ -42,7 +42,7 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Social icons */}
+          {/* SAKNAS (D4): Ersätt href="#" med riktiga profil-URLer */}
           <div className="flex items-center gap-4">
             {/* LinkedIn */}
             <a

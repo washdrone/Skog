@@ -92,6 +92,7 @@ export default function LeveranserPage() {
       <DeliverablesList items={DELIVERABLES} />
 
       {/* Quality section */}
+      {/* EJ VERIFIERAD: A3 "omflygning utan extra kostnad", B3 "SWEREF99 TM", A2 "3–5 arbetsdagar" */}
       <section className="bg-slate-50 section-padding">
         <div className="container-page max-w-3xl prose-forest">
           <h2>Kvalitetssäkring</h2>

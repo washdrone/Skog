@@ -7,6 +7,7 @@ interface CTABandProps {
   ctaHref?: string
 }
 
+/* EJ VERIFIERAD: "inom 24 timmar" (A1) + "hela Sverige" (A6) */
 export default function CTABand({
   headline = 'Kontakta oss',
   description = 'Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar. Vi arbetar med skogsbolag, förvaltare och myndigheter i hela Sverige.',

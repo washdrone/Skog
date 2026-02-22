@@ -1,5 +1,12 @@
 import Link from 'next/link'
 
+/*
+ * EJ VERIFIERAT: Varje punkt nedan kräver bekräftelse.
+ * B1: "2–5 cm" — beror på utrustning och flyghöjd
+ * B4: filformat — bekräfta att alla levereras
+ * A2: "3–5 arbetsdagar" — bekräfta att detta är standard
+ * A6: "Hela Sverige" — bekräfta logistisk kapacitet
+ */
 const FEATURES = [
   'Georefererade ortofoton med 2–5 cm markupplösning',
   'Kartlager i branschstandard — Shapefile, GeoPackage, GeoTIFF',

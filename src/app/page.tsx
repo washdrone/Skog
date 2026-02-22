@@ -23,6 +23,7 @@ import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import RevealSection from '@/components/RevealSection'
 
+/* EJ VERIFIERAD: "Offert inom 24 timmar" — bekräfta att detta stämmer (A1) */
 const PROCESS_STEPS = [
   { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal och tidsram. Offert inom 24 timmar.' },
   { number: 2, title: 'Datainsamling', description: 'Drönare flyger det aktuella området. Georefererade bilder samlas in.' },
@@ -103,6 +104,7 @@ export default function HomePage() {
         ctaHref="/areamatning-och-skogsbruk/kontakt"
         secondaryCtaLabel="Se våra tjänster"
         secondaryCtaHref="/areamatning-och-skogsbruk"
+        /* EJ VERIFIERAD: alla stats nedan — bekräfta B1, A1, B2, B3 */
         stats={[
           { value: '2–5 cm', label: 'Markupplösning' },
           { value: '24h', label: 'Offert' },
