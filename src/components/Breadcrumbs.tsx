@@ -7,7 +7,7 @@ interface BreadcrumbItem {
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Brödsmulor" className="bg-night-950 border-b border-white/5">
+    <nav aria-label="Brödsmulor" className="bg-night-950 border-b border-white/5 pt-20">
       <div className="container-page py-3">
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/40">
           <li>
