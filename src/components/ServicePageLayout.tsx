@@ -4,6 +4,7 @@ import CTABand from '@/components/CTABand'
 
 interface ServicePageLayoutProps {
   breadcrumbLabel: string
+  breadcrumbParent?: { label: string; href: string }
   headline: string
   intro: string
   children: React.ReactNode
@@ -12,6 +13,7 @@ interface ServicePageLayoutProps {
 
 export default function ServicePageLayout({
   breadcrumbLabel,
+  breadcrumbParent = { label: 'Areamätning & skogsbruk', href: '/areamatning-och-skogsbruk' },
   headline,
   intro,
   children,
@@ -21,7 +23,7 @@ export default function ServicePageLayout({
     <>
       <Breadcrumbs
         items={[
-          { label: 'Areamätning & skogsbruk', href: '/areamatning-och-skogsbruk' },
+          { label: breadcrumbParent.label, href: breadcrumbParent.href },
           { label: breadcrumbLabel },
         ]}
       />

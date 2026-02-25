@@ -65,6 +65,15 @@ const config: Config = {
           900: '#78350f',
           950: '#451a03',
         },
+        /* Spectrum — NDVI/multispectral visualization palette */
+        spectrum: {
+          red:    '#d73027',
+          orange: '#fc8d59',
+          yellow: '#fee08b',
+          lime:   '#d9ef8b',
+          green:  '#91cf60',
+          deep:   '#1a9850',
+        },
       },
       fontFamily: {
         sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
