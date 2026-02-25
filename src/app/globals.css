@@ -294,3 +294,64 @@
 .glow-border:hover::before {
   opacity: 1;
 }
+
+/* NDVI spectrum gradient */
+.ndvi-gradient {
+  background: linear-gradient(90deg, #d73027 0%, #fc8d59 20%, #fee08b 40%, #d9ef8b 60%, #91cf60 80%, #1a9850 100%);
+}
+
+/* NDVI shimmer animation */
+@keyframes ndviShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.ndvi-shimmer {
+  background: linear-gradient(90deg,
+    #d73027 0%, #fc8d59 15%, #fee08b 30%, #d9ef8b 45%, #91cf60 60%, #1a9850 75%,
+    #d73027 100%
+  );
+  background-size: 200% 100%;
+  animation: ndviShimmer 8s linear infinite;
+}
+
+/* Layer stack 3D perspective */
+.layer-stack {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.layer-card {
+  transform: rotateX(45deg) rotateZ(-15deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.layer-card:hover {
+  transform: rotateX(45deg) rotateZ(-15deg) translateZ(20px);
+}
+
+/* Blur reveal transition for service cards */
+.blur-reveal {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blur-reveal.revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Gradient for vegetationsanalys hero */
+.gradient-veg {
+  background:
+    radial-gradient(ellipse at 80% 80%, rgba(26, 152, 80, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 30%, rgba(215, 48, 39, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 10%, rgba(145, 207, 96, 0.1) 0%, transparent 40%),
+    linear-gradient(180deg, #041a0e 0%, #0d2818 50%, #0f462d 100%);
+}

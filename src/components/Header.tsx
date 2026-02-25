@@ -11,6 +11,12 @@ const SERVICE_ITEMS = [
   { label: 'Planteringsuppföljning', href: '/areamatning-och-skogsbruk/planteringsuppfoljning' },
 ]
 
+const VEG_ITEMS = [
+  { label: 'NDVI-kartläggning', href: '/vegetationsanalys/ndvi-kartlaggning' },
+  { label: 'Stressanalys', href: '/vegetationsanalys/stressanalys' },
+  { label: 'Uppföljning över tid', href: '/vegetationsanalys/uppfoljning-over-tid' },
+]
+
 const NAV_ITEMS = [
   { label: 'Leveranser', href: '/areamatning-och-skogsbruk/leveranser' },
   { label: 'Case', href: '/areamatning-och-skogsbruk/case' },
@@ -21,6 +27,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [vegDropdownOpen, setVegDropdownOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -51,7 +58,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Huvudnavigation">
-          {/* Tjänster with dropdown */}
+          {/* Mätning & kartläggning dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -61,7 +68,7 @@ export default function Header() {
               href="/areamatning-och-skogsbruk"
               className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
             >
-              Tjänster
+              Mätning
               <svg className={`h-3.5 w-3.5 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
@@ -70,6 +77,38 @@ export default function Header() {
               <div className="absolute left-0 top-full pt-2">
                 <div className="w-64 rounded-2xl bg-night-950/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
                   {SERVICE_ITEMS.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className="block rounded-xl px-4 py-2.5 text-sm text-white/60 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Vegetationsanalys dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setVegDropdownOpen(true)}
+            onMouseLeave={() => setVegDropdownOpen(false)}
+          >
+            <Link
+              href="/vegetationsanalys"
+              className="flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+            >
+              Vegetationsanalys
+              <svg className={`h-3.5 w-3.5 transition-transform duration-300 ${vegDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </Link>
+            {vegDropdownOpen && (
+              <div className="absolute left-0 top-full pt-2">
+                <div className="w-64 rounded-2xl bg-night-950/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
+                  {VEG_ITEMS.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
@@ -133,10 +172,29 @@ export default function Header() {
               className="block rounded-xl px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
               onClick={() => setMobileOpen(false)}
             >
-              Alla tjänster
+              Mätning & kartläggning
             </Link>
             <div className="ml-4 space-y-1 border-l border-white/[0.08] pl-4">
               {SERVICE_ITEMS.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="block rounded-xl px-4 py-2 text-sm text-white/50 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+            <Link
+              href="/vegetationsanalys"
+              className="block rounded-xl px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
+              onClick={() => setMobileOpen(false)}
+            >
+              Vegetationsanalys
+            </Link>
+            <div className="ml-4 space-y-1 border-l border-white/[0.08] pl-4">
+              {VEG_ITEMS.map((child) => (
                 <Link
                   key={child.href}
                   href={child.href}

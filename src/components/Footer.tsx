@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 const NAV_LINKS = [
-  { label: 'Tjänster', href: '/areamatning-och-skogsbruk' },
+  { label: 'Mätning & kartläggning', href: '/areamatning-och-skogsbruk' },
+  { label: 'Vegetationsanalys', href: '/vegetationsanalys' },
   { label: 'Leveranser', href: '/areamatning-och-skogsbruk/leveranser' },
   { label: 'Case', href: '/areamatning-och-skogsbruk/case' },
   { label: 'FAQ', href: '/areamatning-och-skogsbruk/faq' },
