@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Kan ni flyga över tätortsnära skog och parkmark?',
     answer:
-      'Ja. Vi följer gällande regler för drönarflygning och koordinerar med berörda parter vid flygning i och nära tätort.',
+      'Ja. Våra piloter är fullt utbildade enligt EASA-förordningen och vi har tillstånd för att flyga drönare i och nära tätort. Vi koordinerar med berörda parter vid varje uppdrag.',
   },
   {
     question: 'Uppfyller era leveranser kraven för offentlig upphandling?',

@@ -5,9 +5,9 @@ import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare — vi arbetar på många platser i Sverige',
+  title: 'Skogsinventering med drönare i hela Sverige',
   description:
-    'TimberDrone utför drönarbaserad skogsinventering på många platser i Sverige. Läs mer om våra tjänster i Norrland, Svealand och Småland & Götaland.',
+    'TimberDrone utför rikstäckande drönarbaserad skogsinventering i hela Sverige. Läs mer om våra tjänster i Norrland, Svealand och Småland & Götaland.',
   path: '/platser',
 })
 
@@ -56,11 +56,11 @@ export default function PlatserPage() {
         <div className="absolute inset-0 bg-grid" />
         <div className="relative container-page max-w-3xl mx-auto text-center">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Skogsinventering med drönare — vi arbetar på många platser i Sverige
+            Skogsinventering med drönare i hela Sverige
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
             Från Norrbottens fjällnära skogar till Smålands granbestånd. Vi utför drönarbaserad
-            skogsinventering, areamätning och vegetationsanalys på många platser i Sverige.
+            skogsinventering, areamätning och vegetationsanalys i hela Sverige.
           </p>
         </div>
       </header>

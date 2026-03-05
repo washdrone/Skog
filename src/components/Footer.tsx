@@ -45,8 +45,7 @@ export default function Footer() {
                 </span>
               </Link>
               <p className="mt-4 text-sm text-white/40 leading-relaxed">
-                {/* MÅSTE VERIFIERAS: A6 geografisk täckning */}
-                Drönarbaserad skogsinventering och multispektralanalys.
+                Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
               </p>
               <p className="mt-4 text-sm text-white/30">
                 <a href="mailto:info@timberdrone.se" className="hover:text-forest-400 transition-colors">info@timberdrone.se</a>

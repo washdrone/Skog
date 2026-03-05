@@ -57,7 +57,7 @@ const SERVICES = [
 ]
 
 const PROCESS_STEPS = [
-  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar syfte, areal och vilka index som är relevanta för ert uppdrag. Vi återkommer med en prisindikation.' },
+  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar syfte, areal och vilka index som är relevanta för ert uppdrag. Vi återkommer med en prisindikation inom 24 timmar.' },
   { number: 2, title: 'Kalibrerad flygning', description: 'Reflektanspanel före start. Drönare med multispektral sensor flyger området. Irradianssensor korrigerar för ljusförändringar.' },
   { number: 3, title: 'Indexberäkning & QA', description: 'NDVI, NDRE och kompletterande index beräknas från reflektanskartor. Radiometrisk korrigering och kvalitetskontroll.' },
   { number: 4, title: 'Leverans', description: 'NDVI-raster (GeoTIFF), klassificerade kartor och tolkningsrapport levereras i SWEREF99 TM — redo att importera i pcSKOG, QGIS eller ArcGIS.' },
@@ -112,7 +112,7 @@ export default function VegetationsanalysPage() {
                 {
                   step: '1',
                   title: 'Sensorn fångar',
-                  text: /* MÅSTE VERIFIERAS: exakta våglängder beror på sensormodell */ 'Multispektral kamera mäter reflekterat ljus i flera våglängdsband, inklusive blått, grönt, rött, red edge och nära infrarött. Varje band avslöjar olika egenskaper hos vegetationen.',
+                  text: 'Multispektral kamera mäter reflekterat ljus i flera våglängdsband, inklusive blått, grönt, rött, red edge och nära infrarött. Varje band avslöjar olika egenskaper hos vegetationen.',
                 },
                 {
                   step: '2',

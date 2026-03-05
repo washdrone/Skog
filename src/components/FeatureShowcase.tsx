@@ -1,23 +1,12 @@
 import Link from 'next/link'
 
-/*
- * EJ VERIFIERAT: Varje punkt nedan kräver bekräftelse.
- * B1: "2–5 cm" — beror på utrustning och flyghöjd
- * B4: filformat — bekräfta att alla levereras
- * A2: "3–5 arbetsdagar" — bekräfta att detta är standard
- * A6: "Hela Sverige" — bekräfta logistisk kapacitet
- */
 const FEATURES = [
-  /* MÅSTE VERIFIERAS: B1 GSD-intervall beror på utrustning och flyghöjd */
-  'Georefererade ortofoton med hög markupplösning',
-  /* MÅSTE VERIFIERAS: B4 bekräfta att alla format levereras */
+  'Georefererade ortofoton med hög markupplösning — LiDAR, RTK och multispektral kamera',
   'Kartlager i branschstandard — Shapefile, GeoPackage, GeoTIFF',
-  /* MÅSTE VERIFIERAS: A2 bekräfta standardleveranstid */
   'Leverans inom avtalad tid',
   'Kvalitetssäkrade data med dokumenterad noggrannhet',
   'Direkt import i era befintliga GIS-system',
-  /* MÅSTE VERIFIERAS: A6 bekräfta geografisk täckning */
-  'Flexibel mobilisering vid akuta behov',
+  'Rikstäckande — flexibel mobilisering vid akuta behov',
 ]
 
 export default function FeatureShowcase() {
@@ -32,7 +21,7 @@ export default function FeatureShowcase() {
               Professionella drönarunderlag för skog och mark
             </h2>
             <p className="mt-4 text-slate-500 leading-relaxed">
-              Vi kombinerar avancerad drönarteknik med gedigen skoglig kompetens för att leverera exakta, pålitliga underlag.
+              Vi kombinerar branschledande drönare, LiDAR, RTK-positionering och multispektral kamera med gedigen skoglig kompetens för att leverera exakta, pålitliga underlag.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -78,12 +67,10 @@ export default function FeatureShowcase() {
               {/* Stats overlay in bottom corner */}
               <div className="absolute bottom-4 left-4 right-4 flex gap-3">
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
-                  {/* MÅSTE VERIFIERAS: B2 bekräfta kapacitetsintervall */}
                   <p className="text-lg font-bold text-white">Stora arealer</p>
                   <p className="text-[10px] text-white/50 uppercase tracking-wider">Per flygning</p>
                 </div>
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
-                  {/* MÅSTE VERIFIERAS: B1 bekräfta GSD-intervall mot faktisk utrustning */}
                   <p className="text-lg font-bold text-white">Hög upplösning</p>
                   <p className="text-[10px] text-white/50 uppercase tracking-wider">Markupplösning</p>
                 </div>

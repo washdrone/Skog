@@ -4,21 +4,7 @@ import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 
-/*
- * EJ VERIFIERAD: Alla FAQ-svar nedan kräver intern bekräftelse.
- * Specifika verifieringspunkter:
- * - B2: "10–100 hektar" per flygning
- * - B1: "2–5 cm" GSD
- * - B4: filformat (Shapefile, GeoPackage, GeoJSON, GeoTIFF, KML, JPEG2000)
- * - B3: "SWEREF99 TM" som standard
- * - A2: "3–5 arbetsdagar" leveranstid
- * - A4: "bokar vi om utan extra kostnad" (väder)
- * - C1–C3: Transportstyrelsens regler, tillstånd, anmälningar
- * - A6: "hela Sverige"
- * - B8: kompatibilitet med "QGIS, ArcGIS" och "de flesta skogsbruksprogram"
- * - A1: "prisindikation inom 24 timmar"
- * - A5: "kostnadsfri prisuppskattning"
- */
+/* FAQ-svar: verifieringsstatus se CONTENT-VERIFICATION.md */
 const FAQ_ITEMS = [
   {
     question: 'Hur stor areal kan ni kartlägga med drönare?',
@@ -53,12 +39,12 @@ const FAQ_ITEMS = [
   {
     question: 'Behövs tillstånd för drönarflygning?',
     answer:
-      'Vi följer gällande regler för drönarflygning och ansvarar för nödvändiga tillstånd och anmälningar. I vissa områden kan särskilt tillstånd krävas, vilket vi hanterar i god tid.',
+      'Våra piloter är fullt utbildade enligt EASA-förordningen. Vi ansvarar för nödvändiga tillstånd och anmälningar. I vissa områden kan särskilt tillstånd krävas, vilket vi hanterar i god tid.',
   },
   {
     question: 'Arbetar ni i hela Sverige?',
     answer:
-      'Vi utför uppdrag på många platser i Sverige. Vid längre avstånd tillkommer resekostnad, som specificeras i offerten. Vi samordnar gärna flera uppdrag i samma region.',
+      'Ja, vi arbetar rikstäckande i hela Sverige. Vid längre avstånd tillkommer resekostnad, som specificeras i offerten. Vi samordnar gärna flera uppdrag i samma region.',
   },
   {
     question: 'Kan jag använda datan i mitt befintliga GIS-system?',
@@ -68,7 +54,7 @@ const FAQ_ITEMS = [
   {
     question: 'Vad kostar det?',
     answer:
-      'Priset beror på areal, uppdragstyp, reseavstånd och önskade leveranser. Vi återkommer med en prisindikation efter att vi fått in er förfrågan. Kontakta oss via offertformuläret.',
+      'Priset beror på areal, uppdragstyp, reseavstånd och önskade leveranser. Vi återkommer med en prisindikation inom 24 timmar efter att vi fått in er förfrågan. Kontakta oss via offertformuläret.',
   },
 ]
 

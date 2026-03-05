@@ -53,7 +53,7 @@ const SERVICES = [
 ]
 
 const PROCESS_STEPS = [
-  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal, tidsram och önskade leveranser. Vi återkommer med en prisindikation.' },
+  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal, tidsram och önskade leveranser. Vi återkommer med en prisindikation inom 24 timmar.' },
   { number: 2, title: 'Datainsamling', description: 'Drönare flyger det aktuella området enligt planerat uppdrag. Georefererade bilder samlas in.' },
   { number: 3, title: 'Bearbetning & QA', description: 'Data bearbetas till kartlager, ortofoton eller rapporter. Kvalitetskontroll av varje leverans.' },
   { number: 4, title: 'Leverans', description: 'Färdiga underlag levereras digitalt i överenskommet format, redo att importeras i era system.' },

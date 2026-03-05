@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: 'Vilken upplösning och noggrannhet kan vi förvänta oss?',
     answer:
-      /* MÅSTE VERIFIERAS: exakt GSD och positionsnoggrannhet beror på utrustning och flyghöjd */ 'Vi flyger med kamerasystem som ger ortofoton med hög markupplösning. Positionsnoggrannheten varierar beroende på utrustning och metod, och anpassas efter era krav.',
+      'Vi flyger med branschledande utrustning — inklusive LiDAR, RTK-positionering och multispektral kamera — som ger ortofoton med hög markupplösning och noggrann positionering. Utrustningen anpassas efter uppdragets krav.',
   },
   {
     question: 'Erbjuder ni bulkpriser för stora volymer?',

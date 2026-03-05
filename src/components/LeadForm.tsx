@@ -98,8 +98,7 @@ export default function LeadForm() {
           </svg>
         </div>
         <h3 className="text-xl font-bold text-slate-900">Tack för din förfrågan</h3>
-        {/* MÅSTE VERIFIERAS: A1 bekräfta svarstid */}
-        <p className="mt-3 text-slate-600">Vi har tagit emot er förfrågan och återkommer med en prisindikation. Vi bekräftar uppdragsdetaljer, areal och tidsplan via e-post.</p>
+        <p className="mt-3 text-slate-600">Vi har tagit emot er förfrågan och återkommer med en prisindikation inom 24 timmar. Vi bekräftar uppdragsdetaljer, areal och tidsplan via e-post.</p>
       </div>
     )
   }
