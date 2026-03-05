@@ -7,13 +7,13 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Begär offert',
   description:
-    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, areamätning eller vegetationsanalys. Svar inom 24 timmar.',
+    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, areamätning eller vegetationsanalys.',
   path: '/offert',
 })
 
 const PROCESS_STEPS = [
   { number: 1, title: 'Fyll i formulär', description: 'Beskriv ert uppdrag, areal och önskade leveranser.' },
-  { number: 2, title: 'Offert inom 24h', description: 'Vi granskar er förfrågan och skickar en prisindikation.' },
+  { number: 2, title: 'Vi återkommer', description: 'Vi granskar er förfrågan och återkommer med en prisindikation.' },
   { number: 3, title: 'Bekräfta detaljer', description: 'Vi stämmer av uppdragsdetaljer, areal och tidsplan.' },
   { number: 4, title: 'Vi genomför uppdraget', description: 'Flygning genomförs och underlag levereras enligt överenskommelse.' },
 ]
@@ -42,7 +42,7 @@ export default function OffertPage() {
             Begär en kostnadsfri offert
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-            Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar.
+            Berätta om ert uppdrag så återkommer vi med en prisindikation.
             Fyll i formuläret nedan eller kontakta oss direkt på{' '}
             <a href="mailto:info@timberdrone.se" className="text-forest-400 hover:text-forest-300 underline">
               info@timberdrone.se
@@ -65,8 +65,8 @@ export default function OffertPage() {
                 <h3 className="font-semibold text-slate-900">Därför TimberDrone</h3>
                 <ul className="mt-4 space-y-4">
                   {[
-                    { icon: 'clock', text: 'Svar inom 24 timmar' },
-                    { icon: 'map', text: 'Verksamma i hela Sverige' },
+                    { icon: 'clock', text: 'Snabb återkoppling' },
+                    { icon: 'map', text: 'Verksamma på många platser i Sverige' },
                     { icon: 'layer', text: 'GIS-redo leveranser' },
                     { icon: 'shield', text: 'Ingen bindningstid' },
                   ].map((item) => (

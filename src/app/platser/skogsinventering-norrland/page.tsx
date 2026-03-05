@@ -26,12 +26,12 @@ const FAQ_ITEMS = [
   {
     question: 'Hur stora arealer kan ni kartlägga per uppdrag i Norrland?',
     answer:
-      'Vi kartlägger normalt 10–100 hektar per flygdag beroende på terrängförhållanden och önskad upplösning. För mycket stora skogsinnehav i Norrland planerar vi flerdagsuppdrag och kan täcka hundratals hektar med bibehållen datakvalitet.',
+      'Arealkapaciteten per flygdag varierar beroende på terrängförhållanden, önskad upplösning och andra faktorer. För stora skogsinnehav i Norrland planerar vi flerdagsuppdrag för att täcka den areal som behövs med bibehållen datakvalitet.',
   },
   {
     question: 'Vilka län i Norrland täcker ni?',
     answer:
-      'Vi utför uppdrag i hela Norrland: Norrbottens län, Västerbottens län, Jämtlands län, Västernorrlands län och Gävleborgs län. Resekostnad kan tillkomma beroende på avstånd och specificeras alltid i offerten.',
+      'Vi utför uppdrag i Norrland, inklusive Norrbottens län, Västerbottens län, Jämtlands län, Västernorrlands län och Gävleborgs län. Resekostnad kan tillkomma beroende på avstånd och specificeras alltid i offerten.',
   },
 ]
 
@@ -77,10 +77,10 @@ export default function NorrlandPage() {
           <div className="prose prose-slate max-w-none">
             <h2 className="text-heading-xl text-slate-900">Drönarinventering anpassad för norrländska förhållanden</h2>
             <p>
-              Norrlands skogar utgör en betydande del av Sveriges totala skogsareal, med vidsträckta barrskogsområden som ofta ligger långt från närmaste väg. Traditionell fältinventering i dessa områden är tidskrävande och kostsam — inte sällan behöver personal ta sig flera kilometer in i terrängen för att nå aktuella bestånd. Drönarbaserad skogsinventering erbjuder ett effektivt alternativ som minskar fältiden avsevärt.
+              Norrland har vidsträckta barrskogsområden som ofta ligger långt från närmaste väg. Traditionell fältinventering i dessa områden är tidskrävande och kostsam — inte sällan behöver personal ta sig flera kilometer in i terrängen för att nå aktuella bestånd. Drönarbaserad skogsinventering erbjuder ett effektivt alternativ som minskar fältiden avsevärt.
             </p>
             <p>
-              Vi arbetar i hela Norrland, från Gävleborg i söder till Norrbottens fjällnära skogar i norr. Våra drönarsystem är utformade för att hantera de utmaningar som kännetecknar regionen: stora sammanhängande skogsarealer, begränsad väginfrastruktur, kuperad terräng och korta flygsäsonger med begränsade ljusförhållanden under vinterhalvåret.
+              Vi arbetar i Norrland, från Gävleborg i söder till Norrbottens fjällnära skogar i norr. Våra drönarsystem är utformade för att hantera de utmaningar som kännetecknar regionen: stora sammanhängande skogsarealer, begränsad väginfrastruktur, kuperad terräng och korta flygsäsonger med begränsade ljusförhållanden under vinterhalvåret.
             </p>
             <p>
               Genom att kombinera högupplösta ortofoton med GIS-baserade kartlager skapar vi aktuella beslutsunderlag för skogsförvaltning, avverkningsplanering och skadeinventering. Data levereras i SWEREF99 TM och kan importeras direkt i pcSKOG, QGIS eller ArcGIS. Vi anpassar uppdraget efter era behov — oavsett om det gäller en enskild fastighet på 20 hektar eller ett storskaligt skogsinnehav på tusentals hektar.

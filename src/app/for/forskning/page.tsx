@@ -89,7 +89,8 @@ export default function ForskningPage() {
 
             <h2>Högupplöst data med dokumenterad metodik</h2>
             <p>
-              Vi flyger med kamerasystem som ger markupplösning (GSD) ned till 2 cm/pixel. Varje flygning dokumenteras med fullständiga parametrar — flyghöjd, överlapp, sensorspecifikation, kalibreringsinformation och väderförhållanden — så att datainsamlingen kan beskrivas exakt i vetenskapliga publikationer.
+              {/* MÅSTE VERIFIERAS: exakt GSD beror på utrustning och flyghöjd */}
+              Vi flyger med kamerasystem som ger hög markupplösning (GSD beroende på utrustning och flyghöjd). Varje flygning dokumenteras med fullständiga parametrar — flyghöjd, överlapp, sensorspecifikation, kalibreringsinformation och väderförhållanden — så att datainsamlingen kan beskrivas exakt i vetenskapliga publikationer.
             </p>
 
             <h2>Multispektrala tidsserier</h2>

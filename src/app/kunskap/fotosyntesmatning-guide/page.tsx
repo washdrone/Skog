@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Hur exakta är drönarbaserade mätningar?',
     answer:
-      'Med korrekt kalibrering (referenspanel och irradianssensor) uppnås radiometrisk noggrannhet med NRMSE under 2–4 %. Det är tillräckligt för att detektera meningsfulla skillnader i vegetationens tillstånd.',
+      'Med korrekt kalibrering (referenspanel och irradianssensor) uppnås god radiometrisk noggrannhet. Det är tillräckligt för att detektera meningsfulla skillnader i vegetationens tillstånd.', /* MÅSTE VERIFIERAS: specifik NRMSE beror på utrustning och metod */
   },
   {
     question: 'Kan mätningarna jämföras med satellitdata?',
@@ -104,7 +104,7 @@ export default function FotosyntesmatningGuidePage() {
               multispektral sensor
             </Link>{' '}
             monterad på en drönare fångar dessa band pixelvis och skapar en heltäckande
-            karta över fotosyntetisk aktivitet med 5–10 cm upplösning.
+            karta över fotosyntetisk aktivitet med hög rumslig upplösning {/* MÅSTE VERIFIERAS: GSD beror på utrustning och flyghöjd */}.
           </p>
 
           <h2>Vegetationsindex för fotosyntes</h2>

@@ -27,7 +27,7 @@ const SERVICES = [
   },
   {
     title: 'Multispektralanalys',
-    description: 'Vegetationsindex (NDVI, NDRE, GNDVI) från 5-bands multispektral sensor. Objektiv hälsobedömning av skog.',
+    description: 'Vegetationsindex (NDVI, NDRE, GNDVI) från multispektral sensor. Objektiv hälsobedömning av skog.',
     href: '/tjanster/multispektralanalys',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -67,7 +67,7 @@ const SERVICES = [
   },
   {
     title: 'Ortofoto & flygfotografering',
-    description: 'Högupplösta ortofoton för skogsbruk. Georefererade flygbilder med 2–5 cm markupplösning.',
+    description: 'Högupplösta ortofoton för skogsbruk. Georefererade flygbilder med hög markupplösning.',
     href: '/tjanster/ortofoto-kartering',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -114,7 +114,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur stor areal kan ni kartlägga per dag?',
-    answer: 'Med våra drönare kan vi kartlägga 10–100 hektar per flygning beroende på tjänst och flygparametrar. Ortofoton täcker större arealer, medan detaljerade multispektralanalyser och LiDAR-skanningar kräver lägre flyghöjd och täcker mindre yta per flygpass.',
+    answer: 'Med våra drönare kan vi kartlägga stora arealer per flygning beroende på tjänst och flygparametrar. Ortofoton täcker större arealer, medan detaljerade multispektralanalyser och LiDAR-skanningar kräver lägre flyghöjd och täcker mindre yta per flygpass.',
   },
   {
     question: 'I vilka format levereras data?',
@@ -126,7 +126,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur snabbt kan ni leverera efter flygning?',
-    answer: 'Leveranstid beror på tjänst och areal. Ortofoton levereras normalt inom 3–5 arbetsdagar. Multispektralanalyser och LiDAR-bearbetning kan ta 5–10 arbetsdagar beroende på komplexitet. Vi erbjuder expressleverans vid akuta behov.',
+    answer: 'Leveranstid beror på tjänst och areal. Vi levererar inom avtalad tid och erbjuder expressleverans vid akuta behov.',
   },
 ]
 
@@ -176,7 +176,7 @@ export default function TjansterHubPage() {
         secondaryCtaHref="/areamatning-och-skogsbruk/kontakt"
         stats={[
           { value: '9', label: 'Specialisttjänster' },
-          { value: '2–5 cm', label: 'Markupplösning' },
+          { value: 'Hög', label: 'Markupplösning' },
           { value: '24h', label: 'Offert' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}
@@ -215,7 +215,7 @@ export default function TjansterHubPage() {
             <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 { title: 'Minskad fältid', desc: 'Kartlägg stora arealer utan att behöva gå varje beståndsgräns till fots.' },
-                { title: 'Hög precision', desc: '2–5 cm markupplösning ger detaljerade underlag som kompletterar fältdata.' },
+                { title: 'Hög precision', desc: 'Hög markupplösning ger detaljerade underlag som kompletterar fältdata.' },
                 { title: 'Tidig detektion', desc: 'Multispektrala sensorer fångar stressignaler innan de syns för ögat.' },
                 { title: 'Snabb mobilisering', desc: 'Vid storm, skador eller akuta behov kan vi snabbt vara på plats.' },
                 { title: 'Branschstandardformat', desc: 'GeoTIFF, GeoPackage, Shapefile, LAS — importera direkt i ert GIS.' },

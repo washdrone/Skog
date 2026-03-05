@@ -4,7 +4,8 @@ const OUTPUTS = [
   {
     title: 'Ortofoto',
     description:
-      'Sömlösa, georefererade flygbilder med 2–5 cm markupplösning. Visuell grund för all analys och planering.',
+      /* MÅSTE VERIFIERAS: B1 GSD-intervall beror på utrustning och flyghöjd */
+      'Sömlösa, georefererade flygbilder med hög markupplösning. Visuell grund för all analys och planering.',
     badges: ['GeoTIFF', 'JPEG2000'],
     href: '/areamatning-och-skogsbruk/leveranser',
     placeholder: (

@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   {
     question: 'Vilka områden i Götaland täcker ni utöver Småland?',
     answer:
-      'Vi utför uppdrag i hela Götaland, inklusive Östergötland, Västra Götaland, Halland, Skåne, Blekinge och Gotland. Smålandslänen — Jönköping, Kronoberg och Kalmar — är ett kärnområde, men vi har kapacitet att mobilisera i hela södra Sverige.',
+      'Vi utför uppdrag i Götaland, inklusive Östergötland, Västra Götaland, Halland, Skåne, Blekinge och Gotland. Smålandslänen — Jönköping, Kronoberg och Kalmar — är ett kärnområde. Resekostnad kan tillkomma beroende på avstånd.',
   },
   {
     question: 'Hur hjälper drönardata vid avverkningsplanering i tätbevuxna småländska skogar?',
@@ -77,7 +77,7 @@ export default function SmalandPage() {
           <div className="prose prose-slate max-w-none">
             <h2 className="text-heading-xl text-slate-900">Skogsinventering i Smålands täta granskogar</h2>
             <p>
-              Småland och stora delar av Götaland hör till Sveriges mest skogrika regioner. Landskapet präglas av tät granskog, kuperad terräng och en hög andel privatägd skogsmark. Många fastigheter har gått i arv i generationer, och behovet av aktuella kartunderlag är stort — inte minst som komplement till skogsbruksplaner som kan vara flera år gamla.
+              Småland och stora delar av Götaland har en hög andel skogsmark. Landskapet präglas av tät granskog, kuperad terräng och en hög andel privatägd skogsmark. Många fastigheter har gått i arv i generationer, och behovet av aktuella kartunderlag är stort — inte minst som komplement till skogsbruksplaner som kan vara flera år gamla.
             </p>
             <p>
               Regionen har under de senaste åren drabbats hårt av granbarkborreangrepp, särskilt efter torrperioder som försvagat granbestånden. Drönarbaserad inventering och multispektral analys ger skogsägare möjlighet att upptäcka stressade träd i ett tidigt skede, innan angreppen sprider sig och orsakar omfattande ekonomiska förluster. Genom NDVI-kartläggning kan vi identifiera områden där vegetationens vitalitet avviker från det normala.
@@ -86,7 +86,7 @@ export default function SmalandPage() {
               Den småskaliga ägarstrukturen i Småland och Götaland innebär att många skogsägare hanterar allt från planering till åtgärder själva, ofta i dialog med skogsbruksplaneledare eller virkesköpare. Drönarbaserade kartlager och ortofoton blir ett värdefullt stöd i den dialogen — en gemensam, aktuell bild av skogstillståndet som alla parter kan utgå ifrån.
             </p>
             <p>
-              Vi utför uppdrag i hela Götaland med fokus på Jönköpings, Kronobergs och Kalmar län. Alla leveranser sker i SWEREF99 TM och kan importeras direkt i pcSKOG, QGIS eller ArcGIS. Från enskilda fastigheter till större skogsinnehav — vi anpassar uppdraget efter era behov och förhållanden.
+              Vi utför uppdrag i Götaland med fokus på Jönköpings, Kronobergs och Kalmar län. Alla leveranser sker i SWEREF99 TM och kan importeras direkt i pcSKOG, QGIS eller ArcGIS. Från enskilda fastigheter till större skogsinnehav — vi anpassar uppdraget efter era behov och förhållanden.
             </p>
 
             <h2 className="text-heading-xl text-slate-900">Län vi täcker</h2>

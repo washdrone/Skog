@@ -21,7 +21,7 @@ const faqItems = [
   {
     question: 'Vilken upplösning har Sentinel-2 jämfört med drönare?',
     answer:
-      'Sentinel-2 har 10 m upplösning i sina bästa band (synligt och NIR). En drönarbaserad multispektral sensor ger 5–10 cm, alltså 100–200 gånger högre rumslig upplösning.',
+      'Sentinel-2 har 10 m upplösning i sina bästa band (synligt och NIR). En drönarbaserad multispektral sensor ger betydligt högre rumslig upplösning (beroende på utrustning och flyghöjd).',
   },
   {
     question: 'Kostar satellitdata något?',
@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Hur påverkar moln satellitdata?',
     answer:
-      'Optiska satelliter kan inte se genom moln, vilket är ett stort problem i Sverige med i snitt 60–70 % molntäcke. Drönare flyger under molnen och påverkas inte på samma sätt.',
+      'Optiska satelliter kan inte se genom moln, vilket är ett problem i Sverige som har hög andel molntäcke. Drönare flyger under molnen och påverkas inte på samma sätt.', /* MÅSTE VERIFIERAS: källa saknas för molntäcke */
   },
   {
     question: 'Kan man kombinera drönare och satellitdata?',
@@ -101,18 +101,18 @@ export default function DronareVsSatellitdataPage() {
             <tbody className="divide-y divide-slate-100">
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Rumslig upplösning</td>
-                <td className="py-3 pr-4 text-slate-600">5–10 cm (multispektral)</td>
+                <td className="py-3 pr-4 text-slate-600">Centimeternivå (beroende på utrustning och flyghöjd) {/* MÅSTE VERIFIERAS */}</td>
                 <td className="py-3 text-slate-600">10–20 m</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Täckning per pass</td>
-                <td className="py-3 pr-4 text-slate-600">50–200 ha/dag</td>
+                <td className="py-3 pr-4 text-slate-600">Varierar beroende på utrustning och förhållanden {/* MÅSTE VERIFIERAS */}</td>
                 <td className="py-3 text-slate-600">290 km svepbredd</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Återbesöksfrekvens</td>
                 <td className="py-3 pr-4 text-slate-600">På begäran, same day möjligt</td>
-                <td className="py-3 text-slate-600">5 dagar (Sentinel-2A + 2B)</td>
+                <td className="py-3 text-slate-600">Ca 5 dagar (Sentinel-2A + 2B, kan variera med latitud)</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Molnberoende</td>

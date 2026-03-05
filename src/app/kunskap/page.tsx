@@ -27,7 +27,7 @@ const articles = [
     href: '/kunskap/barkborre-tidigt',
     title: 'Upptäck barkborre tidigt med drönare',
     description:
-      'Hur multispektral analys identifierar angrepp 4–8 veckor innan de syns för ögat.',
+      'Hur multispektral analys identifierar angrepp innan de syns för ögat.',
   },
   {
     href: '/kunskap/multispektral-vs-rgb',

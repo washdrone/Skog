@@ -23,12 +23,12 @@ const FAQ_ITEMS = [
   {
     question: 'Hur stor areal kan ni kartlägga med drönare?',
     answer:
-      'Vi anpassar uppdraget efter era behov. En enskild flygning täcker typiskt 10–100 hektar beroende på upplösningskrav och terräng. Större arealer hanteras med flera flygningar och levereras som ett sammanhängande underlag.',
+      'Vi anpassar uppdraget efter era behov. Arealkapaciteten per flygning varierar beroende på upplösningskrav och terräng. Större arealer hanteras med flera flygningar och levereras som ett sammanhängande underlag.',
   },
   {
     question: 'Vilken upplösning har ortofoton?',
     answer:
-      'Markupplösningen (GSD) beror på flyghöjd och kamera. Typiskt levererar vi 2–5 cm per pixel, vilket räcker för att identifiera enskilda träd, stigar och mindre objekt. Vi anpassar upplösningen efter uppdragets syfte.',
+      /* MÅSTE VERIFIERAS: exakt GSD-intervall */ 'Markupplösningen (GSD) beror på flyghöjd och kamera. Vi levererar hög markupplösning som räcker för att identifiera enskilda träd, stigar och mindre objekt. Vi anpassar upplösningen efter uppdragets syfte.',
   },
   {
     question: 'I vilka filformat levereras data?',
@@ -43,32 +43,32 @@ const FAQ_ITEMS = [
   {
     question: 'Hur lång tid tar det från flygning till leverans?',
     answer:
-      'Normal leveranstid är 3–5 arbetsdagar efter genomförd flygning. Vid akuta behov, t.ex. skadeinventering efter storm, kan vi prioritera snabbare leverans. Tidsplan bekräftas alltid i offerten.',
+      'Leveranstiden beror på uppdragets storlek och komplexitet, och bekräftas i offerten. Vid akuta behov, t.ex. skadeinventering efter storm, kan vi prioritera snabbare leverans.',
   },
   {
     question: 'Kan ni flyga vid dåligt väder?',
     answer:
-      'Drönare kräver rimliga väderförhållanden — vi flyger inte i kraftigt regn, snöfall eller stark vind. Om vädret inte tillåter flygning vid planerat datum bokar vi om utan extra kostnad.',
+      'Drönare kräver rimliga väderförhållanden — vi flyger inte i kraftigt regn, snöfall eller stark vind. Om vädret inte tillåter flygning vid planerat datum hittar vi en ny tid.',
   },
   {
     question: 'Behövs tillstånd för drönarflygning?',
     answer:
-      'Vi ansvarar för alla nödvändiga tillstånd och anmälningar. Flygning sker enligt Transportstyrelsens regler och luftfartsförordningen. I vissa områden (t.ex. nära flygplatser eller militära zoner) kan särskilt tillstånd krävas, vilket vi hanterar i god tid.',
+      'Vi följer gällande regler för drönarflygning och ansvarar för nödvändiga tillstånd och anmälningar. I vissa områden kan särskilt tillstånd krävas, vilket vi hanterar i god tid.',
   },
   {
     question: 'Arbetar ni i hela Sverige?',
     answer:
-      'Ja, vi utför uppdrag i hela Sverige. Vid avstånd tillkommer resekostnad, som specificeras i offerten. Vi samordnar gärna flera uppdrag i samma region.',
+      'Vi utför uppdrag på många platser i Sverige. Vid längre avstånd tillkommer resekostnad, som specificeras i offerten. Vi samordnar gärna flera uppdrag i samma region.',
   },
   {
     question: 'Kan jag använda datan i mitt befintliga GIS-system?',
     answer:
-      'Alla leveranser sker i branschstandardformat som är kompatibla med vanliga GIS-system (QGIS, ArcGIS, etc.) samt de flesta skogsbruksprogram. Vi anpassar format efter era system om så önskas.',
+      'Alla leveranser sker i branschstandardformat som är kompatibla med vanliga GIS-system. Vi anpassar format efter era system om så önskas.',
   },
   {
     question: 'Vad kostar det?',
     answer:
-      'Priset beror på areal, uppdragstyp, reseavstånd och önskade leveranser. Vi ger alltid en prisindikation inom 24 timmar efter att vi fått in er förfrågan. Kontakta oss via offertformuläret för en kostnadsfri prisuppskattning.',
+      'Priset beror på areal, uppdragstyp, reseavstånd och önskade leveranser. Vi återkommer med en prisindikation efter att vi fått in er förfrågan. Kontakta oss via offertformuläret.',
   },
 ]
 

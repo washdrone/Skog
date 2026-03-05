@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Ortofoto och flygfotografering för skogsbruk',
   description:
-    'Högupplösta ortofoton och flygfotografering för skogsbruk med 2–5 cm markupplösning. Georefererade flygbilder i SWEREF99 TM för GIS-integration.',
+    'Högupplösta ortofoton och flygfotografering för skogsbruk med hög markupplösning. Georefererade flygbilder i SWEREF99 TM för GIS-integration.',
   path: '/tjanster/ortofoto-kartering',
 })
 
@@ -18,11 +18,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilken upplösning har era ortofoton?',
-    answer: 'Vi levererar ortofoton med 2–5 cm markupplösning (GSD), beroende på flyghöjd och uppdragets krav. Det är 5–25 gånger högre upplösning än Lantmäteriets ortofoton (25–50 cm) och avsevärt mer aktuellt.',
+    answer: 'Vi levererar ortofoton med hög markupplösning (GSD), beroende på flyghöjd och uppdragets krav. Upplösningen är avsevärt högre än Lantmäteriets ortofoton och data är mer aktuellt.',
   },
   {
     question: 'Hur stor areal kan kartläggas per flygning?',
-    answer: 'Med RGB-kamera kan vi kartlägga 30–100 hektar per flygdag beroende på flyghöjd och markupplösningskrav. Lägre flyghöjd ger högre upplösning men täcker mindre areal per flygpass.',
+    answer: 'Med RGB-kamera kan vi kartlägga stora arealer per flygdag, beroende på flyghöjd och markupplösningskrav. Lägre flyghöjd ger högre upplösning men täcker mindre areal per flygpass.',
   },
   {
     question: 'I vilka format levereras ortofotot?',
@@ -51,7 +51,7 @@ export default function OrtofotoKarteringPage() {
           __html: JSON.stringify(
             serviceSchema({
               name: 'Ortofoto och flygfotografering för skogsbruk',
-              description: 'Högupplösta georefererade ortofoton med 2–5 cm markupplösning för skogsbruk.',
+              description: 'Högupplösta georefererade ortofoton med hög markupplösning för skogsbruk.',
               url: '/tjanster/ortofoto-kartering',
             })
           ),
@@ -66,7 +66,7 @@ export default function OrtofotoKarteringPage() {
         breadcrumbLabel="Ortofoto & kartering"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Ortofoto och flygfotografering för skogsbruk"
-        intro="Ortofoto är den grundläggande kartprodukten vid drönarbaserad skogskartering. En geometriskt korrigerad, georefererad flygbild med 2–5 cm markupplösning som fungerar som en aktuell och detaljerad underlagskarta i ert GIS."
+        intro="Ortofoto är den grundläggande kartprodukten vid drönarbaserad skogskartering. En geometriskt korrigerad, georefererad flygbild med hög markupplösning som fungerar som en aktuell och detaljerad underlagskarta i ert GIS."
         relatedLinks={[
           { label: '3D-modellering', href: '/tjanster/3d-modellering' },
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
@@ -84,11 +84,11 @@ export default function OrtofotoKarteringPage() {
 
         <h2>Upplösning och kvalitet</h2>
         <ul>
-          <li><strong>Markupplösning (GSD):</strong> 2–5 cm beroende på flyghöjd</li>
-          <li><strong>Georeferering:</strong> SWEREF99 TM (EPSG:3006) med RTK/PPK-korrektioner</li>
-          <li><strong>Positionsnoggrannhet:</strong> 2–5 cm med RTK, 5–10 cm med PPK</li>
-          <li><strong>5–25x högre upplösning</strong> än Lantmäteriets ortofoton</li>
-          <li><strong>Aktuell data</strong> — flygning vid behov istället för Lantmäteriets 3–5 års cykel</li>
+          <li><strong>Markupplösning (GSD):</strong> hög markupplösning, beroende på flyghöjd och utrustning {/* MÅSTE VERIFIERAS */}</li>
+          <li><strong>Georeferering:</strong> SWEREF99 TM (EPSG:3006) med positionskorrektioner beroende på utrustning</li>
+          <li><strong>Positionsnoggrannhet:</strong> hög, beroende på utrustning och korrektionsteknik {/* MÅSTE VERIFIERAS */}</li>
+          <li><strong>Avsevärt högre upplösning</strong> än Lantmäteriets ortofoton</li>
+          <li><strong>Aktuell data</strong> — flygning vid behov istället för Lantmäteriets fleråriga uppdateringscykel</li>
         </ul>
 
         <h2>Tillämpningar inom skogsbruk</h2>
@@ -114,7 +114,7 @@ export default function OrtofotoKarteringPage() {
 
         <h2>Leveranser</h2>
         <ul>
-          <li>Ortofoto (GeoTIFF, SWEREF99 TM, 2–5 cm GSD)</li>
+          <li>Ortofoto (GeoTIFF, SWEREF99 TM, hög markupplösning)</li>
           <li>Kvalitetsrapport med GSD, överlapp och referenspunkter</li>
           <li>Valfritt: vektorgränser digitaliserade från ortofotot (GeoPackage)</li>
           <li>PDF-översiktskarta</li>

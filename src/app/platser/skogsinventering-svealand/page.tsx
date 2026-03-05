@@ -16,7 +16,7 @@ const FAQ_ITEMS = [
   {
     question: 'Kan ni genomföra flygningar nära tätorter i Svealand?',
     answer:
-      'Ja, vi har erfarenhet av att flyga i områden nära bebyggelse och infrastruktur. Vi hanterar alla nödvändiga tillstånd och anpassar flygplaner efter luftrumsrestriktioner, exempelvis i närheten av Stockholms-området eller andra flygplatser.',
+      'Ja, vi har erfarenhet av att flyga i områden nära bebyggelse och infrastruktur. Vi följer gällande regler för drönarflygning och anpassar flygplaner efter luftrumsrestriktioner.',
   },
   {
     question: 'Passar drönarkartläggning för blandskogar i Svealand?',
@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   {
     question: 'Hur snabbt kan ni genomföra ett uppdrag i Mälardalsregionen?',
     answer:
-      'Tack vare god tillgänglighet och kortare avstånd i Svealand kan vi ofta vara på plats inom en vecka från bekräftad offert. Akuta uppdrag, exempelvis efter stormskador, hanteras med prioritet.',
+      'Tack vare god tillgänglighet och kortare avstånd i Svealand kan vi ofta mobilisera snabbt. Tidsplanen bekräftas i offerten. Akuta uppdrag, exempelvis efter stormskador, hanteras med prioritet.',
   },
   {
     question: 'Arbetar ni med privata skogsägare i Svealand?',
@@ -80,13 +80,13 @@ export default function SvealandPage() {
               Svealand kännetecknas av varierade skogslandskap — från Dalarnas och Värmlands utbredda barrskogar till Mälardalsregionens blandskogar med inslag av löv, ädellöv och jordbruksmark. Regionen har generellt god vägtillgänglighet, vilket gör att vi kan mobilisera snabbt och genomföra uppdrag effektivt.
             </p>
             <p>
-              Närheten till större städer som Stockholm, Uppsala och Örebro innebär att många skogsägare och förvaltare i regionen har goda möjligheter att dra nytta av drönarbaserade underlag utan långa väntetider. Vi kan ofta vara på plats inom en vecka och leverera färdiga kartlager och ortofoton kort därefter.
+              Närheten till större städer som Stockholm, Uppsala och Örebro innebär att många skogsägare och förvaltare i regionen har goda möjligheter att dra nytta av drönarbaserade underlag. God tillgänglighet gör att vi kan mobilisera snabbt och leverera färdiga kartlager och ortofoton inom överenskommen tid.
             </p>
             <p>
               Svealands blandskog ställer specifika krav på inventering. Skillnader mellan trädslag, beståndsgränser i övergångszoner och varierande täthet gör att högupplösta drönardata ger ett betydligt mervärde jämfört med traditionella metoder. Genom multispektral analys kan vi dessutom identifiera tidiga tecken på stress, sjukdomar eller skadedjursangrepp i blandbestånd.
             </p>
             <p>
-              Vi arbetar med skogsbolag, enskilda skogsägare, kommuner och förvaltare i hela Svealand. Alla leveranser sker i SWEREF99 TM och är redo att importera i pcSKOG, QGIS eller ArcGIS. Oavsett om ert skogsinnehav ligger i Dalarnas fjällnära skogar eller i Södermanlands kulturlandskap anpassar vi uppdraget efter era förhållanden.
+              Vi arbetar med skogsbolag, enskilda skogsägare, kommuner och förvaltare i Svealand. Alla leveranser sker i SWEREF99 TM och är redo att importera i pcSKOG, QGIS eller ArcGIS. Oavsett om ert skogsinnehav ligger i Dalarnas fjällnära skogar eller i Södermanlands kulturlandskap anpassar vi uppdraget efter era förhållanden.
             </p>
 
             <h2 className="text-heading-xl text-slate-900">Län vi täcker i Svealand</h2>

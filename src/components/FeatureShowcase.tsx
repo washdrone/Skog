@@ -8,12 +8,16 @@ import Link from 'next/link'
  * A6: "Hela Sverige" — bekräfta logistisk kapacitet
  */
 const FEATURES = [
-  'Georefererade ortofoton med 2–5 cm markupplösning',
+  /* MÅSTE VERIFIERAS: B1 GSD-intervall beror på utrustning och flyghöjd */
+  'Georefererade ortofoton med hög markupplösning',
+  /* MÅSTE VERIFIERAS: B4 bekräfta att alla format levereras */
   'Kartlager i branschstandard — Shapefile, GeoPackage, GeoTIFF',
-  'Leverans inom avtalad tid, oftast 3–5 arbetsdagar',
+  /* MÅSTE VERIFIERAS: A2 bekräfta standardleveranstid */
+  'Leverans inom avtalad tid',
   'Kvalitetssäkrade data med dokumenterad noggrannhet',
   'Direkt import i era befintliga GIS-system',
-  'Hela Sverige — snabb mobilisering vid akuta behov',
+  /* MÅSTE VERIFIERAS: A6 bekräfta geografisk täckning */
+  'Flexibel mobilisering vid akuta behov',
 ]
 
 export default function FeatureShowcase() {
@@ -74,12 +78,14 @@ export default function FeatureShowcase() {
               {/* Stats overlay in bottom corner */}
               <div className="absolute bottom-4 left-4 right-4 flex gap-3">
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
-                  <p className="text-lg font-bold text-white">10–100 ha</p>
+                  {/* MÅSTE VERIFIERAS: B2 bekräfta kapacitetsintervall */}
+                  <p className="text-lg font-bold text-white">Stora arealer</p>
                   <p className="text-[10px] text-white/50 uppercase tracking-wider">Per flygning</p>
                 </div>
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
-                  <p className="text-lg font-bold text-white">2–5 cm</p>
-                  <p className="text-[10px] text-white/50 uppercase tracking-wider">Upplösning</p>
+                  {/* MÅSTE VERIFIERAS: B1 bekräfta GSD-intervall mot faktisk utrustning */}
+                  <p className="text-lg font-bold text-white">Hög upplösning</p>
+                  <p className="text-[10px] text-white/50 uppercase tracking-wider">Markupplösning</p>
                 </div>
               </div>
             </div>

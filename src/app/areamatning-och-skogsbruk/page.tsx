@@ -53,7 +53,7 @@ const SERVICES = [
 ]
 
 const PROCESS_STEPS = [
-  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal, tidsram och önskade leveranser. Offert inom 24 timmar.' },
+  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal, tidsram och önskade leveranser. Vi återkommer med en prisindikation.' },
   { number: 2, title: 'Datainsamling', description: 'Drönare flyger det aktuella området enligt planerat uppdrag. Georefererade bilder samlas in.' },
   { number: 3, title: 'Bearbetning & QA', description: 'Data bearbetas till kartlager, ortofoton eller rapporter. Kvalitetskontroll av varje leverans.' },
   { number: 4, title: 'Leverans', description: 'Färdiga underlag levereras digitalt i överenskommet format, redo att importeras i era system.' },
@@ -76,9 +76,9 @@ export default function HubPage() {
         secondaryCtaLabel="Se leveranser"
         secondaryCtaHref="/areamatning-och-skogsbruk/leveranser"
         stats={[
-          { value: '2–5 cm', label: 'Markupplösning' },
-          { value: '24h', label: 'Offert' },
-          { value: '10–100 ha', label: 'Per flygning' },
+          { value: 'Hög', label: 'Markupplösning' },
+          { value: 'Snabb', label: 'Offert' },
+          { value: 'Flexibel', label: 'Arealkapacitet' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}
       />
@@ -142,7 +142,7 @@ export default function HubPage() {
             <div className="text-center reveal">
               <span className="badge">Målgrupper</span>
               <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Vilka vi arbetar med</h2>
-              <p className="mx-auto mt-4 max-w-2xl text-slate-500">Vi levererar underlag till aktörer inom skogsbruk och markförvaltning i hela Sverige.</p>
+              <p className="mx-auto mt-4 max-w-2xl text-slate-500">Vi levererar underlag till aktörer inom skogsbruk och markförvaltning.</p>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {['Skogsbolag & skogsbrukskoncerner', 'Skogsentreprenörer', 'Skogsförvaltare & fastighetsförvaltning', 'Kommuner & markägare', 'Virkesköpare & planerare', 'Försäkringsbolag & skadebesiktning'].map((a, i) => (

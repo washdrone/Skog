@@ -18,7 +18,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilken noggrannhet kan förväntas vid skogsinventering med drönare?',
-    answer: 'Med fotogrammetri och 2–5 cm markupplösning kan vi uppskatta trädhöjd med ±1–2 meters noggrannhet och identifiera enskilda trädkronor. Volymuppskattningar kalibreras mot fältprovytor för att uppnå relevant noggrannhet.',
+    answer: 'Med fotogrammetri och hög markupplösning kan vi uppskatta trädhöjd och identifiera enskilda trädkronor. Volymuppskattningar kalibreras mot fältprovytor för att uppnå relevant noggrannhet.' /* MÅSTE VERIFIERAS: noggrannhet beror på utrustning och förhållanden */,
   },
   {
     question: 'Vilka trädslag kan identifieras?',
@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur stor areal kan inventeras per dag?',
-    answer: 'Beroende på flygparametrar och terräng kan vi inventera 20–80 hektar per flygdag. Faktorer som flyghöjd, överlapp och antal batterier påverkar kapaciteten.',
+    answer: 'Beroende på flygparametrar och terräng kan vi inventera stora arealer per flygdag. Faktorer som flyghöjd, överlapp och antal batterier påverkar kapaciteten.',
   },
 ]
 
@@ -99,15 +99,15 @@ export default function SkogsinventeringPage() {
         <h2>Fördelar gentemot traditionell inventering</h2>
         <ul>
           <li>Heltäckande kartläggning istället för stickprov</li>
-          <li>Minskad fälttid med 50–70 %</li>
-          <li>Rumslig upplösning på 2–5 cm jämfört med provytor var 50–100 m</li>
+          <li>Minskad fälttid</li>
+          <li>Hög rumslig upplösning jämfört med traditionella provytor</li>
           <li>Objektiva, repeterbara mätningar</li>
           <li>Dokumentation som underlag för uppföljning över tid</li>
         </ul>
 
         <h2>Leveranser</h2>
         <ul>
-          <li>Ortofoto (GeoTIFF, 2–5 cm GSD)</li>
+          <li>Ortofoto (GeoTIFF, hög markupplösning)</li>
           <li>Punktmoln (LAS/LAZ)</li>
           <li>Kronhöjdsmodell (CHM) och markmodell (DTM)</li>
           <li>Beståndskarta med trädparametrar (GeoPackage/Shapefile)</li>

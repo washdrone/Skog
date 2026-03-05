@@ -6,7 +6,8 @@ const LAYERS = [
   {
     id: 'ortofoto',
     label: 'Ortofoto',
-    description: 'RGB flygbild, 2–5 cm',
+    /* MÅSTE VERIFIERAS: B1 GSD-intervall */
+    description: 'RGB flygbild, hög upplösning',
     bg: 'bg-gradient-to-br from-forest-800 via-forest-900 to-night-950',
     overlay: (
       <>

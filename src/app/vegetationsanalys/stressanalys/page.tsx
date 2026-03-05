@@ -42,7 +42,7 @@ export default function StressanalysPage() {
         breadcrumbLabel="Stressanalys"
         breadcrumbParent={{ label: 'Vegetationsanalys', href: '/vegetationsanalys' }}
         headline="Vegetationsstress & tidig skadedetektion"
-        intro="Multispektral analys avslöjar stresssignaler i vegetation innan de syns för blotta ögat. Red Edge-bandet (~717 nm) reagerar på subtila klorofyllförändringar — veckor innan gulning eller avfärgning."
+        intro="Multispektral analys avslöjar stresssignaler i vegetation innan de syns för blotta ögat. Red Edge-bandet reagerar på subtila klorofyllförändringar — ofta innan gulning eller avfärgning blir synlig."
         relatedLinks={[
           { label: 'Skadeinventering', href: '/areamatning-och-skogsbruk/skadeinventering' },
           { label: 'NDVI-kartläggning', href: '/vegetationsanalys/ndvi-kartlaggning' },
@@ -67,13 +67,14 @@ export default function StressanalysPage() {
           splintvedsgångar, vilket leder till klorofyllnedbrytning och spektrala förändringar.
         </p>
         <ul>
-          <li><strong>Grön attack (vecka 1–8)</strong> — Trädet ser grönt ut men multispektral analys kan upptäcka förändringar i Red Edge och Green Shoulder från vecka 5–8</li>
-          <li><strong>Detektionsfönster</strong> — GSI-index (Green Shoulder Index) ger 76–83 % detektionsgrad innan nya skalbaggar kläcks</li>
-          <li><strong>Röd attack (vecka 9+)</strong> — Kronan gulnar/rodnar — trivial att upptäcka med standard-NDVI, men då har skalbaggen redan svärmat</li>
+          <li><strong>Grön attack (tidigt skede)</strong> — Trädet ser grönt ut men multispektral analys kan upptäcka förändringar i Red Edge och Green Shoulder i ett tidigt skede</li>
+          <li>{/* MÅSTE VERIFIERAS: detektionsgrad och specifikt index kräver källhänvisning */}<strong>Detektionsfönster</strong> — Vegetationsindex kan indikera angrepp innan nya skalbaggar kläcks, men detektionsgraden varierar med förhållandena</li>
+          <li><strong>Röd attack (sent skede)</strong> — Kronan gulnar/rodnar — synlig med standard-NDVI, men då har skalbaggen ofta redan svärmat</li>
         </ul>
         <p>
-          SLU:s forskning visar att drönarbaserad multispektral analys identifierar dubbelt så många angripna träd
-          jämfört med fältbesök.
+          {/* MÅSTE VERIFIERAS: kräver specifik källhänvisning om denna påstående ska vara kvar */}
+          Forskning indikerar att drönarbaserad multispektral analys kan identifiera fler angripna träd
+          jämfört med enbart fältbesök, men resultaten varierar beroende på förhållanden och metodik.
         </p>
 
         <h3>Snytbagge (Hylobius abietis)</h3>
@@ -102,28 +103,24 @@ export default function StressanalysPage() {
               </tr>
             </thead>
             <tbody className="text-slate-600">
+              {/* MÅSTE VERIFIERAS: specifika veckoantal och detektionsgrader kräver källhänvisning */}
               <tr className="border-b border-slate-100">
-                <td className="py-2.5 pr-4 font-medium">Vecka 1–2</td>
+                <td className="py-2.5 pr-4 font-medium">Tidigt skede</td>
                 <td className="py-2.5 pr-4">Inga</td>
                 <td className="py-2.5">Mycket låg</td>
               </tr>
               <tr className="border-b border-slate-100">
-                <td className="py-2.5 pr-4 font-medium">Vecka 3–4</td>
-                <td className="py-2.5 pr-4">Inga</td>
-                <td className="py-2.5">Låg — subtila förändringar</td>
-              </tr>
-              <tr className="border-b border-slate-100">
-                <td className="py-2.5 pr-4 font-medium">Vecka 5–6</td>
+                <td className="py-2.5 pr-4 font-medium">Mellanskede</td>
                 <td className="py-2.5 pr-4">Inga till mycket subtila</td>
                 <td className="py-2.5">Måttlig — Red Edge reagerar</td>
               </tr>
               <tr className="border-b border-slate-100 bg-forest-50/50">
-                <td className="py-2.5 pr-4 font-semibold text-forest-800">Vecka 7–8</td>
+                <td className="py-2.5 pr-4 font-semibold text-forest-800">Detektionsfönster</td>
                 <td className="py-2.5 pr-4 text-forest-800">Möjlig svag missfärgning</td>
-                <td className="py-2.5 font-semibold text-forest-800">Hög — 76–83 % detektion</td>
+                <td className="py-2.5 font-semibold text-forest-800">Förhöjd detekterbarhet</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4 font-medium">Vecka 9+</td>
+                <td className="py-2.5 pr-4 font-medium">Sent skede</td>
                 <td className="py-2.5 pr-4">Gulning synlig</td>
                 <td className="py-2.5">Mycket hög — standard-NDVI</td>
               </tr>

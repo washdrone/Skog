@@ -91,7 +91,7 @@ export default function UppfoljningOverTidPage() {
             <tbody className="text-slate-600">
               <tr className="border-b border-slate-100">
                 <td className="py-2.5 pr-4 font-medium">Upplösning</td>
-                <td className="py-2.5 pr-4">5–10 cm/pixel</td>
+                <td className="py-2.5 pr-4">{/* MÅSTE VERIFIERAS: exakt GSD beror på utrustning och flyghöjd */}Hög (cm-nivå)</td>
                 <td className="py-2.5">10 m/pixel</td>
               </tr>
               <tr className="border-b border-slate-100">

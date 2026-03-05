@@ -99,7 +99,7 @@ export default function LeveranserPage() {
           <p>
             Varje leverans genomgår kvalitetskontroll innan den skickas. Vi kontrollerar
             bland annat georeferering, fullständighet och visuell kvalitet. Om ett underlag
-            inte uppfyller våra krav flyger vi om området utan extra kostnad.
+            inte uppfyller våra krav arbetar vi för att lösa det — kontakta oss för detaljer.
           </p>
 
           <h2>Koordinatsystem</h2>
@@ -110,9 +110,9 @@ export default function LeveranserPage() {
 
           <h2>Leveranstid</h2>
           <p>
-            Normal leveranstid är 3–5 arbetsdagar efter genomförd flygning, beroende
-            på uppdragets storlek och komplexitet. Vid akuta behov kan vi prioritera
-            snabbare leverans — kontakta oss för att diskutera.
+            Leveranstiden beror på uppdragets storlek och komplexitet, och bekräftas
+            i offerten. Vid akuta behov kan vi prioritera snabbare leverans —
+            kontakta oss för att diskutera.
           </p>
 
           <h2>Valbara tillägg</h2>

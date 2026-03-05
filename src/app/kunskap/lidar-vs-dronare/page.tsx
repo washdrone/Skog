@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Finns det gratis LiDAR-data för Sverige?',
     answer:
-      'Ja, Lantmäteriet tillhandahåller rikstäckande LiDAR-data (Nationell höjdmodell, NH) med ca 0.5–1 punkt per m². Data är gratis men har lägre punkttäthet och aktualitet jämfört med drönarbaserad LiDAR.',
+      'Ja, Lantmäteriet tillhandahåller rikstäckande LiDAR-data (Nationell höjdmodell, NH). Data är gratis men har lägre punkttäthet och aktualitet jämfört med drönarbaserad LiDAR.', /* MÅSTE VERIFIERAS: punkttäthet för Lantmäteriets data */
   },
   {
     question: 'Kan de två metoderna kombineras?',
@@ -107,8 +107,8 @@ export default function LidarVsDronarePage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Punkttäthet</td>
-                <td className="py-3 pr-4 text-slate-600">50–300+ punkter/m²</td>
-                <td className="py-3 text-slate-600">100–1000+ punkter/m² (ytnära)</td>
+                <td className="py-3 pr-4 text-slate-600">Hög (varierar med sensor och flyghöjd) {/* MÅSTE VERIFIERAS */}</td>
+                <td className="py-3 text-slate-600">Hög ytnära (varierar med GSD och överlapp) {/* MÅSTE VERIFIERAS */}</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Penetration av krontak</td>
@@ -122,8 +122,8 @@ export default function LidarVsDronarePage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Höjdnoggrannhet</td>
-                <td className="py-3 pr-4 text-slate-600">±2–5 cm (vertikalt)</td>
-                <td className="py-3 text-slate-600">±5–15 cm (beroende på GSD)</td>
+                <td className="py-3 pr-4 text-slate-600">Hög (varierar med utrustning och förhållanden) {/* MÅSTE VERIFIERAS */}</td>
+                <td className="py-3 text-slate-600">Lägre än LiDAR (varierar med GSD) {/* MÅSTE VERIFIERAS */}</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Färginformation</td>
@@ -198,10 +198,10 @@ export default function LidarVsDronarePage() {
 
           <h2>Noggrannhet i praktiken</h2>
           <p>
-            I en typisk svensk produktionsskog med 70–80 % kronslutning ger drönarbaserad
-            LiDAR markmodeller med ±5 cm noggrannhet. Fotogrammetri ger i samma förhållanden
-            osäkerhet på ±30–100 cm för markmodellen, men mäter krontoppshöjder med ±5–10 cm
-            noggrannhet. Vid öppen eller gles skog minskar skillnaden avsevärt.
+            I tät produktionsskog ger drönarbaserad
+            LiDAR markmodeller med hög noggrannhet {/* MÅSTE VERIFIERAS */}. Fotogrammetri ger i samma förhållanden
+            betydligt sämre markmodell, men mäter krontoppshöjder med god
+            noggrannhet {/* MÅSTE VERIFIERAS */}. Vid öppen eller gles skog minskar skillnaden avsevärt.
           </p>
           <p>
             För{' '}

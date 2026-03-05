@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: 'Vilken upplösning och noggrannhet kan vi förvänta oss?',
     answer:
-      'Vi flyger med kamerasystem som ger ortofoton med upplösning ned till 2–3 cm/pixel. Positionsnoggrannheten är typiskt under 5 cm med RTK-stöd, vilket uppfyller kraven för de flesta skogsbruks-GIS-tillämpningar.',
+      /* MÅSTE VERIFIERAS: exakt GSD och positionsnoggrannhet beror på utrustning och flyghöjd */ 'Vi flyger med kamerasystem som ger ortofoton med hög markupplösning. Positionsnoggrannheten varierar beroende på utrustning och metod, och anpassas efter era krav.',
   },
   {
     question: 'Erbjuder ni bulkpriser för stora volymer?',

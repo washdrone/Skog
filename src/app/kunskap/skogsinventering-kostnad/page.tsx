@@ -21,7 +21,7 @@ const faqItems = [
   {
     question: 'Är drönare billigare än traditionell inventering?',
     answer:
-      'Per hektar blir drönare ofta kostnadseffektivare vid arealer över 20–30 hektar. Den stora besparingen ligger i minskad fälttid och snabbare leverans. ROI förbättras ytterligare när data används för flera ändamål.',
+      'Per hektar blir drönare ofta kostnadseffektivare vid större arealer. Den stora besparingen ligger i minskad fälttid och snabbare leverans. ROI förbättras ytterligare när data används för flera ändamål.',
   },
   {
     question: 'Vilka dolda kostnader finns?',
@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Hur snabbt levereras resultaten?',
     answer:
-      'Standard leveranstid är 5–10 arbetsdagar efter flygning. Expresshantering kan vara möjlig mot tillägg vid akuta behov som stormskadeinventering.',
+      'Leveranstid varierar beroende på uppdragets omfattning och komplexitet. Expresshantering kan vara möjlig mot tillägg vid akuta behov som stormskadeinventering.',
   },
   {
     question: 'Kan jag kombinera flera analyser i samma flygning?',
@@ -145,7 +145,7 @@ export default function SkogsinventeringKostnadPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Upplösning</td>
-                <td className="py-3 pr-4 text-slate-600">5–10 cm (multispektral)</td>
+                <td className="py-3 pr-4 text-slate-600">Centimeternivå (beroende på utrustning och flyghöjd) {/* MÅSTE VERIFIERAS */}</td>
                 <td className="py-3 text-slate-600">Trädnivå i provytor</td>
               </tr>
               <tr>

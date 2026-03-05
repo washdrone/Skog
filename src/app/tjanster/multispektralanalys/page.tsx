@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Multispektralanalys av skog med drönare',
   description:
-    'Multispektralanalys av skog med drönare och 5-bands sensor. Vegetationsindex som NDVI, NDRE och GNDVI ger objektiv hälsobedömning och tidig stressdetektion.',
+    'Multispektralanalys av skog med drönare och multispektral sensor. Vegetationsindex som NDVI, NDRE och GNDVI ger objektiv hälsobedömning och tidig stressdetektion.',
   path: '/tjanster/multispektralanalys',
 })
 
@@ -22,7 +22,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur hög upplösning har multispektraldata?',
-    answer: 'Vår multispektrala sensor ger 5–10 cm markupplösning (GSD) vid 60–120 m flyghöjd. Det är 100–500 gånger högre upplösning än satellitdata från exempelvis Sentinel-2 (10 m/pixel) och tillräckligt för att analysera enskilda trädkronor.',
+    answer: 'Multispektral sensor ger hög markupplösning (GSD) beroende på flyghöjd och utrustning. Det är avsevärt högre upplösning än satellitdata och tillräckligt för att analysera enskilda trädkronor.' /* MÅSTE VERIFIERAS: GSD beror på faktisk sensor och flyghöjd */,
   },
   {
     question: 'Kan multispektralanalys ersätta fältinventering?',
@@ -55,7 +55,7 @@ export default function MultispektralanalysPage() {
           __html: JSON.stringify(
             serviceSchema({
               name: 'Multispektralanalys av skog med drönare',
-              description: 'Vegetationsindex (NDVI, NDRE, GNDVI) från 5-bands multispektral sensor för objektiv hälsobedömning av skog.',
+              description: 'Vegetationsindex (NDVI, NDRE, GNDVI) från multispektral sensor för objektiv hälsobedömning av skog.',
               url: '/tjanster/multispektralanalys',
             })
           ),
@@ -70,7 +70,7 @@ export default function MultispektralanalysPage() {
         breadcrumbLabel="Multispektralanalys"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Multispektralanalys av skog med drönare"
-        intro="Multispektralanalys mäter hur vegetationen reflekterar ljus i fem våglängdsband och omvandlar reflektansen till vegetationsindex som objektivt visar skogens hälsotillstånd."
+        intro="Multispektralanalys mäter hur vegetationen reflekterar ljus i flera våglängdsband och omvandlar reflektansen till vegetationsindex som objektivt visar skogens hälsotillstånd."
         relatedLinks={[
           { label: 'Fotosyntesmätning', href: '/tjanster/fotosyntesmatning' },
           { label: 'Barkborredetektering', href: '/tjanster/barkborre-detektering' },
@@ -80,9 +80,9 @@ export default function MultispektralanalysPage() {
       >
         <h2>Vad är multispektralanalys?</h2>
         <p>
-          Multispektralanalys innebär att en kalibrerad 5-bands sensor monterad på drönare mäter
-          vegetationens reflektans i blått (~475 nm), grönt (~560 nm), rött (~668 nm), red edge
-          (~717 nm) och nära infrarött (~842 nm). Frisk vegetation absorberar rött ljus för
+          Multispektralanalys innebär att en kalibrerad multispektral sensor monterad på drönare mäter
+          vegetationens reflektans i flera våglängdsband (blått, grönt, rött, red edge
+          och nära infrarött). Frisk vegetation absorberar rött ljus för
           fotosyntes och reflekterar starkt i nära infrarött. Genom att beräkna kvoten mellan
           dessa band skapas vegetationsindex som objektivt graderar skogens hälsa.
         </p>
@@ -92,7 +92,7 @@ export default function MultispektralanalysPage() {
         <ul>
           <li>
             <strong>NDVI</strong> (Normalized Difference Vegetation Index) — standardindex för
-            generell vitalitetsbedömning. Värden 0.6–0.9 indikerar frisk, tät vegetation.
+            generell vitalitetsbedömning. Höga värden indikerar frisk, tät vegetation.
           </li>
           <li>
             <strong>NDRE</strong> (Normalized Difference Red Edge) — känsligare för tidiga
@@ -139,7 +139,7 @@ export default function MultispektralanalysPage() {
 
         <h2>Sensor och kalibrering</h2>
         <p>
-          Vi använder kalibrerad multispektral kamera med 5 separata sensorer. Radiometrisk
+          Vi använder kalibrerad multispektral kamera. {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} Radiometrisk
           kalibrering sker med reflektanspanel före flygning och irradianssensor (DLS) kompenserar
           för ljusförändringar under pågående flygning. Resultatet är kalibrerade
           reflektansvärden som möjliggör jämförelse mellan flygningar och säsonger.

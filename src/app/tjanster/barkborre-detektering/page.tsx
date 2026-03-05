@@ -18,7 +18,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur tidigt kan barkborreangrepp detekteras?',
-    answer: 'Med NDRE-analys kan vi upptäcka gröna angrepp 2–4 veckor innan de blir synliga för ögat som rödbruna kronor. Tidig detektion möjliggör snabb avverkning av angripna träd innan nästa generation barkborrar svärmar.',
+    answer: 'Med NDRE-analys kan vi upptäcka gröna angrepp innan de blir synliga för ögat som rödbruna kronor. Tidig detektion möjliggör snabb avverkning av angripna träd innan nästa generation barkborrar svärmar.',
   },
   {
     question: 'Vilka arter av barkborre kan detekteras?',
@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur ofta bör flygning ske under barkborresäsongen?',
-    answer: 'Under aktiv barkborresäsong (maj–september) rekommenderar vi flygning var 2–4 vecka för att fånga nya angrepp i tid. Frekvensen kan anpassas baserat på risknivå, temperatur och lokala förhållanden.',
+    answer: 'Under aktiv barkborresäsong rekommenderar vi regelbunden flygning för att fånga nya angrepp i tid. Frekvensen kan anpassas baserat på risknivå, temperatur och lokala förhållanden.',
   },
   {
     question: 'Hur skiljer man barkborreangrepp från annan stress?',
@@ -70,7 +70,7 @@ export default function BarkborreDetekteringPage() {
         breadcrumbLabel="Barkborredetektering"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Barkborredetektering med drönare — tidig upptäckt"
-        intro="Barkborredetektering med drönare identifierar angripna granar veckor innan angreppet syns för ögat. Multispektrala sensorer med Red Edge-band avslöjar klorofyllförändringar som indikerar gröna angrepp — den mest kritiska fasen att upptäcka."
+        intro="Barkborredetektering med drönare kan identifiera angripna granar innan angreppet syns för ögat. Multispektrala sensorer med Red Edge-band avslöjar klorofyllförändringar som indikerar gröna angrepp — den mest kritiska fasen att upptäcka."
         relatedLinks={[
           { label: 'Multispektralanalys', href: '/tjanster/multispektralanalys' },
           { label: 'Fotosyntesmätning', href: '/tjanster/fotosyntesmatning' },
@@ -93,26 +93,26 @@ export default function BarkborreDetekteringPage() {
         </p>
         <ul>
           <li>
-            <strong>Grönt angrepp (vecka 1–4)</strong> — trädet ser grönt ut men har förändrad
+            <strong>Grönt angrepp (tidig fas)</strong> — trädet ser grönt ut men har förändrad
             klorofyllstatus. Kan bara detekteras med multispektral sensor (NDRE). Detta är den
             mest värdefulla fasen att fånga.
           </li>
           <li>
-            <strong>Gulnande krona (vecka 4–8)</strong> — kronan börjar gulna/rödna. Synlig för
+            <strong>Gulnande krona (mellanfas)</strong> — kronan börjar gulna/rödna. Synlig för
             ögat och kan identifieras med RGB-kamera.
           </li>
           <li>
-            <strong>Grått angrepp (vecka 8+)</strong> — barren har fallit. Barkborrarna har redan
+            <strong>Grått angrepp (sen fas)</strong> — barren har fallit. Barkborrarna har redan
             lämnat trädet och spridit sig vidare.
           </li>
         </ul>
 
         <h2>Metodik</h2>
         <p>
-          Vi flyger med kalibrerad 5-bands multispektral sensor och beräknar NDRE (Normalized
-          Difference Red Edge) som primärt detektionsindex. Red Edge-bandet (~717 nm) är
-          särskilt känsligt för klorofyllförändringar och reagerar 2–4 veckor innan visuella
-          symptom uppträder.
+          Vi flyger med kalibrerad multispektral sensor och beräknar NDRE (Normalized
+          Difference Red Edge) som primärt detektionsindex. Red Edge-bandet är
+          särskilt känsligt för klorofyllförändringar och kan reagera innan visuella
+          symptom uppträder. {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */}
         </p>
         <ul>
           <li>Kalibrerad flygning med reflektanspanel och DLS-sensor</li>
@@ -131,7 +131,7 @@ export default function BarkborreDetekteringPage() {
 
         <h2>Rekommenderad övervakning</h2>
         <p>
-          Under aktiv barkborresäsong (maj–september) rekommenderar vi flygning var 2–4 vecka
+          Under aktiv barkborresäsong rekommenderar vi regelbunden flygning
           i riskområden. Kombinera med{' '}
           <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
             multispektralanalys
