@@ -1,4 +1,4 @@
-# WashDrone — Prioriterad åtgärdsplan
+# Timberdrone — Prioriterad åtgärdsplan
 
 > Sorterad efter: affärsnytta x SEO-effekt x risk, med lägst insats först.
 >
@@ -16,7 +16,7 @@ juridiska problem, förlorat förtroende eller en icke-fungerande sajt.
 | 1.1 | **Verifiera alla affärslöften** (A1–A6) | Liten (intern check) | Förtroende | HÖG — felaktiga löften skadar varumärket | Se CONTENT-VERIFICATION.md | TODO |
 | 1.2 | **Lägg till telefonnummer** | Liten | Konvertering +SEO | HÖG — ovanligt att sakna, signalerar oseriöst | `schema.ts`, `kontakt/page.tsx` | TODO |
 | 1.3 | **Lägg till företagsadress** | Liten | SEO (LocalBusiness) | MEDEL — Google föredrar komplett NAP | `schema.ts` | TODO |
-| 1.4 | **Verifiera e-post** (info@washdrone.se) | Liten | Konvertering | HÖG — formulär skickar till denna | Testa mail | TODO |
+| 1.4 | **Verifiera e-post** (info@timberdrone.se) | Liten | Konvertering | HÖG — formulär skickar till denna | Testa mail | TODO |
 | 1.5 | **Konfigurera LEAD_WEBHOOK_URL / LEAD_NOTIFY_EMAIL** | Liten | Konvertering | HÖG — leads loggas bara till console | `.env` / deployment config | TODO |
 | 1.6 | **Skapa integritetspolicy** | Medel | GDPR-krav | HÖG — lagkrav + footer-länk leder ingenstans | Ny sida + uppdatera Footer.tsx | TODO |
 | 1.7 | **Verifiera eller ta bort case** (E1–E3) | Liten | Trovärdighet | HÖG — påhittade case skadar kraftigt | `case/page.tsx` | TODO |

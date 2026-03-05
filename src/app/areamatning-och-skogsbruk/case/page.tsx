@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Referenscase – drönarbaserade mättjänster i skogsbruk',
   description:
     'Exempel på uppdrag inom areamätning, skogsinventering och skadedokumentation med drönare. Se hur drönarbaserade underlag används i praktiken.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/case' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/case' },
 }
 
 /*

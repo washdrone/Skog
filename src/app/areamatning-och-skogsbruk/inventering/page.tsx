@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Skogsinventering med drönare – beståndsgränser & hyggen',
   description:
     'Drönarbaserad skogsinventering med kartläggning av beståndsgränser, hyggen, vägar, upplag och kantzoner. Visuellt beslutsunderlag för skogsförvaltning.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/inventering' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/inventering' },
 }
 
 export default function InventeringPage() {

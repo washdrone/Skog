@@ -43,7 +43,7 @@ export default function CTABand({
               </svg>
             </Link>
             <a
-              href="mailto:info@washdrone.se"
+              href="mailto:info@timberdrone.se"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-3.5 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
             >
               Maila oss

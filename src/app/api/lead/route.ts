@@ -64,7 +64,7 @@ export async function POST(request: Request) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          source: 'washdrone.se/areamatning-och-skogsbruk',
+          source: 'timberdrone.se/areamatning-och-skogsbruk',
           ...data,
           submitted_at: new Date().toISOString(),
         }),

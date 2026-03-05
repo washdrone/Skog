@@ -4,11 +4,11 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'WashDrone',
+    name: 'Timberdrone',
     url: SITE_URL,
     description:
       'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och fastighetsförvaltning.',
-    email: 'info@washdrone.se',
+    email: 'info@timberdrone.se',
     /* MÅSTE VERIFIERAS: telefonnummer — lägg till när bekräftat */
     /* telephone: '+46-XX-XXX XX XX', */
     address: {
@@ -22,7 +22,7 @@ export function organizationSchema() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'info@washdrone.se',
+      email: 'info@timberdrone.se',
       contactType: 'customer service',
       availableLanguage: 'Swedish',
     },
@@ -46,7 +46,7 @@ export function serviceSchema({
     url: `${SITE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'WashDrone',
+      name: 'Timberdrone',
       url: SITE_URL,
     },
     areaServed: {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Areamätning med drönare – georefererade polygoner för skog & mark',
   description:
     'Professionell areamätning med drönare för fastigheter, avdelningar och bestånd. Georefererade polygoner och exakta ytberäkningar levererade som kartlager.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/areamatning' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/areamatning' },
 }
 
 export default function AreamatningPage() {
