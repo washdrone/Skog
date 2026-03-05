@@ -22,7 +22,7 @@ export default function Hero({
   stats,
 }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden gradient-hero">
+    <section className="relative flex items-center overflow-hidden gradient-hero">
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid" />
       {/* Topographic overlay */}
@@ -47,7 +47,7 @@ export default function Hero({
         </svg>
       </div>
 
-      <div className="container-page relative z-10 pt-32 pb-20 sm:pt-40 sm:pb-28">
+      <div className="container-page relative z-10 pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="max-w-4xl">
           {badge && (
             <div className="hero-animate-1 mb-6 inline-flex items-center rounded-full bg-forest-500/10 border border-forest-500/20 px-4 py-1.5 backdrop-blur-sm">
@@ -81,11 +81,11 @@ export default function Hero({
 
         {/* Stats bar */}
         {stats && stats.length > 0 && (
-          <div className="hero-animate-5 mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-8">
+          <div className="hero-animate-5 mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
             {stats.map((stat, i) => (
-              <div key={i} className="group rounded-2xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] p-5 text-center transition-all duration-300 hover:bg-white/[0.08] hover:border-forest-500/20">
-                <p className="text-2xl font-bold text-white sm:text-3xl tracking-tight">{stat.value}</p>
-                <p className="mt-1.5 text-xs font-medium text-white/40 uppercase tracking-wider">{stat.label}</p>
+              <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-4 text-center">
+                <p className="text-lg font-semibold text-white/80 sm:text-xl tracking-tight">{stat.value}</p>
+                <p className="mt-1 text-[11px] font-medium text-white/30 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default function Hero({
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/80 to-transparent" />
     </section>
   )
 }
