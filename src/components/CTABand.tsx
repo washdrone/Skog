@@ -12,7 +12,7 @@ export default function CTABand({
   headline = 'Kontakta oss',
   description = 'Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar. Vi arbetar med skogsbolag, förvaltare och myndigheter i hela Sverige.',
   ctaLabel = 'Begär offert',
-  ctaHref = '/areamatning-och-skogsbruk/kontakt',
+  ctaHref = '/offert',
 }: CTABandProps) {
   return (
     <section className="relative overflow-hidden">
@@ -43,7 +43,7 @@ export default function CTABand({
               </svg>
             </Link>
             <a
-              href="mailto:info@washdrone.se"
+              href="mailto:info@timberdrone.se"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-3.5 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
             >
               Maila oss

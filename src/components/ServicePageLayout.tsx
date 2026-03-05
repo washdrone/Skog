@@ -41,8 +41,8 @@ export default function ServicePageLayout({
               {intro}
             </p>
             <div className="mt-8">
-              <Link href="/areamatning-och-skogsbruk/kontakt" className="btn-primary">
-                Boka en fri konsultation
+              <Link href="/offert" className="btn-primary">
+                Begär offert
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>

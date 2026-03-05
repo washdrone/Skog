@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Leveranser & format – kartlager, ortofoton & rapporter',
   description:
     'Leveransformat för drönarbaserade mättjänster: Shapefile, GeoPackage, GeoTIFF, PDF-rapporter och mer. Alla leveranser är georefererade och kvalitetskontrollerade.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/leveranser' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/leveranser' },
 }
 
 const DELIVERABLES = [

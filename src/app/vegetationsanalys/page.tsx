@@ -9,15 +9,15 @@ import NDVIGradientBar from '@/components/NDVIGradientBar'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Multispektral vegetationsanalys med drönare | WashDrone',
+  title: 'Multispektral vegetationsanalys med drönare | TimberDrone',
   description:
     'Objektiv bedömning av växtlighet, skogshälsa och stress genom vegetationsindex som NDVI, GNDVI och NDRE. Multispektral data som komplement till fältinventering.',
-  alternates: { canonical: 'https://washdrone.se/vegetationsanalys' },
+  alternates: { canonical: 'https://timberdrone.se/vegetationsanalys' },
   openGraph: {
-    title: 'Multispektral vegetationsanalys med drönare | WashDrone',
+    title: 'Multispektral vegetationsanalys med drönare | TimberDrone',
     description: 'Vegetationsindex från drönare — NDVI, NDRE och GNDVI för objektiv bedömning av skogshälsa.',
-    url: 'https://washdrone.se/vegetationsanalys',
-    siteName: 'WashDrone',
+    url: 'https://timberdrone.se/vegetationsanalys',
+    siteName: 'TimberDrone',
     locale: 'sv_SE',
     type: 'website',
   },

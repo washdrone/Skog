@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Kontakt & offert – drönarbaserade mättjänster för skogsbruk',
   description:
     'Begär offert eller boka en genomgång av drönarbaserade mättjänster för skog och mark. Prisindikation inom 24 timmar.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/kontakt' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/kontakt' },
 }
 
 export default function KontaktPage() {
@@ -84,8 +84,8 @@ export default function KontaktPage() {
                 <div className="mt-4 space-y-3 text-sm text-slate-600">
                   <p>
                     <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">E-post</span>
-                    <a href="mailto:info@washdrone.se" className="text-forest-600 hover:text-forest-800">
-                      info@washdrone.se
+                    <a href="mailto:info@timberdrone.se" className="text-forest-600 hover:text-forest-800">
+                      info@timberdrone.se
                     </a>
                   </p>
                   {/* MÅSTE VERIFIERAS: Lägg till telefonnummer här när bekräftat */}

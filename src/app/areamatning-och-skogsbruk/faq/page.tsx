@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   title: 'Vanliga frågor om drönarbaserade mättjänster för skog',
   description:
     'Svar på vanliga frågor om drönarbaserad areamätning, inventering och kartläggning för skogsbruk. Upplösning, filformat, koordinatsystem, leveranstider, priser och täckningsområde.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/faq' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/faq' },
 }
 
 export default function FAQPage() {

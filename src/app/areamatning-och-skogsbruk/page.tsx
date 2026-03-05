@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'Areamätning & skogsbruk med drönare',
   description:
     'Drönarbaserade mät- och underlagstjänster för skogsbruk: areamätning, inventering, avverkningsunderlag, skadeinventering och planteringsuppföljning. Begär offert idag.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk' },
   openGraph: {
-    title: 'Areamätning & skogsbruk med drönare | WashDrone',
+    title: 'Areamätning & skogsbruk med drönare | TimberDrone',
     description: 'Professionella drönarbaserade mättjänster för skogsbruk. Kartlager, ortofoton och rapporter levererade i branschstandard.',
-    url: 'https://washdrone.se/areamatning-och-skogsbruk',
+    url: 'https://timberdrone.se/areamatning-och-skogsbruk',
   },
 }
 
