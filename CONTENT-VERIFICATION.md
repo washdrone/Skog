@@ -1,4 +1,4 @@
-# WashDrone — Innehållsverifiering & faktakontroll
+# Timberdrone — Innehållsverifiering & faktakontroll
 
 > Detta dokument listar alla påståenden på sajten som kräver intern bekräftelse
 > innan produktion. Ingen text ska publiceras som sanning om den inte är verifierad.
@@ -66,14 +66,14 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| D1 | E-post: info@washdrone.se | Schema, CTABand, kontaktsida | EJ VERIFIERAD | | |
+| D1 | E-post: info@timberdrone.se | Schema, CTABand, kontaktsida | EJ VERIFIERAD | | |
 | D2 | Telefonnummer — **SAKNAS HELT** | schema.ts (kommentar), kontaktsida (placeholder) | SAKNAS | | |
 | D3 | Företagsadress — **SAKNAS HELT** | schema.ts (kommentar) | SAKNAS | | |
 | D4 | Sociala medier: LinkedIn, YouTube, Instagram | Footer (href="#" — placeholder) | SAKNAS | | |
-| D5 | Domän: washdrone.se | Alla canonical-URLer, sitemap, robots | EJ VERIFIERAD | | |
+| D5 | Domän: timberdrone.se | Alla canonical-URLer, sitemap, robots | EJ VERIFIERAD | | |
 
 ### Vad som behövs:
-- Bekräfta att info@washdrone.se tar emot mail
+- Bekräfta att info@timberdrone.se tar emot mail
 - Ange telefonnummer → uppdatera schema.ts + kontaktsida
 - Ange företagsadress → uppdatera schema.ts
 - Ange sociala medie-URLer → uppdatera Footer.tsx (rad 49, 59, 69)

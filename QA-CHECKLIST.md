@@ -1,4 +1,4 @@
-# WashDrone — QA-checklista före publicering
+# Timberdrone — QA-checklista före publicering
 
 > Använd denna checklista innan VARJE publicering eller innehållsändring.
 > Inga steg får hoppas över. Om något inte kan verifieras: publicera inte.
@@ -19,7 +19,7 @@
 
 ## 2. SEO-kontroll
 
-- [ ] **Title tag** under 60 tecken (exkl. "| WashDrone" som läggs till via template)
+- [ ] **Title tag** under 60 tecken (exkl. "| Timberdrone" som läggs till via template)
 - [ ] **Meta description** 140–160 tecken, innehåller primärt sökord
 - [ ] **H1** — exakt en per sida, innehåller primärt sökord
 - [ ] **H2/H3** — logisk hierarki, inga hopplösa nivåer
@@ -104,5 +104,5 @@ först bekräfta med ansvarig person.
 | Hela Sverige | `grep -r "hela Sverige\|Hela Sverige" src/` |
 | Utan extra kostnad | `grep -r "utan extra kostnad" src/` |
 | Transportstyrelsens | `grep -r "Transportstyrelsen\|luftfartsförordning" src/` |
-| info@washdrone.se | `grep -r "info@washdrone" src/` |
+| info@timberdrone.se | `grep -r "info@timberdrone" src/` |
 | 10–100 ha | `grep -r "10–100\|100 ha\|100+ ha" src/` |
