@@ -33,6 +33,34 @@ const REGIONS = [
     description:
       'Hög skogstäthet, privat ägande och granbarkborreproblematik. Drönarbaserad inventering och multispektral analys för tidig detektion och aktuella beslutsunderlag.',
   },
+  {
+    name: 'Stockholm & Uppsala',
+    href: '/platser/skogsinventering-stockholm',
+    counties: 'Stockholms län, Uppsala län',
+    description:
+      'Tätortsnära skog, kommunal mark och mindre fastigheter. Inventering och planering med hänsyn till närhet till bebyggelse och rekreationsområden.',
+  },
+  {
+    name: 'Dalarna',
+    href: '/platser/skogsinventering-dalarna',
+    counties: 'Dalarnas län',
+    description:
+      'Ett av Sveriges mest skogsrika län med stor variation — från fjällnära skog till produktionsskog. Blandning av privat och bolagsägd skog.',
+  },
+  {
+    name: 'Västernorrland',
+    href: '/platser/skogsinventering-vasternorrland',
+    counties: 'Västernorrlands län',
+    description:
+      'Produktiv barrskog och stora sammanhängande skogsarealer. Historiskt starkt skogsbrukslän med aktiva skogsbolag och privata skogsägare.',
+  },
+  {
+    name: 'Jämtland',
+    href: '/platser/skogsinventering-jamtland',
+    counties: 'Jämtlands län',
+    description:
+      'Fjällnära skogar, alpina förhållanden och stora ytor. Utmanande terräng där drönarteknik ger särskilt stort mervärde jämfört med fältinventering.',
+  },
 ]
 
 export default function PlatserPage() {

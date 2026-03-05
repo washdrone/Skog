@@ -4,9 +4,9 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Kunskap om drönarbaserad skogsanalys',
+  title: 'Kunskap om drönarbaserad skogsanalys — guider och jämförelser',
   description:
-    'Guider och artiklar om NDVI, multispektral analys, barkborredetektion, LiDAR, satellitdata och kostnader för drönarbaserad skogsinventering.',
+    'Guider och artiklar om NDVI, multispektral analys, barkborredetektion, kolinlagring, LiDAR, satellitdata, säsongsplanering och kostnader för drönarbaserad skogsinventering.',
   path: '/kunskap',
 })
 
@@ -52,6 +52,30 @@ const articles = [
     title: 'LiDAR vs fotogrammetri',
     description:
       'Teknisk jämförelse av två metoder för att skapa 3D-modeller av skog.',
+  },
+  {
+    href: '/kunskap/vad-paverkar-priset',
+    title: 'Vad påverkar kostnaden för skogsinventering?',
+    description:
+      'Vilka faktorer styr priset — areal, terräng, sensortyp, leveransformat och årsavtal.',
+  },
+  {
+    href: '/kunskap/kolinlagring-skog-guide',
+    title: 'Kolinlagring i skog — hur mäts det?',
+    description:
+      'Guide till biomassemätning, CO₂-ekvivalenter och ESG-rapportering med drönardata.',
+  },
+  {
+    href: '/kunskap/sasongsguide-skogsinventering',
+    title: 'Bästa tid för skogsinventering — säsongsguide',
+    description:
+      'Månad-för-månad-guide till optimal tidpunkt för varje typ av drönarbaserad skogsanalys.',
+  },
+  {
+    href: '/kunskap/stormskada-checklista',
+    title: 'Checklista efter stormskada i skog',
+    description:
+      'Steg-för-steg-guide: vad du ska göra efter stormskada — dokumentation, försäkring och åtgärd.',
   },
 ]
 

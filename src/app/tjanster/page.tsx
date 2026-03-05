@@ -8,9 +8,9 @@ import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 
 export const metadata = createMetadata({
-  title: 'Drönarbaserade tjänster för skogsbruk',
+  title: 'Drönarbaserade tjänster för skogsbruk — 14 specialisttjänster',
   description:
-    'Komplett utbud av drönarbaserade tjänster för skogsbruk: skogsinventering, multispektralanalys, LiDAR-skanning, barkborredetektion, ortofoto, 3D-modellering och mer. Begär offert idag.',
+    'Komplett utbud av drönarbaserade tjänster för skogsbruk: skogsinventering, multispektralanalys, LiDAR, barkborredetektion, kolinlagring & ESG, skadedokumentation, årsavtal och mer. Nationell täckning.',
   path: '/tjanster',
 })
 
@@ -105,12 +105,62 @@ const SERVICES = [
       </svg>
     ),
   },
+  {
+    title: 'Planteringsinventering',
+    description: 'Kontrollera plantors överlevnad och täthet efter slutavverkning. Underlag för uppföljning enligt Skogsstyrelsens krav.',
+    href: '/tjanster/planteringsinventering',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Skadedokumentation',
+    description: 'Kartläggning och dokumentation av stormskador, brandskador och snöbrott. Professionella underlag för försäkringsärenden.',
+    href: '/tjanster/skadedokumentation',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-5.1m0 0l5.1-5.1m-5.1 5.1h11.314a6.001 6.001 0 010 12H9.72" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Kolinlagring & ESG',
+    description: 'Biomassemätning och kolinlagringsberäkning med drönare. Dokumenterat underlag för ESG-rapportering och CSRD.',
+    href: '/tjanster/kolinlagring',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Årsavtal & löpande förvaltning',
+    description: 'Abonnemangsbaserad skogsövervakning med regelbundna flygningar. Förutsägbar kostnad och löpande insikt i skogens tillstånd.',
+    href: '/tjanster/arsavtal',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Jaktkartering',
+    description: 'Högupplösta ortofoton och kartor optimerade för jaktplanering. Fastighetsgränser, terräng och viltstråk.',
+    href: '/tjanster/jaktkartering',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+      </svg>
+    ),
+  },
 ]
 
 const FAQ_ITEMS = [
   {
     question: 'Vilka drönarbaserade tjänster erbjuder TimberDrone?',
-    answer: 'Vi erbjuder skogsinventering, multispektralanalys, LiDAR-skanning, barkborredetektion, ortofoto och flygfotografering, 3D-modellering, beståndsinventering, mätning av fotosyntetisk aktivitet och underlag för skogsbruksplaner. Alla tjänster levereras som georefererade kartlager i branschstandardformat.',
+    answer: 'Vi erbjuder skogsinventering, multispektralanalys, LiDAR-skanning, barkborredetektion, ortofoto, 3D-modellering, beståndsinventering, fotosyntesmätning, planteringsinventering, skadedokumentation, kolinlagring & ESG-underlag, årsavtal för löpande övervakning, jaktkartering och underlag för skogsbruksplaner. Alla tjänster levereras som georefererade kartlager i branschstandardformat.',
   },
   {
     question: 'Hur stor areal kan ni kartlägga per dag?',
@@ -168,14 +218,14 @@ export default function TjansterHubPage() {
 
       <Hero
         badge="Drönarbaserade skogstjänster"
-        headline="Professionella drönarbaserade tjänster för skogsbruk"
-        subheadline="Från skogsinventering och multispektralanalys till LiDAR-skanning och barkborredetektion. Vi levererar georefererade kartlager, höjdmodeller och analysrapporter som ger bättre beslutsunderlag för skogsförvaltning."
+        headline="Drönarbaserade tjänster för skogsbruk — från inventering till ESG"
+        subheadline="Skogsinventering, multispektralanalys, barkborredetektion, kolinlagringsberäkning och skadedokumentation. Vi levererar georefererade kartlager, höjdmodeller och analysrapporter i hela Sverige — från enstaka uppdrag till årsavtal."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Kontakta oss"
         secondaryCtaHref="/areamatning-och-skogsbruk/kontakt"
         stats={[
-          { value: '9', label: 'Specialisttjänster' },
+          { value: '14', label: 'Specialisttjänster' },
           { value: 'Hög', label: 'Markupplösning' },
           { value: '24h', label: 'Offert' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },

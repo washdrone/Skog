@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SITE_NAME, SITE_URL } from '@/lib/metadata'
+import { websiteSchema } from '@/lib/schema'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -7,11 +8,11 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} – Drönarbaserade mättjänster för skogsbruk`,
+    default: `${SITE_NAME} | Skogsinventering & Multispektralanalys med Drönare i Sverige`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och fastighetsförvaltning. Areamätning, inventering, avverkningsunderlag och skadedokumentation.',
+    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG. Nationell täckning.',
   openGraph: {
     type: 'website',
     locale: 'sv_SE',
@@ -23,6 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sv" className="antialiased">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
+        />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <script
