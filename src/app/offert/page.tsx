@@ -13,7 +13,7 @@ export const metadata = createMetadata({
 
 const PROCESS_STEPS = [
   { number: 1, title: 'Fyll i formulär', description: 'Beskriv ert uppdrag, areal och önskade leveranser.' },
-  { number: 2, title: 'Offert inom 24h', description: 'Vi granskar er förfrågan och skickar en prisindikation.' },
+  { number: 2, title: 'Offert inom 24h', description: 'Vi granskar er förfrågan och återkommer med en prisindikation inom 24 timmar.' },
   { number: 3, title: 'Bekräfta detaljer', description: 'Vi stämmer av uppdragsdetaljer, areal och tidsplan.' },
   { number: 4, title: 'Vi genomför uppdraget', description: 'Flygning genomförs och underlag levereras enligt överenskommelse.' },
 ]

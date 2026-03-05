@@ -5,12 +5,12 @@ import { organizationSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare i Sverige',
   description:
-    'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo kartlager, ortofoton och vegetationsindex för skogsägare och skogsbolag i hela Sverige.',
+    'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo kartlager, ortofoton och vegetationsindex för skogsägare och skogsbolag.',
   alternates: { canonical: 'https://timberdrone.se' },
   openGraph: {
     title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare',
     description:
-      'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo leveranser i hela Sverige.',
+      'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo leveranser.',
     url: 'https://timberdrone.se',
     siteName: 'TimberDrone',
     locale: 'sv_SE',
@@ -25,9 +25,8 @@ import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import RevealSection from '@/components/RevealSection'
 
-/* EJ VERIFIERAD: "Offert inom 24 timmar" — bekräfta att detta stämmer (A1) */
 const PROCESS_STEPS = [
-  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal och tidsram. Offert inom 24 timmar.' },
+  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal och tidsram och återkommer med en prisindikation inom 24 timmar.' },
   { number: 2, title: 'Datainsamling', description: 'Drönare flyger det aktuella området. Georefererade bilder samlas in.' },
   { number: 3, title: 'Bearbetning & analys', description: 'Data bearbetas till kartlager, ortofoton, vegetationsindex eller rapporter. Kvalitetskontroll av varje leverans.' },
   { number: 4, title: 'Leverans', description: 'Färdiga underlag levereras digitalt i överenskommet format, redo att importeras i era system.' },
@@ -63,7 +62,7 @@ const BENEFITS = [
   },
   {
     title: 'Snabb mobilisering',
-    desc: 'Vid storm, skador eller akuta behov kan vi snabbt vara på plats och leverera underlag.',
+    desc: 'Rikstäckande verksamhet — vid storm, skador eller akuta behov mobiliserar vi snabbt och levererar underlag.',
     icon: (
       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -116,9 +115,8 @@ export default function HomePage() {
         ctaHref="/offert"
         secondaryCtaLabel="Utforska tjänster"
         secondaryCtaHref="/tjanster"
-        /* EJ VERIFIERAD: alla stats nedan — bekräfta B1, A1, B2, B3 */
         stats={[
-          { value: '2–5 cm', label: 'Markupplösning' },
+          { value: 'Hög upplösning', label: 'Markupplösning' },
           { value: 'NDVI & RGB', label: 'Analystyper' },
           { value: 'SWEREF99 TM', label: 'Koordinatsystem' },
           { value: 'GIS-redo', label: 'Leveransformat' },
@@ -282,7 +280,7 @@ export default function HomePage() {
 
       <CTABand
         headline="Redo att effektivisera er skogliga datainsamling?"
-        description="Berätta om ert uppdrag — oavsett om det gäller areamätning, inventering eller vegetationsanalys. Vi återkommer med en prisindikation."
+        description="Berätta om ert uppdrag — oavsett om det gäller areamätning, inventering eller vegetationsanalys. Vi återkommer med en prisindikation inom 24 timmar."
       />
     </>
   )

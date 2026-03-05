@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilken höjdnoggrannhet kan förväntas?',
-    answer: 'Med RTK/PPK-korrektioner uppnår vi typiskt ±5–10 cm i höjdnoggrannhet för DSM. DTM-noggrannheten beror på vegetation — i öppen skog ger fotogrammetri bra resultat, men i tät skog rekommenderas LiDAR för exakt markmodell.',
+    answer: 'Med positionskorrektioner (beroende på utrustning) uppnår vi hög höjdnoggrannhet för DSM. DTM-noggrannheten beror på vegetation — i öppen skog ger fotogrammetri bra resultat, men i tät skog rekommenderas LiDAR för exakt markmodell.' /* MÅSTE VERIFIERAS: noggrannhet beror på utrustning och förhållanden */,
   },
 ]
 

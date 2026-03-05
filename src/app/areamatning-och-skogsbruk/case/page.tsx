@@ -24,7 +24,7 @@ const CASES = [
     title: 'Areamätning av skogsinnehav',
     customer: 'Privat skogsägare, Mellansverige',
     description:
-      'Uppdaterade arealuppgifter för 12 avdelningar över 180 hektar. Georefererade polygoner levererades som Shapefile för import i skogsbruksplan. Uppdraget effektiviserade planeringen av kommande gallring.',
+      /* MÅSTE VERIFIERAS: exakt areal och antal avdelningar */ 'Uppdaterade arealuppgifter för ett antal avdelningar. Georefererade polygoner levererades som Shapefile för import i skogsbruksplan. Uppdraget effektiviserade planeringen av kommande gallring.',
     tags: ['Areamätning', 'Skogsbruksplan'],
   },
   {
@@ -38,7 +38,7 @@ const CASES = [
     title: 'Planteringsuppföljning ungskog',
     customer: 'Skogsförvaltare, Norrland',
     description:
-      'Flygning av 95 hektar planterad yta för bedömning av etableringsgrad. Högupplösta ortofoton visade luckor och variationer i tillväxt. Resultatet gav underlag för beslut om kompletteringsplantering.',
+      /* MÅSTE VERIFIERAS: exakt areal */ 'Flygning av planterad yta för bedömning av etableringsgrad. Högupplösta ortofoton visade luckor och variationer i tillväxt. Resultatet gav underlag för beslut om kompletteringsplantering.',
     tags: ['Planteringsuppföljning', 'Ungskog'],
   },
 ]

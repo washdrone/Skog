@@ -107,8 +107,8 @@ export default function MultispektralVsRGBPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Rumslig upplösning</td>
-                <td className="py-3 pr-4 text-slate-600">1–3 cm GSD</td>
-                <td className="py-3 text-slate-600">5–10 cm GSD</td>
+                <td className="py-3 pr-4 text-slate-600">Hög {/* MÅSTE VERIFIERAS: GSD beror på utrustning och flyghöjd */}</td>
+                <td className="py-3 text-slate-600">Lägre än RGB {/* MÅSTE VERIFIERAS: GSD beror på utrustning och flyghöjd */}</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Vegetationsindex</td>
@@ -145,29 +145,29 @@ export default function MultispektralVsRGBPage() {
           </p>
           <ul>
             <li>
-              <strong>Blue (450 nm)</strong> — Känsligt för klorofyll och karotenoider.
+              <strong>Blue (blått)</strong> {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} — Känsligt för klorofyll och karotenoider.
               Används i vattenanalys och för att skilja vegetation från jord.
             </li>
             <li>
-              <strong>Green (560 nm)</strong> — Reflekteras mest av frisk vegetation, används
+              <strong>Green (grönt)</strong> {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} — Reflekteras mest av frisk vegetation, används
               i GNDVI och för att bedöma total biomassa.
             </li>
             <li>
-              <strong>Red (650 nm)</strong> — Absorberas starkt av klorofyll. Hög absorption
+              <strong>Red (rött)</strong> {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} — Absorberas starkt av klorofyll. Hög absorption
               innebär frisk vegetation. Centralt band i{' '}
               <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-beräkning
               </Link>.
             </li>
             <li>
-              <strong>Red Edge (730 nm)</strong> — Övergångszonen mellan röd absorption och
+              <strong>Red Edge</strong> {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} — Övergångszonen mellan röd absorption och
               NIR-reflektans. Mycket känsligt för klorofyllförändringar och centralt för{' '}
               <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
                 tidig barkborredetektion
               </Link>.
             </li>
             <li>
-              <strong>NIR (840 nm)</strong> — Nära infrarött reflekteras starkt av frisk
+              <strong>NIR (nära infrarött)</strong> {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */} — Nära infrarött reflekteras starkt av frisk
               bladstruktur. Minskad NIR-reflektans indikerar cellskada eller torrstress.
             </li>
           </ul>

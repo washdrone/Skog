@@ -57,8 +57,8 @@ const SERVICES = [
 ]
 
 const PROCESS_STEPS = [
-  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar syfte, areal och vilka index som är relevanta för ert uppdrag. Offert inom 24 timmar.' },
-  { number: 2, title: 'Kalibrerad flygning', description: 'Reflektanspanel före start. Drönare med multispektral sensor (5 band) flyger området. Irradianssensor korrigerar för ljusförändringar.' },
+  { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar syfte, areal och vilka index som är relevanta för ert uppdrag. Vi återkommer med en prisindikation inom 24 timmar.' },
+  { number: 2, title: 'Kalibrerad flygning', description: 'Reflektanspanel före start. Drönare med multispektral sensor flyger området. Irradianssensor korrigerar för ljusförändringar.' },
   { number: 3, title: 'Indexberäkning & QA', description: 'NDVI, NDRE och kompletterande index beräknas från reflektanskartor. Radiometrisk korrigering och kvalitetskontroll.' },
   { number: 4, title: 'Leverans', description: 'NDVI-raster (GeoTIFF), klassificerade kartor och tolkningsrapport levereras i SWEREF99 TM — redo att importera i pcSKOG, QGIS eller ArcGIS.' },
 ]
@@ -67,8 +67,8 @@ const BENEFITS = [
   { title: 'Objektiv mätning', desc: 'Index ger ett siffervärde — inte en subjektiv bedömning.' },
   { title: 'Tidig detektion', desc: 'Red Edge-bandet fångar stressignaler innan de syns för ögat.' },
   { title: 'Jämförbarhet', desc: 'Kalibrerade data möjliggör jämförelse mellan flygningar och säsonger.' },
-  { title: 'Enskilda trädkronor', desc: '5–10 cm upplösning möjliggör analys på trädnivå.' },
-  { title: 'Komplement till satellit', desc: '100–500x högre upplösning än Sentinel-2 (10 m/pixel).' },
+  { title: 'Enskilda trädkronor', desc: 'Hög upplösning möjliggör analys på trädnivå.' },
+  { title: 'Komplement till satellit', desc: 'Betydligt högre upplösning än satellitdata.' },
   { title: 'GIS-integration', desc: 'Leverans i SWEREF99 TM, importerbar i pcSKOG, QGIS, ArcGIS.' },
 ]
 
@@ -83,15 +83,15 @@ export default function VegetationsanalysPage() {
       <Hero
         badge="Multispektral analys"
         headline="Objektiv bild av skogshälsa — med vegetationsindex från drönare"
-        subheadline="Multispektral kamera i 5 våglängdsband mäter hur vegetationen reflekterar ljus. Friska träd absorberar rött ljus för fotosyntes och reflekterar starkt i NIR. Vi omvandlar den kontrasten till kartor som visar var skogen mår bra, var den stressar och var den försämras."
+        subheadline="Multispektral kamera mäter hur vegetationen reflekterar ljus i flera våglängdsband. Friska träd absorberar rött ljus för fotosyntes och reflekterar starkt i NIR. Vi omvandlar den kontrasten till kartor som visar var skogen mår bra, var den stressar och var den försämras."
         ctaLabel="Begär offert"
         ctaHref="/areamatning-och-skogsbruk/kontakt"
         secondaryCtaLabel="Läs mer om NDVI"
         secondaryCtaHref="/vegetationsanalys/ndvi-kartlaggning"
         stats={[
-          { value: '5 band', label: 'Multispektral sensor' },
+          { value: 'Multispektral', label: 'Sensor' },
           { value: 'NDVI · NDRE', label: 'Vegetationsindex' },
-          { value: '5–10 cm', label: 'Multispektral GSD' },
+          { value: 'Hög', label: 'Markupplösning' },
           { value: 'SWEREF99 TM', label: 'Koordinatsystem' },
         ]}
       />
@@ -112,7 +112,7 @@ export default function VegetationsanalysPage() {
                 {
                   step: '1',
                   title: 'Sensorn fångar',
-                  text: 'Multispektral kamera mäter reflekterat ljus i 5 våglängdsband: blått (~475 nm), grönt (~560 nm), rött (~668 nm), red edge (~717 nm) och nära infrarött (~842 nm). Varje band avslöjar olika egenskaper hos vegetationen.',
+                  text: 'Multispektral kamera mäter reflekterat ljus i flera våglängdsband, inklusive blått, grönt, rött, red edge och nära infrarött. Varje band avslöjar olika egenskaper hos vegetationen.',
                 },
                 {
                   step: '2',

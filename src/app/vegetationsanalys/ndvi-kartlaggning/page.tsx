@@ -7,7 +7,7 @@ import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'NDVI-kartläggning med drönare – vegetationsindex för skog | TimberDrone',
   description:
-    'Georefererade NDVI-kartor med 5–10 cm upplösning. Klassificerad vitalitetskarta, tolkningsrapport och GeoTIFF i SWEREF99 TM för import i ert GIS.',
+    /* MÅSTE VERIFIERAS: exakt GSD beror på utrustning och flyghöjd */ 'Georefererade NDVI-kartor med hög markupplösning. Klassificerad vitalitetskarta, tolkningsrapport och GeoTIFF i SWEREF99 TM för import i ert GIS.',
   alternates: { canonical: 'https://timberdrone.se/vegetationsanalys/ndvi-kartlaggning' },
 }
 
@@ -43,7 +43,7 @@ export default function NDVIKartlaggningPage() {
         breadcrumbLabel="NDVI-kartläggning"
         breadcrumbParent={{ label: 'Vegetationsanalys', href: '/vegetationsanalys' }}
         headline="NDVI-kartläggning med drönare"
-        intro="Georefererade vegetationskartor som visar var skogen mår bra, var den stressar och var åtgärder behövs. Objektiv vitalitetsbedömning med 5–10 cm upplösning."
+        intro="Georefererade vegetationskartor som visar var skogen mår bra, var den stressar och var åtgärder behövs. Objektiv vitalitetsbedömning med hög markupplösning."
         relatedLinks={[
           { label: 'Stressanalys', href: '/vegetationsanalys/stressanalys' },
           { label: 'Uppföljning över tid', href: '/vegetationsanalys/uppfoljning-over-tid' },
@@ -90,8 +90,8 @@ export default function NDVIKartlaggningPage() {
 
         <h2>Upplösning och noggrannhet</h2>
         <ul>
-          <li>Multispektral GSD: 5–10 cm vid 60–120 m flyghöjd (tillräckligt för enskilda trädkronor)</li>
-          <li>Radiometrisk kalibrering: NRMSE &lt; 2–4 % vid korrekt panelkalibrering</li>
+          <li>{/* MÅSTE VERIFIERAS: exakt GSD beror på utrustning och flyghöjd */}Multispektral GSD: hög markupplösning beroende på utrustning och flyghöjd (tillräckligt för enskilda trädkronor)</li>
+          <li>{/* MÅSTE VERIFIERAS: exakt NRMSE beror på kalibrering och förhållanden */}Radiometrisk kalibrering genomförs med referenspanel för konsistent data</li>
           <li>Kräver molnfria förhållanden för konsistent data</li>
         </ul>
 

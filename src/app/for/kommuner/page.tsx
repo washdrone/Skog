@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Kan ni flyga över tätortsnära skog och parkmark?',
     answer:
-      'Ja. Vi har tillstånd och försäkringar för att flyga drönare i och nära tätort. Vi koordinerar med berörda parter och följer Transportstyrelsens regler för flygning i befolkade områden.',
+      'Ja. Våra piloter är fullt utbildade enligt EASA-förordningen och vi har tillstånd för att flyga drönare i och nära tätort. Vi koordinerar med berörda parter vid varje uppdrag.',
   },
   {
     question: 'Uppfyller era leveranser kraven för offentlig upphandling?',
@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Hur hanterar ni GDPR vid flygning över offentlig mark?',
     answer:
-      'Vi flyger på höjder och med inställningar som minimerar risken att enskilda personer kan identifieras. Vid behov kan ansikten och registreringsskyltar suddas automatiskt i levererade ortofoton. Vi följer Integritetsskyddsmyndighetens riktlinjer.',
+      'Vi flyger på höjder och med inställningar som minimerar risken att enskilda personer kan identifieras. Vi arbetar för att hantera personuppgifter ansvarsfullt i enlighet med gällande dataskyddsregler. Kontakta oss för mer information om hur vi hanterar GDPR i specifika uppdrag.',
   },
 ]
 

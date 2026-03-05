@@ -91,7 +91,7 @@ export default function SkogsbruksplanUnderlagPage() {
         <ul>
           <li>
             <strong><Link href="/tjanster/ortofoto-kartering" className="text-forest-600 underline hover:text-forest-800">Ortofoto</Link></strong>{' '}
-            — aktuell, högupplöst flygbild (2–5 cm) som underlag för beståndsgränser och visuell bedömning
+            — aktuell, högupplöst flygbild som underlag för beståndsgränser och visuell bedömning
           </li>
           <li>
             <strong><Link href="/tjanster/3d-modellering" className="text-forest-600 underline hover:text-forest-800">Höjdmodeller</Link></strong>{' '}

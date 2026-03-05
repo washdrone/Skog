@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Vad betyder ett NDVI-värde på 0.7?',
     answer:
-      'Ett NDVI-värde på 0.7 indikerar tät, frisk vegetation med hög klorofyllhalt och aktiv fotosyntes. Värden mellan 0.6 och 0.9 är typiska för välmående barrskog under växtsäsongen.',
+      'Ett NDVI-värde på 0.7 indikerar tät, frisk vegetation med hög klorofyllhalt och aktiv fotosyntes. Värden mellan 0.6 och 0.9 är typiska värden som kan variera beroende på trädslag, årstid och förhållanden.',
   },
   {
     question: 'Kan NDVI mätas med vanlig RGB-kamera?',
@@ -103,6 +103,9 @@ export default function VadArNDVIPage() {
           </p>
 
           <h2>Värdeskala och tolkning</h2>
+          <p className="text-sm text-slate-500 italic">
+            Tabellen visar typiska värden som kan variera beroende på trädslag, årstid och förhållanden.
+          </p>
           <table className="w-full text-sm border-collapse my-6">
             <thead>
               <tr className="border-b-2 border-slate-200">
@@ -167,7 +170,7 @@ export default function VadArNDVIPage() {
           <p>
             Satellitbaserad NDVI (exempelvis Sentinel-2 med 10 m upplösning) ger bra överblick
             men saknar detaljer på trädnivå. Drönarbaserad NDVI med multispektral sensor
-            erbjuder 5–10 cm upplösning, vilket möjliggör analys av enskilda trädkronor. Drönare
+            erbjuder hög upplösning {/* MÅSTE VERIFIERAS: GSD beror på utrustning och flyghöjd */} som möjliggör analys av enskilda trädkronor. Drönare
             påverkas inte heller av molntäcke på samma sätt och kan flygas på begäran. Läs mer i
             vår jämförelse{' '}
             <Link href="/kunskap/dronare-vs-satellitdata" className="text-forest-600 underline hover:text-forest-800">

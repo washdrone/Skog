@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Upptäck barkborre tidigt med drönare',
   description:
-    'Multispektral drönaranalys kan upptäcka barkborreangrepp (Ips typographus) 4–8 veckor innan symptomen syns visuellt. Lär dig om green attack, NDRE-index och flygintervall.',
+    'Multispektral drönaranalys kan upptäcka barkborreangrepp (Ips typographus) före visuella symptom. Lär dig om green attack, NDRE-index och flygintervall.',
   path: '/kunskap/barkborre-tidigt',
 })
 
@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Hur tidigt kan drönare upptäcka barkborre?',
     answer:
-      'Med multispektral analys och NDRE-index kan angrepp upptäckas 4–8 veckor före visuella symptom (gulnande kronor). Det beror på angreppsintensitet, trädslag och förhållanden.',
+      'Med multispektral analys och NDRE-index kan angrepp upptäckas före visuella symptom (gulnande kronor). Hur tidigt beror på angreppsintensitet, trädslag och förhållanden.',
   },
   {
     question: 'Vad är skillnaden mellan green attack och red attack?',
@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: 'Vilken tid på året bör man flyga för barkborredetektion?',
     answer:
-      'Primärsvärmningen sker i maj–juni. Första kontrollflyg bör göras 3–4 veckor efter svärmning. Uppföljningsflyg rekommenderas varannan till var fjärde vecka under juni–september.',
+      'Primärsvärmningen sker i maj–juni. Första kontrollflyg bör göras några veckor efter svärmning. Uppföljningsflyg rekommenderas regelbundet under juni–september.',
   },
   {
     question: 'Fungerar detektion i alla typer av barrskog?',
@@ -36,7 +36,7 @@ const faqItems = [
   {
     question: 'Hur stor areal kan övervakas per flygning?',
     answer:
-      'Med en multispektral drönare kan 50–150 hektar kartläggas per dag beroende på terräng och flyghöjd. Vid ren screening kan högre flyghöjd ge snabbare täckning med något lägre upplösning.',
+      'Arealen som kan kartläggas per dag varierar beroende på utrustning, terräng och flyghöjd. Vid ren screening kan högre flyghöjd ge snabbare täckning med något lägre upplösning.',
   },
 ]
 
@@ -83,7 +83,7 @@ export default function BarkborreTidigtPage() {
       <article className="section-padding bg-white">
         <div className="container-page max-w-3xl prose-forest">
           <p>
-            Barkborreangrepp (<em>Ips typographus</em>) kan upptäckas 4–8 veckor tidigare med
+            Barkborreangrepp (<em>Ips typographus</em>) kan upptäckas betydligt tidigare med
             multispektral drönaranalys jämfört med visuell inspektion. Den avgörande fördelen
             ligger i att multispektrala sensorer registrerar förändringar i klorofyll och
             cellstruktur som sker långt innan kronan ändrar färg. Tidig detektion ger skogsägare
@@ -109,13 +109,13 @@ export default function BarkborreTidigtPage() {
                 <td className="py-3 pr-4 font-medium text-slate-700">Green attack</td>
                 <td className="py-3 pr-4 text-slate-600">Kronan grön, inga synliga symptom</td>
                 <td className="py-3 pr-4 text-slate-600">NDRE och NIR-reflektans minskar mätbart</td>
-                <td className="py-3 text-slate-600">0–8 veckor efter angrepp</td>
+                <td className="py-3 text-slate-600">Veckor efter angrepp (varierar)</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Red attack</td>
                 <td className="py-3 pr-4 text-slate-600">Kronan gulnar, sedan rodnar</td>
                 <td className="py-3 pr-4 text-slate-600">Kraftigt minskad NDVI och NDRE</td>
-                <td className="py-3 text-slate-600">8–16 veckor efter angrepp</td>
+                <td className="py-3 text-slate-600">Längre tid efter angrepp</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Grey attack</td>
@@ -133,7 +133,7 @@ export default function BarkborreTidigtPage() {
             <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
               Till skillnad från NDVI
             </Link>{' '}
-            använder NDRE Red Edge-bandet (ca 730 nm) istället för rött band. Red Edge är
+            använder NDRE Red Edge-bandet istället för rött band {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */}. Red Edge är
             känsligare för subtila förändringar i klorofyllhalt och bladstruktur — precis de
             förändringar som sker under green attack.
           </p>
@@ -150,12 +150,12 @@ export default function BarkborreTidigtPage() {
           </p>
           <ul>
             <li>
-              <strong>Första flyg</strong> — 3–4 veckor efter primärsvärmning (vanligen
+              <strong>Första flyg</strong> — Några veckor efter primärsvärmning (vanligen
               slutet av maj eller början av juni)
             </li>
             <li>
-              <strong>Uppföljningsflyg</strong> — Varannan till var fjärde vecka under
-              juni–september
+              <strong>Uppföljningsflyg</strong> — Regelbundet under
+              juni–september, med intervall anpassat efter riskbedömning
             </li>
             <li>
               <strong>Riskbestånd</strong> — Prioritera bestånd nära föregående års angrepp,

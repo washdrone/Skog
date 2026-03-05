@@ -94,13 +94,73 @@
 
 ---
 
-## F. Saknade sidor/innehåll (inga påståenden — men saknas för fullständig sajt)
+## F. Utrustning & kapacitet (HÖG RISK — inga drönmodeller eller sensorer specificerade)
+
+| # | Påstående | Var det används | Status | Verifierad av | Datum |
+|---|-----------|-----------------|--------|---------------|-------|
+| F1 | Ingen drönarmodell nämns någonstans | Hela sajten — kapacitetspåståenden saknar grund | SAKNAS | | |
+| F2 | Ingen kameramodell/sensormodell nämns | Multispektral-, ortofoto-, LiDAR-sidor | SAKNAS | | |
+| F3 | "5-bands multispektral sensor" med specifika våglängder (~475, ~560, ~668, ~717, ~842 nm) | Multispektralanalys, vegetationsanalys | EJ VERIFIERAD — verkar vara MicaSense men aldrig namngivet | | |
+| F4 | "DLS" (Downwelling Light Sensor) nämns | Vegetationsanalys, uppföljning-sidor | EJ VERIFIERAD — sensortyp/modell ej specificerad | | |
+| F5 | RTK/PPK-kapacitet nämns | Ortofoto, skogsbolag-sidor | EJ VERIFIERAD — inget GNSS-system specificerat | | |
+| F6 | LiDAR-kapacitet erbjuds som tjänst | Header, LiDAR-sidan | EJ VERIFIERAD — inget LiDAR-system specificerat | | |
+| F7 | Ingen processmjukvara nämns (Pix4D, Metashape etc.) | Hela sajten | SAKNAS | | |
+
+### Vad som behövs:
+- Bekräfta vilken/vilka drönarmodeller som används
+- Bekräfta vilken multispektral sensor som används (MicaSense RedEdge? Annan?)
+- Bekräfta om LiDAR-kapacitet finns och i så fall vilken utrustning
+- Bekräfta RTK/PPK-utrustning
+- Bekräfta processmjukvara
+- SEDAN: uppdatera tekniska specifikationer baserat på faktisk utrustning
+
+---
+
+## G. Pilotcertifieringar & regulatoriskt (HÖG RISK — vagt eller saknande)
+
+| # | Påstående | Var det används | Status | Verifierad av | Datum |
+|---|-----------|-----------------|--------|---------------|-------|
+| G1 | "Certifierad UAS-operatör" / "fullständigt operatörstillstånd" | TrustBlock (nu ändrat till "Regelefterlevnad") | BORTTAGEN — ersatt med generell formulering | | |
+| G2 | Vilken EASA-kategori (Open/Specific/Certified)? | Ej nämnt | SAKNAS | | |
+| G3 | Pilotcertifieringar (A1/A2, STS)? | Ej nämnt | SAKNAS | | |
+| G4 | Ansvarsförsäkring för drönarverksamhet? | Ej nämnt | SAKNAS | | |
+| G5 | "Vi har tillstånd och försäkringar för att flyga i tätort" | Kommun-sidan | EJ VERIFIERAD | | |
+| G6 | "Vi följer Integritetsskyddsmyndighetens riktlinjer" | Kommun-sidan | EJ VERIFIERAD | | |
+| G7 | "Ansikten och registreringsskyltar suddas automatiskt" | Kommun-sidan | EJ VERIFIERAD — kräver specifik mjukvara | | |
+
+### Vad som behövs:
+- Bekräfta operatörskategori och tillstånd
+- Bekräfta pilotcertifieringar
+- Bekräfta försäkringstyp och -omfattning
+- Bekräfta integritetskyddsrutiner vid flygning i tätort
+
+---
+
+## H. Vetenskapliga påståenden utan källa (MEDEL RISK)
+
+| # | Påstående | Var det används | Status | Verifierad av | Datum |
+|---|-----------|-----------------|--------|---------------|-------|
+| H1 | "SLU:s forskning visar att drönarbaserad analys identifierar dubbelt så många angripna träd" | Stressanalys-sidan | EJ VERIFIERAD — ingen specifik studie citerad | | |
+| H2 | "GSI-index ger 76–83 % detektionsgrad" | Stressanalys-sidan | EJ VERIFIERAD — ingen källa | | |
+| H3 | Barkborre: "4–8 veckor före visuella symptom" / "2–4 veckor" | Barkborre-sidor, kunskap | EJ VERIFIERAD — tidsangivelse utan forskningsreferens | | |
+| H4 | "NRMSE under 2–4 %" för radiometrisk kalibrering | Fotosyntes-guide, NDVI-kartläggning | EJ VERIFIERAD — ingen källa | | |
+| H5 | "Sverige med i snitt 60–70 % molntäcke" | Drönare vs satellitdata | EJ VERIFIERAD — ingen källa | | |
+| H6 | "Minskad fälttid med 50–70 %" | Skogsinventering | EJ VERIFIERAD — ingen källa | | |
+| H7 | "Kostnadseffektivare vid arealer över 20–30 hektar" | Skogsinventering-kostnad | EJ VERIFIERAD — ingen ekonomisk analys | | |
+
+### Rekommendation:
+- Citera specifika studier eller ta bort specifika siffror
+- Allmänt vedertagen vetenskap (NDVI-formel, vad multispektral innebär) behöver inte källa
+
+---
+
+## I. Saknade sidor/innehåll (inga påståenden — men saknas för fullständig sajt)
 
 | # | Vad saknas | Effekt | Prioritet |
 |---|-----------|--------|-----------|
-| F1 | Integritetspolicy-sida | Footer-text "Integritetspolicy" är ej klickbar, GDPR-krav | HÖG |
-| F2 | Cookiepolicy-sida | Footer-text "Cookiepolicy" är ej klickbar | MEDEL |
-| F3 | Om oss-sida | Ingen företagspresentation, minskar förtroende | MEDEL |
-| F4 | Riktiga bilder | public/images/ är tomt — gradienter används som placeholder | MEDEL |
-| F5 | Google Analytics-konfiguration | NEXT_PUBLIC_GA_ID saknas (ingen spårning) | HÖG |
-| F6 | Lead-webhook/email-notifiering | LEAD_WEBHOOK_URL & LEAD_NOTIFY_EMAIL ej konfigurerade | HÖG |
+| I1 | Integritetspolicy-sida | Footer-text "Integritetspolicy" är ej klickbar, GDPR-krav | HÖG |
+| I2 | Cookiepolicy-sida | Footer-text "Cookiepolicy" är ej klickbar | MEDEL |
+| I3 | Om oss-sida | Ingen företagspresentation, minskar förtroende | MEDEL |
+| I4 | Riktiga bilder | public/images/ är tomt — gradienter används som placeholder | MEDEL |
+| I5 | Google Analytics-konfiguration | NEXT_PUBLIC_GA_ID saknas (ingen spårning) | HÖG |
+| I6 | Lead-webhook/email-notifiering | LEAD_WEBHOOK_URL & LEAD_NOTIFY_EMAIL ej konfigurerade | HÖG |

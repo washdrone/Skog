@@ -22,7 +22,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilken punktdensitet kan uppnås med drönarburen LiDAR?',
-    answer: 'Med drönarburen LiDAR uppnår vi typiskt 100–400 punkter per kvadratmeter, att jämföra med flygburen LiDAR från flygplan som ger 1–20 punkter per kvadratmeter. Den höga punktdensiteten möjliggör detaljerad analys av enskilda träd.',
+    answer: 'Drönarburen LiDAR ger avsevärt högre punktdensitet per kvadratmeter än flygburen LiDAR från flygplan. Den höga punktdensiteten möjliggör detaljerad analys av enskilda träd.' /* MÅSTE VERIFIERAS: punktdensitet beror på faktisk utrustning */,
   },
   {
     question: 'Kan LiDAR-data kombineras med multispektraldata?',
@@ -79,8 +79,8 @@ export default function LidarSkanningPage() {
           LiDAR (Light Detection and Ranging) är en aktiv fjärranalysteknik som mäter avstånd
           genom att sända ut laserpulser och registrera reflektionerna. Till skillnad från
           fotogrammetri kan LiDAR penetrera vegetationens krontak och nå markytan, vilket ger
-          exakta höjdmodeller även i tät skog. Drönarburen LiDAR ger 100–400 punkter per
-          kvadratmeter — avsevärt högre densitet än traditionell flygburen LiDAR.
+          exakta höjdmodeller även i tät skog. Drönarburen LiDAR ger avsevärt högre punktdensitet
+          per kvadratmeter än traditionell flygburen LiDAR. {/* MÅSTE VERIFIERAS: punktdensitet beror på faktisk utrustning */}
         </p>
 
         <h2>Produkter och modeller</h2>
@@ -116,7 +116,7 @@ export default function LidarSkanningPage() {
         <h2>Fördelar med drönarburen LiDAR</h2>
         <ul>
           <li>Penetrerar krontak — exakta markmodeller även i tät skog</li>
-          <li>100–400 punkter/m² jämfört med 1–20 punkter/m² från flygplan</li>
+          <li>Avsevärt högre punktdensitet jämfört med flygburen LiDAR {/* MÅSTE VERIFIERAS */}</li>
           <li>Flexibel flygplanering — anpassad för specifika bestånd</li>
           <li>Snabb mobilisering jämfört med traditionell LiDAR-flygning</li>
         </ul>

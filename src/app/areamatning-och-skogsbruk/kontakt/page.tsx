@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Kontakt & offert – drönarbaserade mättjänster för skogsbruk',
   description:
-    'Begär offert eller boka en genomgång av drönarbaserade mättjänster för skog och mark. Prisindikation inom 24 timmar.',
+    'Begär offert eller boka en genomgång av drönarbaserade mättjänster för skog och mark.',
   alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/kontakt' },
 }
 
@@ -40,7 +40,7 @@ export default function KontaktPage() {
             Begär offert
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-            Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar.
+            Berätta om ert uppdrag så återkommer vi med en prisindikation.
             Fyll i formuläret nedan eller kontakta oss direkt.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function KontaktPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-600 text-xs font-bold text-white">2</span>
-                    <span>Vi granskar förfrågan och återkommer med prisindikation inom 24 timmar.</span>
+                    <span>Vi granskar förfrågan och återkommer med en prisindikation inom 24 timmar.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-600 text-xs font-bold text-white">3</span>
@@ -99,7 +99,7 @@ export default function KontaktPage() {
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
                 <h3 className="font-semibold text-slate-900">Täckningsområde</h3>
                 <p className="mt-3 text-sm text-slate-600">
-                  Vi utför uppdrag i hela Sverige. Vid längre avstånd tillkommer resekostnad som specificeras i offerten.
+                  Vi arbetar rikstäckande i hela Sverige. Vid längre avstånd tillkommer resekostnad som specificeras i offerten.
                 </p>
               </div>
             </aside>

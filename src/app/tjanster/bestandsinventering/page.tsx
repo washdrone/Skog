@@ -129,7 +129,7 @@ export default function BestandsinventeringPage() {
         <h2>Leveranser</h2>
         <ul>
           <li>Beståndskarta med polygoner och attributdata (GeoPackage/Shapefile)</li>
-          <li>Ortofoto (GeoTIFF, 2–5 cm GSD)</li>
+          <li>Ortofoto (GeoTIFF, hög markupplösning)</li>
           <li>Kronhöjdsmodell (GeoTIFF)</li>
           <li>Beståndsregister med sammanställda mått (Excel/CSV)</li>
           <li>PDF-rapport med kartor och beståndssammanfattning</li>
