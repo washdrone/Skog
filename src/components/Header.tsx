@@ -9,23 +9,25 @@ const SERVICE_ITEMS = [
   { label: 'Barkborredetektering', href: '/tjanster/barkborre-detektering' },
   { label: 'LiDAR-skanning', href: '/tjanster/lidar-skanning' },
   { label: 'Ortofoto & kartering', href: '/tjanster/ortofoto-kartering' },
-  { label: '3D-modellering', href: '/tjanster/3d-modellering' },
-  { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
-  { label: 'Skogsbruksplan-underlag', href: '/tjanster/skogsbruksplan-underlag' },
+  { label: 'Kolinlagring & ESG', href: '/tjanster/kolinlagring' },
+  { label: 'Skadedokumentation', href: '/tjanster/skadedokumentation' },
+  { label: 'Årsavtal', href: '/tjanster/arsavtal' },
+  { label: 'Alla tjänster →', href: '/tjanster' },
 ]
 
 const KUNSKAP_ITEMS = [
   { label: 'Vad är NDVI?', href: '/kunskap/vad-ar-ndvi' },
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
+  { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
+  { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
+  { label: 'Kolinlagring i skog', href: '/kunskap/kolinlagring-skog-guide' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
-  { label: 'Multispektral vs RGB', href: '/kunskap/multispektral-vs-rgb' },
-  { label: 'Alla artiklar', href: '/kunskap' },
+  { label: 'Alla artiklar →', href: '/kunskap' },
 ]
 
 const NAV_ITEMS = [
   { label: 'Platser', href: '/platser' },
-  { label: 'Case', href: '/areamatning-och-skogsbruk/case' },
-  { label: 'FAQ', href: '/areamatning-och-skogsbruk/faq' },
+  { label: 'Kontakt', href: '/areamatning-och-skogsbruk/kontakt' },
 ]
 
 export default function Header() {

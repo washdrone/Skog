@@ -18,7 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tjanster/3d-modellering', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/bestandsinventering', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/skogsbruksplan-underlag', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/fotosyntesmatning', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/fotosyntesmatning', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/planteringsinventering', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/skadedokumentation', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/kolinlagring', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/arsavtal', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/jaktkartering', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // Kunskap
     { path: '/kunskap', priority: 0.8, changeFrequency: 'weekly' as const },
@@ -29,18 +34,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/kunskap/skogsinventering-kostnad', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/kunskap/fotosyntesmatning-guide', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kunskap/lidar-vs-dronare', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/kunskap/vad-paverkar-priset', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/kunskap/kolinlagring-skog-guide', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/kunskap/sasongsguide-skogsinventering', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/kunskap/stormskada-checklista', priority: 0.8, changeFrequency: 'monthly' as const },
 
     // Kundsegment
     { path: '/for/skogsagare', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/for/skogsbolag', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/for/forskning', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/for/kommuner', priority: 0.6, changeFrequency: 'monthly' as const },
+    { path: '/for/fastighet', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // Platser (regionala)
     { path: '/platser', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/platser/skogsinventering-norrland', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/platser/skogsinventering-svealand', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/platser/skogsinventering-smaland', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/platser/skogsinventering-stockholm', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/platser/skogsinventering-dalarna', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/platser/skogsinventering-vasternorrland', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/platser/skogsinventering-jamtland', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // Befintliga sidor (bevarade)
     { path: '/vegetationsanalys', priority: 0.8, changeFrequency: 'weekly' as const },

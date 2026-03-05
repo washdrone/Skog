@@ -6,12 +6,19 @@ const SERVICE_LINKS = [
   { label: 'Barkborredetektering', href: '/tjanster/barkborre-detektering' },
   { label: 'LiDAR-skanning', href: '/tjanster/lidar-skanning' },
   { label: 'Ortofoto & kartering', href: '/tjanster/ortofoto-kartering' },
-  { label: '3D-modellering', href: '/tjanster/3d-modellering' },
+  { label: 'Kolinlagring & ESG', href: '/tjanster/kolinlagring' },
+  { label: 'Skadedokumentation', href: '/tjanster/skadedokumentation' },
+  { label: 'Årsavtal', href: '/tjanster/arsavtal' },
+  { label: 'Jaktkartering', href: '/tjanster/jaktkartering' },
+  { label: 'Alla tjänster', href: '/tjanster' },
 ]
 
 const KUNSKAP_LINKS = [
   { label: 'Vad är NDVI?', href: '/kunskap/vad-ar-ndvi' },
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
+  { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
+  { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
+  { label: 'Kolinlagring i skog', href: '/kunskap/kolinlagring-skog-guide' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
   { label: 'Alla artiklar', href: '/kunskap' },
 ]
@@ -19,6 +26,7 @@ const KUNSKAP_LINKS = [
 const FORETAG_LINKS = [
   { label: 'För skogsägare', href: '/for/skogsagare' },
   { label: 'För skogsbolag', href: '/for/skogsbolag' },
+  { label: 'För fastighetsköpare', href: '/for/fastighet' },
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
   { label: 'Begär offert', href: '/offert' },

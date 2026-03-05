@@ -1,16 +1,16 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { organizationSchema } from '@/lib/schema'
+import { organizationSchema, faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare i Sverige',
   description:
-    'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo kartlager, ortofoton och vegetationsindex för skogsägare och skogsbolag.',
+    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG. Nationell täckning i hela Sverige.',
   alternates: { canonical: 'https://timberdrone.se' },
   openGraph: {
-    title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare',
+    title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare i Sverige',
     description:
-      'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo leveranser.',
+      'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
     url: 'https://timberdrone.se',
     siteName: 'TimberDrone',
     locale: 'sv_SE',
@@ -23,7 +23,31 @@ import FeatureShowcase from '@/components/FeatureShowcase'
 import TrustBlock from '@/components/TrustBlock'
 import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
+import FAQ from '@/components/FAQ'
 import RevealSection from '@/components/RevealSection'
+
+const HOME_FAQ_ITEMS = [
+  {
+    question: 'Vad är skogsinventering med drönare?',
+    answer: 'Skogsinventering med drönare innebär att hela skogsarealen kartläggs från luften med högupplösta kameror och sensorer. Till skillnad från traditionell inventering som bygger på stickprov ger drönardata en heltäckande bild av beståndets struktur — volym, stamantal, trädhöjd och beståndsgränser.',
+  },
+  {
+    question: 'Vilka tjänster erbjuder TimberDrone?',
+    answer: 'TimberDrone erbjuder skogsinventering, multispektralanalys, fotosyntesmätning, LiDAR-skanning, barkborredetektion, ortofoto, 3D-modellering, beståndsinventering, planteringsinventering, skadedokumentation, kolinlagring & ESG-underlag, årsavtal och jaktkartering. Alla tjänster levereras som georefererade kartlager i branschstandardformat.',
+  },
+  {
+    question: 'Var i Sverige verkar TimberDrone?',
+    answer: 'TimberDrone erbjuder rikstäckande tjänster i hela Sverige — från Skåne till Norrbotten. Vi har kapacitet att mobilisera till alla regioner och anpassar logistiken efter uppdragets lokalisering och omfattning.',
+  },
+  {
+    question: 'Hur skiljer sig drönarbaserad inventering från satellitdata?',
+    answer: 'Drönarbaserad inventering ger betydligt högre rumslig upplösning än satellitdata och möjliggör analys på enskild trädnivå. Drönare påverkas inte av molntäcke och kan flygas på begäran. Satellitdata (t.ex. Sentinel-2 med 10 m upplösning) ger bra överblick men saknar detaljer för trädindividuell analys.',
+  },
+  {
+    question: 'Kan drönare upptäcka barkborreangrepp tidigt?',
+    answer: 'Ja, multispektral analys kan identifiera stressförändringar i vegetation som orsakas av granbarkborre, ofta innan angreppen är synliga med blotta ögat. Genom att analysera NIR- och Red Edge-reflektans kan stressade träd skiljas från friska.',
+  },
+]
 
 const PROCESS_STEPS = [
   { number: 1, title: 'Uppdragsdialog', description: 'Vi diskuterar behov, areal och tidsram och återkommer med en prisindikation inom 24 timmar.' },
@@ -106,11 +130,15 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(HOME_FAQ_ITEMS)) }}
+      />
 
       <Hero
         badge="Skogsinventering med drönare"
-        headline="Skogsinventering, multispektralanalys och barkborredetektering — med drönare"
-        subheadline="TimberDrone levererar GIS-redo kartlager, ortofoton och vegetationsindex till skogsägare, förvaltare och skogsbolag i hela Sverige. Från beståndsinventering till tidig barkborredetektion."
+        headline="Skogsinventering med drönare — precision du kan lita på"
+        subheadline="TimberDrone erbjuder skogsinventering, multispektralanalys, fotosyntesmätning, barkborredetektion och kolinlagringsberäkning med drönare. GIS-redo kartlager och analysrapporter levererade i hela Sverige — till skogsägare, förvaltare och skogsbolag."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Utforska tjänster"
@@ -278,9 +306,11 @@ export default function HomePage() {
 
       <ProcessSteps steps={PROCESS_STEPS} />
 
+      <FAQ items={HOME_FAQ_ITEMS} />
+
       <CTABand
         headline="Redo att effektivisera er skogliga datainsamling?"
-        description="Berätta om ert uppdrag — oavsett om det gäller areamätning, inventering eller vegetationsanalys. Vi återkommer med en prisindikation inom 24 timmar."
+        description="Berätta om ert uppdrag — oavsett om det gäller inventering, multispektralanalys, kolinlagringsberäkning eller akut skadedokumentation. Vi återkommer med en prisindikation."
       />
     </>
   )
