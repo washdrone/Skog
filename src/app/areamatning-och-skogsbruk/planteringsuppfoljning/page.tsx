@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Planteringsuppföljning med drönare – ungskog & planteringar',
   description:
     'Drönarbaserad planteringsuppföljning för översikt och dokumentation av planteringar och ungskog. Identifiera luckor och bedöm etableringsgrad effektivt.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/planteringsuppfoljning' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/planteringsuppfoljning' },
 }
 
 export default function PlanteringsuppfoljningPage() {

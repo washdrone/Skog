@@ -52,7 +52,7 @@ export default function Header() {
             </svg>
           </div>
           <span className="text-xl font-bold text-white tracking-tight">
-            Wash<span className="text-forest-400">Drone</span>
+            Timber<span className="text-forest-400">drone</span>
           </span>
         </Link>
 

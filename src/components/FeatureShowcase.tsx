@@ -23,7 +23,7 @@ export default function FeatureShowcase() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: Features with checkmarks */}
           <div>
-            <span className="badge">Varför WashDrone</span>
+            <span className="badge">Varför Timberdrone</span>
             <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">
               Professionella drönarunderlag för skog och mark
             </h2>

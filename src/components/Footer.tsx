@@ -26,7 +26,7 @@ export default function Footer() {
               <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" /></svg>
             </div>
             <span className="text-xl font-bold text-white tracking-tight">
-              Wash<span className="text-forest-400">Drone</span>
+              Timber<span className="text-forest-400">drone</span>
             </span>
           </Link>
 
@@ -83,7 +83,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row">
-          <p className="text-xs text-white/25">&copy; {new Date().getFullYear()} WashDrone. Alla rättigheter förbehållna.</p>
+          <p className="text-xs text-white/25">&copy; {new Date().getFullYear()} Timberdrone. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6 text-xs text-white/25">
             <span className="transition-colors hover:text-white/50 cursor-pointer">Integritetspolicy</span>
             <span className="transition-colors hover:text-white/50 cursor-pointer">Cookiepolicy</span>

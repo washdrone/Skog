@@ -3,16 +3,16 @@ import Link from 'next/link'
 import { organizationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'WashDrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
+  title: 'Timberdrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
   description:
     'Kartlager, ortofoton och vegetationsanalys direkt från drönare till ert GIS. Professionella mät- och underlagstjänster för skogsbruk och markförvaltning i hela Sverige.',
-  alternates: { canonical: 'https://washdrone.se' },
+  alternates: { canonical: 'https://timberdrone.se' },
   openGraph: {
-    title: 'WashDrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
+    title: 'Timberdrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
     description:
       'Kartlager, ortofoton och vegetationsanalys direkt från drönare till ert GIS.',
-    url: 'https://washdrone.se',
-    siteName: 'WashDrone',
+    url: 'https://timberdrone.se',
+    siteName: 'Timberdrone',
     locale: 'sv_SE',
     type: 'website',
   },

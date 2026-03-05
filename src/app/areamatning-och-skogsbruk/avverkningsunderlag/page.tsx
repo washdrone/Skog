@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Avverkningsunderlag med drönare – kartlager & planering',
   description:
     'Drönarbaserade avverkningsunderlag med kartlagda ytor, avgränsningar, åtkomstvägar och hinder. Ger planerare och maskinförare ett komplett visuellt underlag.',
-  alternates: { canonical: 'https://washdrone.se/areamatning-och-skogsbruk/avverkningsunderlag' },
+  alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/avverkningsunderlag' },
 }
 
 export default function AvverkningsunderlagPage() {
