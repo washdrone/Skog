@@ -4,7 +4,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Timberdrone',
+    name: 'TimberDrone',
     url: SITE_URL,
     description:
       'Professionella drönarbaserade mät- och underlagstjänster för skogsbruk och fastighetsförvaltning.',
@@ -46,7 +46,7 @@ export function serviceSchema({
     url: `${SITE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'Timberdrone',
+      name: 'TimberDrone',
       url: SITE_URL,
     },
     areaServed: {

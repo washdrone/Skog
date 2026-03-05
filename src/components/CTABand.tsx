@@ -12,7 +12,7 @@ export default function CTABand({
   headline = 'Kontakta oss',
   description = 'Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar. Vi arbetar med skogsbolag, förvaltare och myndigheter i hela Sverige.',
   ctaLabel = 'Begär offert',
-  ctaHref = '/areamatning-och-skogsbruk/kontakt',
+  ctaHref = '/offert',
 }: CTABandProps) {
   return (
     <section className="relative overflow-hidden">

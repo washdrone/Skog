@@ -3,16 +3,16 @@ import Link from 'next/link'
 import { organizationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Timberdrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
+  title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare i Sverige',
   description:
-    'Kartlager, ortofoton och vegetationsanalys direkt från drönare till ert GIS. Professionella mät- och underlagstjänster för skogsbruk och markförvaltning i hela Sverige.',
+    'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo kartlager, ortofoton och vegetationsindex för skogsägare och skogsbolag i hela Sverige.',
   alternates: { canonical: 'https://timberdrone.se' },
   openGraph: {
-    title: 'Timberdrone – Drönarbaserade underlag för skogsbruk & vegetationsanalys',
+    title: 'TimberDrone | Skogsinventering & Multispektralanalys med Drönare',
     description:
-      'Kartlager, ortofoton och vegetationsanalys direkt från drönare till ert GIS.',
+      'Skogsinventering, multispektralanalys och barkborredetektering med drönare. GIS-redo leveranser i hela Sverige.',
     url: 'https://timberdrone.se',
-    siteName: 'Timberdrone',
+    siteName: 'TimberDrone',
     locale: 'sv_SE',
     type: 'website',
   },
@@ -109,13 +109,13 @@ export default function HomePage() {
       />
 
       <Hero
-        badge="Beslutsstöd för skogsbruk"
-        headline="Kartlager, ortofoton och vegetationsanalys — direkt från drönare till ert GIS"
-        subheadline="Vi levererar georefererade underlag som ger skogsägare, förvaltare och skogsbolag en aktuell, datadriven bild av skog och mark. Från areamätning till multispektral analys."
-        ctaLabel="Boka en fri konsultation"
-        ctaHref="/areamatning-och-skogsbruk/kontakt"
-        secondaryCtaLabel="Se exempelleveranser"
-        secondaryCtaHref="/areamatning-och-skogsbruk/leveranser"
+        badge="Skogsinventering med drönare"
+        headline="Skogsinventering, multispektralanalys och barkborredetektering — med drönare"
+        subheadline="TimberDrone levererar GIS-redo kartlager, ortofoton och vegetationsindex till skogsägare, förvaltare och skogsbolag i hela Sverige. Från beståndsinventering till tidig barkborredetektion."
+        ctaLabel="Begär offert"
+        ctaHref="/offert"
+        secondaryCtaLabel="Utforska tjänster"
+        secondaryCtaHref="/tjanster"
         /* EJ VERIFIERAD: alla stats nedan — bekräfta B1, A1, B2, B3 */
         stats={[
           { value: '2–5 cm', label: 'Markupplösning' },
@@ -148,7 +148,7 @@ export default function HomePage() {
             <div className="mt-14 grid gap-6 lg:grid-cols-2">
               {/* Card 1: Mätning */}
               <Link
-                href="/areamatning-och-skogsbruk"
+                href="/tjanster"
                 className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-10 shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5 reveal reveal-delay-1"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-50 text-forest-600 ring-1 ring-forest-100 transition-all duration-500 group-hover:bg-forest-600 group-hover:text-white group-hover:ring-forest-600 group-hover:shadow-lg group-hover:shadow-forest-600/25">
@@ -178,7 +178,7 @@ export default function HomePage() {
 
               {/* Card 2: Vegetationsanalys */}
               <Link
-                href="/vegetationsanalys"
+                href="/tjanster/multispektralanalys"
                 className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-10 shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5 reveal reveal-delay-2"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-50 text-forest-600 ring-1 ring-forest-100 transition-all duration-500 group-hover:bg-forest-600 group-hover:text-white group-hover:ring-forest-600 group-hover:shadow-lg group-hover:shadow-forest-600/25">

@@ -5,7 +5,7 @@ import NDVIGradientBar from '@/components/NDVIGradientBar'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'NDVI-kartläggning med drönare – vegetationsindex för skog | Timberdrone',
+  title: 'NDVI-kartläggning med drönare – vegetationsindex för skog | TimberDrone',
   description:
     'Georefererade NDVI-kartor med 5–10 cm upplösning. Klassificerad vitalitetskarta, tolkningsrapport och GeoTIFF i SWEREF99 TM för import i ert GIS.',
   alternates: { canonical: 'https://timberdrone.se/vegetationsanalys/ndvi-kartlaggning' },

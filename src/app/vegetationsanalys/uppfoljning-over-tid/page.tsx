@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Uppföljning av vegetation över tid – tidsserie med drönare | Timberdrone',
+  title: 'Uppföljning av vegetation över tid – tidsserie med drönare | TimberDrone',
   description:
     'Återkommande multispektrala flygningar med standardiserad metodik skapar tidsserier som avslöjar trender i vegetationens hälsa. Förändringskarta och trendanalys.',
   alternates: { canonical: 'https://timberdrone.se/vegetationsanalys/uppfoljning-over-tid' },

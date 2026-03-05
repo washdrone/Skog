@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/ServicePageLayout'
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Vegetationsstress & tidig skadedetektion med drönare | Timberdrone',
+  title: 'Vegetationsstress & tidig skadedetektion med drönare | TimberDrone',
   description:
     'Multispektral analys avslöjar stresssignaler i vegetation innan de syns för blotta ögat. Red Edge-analys för tidig detektion av granbarkborre och andra skador.',
   alternates: { canonical: 'https://timberdrone.se/vegetationsanalys/stressanalys' },
