@@ -46,19 +46,19 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-night-950/90 backdrop-blur-2xl border-b border-white/[0.06] shadow-2xl shadow-black/20'
+          ? 'bg-forest-600/95 backdrop-blur-2xl border-b border-white/[0.06] shadow-2xl shadow-black/20'
           : 'bg-transparent'
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-forest-600 shadow-lg shadow-forest-600/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-forest-600/40">
-            <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-forest-400 shadow-lg shadow-forest-400/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-forest-400/40">
+            <svg className="h-5 w-5 text-forest-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" />
             </svg>
           </div>
-          <span className="text-xl font-bold text-white tracking-tight">
+          <span className="text-xl font-display font-bold text-white tracking-tight">
             Timber<span className="text-forest-400">Drone</span>
           </span>
         </Link>
@@ -82,7 +82,7 @@ export default function Header() {
             </Link>
             {dropdownOpen && (
               <div className="absolute left-0 top-full pt-2">
-                <div className="w-72 rounded-2xl bg-night-950/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
+                <div className="w-72 rounded-2xl bg-forest-600/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
                   {SERVICE_ITEMS.map((child) => (
                     <Link
                       key={child.href}
@@ -114,7 +114,7 @@ export default function Header() {
             </Link>
             {kunskapDropdownOpen && (
               <div className="absolute left-0 top-full pt-2">
-                <div className="w-64 rounded-2xl bg-night-950/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
+                <div className="w-64 rounded-2xl bg-forest-600/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
                   {KUNSKAP_ITEMS.map((child) => (
                     <Link
                       key={child.href}
@@ -141,7 +141,7 @@ export default function Header() {
 
           <Link
             href="/offert"
-            className="ml-4 inline-flex items-center justify-center gap-2 rounded-full bg-forest-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-forest-500/30 transition-all duration-300 hover:bg-forest-400 hover:shadow-xl hover:shadow-forest-400/30 hover:-translate-y-0.5 active:translate-y-0 group"
+            className="ml-4 inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-6 py-2.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/30 transition-all duration-300 hover:bg-accent-500 hover:shadow-xl hover:shadow-accent-500/30 hover:-translate-y-0.5 active:translate-y-0 group"
           >
             Begär offert
             <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -172,7 +172,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="lg:hidden bg-night-950/98 backdrop-blur-2xl border-t border-white/[0.06]" aria-label="Mobilmeny">
+        <nav className="lg:hidden bg-forest-600/98 backdrop-blur-2xl border-t border-white/[0.06]" aria-label="Mobilmeny">
           <div className="container-page py-6 space-y-1">
             <Link
               href="/tjanster"
@@ -225,7 +225,7 @@ export default function Header() {
             <div className="pt-4">
               <Link
                 href="/offert"
-                className="flex items-center justify-center gap-2 w-full rounded-full bg-forest-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-forest-500/30 transition-all duration-300 hover:bg-forest-400"
+                className="flex items-center justify-center gap-2 w-full rounded-full bg-accent-600 px-6 py-3.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/30 transition-all duration-300 hover:bg-accent-500"
                 onClick={() => setMobileOpen(false)}
               >
                 Begär offert

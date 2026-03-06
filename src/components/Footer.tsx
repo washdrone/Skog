@@ -34,7 +34,7 @@ const FORETAG_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-night-950 text-white/60">
+    <footer className="relative overflow-hidden bg-forest-600 text-white/60">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -45,10 +45,10 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-600 shadow-lg shadow-forest-600/20 transition-transform duration-300 group-hover:scale-105">
-                  <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" /></svg>
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-400 shadow-lg shadow-forest-400/20 transition-transform duration-300 group-hover:scale-105">
+                  <svg className="h-5 w-5 text-forest-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" /></svg>
                 </div>
-                <span className="text-xl font-bold text-white tracking-tight">
+                <span className="text-xl font-display font-bold text-white tracking-tight">
                   Timber<span className="text-forest-400">Drone</span>
                 </span>
               </Link>

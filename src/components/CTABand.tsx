@@ -16,7 +16,7 @@ export default function CTABand({
   return (
     <section className="relative overflow-hidden">
       {/* Background: rich forest gradient simulating aerial photo */}
-      <div className="absolute inset-0 bg-gradient-to-br from-night-950 via-forest-950 to-night-900" />
+      <div className="absolute inset-0 bg-gradient-to-br from-forest-950 via-forest-600 to-forest-900" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 topo-pattern opacity-30" />
 
@@ -29,12 +29,12 @@ export default function CTABand({
 
       <div className="container-page relative z-10 py-28 sm:py-36">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-display text-white sm:text-display-lg">{headline}</h2>
-          <p className="mt-5 text-lg text-white/60 leading-relaxed">{description}</p>
+          <h2 className="text-display text-white font-display sm:text-display-lg">{headline}</h2>
+          <p className="mt-5 text-lg text-white/60 font-body leading-relaxed">{description}</p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaHref}
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-forest-400 px-8 py-3.5 text-sm font-semibold text-forest-300 transition-all duration-300 hover:bg-forest-400 hover:text-night-950 backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-8 py-3.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/30 transition-all duration-300 hover:bg-accent-500 hover:shadow-xl hover:-translate-y-0.5"
             >
               {ctaLabel}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

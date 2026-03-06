@@ -16,8 +16,8 @@ function FAQAccordion({ item, isOpen, toggle }: { item: FAQItem; isOpen: boolean
         onClick={toggle}
         aria-expanded={isOpen}
       >
-        <span className="pr-6 text-base font-medium text-slate-900 group-hover:text-forest-700 transition-colors">{item.question}</span>
-        <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-forest-600 rotate-180' : 'bg-slate-100 group-hover:bg-forest-50'}`}>
+        <span className="pr-6 text-base font-sans font-medium text-slate-900 group-hover:text-forest-600 transition-colors">{item.question}</span>
+        <div className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-forest-500 rotate-180' : 'bg-cream-200 group-hover:bg-forest-400/10'}`}>
           <svg
             className={`h-4 w-4 transition-colors ${isOpen ? 'text-white' : 'text-slate-500'}`}
             fill="none"
@@ -31,7 +31,7 @@ function FAQAccordion({ item, isOpen, toggle }: { item: FAQItem; isOpen: boolean
         </div>
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
-        <p className="pr-12 text-sm leading-relaxed text-slate-500">{item.answer}</p>
+        <p className="pr-12 text-sm leading-relaxed text-slate-500 font-body">{item.answer}</p>
       </div>
     </div>
   )
@@ -46,7 +46,7 @@ export default function FAQ({ items, showHeading = true }: { items: FAQItem[]; s
         {showHeading && (
           <div className="text-center mb-12">
             <span className="badge">FAQ</span>
-            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">Vanliga frågor</h2>
+            <h2 className="mt-4 text-heading-xl text-slate-900 font-display sm:text-display">Vanliga frågor</h2>
             <p className="mt-4 text-slate-500">Svar på de vanligaste frågorna om drönarbaserade mättjänster för skogsbruk.</p>
           </div>
         )}

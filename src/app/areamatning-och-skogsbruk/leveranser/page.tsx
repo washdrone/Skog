@@ -93,7 +93,7 @@ export default function LeveranserPage() {
 
       {/* Quality section */}
       {/* EJ VERIFIERAD: A3 "omflygning utan extra kostnad", B3 "SWEREF99 TM", A2 "3–5 arbetsdagar" */}
-      <section className="bg-slate-50 section-padding">
+      <section className="bg-cream-200/50 section-padding">
         <div className="container-page max-w-3xl prose-forest">
           <h2>Kvalitetssäkring</h2>
           <p>

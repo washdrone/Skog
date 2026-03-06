@@ -82,7 +82,7 @@ export default function OffertPage() {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div className="rounded-2xl border border-slate-200 bg-cream-200/50 p-6">
                 <h3 className="font-semibold text-slate-900">Direktkontakt</h3>
                 <div className="mt-4 space-y-3 text-sm text-slate-600">
                   <p>
@@ -99,7 +99,7 @@ export default function OffertPage() {
       </section>
 
       {/* Process steps */}
-      <section className="relative bg-slate-50 section-padding overflow-hidden">
+      <section className="relative bg-cream-200/50 section-padding overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/[0.03] blur-[100px]" />
         <div className="container-page relative">
           <div className="text-center">

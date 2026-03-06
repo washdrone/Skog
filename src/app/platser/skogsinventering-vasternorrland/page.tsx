@@ -101,7 +101,7 @@ export default function VasternorrlandPage() {
       </section>
 
       {/* Services */}
-      <section className="relative bg-slate-50 section-padding overflow-hidden">
+      <section className="relative bg-cream-200/50 section-padding overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/[0.03] blur-[100px]" />
         <div className="container-page relative">
           <div className="text-center">

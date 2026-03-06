@@ -57,7 +57,7 @@ export default function KontaktPage() {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div className="rounded-2xl border border-slate-200 bg-cream-200/50 p-6">
                 <h3 className="font-semibold text-slate-900">Så fungerar det</h3>
                 <ol className="mt-4 space-y-3 text-sm text-slate-600">
                   <li className="flex gap-3">

@@ -36,7 +36,7 @@ const TRUST_ITEMS = [
 export default function TrustBlock() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 gradient-forest" />
+      <div className="absolute inset-0 bg-gradient-to-br from-forest-950 via-forest-600 to-forest-900" />
       <div className="absolute inset-0 bg-grid opacity-20" />
 
       <div className="container-page relative z-10 section-padding-sm">
