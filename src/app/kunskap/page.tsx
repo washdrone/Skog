@@ -96,26 +96,28 @@ export default function KunskapPage() {
 
       <Breadcrumbs items={[{ label: 'Kunskap' }]} />
 
-      <section className="gradient-hero section-padding">
+      <section className="gradient-hero py-12 sm:py-16 lg:py-20">
         <div className="container-page max-w-3xl text-center">
-          <h1 className="text-display text-white sm:text-display-lg">
+          <h1 className="text-heading-xl text-white font-display sm:text-display lg:text-display-lg">
             Kunskap om drönarbaserad skogsanalys
           </h1>
-          <p className="mt-5 text-lg text-white/60 leading-relaxed">
+          <p className="mt-4 text-base text-white/60 leading-relaxed sm:mt-5 sm:text-lg">
             Guider, jämförelser och förklaringar som hjälper dig att förstå hur drönarteknik
             kan effektivisera och förbättra skogsbruket.
           </p>
         </div>
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent sm:h-16" />
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container-page">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
               <Link
                 key={article.href}
                 href={article.href}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-forest-300 hover:shadow-md"
+                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-forest-300 hover:shadow-md sm:p-6"
               >
                 <h2 className="text-heading text-slate-900 group-hover:text-forest-700 transition-colors">
                   {article.title}

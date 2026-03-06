@@ -29,6 +29,8 @@ const FORETAG_LINKS = [
   { label: 'För fastighetsköpare', href: '/for/fastighet' },
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
+  { label: 'Platser', href: '/platser' },
+  { label: 'Kontakt', href: '/areamatning-och-skogsbruk/kontakt' },
   { label: 'Begär offert', href: '/offert' },
 ]
 
@@ -39,11 +41,11 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="container-page relative">
-        <div className="py-16 sm:py-20">
+        <div className="py-12 sm:py-16 lg:py-20">
           {/* Top: Logo + columns */}
-          <div className="grid gap-12 lg:grid-cols-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
             {/* Brand */}
-            <div className="lg:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-400 shadow-lg shadow-forest-400/20 transition-transform duration-300 group-hover:scale-105">
                   <svg className="h-5 w-5 text-forest-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" /></svg>
@@ -52,7 +54,7 @@ export default function Footer() {
                   Timber<span className="text-forest-400">Drone</span>
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-white/60 leading-relaxed">
+              <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
                 Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
               </p>
               <p className="mt-4 text-sm text-white/60">
@@ -84,9 +86,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Företag */}
+            {/* Företag & navigation */}
             <div>
-              <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">Kundsegment</h3>
+              <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">Kundsegment & kontakt</h3>
               <ul className="space-y-2.5">
                 {FORETAG_LINKS.map((link) => (
                   <li key={link.href}>
@@ -96,11 +98,13 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row">
+        <div
+          className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row"
+          style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
+        >
           <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6 text-xs text-white/50">
             <Link href="/integritetspolicy" className="hover:text-forest-400 transition-colors">Integritetspolicy</Link>

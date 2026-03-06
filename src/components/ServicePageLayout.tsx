@@ -30,18 +30,18 @@ export default function ServicePageLayout({
 
       <article>
         {/* Page header */}
-        <header className="relative overflow-hidden gradient-hero pt-8 pb-16 sm:pt-12 sm:pb-24">
+        <header className="relative overflow-hidden gradient-hero pt-8 pb-12 sm:pt-12 sm:pb-20">
           <div className="absolute inset-0 bg-grid" />
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/5 blur-[100px]" />
           <div className="container-page relative max-w-3xl mx-auto text-center">
-            <h1 className="text-display text-white font-display sm:text-display-lg">
+            <h1 className="text-heading-xl text-white font-display sm:text-display lg:text-display-lg">
               {headline}
             </h1>
-            <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
+            <p className="mt-4 mx-auto max-w-2xl text-base leading-relaxed text-white/60 sm:mt-5 sm:text-lg">
               {intro}
             </p>
-            <div className="mt-8">
-              <Link href="/offert" className="btn-primary">
+            <div className="mt-6 sm:mt-8">
+              <Link href="/offert" className="btn-primary text-sm sm:text-base">
                 Begär offert
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -49,6 +49,8 @@ export default function ServicePageLayout({
               </Link>
             </div>
           </div>
+          {/* Bottom gradient fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-cream-100 to-transparent sm:h-16" />
         </header>
 
         {/* Content */}

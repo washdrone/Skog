@@ -73,7 +73,7 @@ export default function OutputShowcase() {
             <Link
               key={output.title}
               href={output.href}
-              className="card-shine group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5 hover:scale-[1.02]"
+              className="card-shine group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] sm:hover:-translate-y-1.5"
             >
               {/* Visual placeholder */}
               <div className="relative aspect-[16/10] overflow-hidden">

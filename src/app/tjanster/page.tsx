@@ -271,7 +271,7 @@ export default function TjansterHubPage() {
                 { title: 'Branschstandardformat', desc: 'GeoTIFF, GeoPackage, Shapefile, LAS — importera direkt i ert GIS.' },
                 { title: 'Kombinera datatillgångar', desc: 'Ortofoto, höjdmodeller och vegetationsindex i samma leverans.' },
               ].map((item, i) => (
-                <div key={item.title} className={`group flex gap-4 reveal reveal-delay-${i + 1}`}>
+                <div key={item.title} className={`group flex gap-4 reveal reveal-delay-${Math.min(i + 1, 6)}`}>
                   <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-forest-50 text-forest-600 ring-1 ring-forest-100 transition-all duration-500 group-hover:bg-forest-600 group-hover:text-white group-hover:ring-forest-600 group-hover:shadow-lg group-hover:shadow-forest-600/20">
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />

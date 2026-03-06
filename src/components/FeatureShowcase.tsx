@@ -77,9 +77,9 @@ export default function FeatureShowcase() {
               </div>
             </div>
 
-            {/* Decorative floating element */}
-            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-2xl bg-forest-50 border border-forest-100 -z-10" />
-            <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-2xl bg-forest-50/50 border border-forest-100/50 -z-10" />
+            {/* Decorative floating element — hidden on mobile to prevent overflow */}
+            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-2xl bg-forest-50 border border-forest-100 -z-10 hidden sm:block" />
+            <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-2xl bg-forest-50/50 border border-forest-100/50 -z-10 hidden sm:block" />
           </div>
         </div>
       </div>

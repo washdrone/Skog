@@ -27,11 +27,11 @@ export default function CTABand({
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="container-page relative z-10 py-28 sm:py-36">
+      <div className="container-page relative z-10 py-16 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-display text-white font-display sm:text-display-lg">{headline}</h2>
-          <p className="mt-5 text-lg text-white/60 font-body leading-relaxed">{description}</p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <h2 className="text-heading-xl text-white font-display sm:text-display lg:text-display-lg">{headline}</h2>
+          <p className="mt-4 text-base text-white/60 font-body leading-relaxed sm:mt-5 sm:text-lg">{description}</p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center sm:gap-4">
             <Link
               href={ctaHref}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-8 py-3.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/30 transition-all duration-300 hover:bg-accent-500 hover:shadow-xl hover:-translate-y-0.5"

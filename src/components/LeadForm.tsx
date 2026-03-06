@@ -114,11 +114,9 @@ export default function LeadForm() {
           <input type="text" id="kontaktperson" name="kontaktperson" required value={formData.kontaktperson} onChange={handleChange} className={inputClass} />
         </div>
       </div>
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label htmlFor="epost" className={labelClass}>E-postadress <span className="text-red-500">*</span></label>
-          <input type="email" id="epost" name="epost" required value={formData.epost} onChange={handleChange} className={inputClass} />
-        </div>
+      <div>
+        <label htmlFor="epost" className={labelClass}>E-postadress <span className="text-red-500">*</span></label>
+        <input type="email" id="epost" name="epost" required value={formData.epost} onChange={handleChange} className={inputClass} />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>

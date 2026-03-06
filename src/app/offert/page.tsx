@@ -35,13 +35,13 @@ export default function OffertPage() {
 
       <Breadcrumbs items={[{ label: 'Begär offert' }]} />
 
-      <header className="relative overflow-hidden gradient-hero py-14 sm:py-20">
+      <header className="relative overflow-hidden gradient-hero py-10 sm:py-16">
         <div className="absolute inset-0 bg-grid" />
         <div className="relative container-page max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h1 className="text-heading-xl font-display font-bold tracking-tight text-white sm:text-display">
             Begär en kostnadsfri offert
           </h1>
-          <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
+          <p className="mt-3 mx-auto max-w-2xl text-base leading-relaxed text-white/60 sm:mt-4 sm:text-lg">
             Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar.
             Fyll i formuläret nedan eller kontakta oss direkt på{' '}
             <a href="mailto:info@timberdrone.se" className="text-forest-400 hover:text-forest-300 underline">
@@ -51,9 +51,9 @@ export default function OffertPage() {
         </div>
       </header>
 
-      <section className="section-padding">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="container-page">
-          <div className="grid gap-12 lg:grid-cols-3">
+          <div className="grid gap-8 lg:grid-cols-3 lg:gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
               <LeadForm />
@@ -99,7 +99,7 @@ export default function OffertPage() {
       </section>
 
       {/* Process steps */}
-      <section className="relative bg-cream-200/50 section-padding overflow-hidden">
+      <section className="relative bg-cream-200/50 py-12 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/[0.03] blur-[100px]" />
         <div className="container-page relative">
           <div className="text-center">

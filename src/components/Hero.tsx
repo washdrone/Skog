@@ -47,32 +47,32 @@ export default function Hero({
         </svg>
       </div>
 
-      <div className="container-page relative z-10 pt-32 pb-16 sm:pt-40 sm:pb-20">
+      <div className="container-page relative z-10 pt-24 pb-14 sm:pt-36 sm:pb-20 lg:pt-40">
         <div className="max-w-4xl">
           {badge && (
-            <div className="hero-animate-1 mb-6 inline-flex items-center rounded-full bg-forest-400/10 border border-forest-400/20 px-4 py-1.5 backdrop-blur-sm">
+            <div className="hero-animate-1 mb-5 inline-flex items-center rounded-full bg-forest-400/10 border border-forest-400/20 px-3.5 py-1.5 backdrop-blur-sm sm:mb-6 sm:px-4">
               <div className="mr-2 h-1.5 w-1.5 rounded-full bg-forest-400 pulse-ring" />
-              <span className="text-xs font-sans font-semibold text-forest-400 tracking-wide uppercase">{badge}</span>
+              <span className="text-[10px] font-sans font-semibold text-forest-400 tracking-wide uppercase sm:text-xs">{badge}</span>
             </div>
           )}
 
-          <h1 className="hero-animate-2 text-display text-white font-display sm:text-display-lg lg:text-display-xl">
+          <h1 className="hero-animate-2 text-heading-xl text-white font-display sm:text-display-lg lg:text-display-xl">
             {headline}
           </h1>
 
-          <p className="hero-animate-3 mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-body sm:text-xl">
+          <p className="hero-animate-3 mt-5 max-w-2xl text-base leading-relaxed text-white/60 font-body sm:mt-6 sm:text-lg lg:text-xl">
             {subheadline}
           </p>
 
-          <div className="hero-animate-4 mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link href={ctaHref} className="btn-primary text-base group">
+          <div className="hero-animate-4 mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+            <Link href={ctaHref} className="btn-primary text-sm group sm:text-base">
               {ctaLabel}
               <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </Link>
             {secondaryCtaLabel && secondaryCtaHref && (
-              <Link href={secondaryCtaHref} className="btn-secondary text-base">
+              <Link href={secondaryCtaHref} className="btn-secondary text-sm sm:text-base">
                 {secondaryCtaLabel}
               </Link>
             )}
@@ -81,11 +81,11 @@ export default function Hero({
 
         {/* Stats bar */}
         {stats && stats.length > 0 && (
-          <div className="hero-animate-5 mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
+          <div className="hero-animate-5 mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:grid-cols-4 sm:gap-4 lg:gap-6">
             {stats.map((stat, i) => (
-              <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-4 text-center">
-                <p className="text-lg font-sans font-semibold text-white/80 sm:text-xl tracking-tight">{stat.value}</p>
-                <p className="mt-1 text-[11px] font-sans font-medium text-white/30 uppercase tracking-wider">{stat.label}</p>
+              <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-3 py-3 text-center sm:px-4 sm:py-4">
+                <p className="text-sm font-sans font-semibold text-white/80 sm:text-lg lg:text-xl tracking-tight truncate">{stat.value}</p>
+                <p className="mt-0.5 text-[10px] font-sans font-medium text-white/30 uppercase tracking-wider sm:mt-1 sm:text-[11px]">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default function Hero({
       </div>
 
       {/* Bottom gradient fade to cream background */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-100/80 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-cream-100 to-transparent sm:h-24" />
     </section>
   )
 }

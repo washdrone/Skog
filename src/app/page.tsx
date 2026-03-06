@@ -211,14 +211,14 @@ export default function HomePage() {
                 <Link
                   key={card.title}
                   href={card.href}
-                  className={`glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 reveal reveal-delay-${Math.min(i + 1, 4)}`}
+                  className={`glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] sm:hover:-translate-y-1.5 sm:p-8 reveal reveal-delay-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25 sm:h-12 sm:w-12">
                     {card.icon}
                   </div>
-                  <h3 className="mt-5 text-lg font-sans font-semibold text-slate-900 group-hover:text-forest-600 transition-colors">{card.title}</h3>
+                  <h3 className="mt-4 text-lg font-sans font-semibold text-slate-900 group-hover:text-forest-600 transition-colors sm:mt-5">{card.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-500 font-body">{card.desc}</p>
-                  <div className="mt-5 flex items-center gap-2 text-sm font-sans font-semibold text-forest-500">
+                  <div className="mt-4 flex items-center gap-2 text-sm font-sans font-semibold text-forest-500 sm:mt-5">
                     Läs mer
                     <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -250,10 +250,10 @@ export default function HomePage() {
               {/* Card 1: Mätning */}
               <Link
                 href="/tjanster"
-                className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-10 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 reveal reveal-delay-1"
+                className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] sm:hover:-translate-y-1.5 sm:p-10 reveal reveal-delay-1"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25">
-                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25 sm:h-14 sm:w-14">
+                  <svg className="h-6 w-6 sm:h-7 sm:w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                   </svg>
                 </div>
@@ -280,7 +280,7 @@ export default function HomePage() {
               {/* Card 2: Vegetationsanalys */}
               <Link
                 href="/tjanster/multispektralanalys"
-                className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-10 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 reveal reveal-delay-2"
+                className="glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] sm:hover:-translate-y-1.5 sm:p-10 reveal reveal-delay-2"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25">
                   <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

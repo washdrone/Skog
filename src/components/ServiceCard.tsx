@@ -12,7 +12,7 @@ export default function ServiceCard({ title, description, href, icon, index = 0 
   return (
     <Link
       href={href}
-      className={`card-shine group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 reveal reveal-delay-${index + 1}`}
+      className={`card-shine group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] sm:hover:-translate-y-1.5 sm:p-7 reveal reveal-delay-${index + 1}`}
     >
       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25 group-hover:scale-110">
         {icon}
