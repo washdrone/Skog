@@ -34,7 +34,7 @@ export default function ServicePageLayout({
           <div className="absolute inset-0 bg-grid" />
           <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-forest-500/5 blur-[100px]" />
           <div className="container-page relative max-w-3xl mx-auto text-center">
-            <h1 className="text-display text-white sm:text-display-lg">
+            <h1 className="text-display text-white font-display sm:text-display-lg">
               {headline}
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
@@ -60,7 +60,7 @@ export default function ServicePageLayout({
 
         {/* Related links */}
         {relatedLinks && relatedLinks.length > 0 && (
-          <section className="bg-slate-50 section-padding-sm">
+          <section className="bg-cream-200/50 section-padding-sm">
             <div className="container-page">
               <h2 className="text-center text-heading text-slate-900">Relaterade tjänster</h2>
               <div className="mt-8 flex flex-wrap justify-center gap-3">

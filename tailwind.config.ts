@@ -9,21 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        /* Deep forest — inspired by AirForestry's bold dark greens */
+        /* Deep forest primary — #1B4332 / #2D6A4F as brand anchors */
         forest: {
           50:  '#eefbf3',
           100: '#d6f5e0',
           200: '#b0eac6',
           300: '#7cd9a5',
-          400: '#46c17e',
-          500: '#24a663',
-          600: '#17864f',
-          700: '#136b41',
-          800: '#125536',
-          900: '#0f462d',
-          950: '#06271a',
+          400: '#52B788', /* Löv-accent */
+          500: '#2D6A4F', /* Primary mid */
+          600: '#1B4332', /* Primary deep */
+          700: '#163a2b',
+          800: '#122f23',
+          900: '#0e251c',
+          950: '#071510',
         },
-        /* Night — deepest blacks/greens for backgrounds */
+        /* Warm off-white background */
+        cream: {
+          50:  '#FDFCFA',
+          100: '#F8F5F0', /* Primary background */
+          200: '#F0EBE3',
+          300: '#E5DED3',
+          400: '#D4CABF',
+        },
+        /* Night — deepest greens for dark sections */
         night: {
           50:  '#f0fdf6',
           100: '#dbfce9',
@@ -51,19 +59,19 @@ const config: Config = {
           900: '#0f172a',
           950: '#020617',
         },
-        /* Accent — warm amber for CTAs, inspired by Airpelago's action colors */
+        /* Accent — amber for CTAs (#E76F00) */
         accent: {
-          50:  '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-          950: '#451a03',
+          50:  '#FFF8F0',
+          100: '#FFEDD5',
+          200: '#FED7AA',
+          300: '#FDBA74',
+          400: '#FB923C',
+          500: '#F97316',
+          600: '#E76F00', /* Primary CTA color */
+          700: '#C2610A',
+          800: '#9A3412',
+          900: '#7C2D12',
+          950: '#431407',
         },
         /* Spectrum — NDVI/multispectral visualization palette */
         spectrum: {
@@ -76,8 +84,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
-        heading: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Source Serif 4"', 'Georgia', 'serif'],
+        sans: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       fontSize: {

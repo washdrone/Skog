@@ -91,7 +91,7 @@ export default function VadArNDVIPage() {
 
           <h2>Formeln bakom NDVI</h2>
           <p>NDVI beräknas med en enkel formel:</p>
-          <div className="my-6 rounded-xl border border-slate-200 bg-slate-50 p-6 text-center">
+          <div className="my-6 rounded-xl border border-slate-200 bg-cream-200/50 p-6 text-center">
             <span className="font-mono text-lg text-slate-800">
               NDVI = (NIR − Röd) / (NIR + Röd)
             </span>

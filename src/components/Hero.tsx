@@ -29,13 +29,13 @@ export default function Hero({
       <div className="absolute inset-0 topo-pattern" />
 
       {/* Animated radial glows */}
-      <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] rounded-full bg-forest-500/10 blur-[120px] animate-float-slow" />
+      <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] rounded-full bg-forest-400/10 blur-[120px] animate-float-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-forest-400/8 blur-[100px] animate-float-reverse" />
 
       {/* Floating decorative elements */}
-      <div className="absolute top-[15%] right-[10%] w-20 h-20 rounded-full border border-forest-500/10 animate-float-slow" aria-hidden="true" />
+      <div className="absolute top-[15%] right-[10%] w-20 h-20 rounded-full border border-forest-400/10 animate-float-slow" aria-hidden="true" />
       <div className="absolute top-[60%] right-[15%] w-3 h-3 rounded-full bg-forest-400/30 animate-float" aria-hidden="true" />
-      <div className="absolute top-[25%] right-[25%] w-2 h-2 rounded-full bg-forest-300/20 animate-float-reverse" aria-hidden="true" />
+      <div className="absolute top-[25%] right-[25%] w-2 h-2 rounded-full bg-forest-400/20 animate-float-reverse" aria-hidden="true" />
       <div className="absolute bottom-[30%] left-[8%] w-16 h-16 rounded-full border border-white/5 animate-float" aria-hidden="true" />
 
       {/* Decorative tree silhouettes */}
@@ -50,17 +50,17 @@ export default function Hero({
       <div className="container-page relative z-10 pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="max-w-4xl">
           {badge && (
-            <div className="hero-animate-1 mb-6 inline-flex items-center rounded-full bg-forest-500/10 border border-forest-500/20 px-4 py-1.5 backdrop-blur-sm">
+            <div className="hero-animate-1 mb-6 inline-flex items-center rounded-full bg-forest-400/10 border border-forest-400/20 px-4 py-1.5 backdrop-blur-sm">
               <div className="mr-2 h-1.5 w-1.5 rounded-full bg-forest-400 pulse-ring" />
-              <span className="text-xs font-semibold text-forest-300 tracking-wide uppercase">{badge}</span>
+              <span className="text-xs font-sans font-semibold text-forest-400 tracking-wide uppercase">{badge}</span>
             </div>
           )}
 
-          <h1 className="hero-animate-2 text-display text-white sm:text-display-lg lg:text-display-xl">
+          <h1 className="hero-animate-2 text-display text-white font-display sm:text-display-lg lg:text-display-xl">
             {headline}
           </h1>
 
-          <p className="hero-animate-3 mt-6 max-w-2xl text-lg leading-relaxed text-white/60 sm:text-xl">
+          <p className="hero-animate-3 mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-body sm:text-xl">
             {subheadline}
           </p>
 
@@ -84,16 +84,16 @@ export default function Hero({
           <div className="hero-animate-5 mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
             {stats.map((stat, i) => (
               <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-4 text-center">
-                <p className="text-lg font-semibold text-white/80 sm:text-xl tracking-tight">{stat.value}</p>
-                <p className="mt-1 text-[11px] font-medium text-white/30 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-lg font-sans font-semibold text-white/80 sm:text-xl tracking-tight">{stat.value}</p>
+                <p className="mt-1 text-[11px] font-sans font-medium text-white/30 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
         )}
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/80 to-transparent" />
+      {/* Bottom gradient fade to cream background */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-100/80 to-transparent" />
     </section>
   )
 }

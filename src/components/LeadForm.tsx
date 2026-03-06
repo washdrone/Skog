@@ -47,7 +47,7 @@ interface FormData {
   meddelande: string
 }
 
-const inputClass = 'mt-1.5 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm transition-all placeholder:text-slate-400 focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20'
+const inputClass = 'mt-1.5 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-body shadow-sm transition-all placeholder:text-slate-400 focus:border-forest-400 focus:outline-none focus:ring-2 focus:ring-forest-400/20'
 const labelClass = 'block text-sm font-medium text-slate-700'
 
 export default function LeadForm() {

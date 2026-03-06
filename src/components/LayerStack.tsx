@@ -8,7 +8,7 @@ const LAYERS = [
     label: 'Ortofoto',
     /* MÅSTE VERIFIERAS: B1 GSD-intervall */
     description: 'RGB flygbild, hög upplösning',
-    bg: 'bg-gradient-to-br from-forest-800 via-forest-900 to-night-950',
+    bg: 'bg-gradient-to-br from-forest-800 via-forest-900 to-forest-950',
     overlay: (
       <>
         <div className="absolute inset-0 topo-pattern opacity-50" />
@@ -20,7 +20,7 @@ const LAYERS = [
     id: 'hojdmodell',
     label: 'Höjdmodell',
     description: 'DSM/DTM',
-    bg: 'bg-gradient-to-br from-night-900 via-slate-800 to-forest-950',
+    bg: 'bg-gradient-to-br from-forest-900 via-slate-800 to-forest-950',
     overlay: (
       <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 200 120" fill="none">
         <path d="M0 80 Q50 40 100 60 T200 50" stroke="#94a3b8" strokeWidth="1" />
@@ -33,7 +33,7 @@ const LAYERS = [
     id: 'bestandsgranser',
     label: 'Beståndsgränser',
     description: 'Vektorlager',
-    bg: 'bg-night-950/90',
+    bg: 'bg-forest-950/90',
     overlay: (
       <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 200 120" fill="none">
         <polygon points="20,15 90,10 100,55 30,60" stroke="#46c17e" strokeWidth="1.5" fill="#46c17e" fillOpacity="0.1" />

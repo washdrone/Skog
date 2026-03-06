@@ -9,7 +9,7 @@ const OUTPUTS = [
     badges: ['GeoTIFF', 'JPEG2000'],
     href: '/areamatning-och-skogsbruk/leveranser',
     placeholder: (
-      <div className="absolute inset-0 bg-gradient-to-br from-forest-800 via-forest-900 to-night-950">
+      <div className="absolute inset-0 bg-gradient-to-br from-forest-700 via-forest-600 to-forest-950">
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute inset-0 topo-pattern opacity-60" />
         <div className="absolute top-1/3 left-1/4 w-[150px] h-[150px] rounded-full bg-forest-500/20 blur-[50px]" />
@@ -23,7 +23,7 @@ const OUTPUTS = [
     badges: ['Shapefile', 'GeoPackage', 'GeoJSON'],
     href: '/areamatning-och-skogsbruk/leveranser',
     placeholder: (
-      <div className="absolute inset-0 bg-night-950">
+      <div className="absolute inset-0 bg-forest-950">
         <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 300 200" fill="none">
           <polygon points="40,30 120,20 140,80 60,90" stroke="#46c17e" strokeWidth="1.5" fill="#46c17e" fillOpacity="0.1" />
           <polygon points="130,40 230,25 250,100 160,95" stroke="#7cd9a5" strokeWidth="1.5" fill="#7cd9a5" fillOpacity="0.08" />
@@ -60,7 +60,7 @@ export default function OutputShowcase() {
       <div className="container-page relative">
         <div className="text-center">
           <span className="badge">Vad vi levererar</span>
-          <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">
+          <h2 className="mt-4 text-heading-xl text-slate-900 font-display sm:text-display">
             Era underlag — redo att använda
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-500">

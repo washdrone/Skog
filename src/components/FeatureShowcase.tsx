@@ -11,13 +11,13 @@ const FEATURES = [
 
 export default function FeatureShowcase() {
   return (
-    <section className="relative bg-white section-padding overflow-hidden">
+    <section className="relative bg-cream-50 section-padding overflow-hidden">
       <div className="container-page relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: Features with checkmarks */}
           <div>
             <span className="badge">Varför TimberDrone</span>
-            <h2 className="mt-4 text-heading-xl text-slate-900 sm:text-display">
+            <h2 className="mt-4 text-heading-xl text-slate-900 font-display sm:text-display">
               Professionella drönarunderlag för skog och mark
             </h2>
             <p className="mt-4 text-slate-500 leading-relaxed">
@@ -27,7 +27,7 @@ export default function FeatureShowcase() {
             <ul className="mt-8 space-y-4">
               {FEATURES.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-600">
+                  <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-500">
                     <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
@@ -49,7 +49,7 @@ export default function FeatureShowcase() {
 
           {/* Right: Image placeholder with forest/drone scene */}
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-forest-800 via-night-900 to-forest-950 shadow-2xl">
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-forest-700 via-forest-600 to-forest-950 shadow-2xl">
               {/* Decorative overlay simulating drone/forest photography */}
               <div className="absolute inset-0 bg-grid opacity-20" />
               <div className="absolute inset-0 topo-pattern opacity-40" />

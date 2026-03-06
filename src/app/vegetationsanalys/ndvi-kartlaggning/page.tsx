@@ -65,7 +65,7 @@ export default function NDVIKartlaggningPage() {
           <li><strong>&lt; 0.2</strong> — Bar mark, vatten, snö</li>
         </ul>
 
-        <div className="my-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+        <div className="my-8 rounded-2xl border border-slate-200 bg-cream-200/50 p-6">
           <NDVIGradientBar />
         </div>
 
