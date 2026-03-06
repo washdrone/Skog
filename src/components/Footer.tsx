@@ -52,10 +52,10 @@ export default function Footer() {
                   Timber<span className="text-forest-400">Drone</span>
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-white/40 leading-relaxed">
+              <p className="mt-4 text-sm text-white/60 leading-relaxed">
                 Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
               </p>
-              <p className="mt-4 text-sm text-white/30">
+              <p className="mt-4 text-sm text-white/60">
                 <a href="mailto:info@timberdrone.se" className="hover:text-forest-400 transition-colors">info@timberdrone.se</a>
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {SERVICE_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/40 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -78,7 +78,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {KUNSKAP_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/40 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {FORETAG_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/40 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -101,10 +101,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row">
-          <p className="text-xs text-white/25">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
-          <div className="flex gap-6 text-xs text-white/25">
-            <span>Integritetspolicy</span>
-            <span>Cookiepolicy</span>
+          <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
+          <div className="flex gap-6 text-xs text-white/50">
+            <Link href="/integritetspolicy" className="hover:text-forest-400 transition-colors">Integritetspolicy</Link>
+            <Link href="/cookiepolicy" className="hover:text-forest-400 transition-colors">Cookiepolicy</Link>
           </div>
         </div>
       </div>
