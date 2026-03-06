@@ -88,11 +88,6 @@ export default function KontaktPage() {
                       info@timberdrone.se
                     </a>
                   </p>
-                  {/* MÅSTE VERIFIERAS: Lägg till telefonnummer här när bekräftat */}
-                  <p>
-                    <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">Telefon</span>
-                    <span className="text-slate-400">Anges i offerten</span>
-                  </p>
                 </div>
               </div>
 

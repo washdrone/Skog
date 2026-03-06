@@ -37,7 +37,6 @@ interface FormData {
   foretag: string
   kontaktperson: string
   epost: string
-  telefon: string
   omrade: string
   fastighetsbeteckning: string
   uppdragstyp: string
@@ -53,7 +52,7 @@ const labelClass = 'block text-sm font-medium text-slate-700'
 
 export default function LeadForm() {
   const [formData, setFormData] = useState<FormData>({
-    foretag: '', kontaktperson: '', epost: '', telefon: '',
+    foretag: '', kontaktperson: '', epost: '',
     omrade: '', fastighetsbeteckning: '', uppdragstyp: '',
     areal: '', leverans: [], tillagg: [], tidsram: '', meddelande: '',
   })
@@ -119,10 +118,6 @@ export default function LeadForm() {
         <div>
           <label htmlFor="epost" className={labelClass}>E-postadress <span className="text-red-500">*</span></label>
           <input type="email" id="epost" name="epost" required value={formData.epost} onChange={handleChange} className={inputClass} />
-        </div>
-        <div>
-          <label htmlFor="telefon" className={labelClass}>Telefonnummer <span className="text-red-500">*</span></label>
-          <input type="tel" id="telefon" name="telefon" required value={formData.telefon} onChange={handleChange} className={inputClass} />
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
