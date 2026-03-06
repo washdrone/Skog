@@ -71,10 +71,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/areamatning-och-skogsbruk/faq', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/areamatning-och-skogsbruk/case', priority: 0.5, changeFrequency: 'monthly' as const },
     { path: '/areamatning-och-skogsbruk/kontakt', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // Juridiskt
+    { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const },
+    { path: '/cookiepolicy', priority: 0.3, changeFrequency: 'yearly' as const },
   ]
 
   return pages.map((page) => ({
     url: `${BASE_URL}${page.path}`,
+    lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }))

@@ -4,7 +4,6 @@ interface LeadData {
   foretag: string
   kontaktperson: string
   epost: string
-  telefon: string
   omrade: string
   fastighetsbeteckning: string
   uppdragstyp: string
@@ -24,7 +23,7 @@ export async function POST(request: Request) {
     const data: LeadData = await request.json()
 
     // Validate required fields
-    if (!data.foretag || !data.kontaktperson || !data.epost || !data.telefon || !data.uppdragstyp) {
+    if (!data.foretag || !data.kontaktperson || !data.epost || !data.uppdragstyp) {
       return NextResponse.json(
         { error: 'Obligatoriska fält saknas.' },
         { status: 400 }
@@ -46,7 +45,6 @@ export async function POST(request: Request) {
       foretag: data.foretag,
       kontaktperson: data.kontaktperson,
       epost: data.epost,
-      telefon: data.telefon || '-',
       omrade: data.omrade || '-',
       fastighetsbeteckning: data.fastighetsbeteckning || '-',
       uppdragstyp: data.uppdragstyp,

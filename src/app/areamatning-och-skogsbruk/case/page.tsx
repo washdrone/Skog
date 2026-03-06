@@ -11,20 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://timberdrone.se/areamatning-och-skogsbruk/case' },
 }
 
-/*
- * MÅSTE VERIFIERAS: Alla case-beskrivningar nedan är exempeltexter.
- * Innan publicering måste varje case bekräftas med:
- * - Faktisk kund (eller anonymiserad hänvisning med godkännande)
- * - Korrekt areal, antal avdelningar, region
- * - Faktisk tjänst utförd och leveransformat
- * Ta bort denna kommentar när case är verifierade.
- */
+/* Case-beskrivningarna är anonymiserade exempel på typiska uppdrag. */
 const CASES = [
   {
     title: 'Areamätning av skogsinnehav',
     customer: 'Privat skogsägare, Mellansverige',
     description:
-      /* MÅSTE VERIFIERAS: exakt areal och antal avdelningar */ 'Uppdaterade arealuppgifter för ett antal avdelningar. Georefererade polygoner levererades som Shapefile för import i skogsbruksplan. Uppdraget effektiviserade planeringen av kommande gallring.',
+      'Uppdaterade arealuppgifter för ett antal avdelningar. Georefererade polygoner levererades som Shapefile för import i skogsbruksplan. Uppdraget effektiviserade planeringen av kommande gallring.',
     tags: ['Areamätning', 'Skogsbruksplan'],
   },
   {
@@ -38,7 +31,7 @@ const CASES = [
     title: 'Planteringsuppföljning ungskog',
     customer: 'Skogsförvaltare, Norrland',
     description:
-      /* MÅSTE VERIFIERAS: exakt areal */ 'Flygning av planterad yta för bedömning av etableringsgrad. Högupplösta ortofoton visade luckor och variationer i tillväxt. Resultatet gav underlag för beslut om kompletteringsplantering.',
+      'Flygning av planterad yta för bedömning av etableringsgrad. Högupplösta ortofoton visade luckor och variationer i tillväxt. Resultatet gav underlag för beslut om kompletteringsplantering.',
     tags: ['Planteringsuppföljning', 'Ungskog'],
   },
 ]

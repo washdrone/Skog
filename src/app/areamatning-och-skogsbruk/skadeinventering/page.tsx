@@ -81,7 +81,7 @@ export default function SkadeinventeringPage() {
           <Link href="/areamatning-och-skogsbruk/kontakt" className="text-forest-600 underline hover:text-forest-800">
             kontaktformuläret
           </Link>{' '}
-          eller telefon så diskuterar vi tidsplan och genomförande.
+          eller via <a href="mailto:info@timberdrone.se" className="text-forest-600 underline hover:text-forest-800">e-post</a> så diskuterar vi tidsplan och genomförande.
         </p>
       </ServicePageLayout>
     </>
