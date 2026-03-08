@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 interface LeadData {
   foretag: string
@@ -12,6 +15,31 @@ interface LeadData {
   tillagg: string[]
   tidsram: string
   meddelande: string
+}
+
+function buildEmailHtml(data: LeadData): string {
+  const row = (label: string, value: string) =>
+    value && value !== '-'
+      ? `<tr><td style="padding:6px 12px;font-weight:600;vertical-align:top">${label}</td><td style="padding:6px 12px">${value}</td></tr>`
+      : ''
+
+  return `
+    <h2 style="color:#1a3c2a">Ny offertförfrågan från timberdrone.se</h2>
+    <table style="border-collapse:collapse;font-family:sans-serif;font-size:14px">
+      ${row('Företag', data.foretag)}
+      ${row('Kontaktperson', data.kontaktperson)}
+      ${row('E-post', data.epost)}
+      ${row('Område/kommun', data.omrade)}
+      ${row('Fastighetsbeteckning', data.fastighetsbeteckning)}
+      ${row('Uppdragstyp', data.uppdragstyp)}
+      ${row('Uppskattad areal', data.areal ? `${data.areal} ha` : '')}
+      ${row('Leverans', data.leverans?.length ? data.leverans.join(', ') : '')}
+      ${row('Tillägg', data.tillagg?.length ? data.tillagg.join(', ') : '')}
+      ${row('Tidsram', data.tidsram)}
+      ${row('Meddelande', data.meddelande)}
+    </table>
+    <p style="margin-top:16px;font-size:12px;color:#666">Skickat ${new Date().toISOString()}</p>
+  `
 }
 
 function isValidEmail(email: string): boolean {
@@ -71,11 +99,18 @@ export async function POST(request: Request) {
       })
     }
 
-    // If an email endpoint is configured, send notification
-    const notifyEmail = process.env.LEAD_NOTIFY_EMAIL
-    if (notifyEmail) {
-      // Email sending would be integrated here (e.g., Resend, SendGrid)
-      console.log(`[LEAD NOTIFY] Would email ${notifyEmail}`)
+    // Send email notification to info@timberdrone.se
+    try {
+      await resend.emails.send({
+        from: 'Timberdrone Formulär <formular@timberdrone.se>',
+        to: 'info@timberdrone.se',
+        replyTo: data.epost,
+        subject: `Offertförfrågan: ${data.foretag} – ${data.uppdragstyp}`,
+        html: buildEmailHtml(data),
+      })
+    } catch (emailErr) {
+      console.error('[LEAD EMAIL ERROR]', emailErr)
+      // Don't fail the request if email fails — lead is already logged
     }
 
     return NextResponse.json({ success: true })
