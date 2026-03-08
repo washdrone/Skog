@@ -62,7 +62,7 @@ export default function LayerStack() {
     <div className="relative">
       {/* 3D stack — desktop */}
       <div className="hidden lg:block">
-        <div className="layer-stack relative mx-auto" style={{ width: 400, height: 320 }}>
+        <div className="layer-stack relative mx-auto w-full max-w-[400px]" style={{ height: 320 }}>
           {LAYERS.map((layer, i) => {
             const isActive = activeLayer === layer.id
             const isOther = activeLayer !== null && !isActive
@@ -82,7 +82,7 @@ export default function LayerStack() {
               >
                 {layer.overlay}
                 <div className="absolute bottom-2 left-3 z-10">
-                  <span className="rounded bg-black/40 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur-sm">
+                  <span className="rounded bg-black/40 px-2 py-0.5 text-[10px] leading-normal font-semibold text-white backdrop-blur-sm">
                     {layer.label}
                   </span>
                 </div>
@@ -101,12 +101,12 @@ export default function LayerStack() {
           >
             {layer.overlay}
             <div className="absolute bottom-2 left-3 z-10">
-              <span className="rounded bg-black/40 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur-sm">
+              <span className="rounded bg-black/40 px-2 py-0.5 text-[10px] leading-normal font-semibold text-white backdrop-blur-sm">
                 {layer.label}
               </span>
             </div>
             <div className="absolute bottom-2 right-3 z-10">
-              <span className="text-[10px] text-white/50">{layer.description}</span>
+              <span className="text-[10px] leading-normal text-white/70">{layer.description}</span>
             </div>
           </div>
         ))}

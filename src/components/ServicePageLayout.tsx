@@ -37,7 +37,7 @@ export default function ServicePageLayout({
             <h1 className="text-display text-white font-display sm:text-display-lg">
               {headline}
             </h1>
-            <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
+            <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/70">
               {intro}
             </p>
             <div className="mt-8">

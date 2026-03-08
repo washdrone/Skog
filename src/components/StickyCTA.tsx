@@ -38,6 +38,9 @@ export default function StickyCTA() {
   if (dismissed || !visible) return null
 
   return (
+    <>
+    {/* Spacer to prevent StickyCTA from overlapping footer content on mobile */}
+    <div className="h-16 lg:h-0" aria-hidden="true" />
     <div className="fixed bottom-0 left-0 right-0 z-40 translate-y-0 animate-fade-up lg:bottom-6 lg:left-auto lg:right-6 lg:w-auto">
       <div className="flex items-center gap-3 bg-white/95 backdrop-blur-xl border-t border-slate-200 px-5 py-3 shadow-2xl lg:rounded-2xl lg:border lg:border-slate-200/80 lg:px-6 lg:py-4"
         style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
@@ -62,5 +65,6 @@ export default function StickyCTA() {
         </button>
       </div>
     </div>
+    </>
   )
 }

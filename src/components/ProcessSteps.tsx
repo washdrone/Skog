@@ -17,7 +17,7 @@ export default function ProcessSteps({ steps }: { steps: Step[] }) {
           <h2 className="mt-4 text-heading-xl text-white font-display sm:text-display">
             Så går det till
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-white/50">
+          <p className="mx-auto mt-4 max-w-2xl text-white/70">
             Från uppdragsdialog till färdigt underlag — en tydlig och kvalitetssäkrad process.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function ProcessSteps({ steps }: { steps: Step[] }) {
             </div>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className={`grid gap-6 sm:grid-cols-2 ${steps.length <= 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}>
             {steps.map((step) => (
               <div key={step.number} className="relative group">
                 <div className="rounded-2xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] p-6 transition-all duration-500 hover:bg-white/[0.08] hover:border-forest-500/30 hover:shadow-lg hover:shadow-forest-500/5">
@@ -38,7 +38,7 @@ export default function ProcessSteps({ steps }: { steps: Step[] }) {
                     {step.number}
                   </div>
                   <h3 className="mt-5 text-base font-sans font-semibold text-white">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/50">{step.description}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/70">{step.description}</p>
                 </div>
               </div>
             ))}

@@ -34,14 +34,14 @@ const FORETAG_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest-600 text-white/60">
+    <footer className="relative overflow-hidden bg-forest-600 text-white/70">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="container-page relative">
         <div className="py-16 sm:py-20">
           {/* Top: Logo + columns */}
-          <div className="grid gap-12 lg:grid-cols-4">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link href="/" className="flex items-center gap-3 group">
@@ -52,10 +52,10 @@ export default function Footer() {
                   Timber<span className="text-forest-400">Drone</span>
                 </span>
               </Link>
-              <p className="mt-4 text-sm text-white/60 leading-relaxed">
+              <p className="mt-4 text-sm text-white/70 leading-relaxed">
                 Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
               </p>
-              <p className="mt-4 text-sm text-white/60">
+              <p className="mt-4 text-sm text-white/70">
                 <a href="mailto:info@timberdrone.se" className="hover:text-forest-400 transition-colors">info@timberdrone.se</a>
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {SERVICE_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -78,7 +78,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {KUNSKAP_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {FORETAG_LINKS.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/60 hover:text-forest-400 transition-colors">{link.label}</Link>
+                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -101,8 +101,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row">
-          <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
-          <div className="flex gap-6 text-xs text-white/50">
+          <p className="text-xs text-white/60">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
+          <div className="flex gap-6 text-xs text-white/60">
             <Link href="/integritetspolicy" className="hover:text-forest-400 transition-colors">Integritetspolicy</Link>
             <Link href="/cookiepolicy" className="hover:text-forest-400 transition-colors">Cookiepolicy</Link>
           </div>

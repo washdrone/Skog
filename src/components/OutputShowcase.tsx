@@ -73,7 +73,7 @@ export default function OutputShowcase() {
             <Link
               key={output.title}
               href={output.href}
-              className="card-shine group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5 hover:scale-[1.02]"
+              className="card-shine group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-500 hover:border-forest-300 hover:shadow-2xl hover:shadow-forest-500/[0.08] hover:-translate-y-1.5 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-500"
             >
               {/* Visual placeholder */}
               <div className="relative aspect-[16/10] overflow-hidden">
@@ -92,7 +92,7 @@ export default function OutputShowcase() {
                   {output.badges.map((badge) => (
                     <span
                       key={badge}
-                      className="rounded bg-slate-100 px-2 py-0.5 font-mono text-[10px] font-medium text-slate-500"
+                      className="rounded bg-slate-100 px-2 py-0.5 font-mono text-[10px] leading-normal font-medium text-slate-500"
                     >
                       {badge}
                     </span>

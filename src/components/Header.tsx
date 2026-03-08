@@ -42,6 +42,16 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -70,6 +80,8 @@ export default function Header() {
             className="relative"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
+            onFocus={() => setDropdownOpen(true)}
+            onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setDropdownOpen(false) }}
           >
             <Link
               href="/tjanster"
@@ -87,7 +99,7 @@ export default function Header() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block rounded-xl px-4 py-2.5 text-sm text-white/60 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+                      className="block rounded-xl px-4 py-2.5 text-sm text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
                     >
                       {child.label}
                     </Link>
@@ -102,6 +114,8 @@ export default function Header() {
             className="relative"
             onMouseEnter={() => setKunskapDropdownOpen(true)}
             onMouseLeave={() => setKunskapDropdownOpen(false)}
+            onFocus={() => setKunskapDropdownOpen(true)}
+            onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setKunskapDropdownOpen(false) }}
           >
             <Link
               href="/kunskap"
@@ -119,7 +133,7 @@ export default function Header() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block rounded-xl px-4 py-2.5 text-sm text-white/60 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+                      className="block rounded-xl px-4 py-2.5 text-sm text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
                     >
                       {child.label}
                     </Link>
@@ -172,7 +186,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="lg:hidden bg-forest-600/98 backdrop-blur-2xl border-t border-white/[0.06]" aria-label="Mobilmeny">
+        <nav className="lg:hidden bg-forest-600/98 backdrop-blur-2xl border-t border-white/[0.06] max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain" aria-label="Mobilmeny">
           <div className="container-page py-6 space-y-1">
             <Link
               href="/tjanster"
@@ -186,7 +200,7 @@ export default function Header() {
                 <Link
                   key={child.href}
                   href={child.href}
-                  className="block rounded-xl px-4 py-2 text-sm text-white/50 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
+                  className="block rounded-xl px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
                   onClick={() => setMobileOpen(false)}
                 >
                   {child.label}
@@ -205,7 +219,7 @@ export default function Header() {
                 <Link
                   key={child.href}
                   href={child.href}
-                  className="block rounded-xl px-4 py-2 text-sm text-white/50 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
+                  className="block rounded-xl px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
                   onClick={() => setMobileOpen(false)}
                 >
                   {child.label}
