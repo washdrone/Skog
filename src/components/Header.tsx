@@ -69,7 +69,7 @@ export default function Header() {
             alt="TimberDrone"
             width={180}
             height={48}
-            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-12 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
             priority
           />
         </Link>
