@@ -28,11 +28,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
         />
-        {process.env.NEXT_PUBLIC_GA_ID && (
+        {(process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM') && (
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}`}
             />
             <script
               dangerouslySetInnerHTML={{
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}', {
                     page_path: window.location.pathname,
                   });
                 `,
