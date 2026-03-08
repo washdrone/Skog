@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const SERVICE_ITEMS = [
@@ -62,15 +63,15 @@ export default function Header() {
     >
       <div className="container-page flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-forest-400 shadow-lg shadow-forest-400/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-forest-400/40">
-            <svg className="h-5 w-5 text-forest-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" />
-            </svg>
-          </div>
-          <span className="text-xl font-display font-bold text-white tracking-tight">
-            Timber<span className="text-forest-400">Drone</span>
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/timberdrone-logo.png"
+            alt="TimberDrone"
+            width={180}
+            height={48}
+            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

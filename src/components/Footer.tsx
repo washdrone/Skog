@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const SERVICE_LINKS = [
   { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
@@ -44,13 +45,14 @@ export default function Footer() {
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center gap-3 group">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-400 shadow-lg shadow-forest-400/20 transition-transform duration-300 group-hover:scale-105">
-                  <svg className="h-5 w-5 text-forest-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" /></svg>
-                </div>
-                <span className="text-xl font-display font-bold text-white tracking-tight">
-                  Timber<span className="text-forest-400">Drone</span>
-                </span>
+              <Link href="/" className="flex items-center group">
+                <Image
+                  src="/timberdrone-logo.png"
+                  alt="TimberDrone"
+                  width={180}
+                  height={48}
+                  className="h-12 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+                />
               </Link>
               <p className="mt-4 text-sm text-white/70 leading-relaxed">
                 Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
