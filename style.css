@@ -363,8 +363,6 @@ h1, h2, h3 {
 .process {
   background-color: var(--color-white);
   padding: var(--space-2xl) var(--space-md);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .process__inner {
