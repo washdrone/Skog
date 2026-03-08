@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   },
   description:
     'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG. Nationell täckning.',
+  icons: {
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'sv_SE',
