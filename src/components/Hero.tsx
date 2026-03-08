@@ -92,8 +92,8 @@ export default function Hero({
         )}
       </div>
 
-      {/* Bottom gradient fade to cream background */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream-100/80 to-transparent" />
+      {/* Bottom gradient fade to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-forest-600 to-transparent" />
     </section>
   )
 }
