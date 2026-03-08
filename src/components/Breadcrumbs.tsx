@@ -9,7 +9,7 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav aria-label="Brödsmulor" className="bg-forest-600 border-b border-white/5 pt-20">
       <div className="container-page py-3">
-        <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/40">
+        <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/60">
           <li>
             <Link href="/" className="transition-colors hover:text-forest-400">Hem</Link>
           </li>

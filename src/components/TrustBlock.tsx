@@ -54,7 +54,7 @@ export default function TrustBlock() {
                 {item.icon}
               </div>
               <h3 className="mt-5 text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/50">{item.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">{item.description}</p>
             </div>
           ))}
         </div>

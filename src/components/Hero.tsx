@@ -22,7 +22,7 @@ export default function Hero({
   stats,
 }: HeroProps) {
   return (
-    <section className="relative flex items-center overflow-hidden gradient-hero">
+    <section className="relative flex items-center overflow-hidden gradient-hero min-h-[50vh] lg:min-h-[60vh]">
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid" />
       {/* Topographic overlay */}
@@ -60,7 +60,7 @@ export default function Hero({
             {headline}
           </h1>
 
-          <p className="hero-animate-3 mt-6 max-w-2xl text-lg leading-relaxed text-white/60 font-body sm:text-xl">
+          <p className="hero-animate-3 mt-6 max-w-2xl text-lg leading-relaxed text-white/70 font-body sm:text-xl">
             {subheadline}
           </p>
 
@@ -85,7 +85,7 @@ export default function Hero({
             {stats.map((stat, i) => (
               <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-4 text-center">
                 <p className="text-lg font-sans font-semibold text-white/80 sm:text-xl tracking-tight">{stat.value}</p>
-                <p className="mt-1 text-[11px] font-sans font-medium text-white/30 uppercase tracking-wider">{stat.label}</p>
+                <p className="mt-1 text-[11px] leading-normal font-sans font-medium text-white/50 uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>

@@ -61,18 +61,18 @@ export default function FeatureShowcase() {
                 <svg className="h-24 w-24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2L6 10h3l-4 7h4l-3 5h12l-3-5h4l-4-7h3L12 2z" />
                 </svg>
-                <p className="mt-4 text-xs font-medium text-white/30 tracking-wider uppercase">Drönarfoto</p>
+                <p className="mt-4 text-xs font-medium text-white/50 tracking-wider uppercase">Drönarfoto</p>
               </div>
 
               {/* Stats overlay in bottom corner */}
               <div className="absolute bottom-4 left-4 right-4 flex gap-3">
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
                   <p className="text-lg font-bold text-white">Stora arealer</p>
-                  <p className="text-[10px] text-white/50 uppercase tracking-wider">Per flygning</p>
+                  <p className="text-[10px] leading-normal text-white/60 uppercase tracking-wider">Per flygning</p>
                 </div>
                 <div className="flex-1 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3 text-center">
                   <p className="text-lg font-bold text-white">Hög upplösning</p>
-                  <p className="text-[10px] text-white/50 uppercase tracking-wider">Markupplösning</p>
+                  <p className="text-[10px] leading-normal text-white/60 uppercase tracking-wider">Markupplösning</p>
                 </div>
               </div>
             </div>

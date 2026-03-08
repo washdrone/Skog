@@ -211,7 +211,7 @@ export default function HomePage() {
                 <Link
                   key={card.title}
                   href={card.href}
-                  className={`glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 reveal reveal-delay-${Math.min(i + 1, 4)}`}
+                  className={`glow-border card-shine group relative rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm transition-all duration-500 hover:border-forest-400/50 hover:shadow-2xl hover:shadow-forest-400/[0.08] hover:-translate-y-1.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-500 reveal reveal-delay-${Math.min(i + 1, 4)}`}
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-forest-400/10 text-forest-500 ring-1 ring-forest-400/20 transition-all duration-500 group-hover:bg-forest-500 group-hover:text-white group-hover:ring-forest-500 group-hover:shadow-lg group-hover:shadow-forest-500/25">
                     {card.icon}

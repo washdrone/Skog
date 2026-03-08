@@ -30,7 +30,7 @@ function FAQAccordion({ item, isOpen, toggle }: { item: FAQItem; isOpen: boolean
           </svg>
         </div>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[800px] pb-6' : 'max-h-0'}`}>
         <p className="pr-12 text-sm leading-relaxed text-slate-500 font-body">{item.answer}</p>
       </div>
     </div>

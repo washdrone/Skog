@@ -30,7 +30,7 @@ export default function CTABand({
       <div className="container-page relative z-10 py-28 sm:py-36">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-display text-white font-display sm:text-display-lg">{headline}</h2>
-          <p className="mt-5 text-lg text-white/60 font-body leading-relaxed">{description}</p>
+          <p className="mt-5 text-lg text-white/70 font-body leading-relaxed">{description}</p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaHref}
