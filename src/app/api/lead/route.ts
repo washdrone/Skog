@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 interface LeadData {
   foretag: string
@@ -101,7 +103,7 @@ export async function POST(request: Request) {
 
     // Send email notification to info@timberdrone.se
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: 'Timberdrone Formulär <formular@timberdrone.se>',
         to: 'info@timberdrone.se',
         replyTo: data.epost,
