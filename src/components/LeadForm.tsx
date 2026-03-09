@@ -57,6 +57,7 @@ export default function LeadForm() {
     areal: '', leverans: [], tillagg: [], tidsram: '', meddelande: '',
   })
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [errorDetail, setErrorDetail] = useState<string | null>(null)
   const [hasStarted, setHasStarted] = useState(false)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
@@ -84,7 +85,11 @@ export default function LeadForm() {
         body: JSON.stringify(formData),
       })
       if (res.ok) { setStatus('success'); events.formSubmit() }
-      else { setStatus('error') }
+      else {
+        const body = await res.json().catch(() => null)
+        setErrorDetail(body?.detail || body?.error || null)
+        setStatus('error')
+      }
     } catch { setStatus('error') }
   }
 
@@ -183,7 +188,10 @@ export default function LeadForm() {
         )}
       </button>
       {status === 'error' && (
-        <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">Något gick fel. Försök igen eller kontakta oss direkt via e-post.</div>
+        <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+          Något gick fel. Försök igen eller kontakta oss direkt via e-post.
+          {errorDetail && <p className="mt-1 text-xs text-red-500">{errorDetail}</p>}
+        </div>
       )}
     </form>
   )

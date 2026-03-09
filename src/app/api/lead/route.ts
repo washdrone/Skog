@@ -102,17 +102,26 @@ export async function POST(request: Request) {
     }
 
     // Send email notification to info@timberdrone.se
-    try {
-      await getResend().emails.send({
+    if (process.env.RESEND_API_KEY) {
+      const { data: emailResult, error: emailError } = await getResend().emails.send({
         from: 'Timberdrone Formulär <formular@timberdrone.se>',
         to: 'info@timberdrone.se',
         replyTo: data.epost,
         subject: `Offertförfrågan: ${data.foretag} – ${data.uppdragstyp}`,
         html: buildEmailHtml(data),
       })
-    } catch (emailErr) {
-      console.error('[LEAD EMAIL ERROR]', emailErr)
-      // Don't fail the request if email fails — lead is already logged
+
+      if (emailError) {
+        console.error('[LEAD EMAIL ERROR]', emailError)
+        return NextResponse.json(
+          { success: false, error: 'E-post kunde inte skickas.', detail: emailError.message },
+          { status: 502 }
+        )
+      }
+
+      console.log('[LEAD EMAIL SENT]', emailResult?.id)
+    } else {
+      console.warn('[LEAD] RESEND_API_KEY not set — skipping email')
     }
 
     return NextResponse.json({ success: true })
