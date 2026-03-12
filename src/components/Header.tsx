@@ -93,21 +93,20 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </Link>
-            {dropdownOpen && (
-              <div className="absolute left-0 top-full pt-2">
+            <div className={`absolute left-0 top-full pt-2 transition-all duration-200 ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1 pointer-events-none'}`}>
                 <div className="w-72 rounded-2xl bg-forest-600/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
                   {SERVICE_ITEMS.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
                       className="block rounded-xl px-4 py-2.5 text-sm text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+                      tabIndex={dropdownOpen ? 0 : -1}
                     >
                       {child.label}
                     </Link>
                   ))}
                 </div>
               </div>
-            )}
           </div>
 
           {/* Kunskap dropdown */}
@@ -127,21 +126,20 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
             </Link>
-            {kunskapDropdownOpen && (
-              <div className="absolute left-0 top-full pt-2">
+            <div className={`absolute left-0 top-full pt-2 transition-all duration-200 ${kunskapDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1 pointer-events-none'}`}>
                 <div className="w-64 rounded-2xl bg-forest-600/95 backdrop-blur-2xl border border-white/[0.08] p-2 shadow-2xl shadow-black/30">
                   {KUNSKAP_ITEMS.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
                       className="block rounded-xl px-4 py-2.5 text-sm text-white/70 transition-all duration-300 hover:text-white hover:bg-white/[0.06]"
+                      tabIndex={kunskapDropdownOpen ? 0 : -1}
                     >
                       {child.label}
                     </Link>
                   ))}
                 </div>
               </div>
-            )}
           </div>
 
           {NAV_ITEMS.map((item) => (

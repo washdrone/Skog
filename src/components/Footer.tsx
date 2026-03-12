@@ -30,6 +30,9 @@ const FORETAG_LINKS = [
   { label: 'För fastighetsköpare', href: '/for/fastighet' },
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
+  { label: 'Platser', href: '/platser' },
+  { label: 'Vegetationsanalys', href: '/vegetationsanalys' },
+  { label: 'Areamätning & skogsbruk', href: '/areamatning-och-skogsbruk' },
   { label: 'Begär offert', href: '/offert' },
 ]
 
