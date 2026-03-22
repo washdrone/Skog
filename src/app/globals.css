@@ -117,6 +117,11 @@
   .tech-frame {
     @apply relative border border-slate-200 bg-slate-50 overflow-hidden rounded-md;
   }
+
+  /* Restored for subpage headers, but with new solid industrial design */
+  .gradient-hero {
+    @apply bg-forest-950 border-b border-forest-900;
+  }
 }
 
 /* Technical map grid */
