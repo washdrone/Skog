@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { organizationSchema, faqSchema } from '@/lib/schema'
 import Hero from '@/components/Hero'
 import OutputShowcase from '@/components/OutputShowcase'
@@ -206,7 +207,11 @@ export default function HomePage() {
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Card 1: Mätning */}
             <div className="panel flex flex-col group overflow-hidden">
-              <div className="h-2 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />
+              <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
+                <Image src="/sunny_lidar.png" alt="LiDAR Mätning" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
+                <div className="absolute top-0 left-0 h-1 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />
+              </div>
               <div className="p-8 sm:p-10 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="text-2xl font-bold text-slate-900">Mätning & Geodata</h3>
@@ -235,7 +240,11 @@ export default function HomePage() {
 
             {/* Card 2: Vegetationsanalys */}
             <div className="panel flex flex-col group overflow-hidden">
-              <div className="h-2 w-full bg-forest-800 transition-all duration-300 group-hover:bg-accent-500" />
+              <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
+                <Image src="/multispectral_ndvi.png" alt="Multispektral Analys" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
+                <div className="absolute top-0 left-0 h-1 w-full bg-forest-800 transition-all duration-300 group-hover:bg-accent-500" />
+              </div>
               <div className="p-8 sm:p-10 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="text-2xl font-bold text-slate-900">Multispektral Analys</h3>

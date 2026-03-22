@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const FEATURES = [
   'Georefererade ortofoton och LiDAR-data',
@@ -43,9 +44,17 @@ export default function FeatureShowcase() {
 
           {/* Right: Technical framing visual instead of soft blobs */}
           <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
-            <div className="tech-frame aspect-[4/5] bg-slate-50 border border-slate-200 shadow-xl overflow-hidden group">
+            <div className="tech-frame aspect-[4/5] bg-slate-50 border border-slate-200 shadow-xl overflow-hidden group relative">
+              <Image 
+                src="/multispectral_ndvi.png" 
+                alt="Multispectral NDVI map analysis"
+                fill 
+                className="object-cover transition-transform duration-700 group-hover:scale-105 hue-rotate-15 contrast-125"
+              />
+              <div className="absolute inset-0 bg-forest-950/20 mix-blend-multiply" />
+
               {/* Map grid simulation */}
-              <div className="absolute inset-0 bg-mapping-grid opacity-10" />
+              <div className="absolute inset-0 bg-mapping-grid opacity-20 mix-blend-overlay" />
               
               {/* Technical framing lines */}
               <div className="absolute top-8 left-0 right-0 h-px bg-forest-500/20" />

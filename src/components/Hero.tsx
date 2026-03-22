@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface HeroProps {
   badge?: string
@@ -74,7 +75,15 @@ export default function Hero({
 
           {/* Right: Technical framing / Data visualization */}
           <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-none">
-            <div className="tech-frame aspect-[4/3] w-full border-forest-800 bg-forest-900 shadow-2xl">
+            <div className="tech-frame aspect-[4/3] w-full border-forest-800 bg-forest-900 shadow-2xl relative group">
+              <Image 
+                src="/forestry_drone.png" 
+                alt="Industrial drone over Swedish forest"
+                fill 
+                className="object-cover opacity-80 mix-blend-luminosity transition-all duration-700 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105"
+                priority
+              />
+
               {/* Corner crosshairs */}
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-forest-500/50" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-forest-500/50" />
