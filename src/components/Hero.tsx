@@ -23,8 +23,12 @@ export default function Hero({
   stats,
 }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-forest-950 pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 border-b border-forest-900">
-      <div className="absolute inset-0 bg-mapping-grid opacity-[0.03] pointer-events-none" />
+    <section className="relative overflow-hidden bg-forest-900 pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 border-b border-forest-800">
+      {/* Subtle organic forest texture in the background to make it less sterile/dark */}
+      <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
+        <Image src="/sunny_ortofoto.png" alt="Forest background texture" fill className="object-cover" priority />
+      </div>
+      <div className="absolute inset-0 bg-mapping-grid opacity-[0.05] pointer-events-none" />
       
       <div className="container-page relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
