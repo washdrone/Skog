@@ -14,27 +14,22 @@ export default function CTABand({
   ctaHref = '/offert',
 }: CTABandProps) {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background: rich forest gradient simulating aerial photo */}
-      <div className="absolute inset-0 bg-gradient-to-br from-forest-950 via-forest-600 to-forest-900" />
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute inset-0 topo-pattern opacity-30" />
+    <section className="relative overflow-hidden bg-forest-950 border-t border-forest-900">
+      <div className="absolute inset-0 bg-mapping-grid opacity-[0.05]" />
+      
+      {/* Structural mapping lines */}
+      <div className="absolute top-0 left-10 bottom-0 w-px bg-forest-800/50" />
+      <div className="absolute top-0 right-10 bottom-0 w-px bg-forest-800/50 hidden md:block" />
 
-      {/* Atmospheric glows */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[400px] rounded-full bg-forest-600/15 blur-[120px]" />
-      <div className="absolute bottom-0 right-1/3 w-[500px] h-[300px] rounded-full bg-forest-500/10 blur-[100px]" />
-
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30" />
-
-      <div className="container-page relative z-10 py-28 sm:py-36">
+      <div className="container-page relative z-10 py-24 sm:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-display text-white font-display sm:text-display-lg">{headline}</h2>
-          <p className="mt-5 text-lg text-white/70 font-body leading-relaxed">{description}</p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <h2 className="text-display text-white font-display tracking-tight mb-6">{headline}</h2>
+          <p className="mx-auto max-w-2xl text-lg text-white/60 font-body leading-relaxed mb-10">{description}</p>
+          
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href={ctaHref}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-8 py-3.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/30 transition-all duration-300 hover:bg-accent-500 hover:shadow-xl hover:-translate-y-0.5"
+              className="btn-primary"
             >
               {ctaLabel}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -43,7 +38,7 @@ export default function CTABand({
             </Link>
             <a
               href="mailto:info@timberdrone.se"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-3.5 text-sm font-semibold text-white/80 transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+              className="btn-secondary"
             >
               Maila oss
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

@@ -10,8 +10,6 @@ const SERVICE_LINKS = [
   { label: 'Kolinlagring & ESG', href: '/tjanster/kolinlagring' },
   { label: 'Skadedokumentation', href: '/tjanster/skadedokumentation' },
   { label: 'Årsavtal', href: '/tjanster/arsavtal' },
-  { label: 'Jaktkartering', href: '/tjanster/jaktkartering' },
-  { label: 'Alla tjänster', href: '/tjanster' },
 ]
 
 const KUNSKAP_LINKS = [
@@ -19,9 +17,7 @@ const KUNSKAP_LINKS = [
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
   { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
   { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
-  { label: 'Kolinlagring i skog', href: '/kunskap/kolinlagring-skog-guide' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
-  { label: 'Alla artiklar', href: '/kunskap' },
 ]
 
 const FORETAG_LINKS = [
@@ -31,85 +27,79 @@ const FORETAG_LINKS = [
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
   { label: 'Platser', href: '/platser' },
-  { label: 'Vegetationsanalys', href: '/vegetationsanalys' },
-  { label: 'Areamätning & skogsbruk', href: '/areamatning-och-skogsbruk' },
-  { label: 'Begär offert', href: '/offert' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest-600 text-white/70">
-      <div className="absolute inset-0 bg-grid opacity-30" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-      <div className="container-page relative">
-        <div className="py-16 sm:py-20">
-          {/* Top: Logo + columns */}
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Brand */}
-            <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center group">
-                <Image
-                  src="/timberdrone-logo.png"
-                  alt="TimberDrone"
-                  width={180}
-                  height={48}
-                  className="h-12 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
-                />
-              </Link>
-              <p className="mt-4 text-sm text-white/70 leading-relaxed">
-                Rikstäckande drönarbaserad skogsinventering och multispektralanalys.
-              </p>
-              <p className="mt-4 text-sm text-white/70">
-                <a href="mailto:info@timberdrone.se" className="hover:text-forest-400 transition-colors">info@timberdrone.se</a>
-              </p>
-            </div>
-
-            {/* Tjänster */}
-            <div>
-              <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">Tjänster</h3>
-              <ul className="space-y-2.5">
-                {SERVICE_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Kunskap */}
-            <div>
-              <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">Kunskap</h3>
-              <ul className="space-y-2.5">
-                {KUNSKAP_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Företag */}
-            <div>
-              <h3 className="text-sm font-semibold text-white/80 uppercase tracking-wider mb-4">Kundsegment</h3>
-              <ul className="space-y-2.5">
-                {FORETAG_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/70 hover:text-forest-400 transition-colors">{link.label}</Link>
-                  </li>
-                ))}
-              </ul>
+    <footer className="bg-forest-950 text-white border-t border-forest-900">
+      <div className="container-page py-16 sm:py-24">
+        {/* Top: Logo + columns */}
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/timberdrone-logo.png"
+                alt="TimberDrone"
+                width={180}
+                height={48}
+                className="h-8 w-auto brightness-0 invert"
+              />
+            </Link>
+            <p className="mt-6 text-sm text-white/50 leading-relaxed font-body">
+              Rikstäckande drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
+            </p>
+            <div className="mt-6 space-y-2">
+              <a href="mailto:info@timberdrone.se" className="block text-sm font-bold text-accent-500 hover:text-accent-400">info@timberdrone.se</a>
+              <p className="text-sm font-bold text-white/80">Org.nr: 559489-3990</p>
             </div>
           </div>
 
-        </div>
+          {/* Tjänster */}
+          <div>
+            <h3 className="text-xs font-mono font-bold text-white/40 uppercase tracking-widest mb-6">Tjänster</h3>
+            <ul className="space-y-3">
+              {SERVICE_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm font-bold text-white/70 hover:text-white transition-colors">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] py-6 sm:flex-row">
-          <p className="text-xs text-white/60">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
-          <div className="flex gap-6 text-xs text-white/60">
-            <Link href="/integritetspolicy" className="hover:text-forest-400 transition-colors">Integritetspolicy</Link>
-            <Link href="/cookiepolicy" className="hover:text-forest-400 transition-colors">Cookiepolicy</Link>
+          {/* Kunskap */}
+          <div>
+            <h3 className="text-xs font-mono font-bold text-white/40 uppercase tracking-widest mb-6">Kunskap & Artiklar</h3>
+            <ul className="space-y-3">
+              {KUNSKAP_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm font-bold text-white/70 hover:text-white transition-colors">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Segment */}
+          <div>
+            <h3 className="text-xs font-mono font-bold text-white/40 uppercase tracking-widest mb-6">Målgrupper</h3>
+            <ul className="space-y-3">
+              {FORETAG_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm font-bold text-white/70 hover:text-white transition-colors">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-forest-900 bg-forest-950">
+        <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4 py-6">
+          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} TimberDrone AB. Alla rättigheter förbehållna.</p>
+          <div className="flex gap-6 text-xs font-bold text-white/50">
+            <Link href="/integritetspolicy" className="hover:text-white transition-colors">Integritetspolicy</Link>
+            <Link href="/cookiepolicy" className="hover:text-white transition-colors">Cookiepolicy</Link>
           </div>
         </div>
       </div>

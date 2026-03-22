@@ -55,19 +55,19 @@
     @apply py-12 sm:py-16 lg:py-20;
   }
 
-  /* Primary CTA — amber (#E76F00) for maximum contrast against green palette */
+  /* Primary CTA — sharp, industrial amber */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-7 py-3.5 text-sm font-sans font-semibold text-white shadow-lg shadow-accent-600/25 transition-all duration-200 hover:bg-accent-500 hover:shadow-xl hover:shadow-accent-600/30 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent-600 px-6 py-3 text-sm font-sans font-bold text-white transition-colors duration-200 hover:bg-accent-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-600;
   }
 
-  /* Secondary CTA — outlined, for dark backgrounds */
+  /* Secondary CTA — sharp outline */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-7 py-3.5 text-sm font-sans font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/20 bg-transparent px-6 py-3 text-sm font-sans font-bold text-white transition-colors duration-200 hover:bg-white/10 hover:border-white/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white;
   }
 
-  /* Ghost button for light backgrounds */
+  /* Ghost button */
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-forest-600 px-7 py-3.5 text-sm font-sans font-semibold text-forest-600 transition-all duration-200 hover:bg-forest-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-600;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-forest-600 bg-transparent px-6 py-3 text-sm font-sans font-bold text-forest-600 transition-colors duration-200 hover:bg-forest-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-forest-600;
   }
 
   /* Tag/badge */
@@ -105,198 +105,36 @@
     @apply absolute left-0 top-[0.6em] h-1.5 w-1.5 rounded-full bg-forest-400;
   }
 
-  /* Glass morphism card */
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  /* Structural panels for a technical feel */
+  .panel {
+    @apply bg-white border border-slate-200 shadow-sm rounded-md;
   }
 
-  .glass-light {
-    @apply bg-white/80 backdrop-blur-xl border border-white/50 shadow-lg;
+  .panel-dark {
+    @apply bg-forest-900 border border-forest-800 rounded-md;
+  }
+
+  .tech-frame {
+    @apply relative border border-slate-200 bg-slate-50 overflow-hidden rounded-md;
   }
 }
 
-/* Gradient meshes — using new primary colors */
-.gradient-forest {
-  background: linear-gradient(135deg, #071510 0%, #0e251c 40%, #1B4332 100%);
+/* Technical map grid */
+.bg-mapping-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.gradient-hero {
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(45, 106, 79, 0.25) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(82, 183, 136, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 90%, rgba(7, 21, 16, 0.5) 0%, transparent 60%),
-    linear-gradient(180deg, #071510 0%, #0e251c 50%, #1B4332 100%);
+/* Mechanical snap animation */
+.snapIn {
+  animation: snapIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Animated grid background */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-/* Noise texture overlay */
-.noise::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Glow effects — using new accent green */
-.glow-green {
-  box-shadow: 0 0 60px rgba(82, 183, 136, 0.15), 0 0 120px rgba(82, 183, 136, 0.05);
-}
-
-.glow-green-strong {
-  box-shadow: 0 0 40px rgba(82, 183, 136, 0.3), 0 0 80px rgba(82, 183, 136, 0.1);
-}
-
-/* Reveal animation helper classes */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-delay-1 { transition-delay: 80ms; }
-.reveal-delay-2 { transition-delay: 160ms; }
-.reveal-delay-3 { transition-delay: 240ms; }
-.reveal-delay-4 { transition-delay: 320ms; }
-.reveal-delay-5 { transition-delay: 400ms; }
-.reveal-delay-6 { transition-delay: 480ms; }
-
-/* Topographic pattern — subtle */
-.topo-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 40c40 0 60 40 100 40s60-30 100-30' fill='none' stroke='%2352B788' stroke-width='0.5' opacity='0.08'/%3E%3Cpath d='M-20 80c40 10 60 50 100 50s60-40 100-40' fill='none' stroke='%2352B788' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M20 120c30 0 50 30 90 30s70-20 110-20' fill='none' stroke='%2352B788' stroke-width='0.5' opacity='0.04'/%3E%3Cpath d='M0 160c40 0 70 30 110 30s50-20 90-20' fill='none' stroke='%2352B788' stroke-width='0.5' opacity='0.03'/%3E%3C/svg%3E");
-}
-
-/* Floating animation for decorative elements */
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-12px) rotate(1deg); }
-  66% { transform: translateY(-6px) rotate(-1deg); }
-}
-
-@keyframes floatSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes floatReverse {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(15px); }
-}
-
-.animate-float { animation: float 8s ease-in-out infinite; }
-.animate-float-slow { animation: floatSlow 12s ease-in-out infinite; }
-.animate-float-reverse { animation: floatReverse 10s ease-in-out infinite; }
-
-/* Animated gradient text — using leaf accent */
-.gradient-text {
-  background: linear-gradient(135deg, #52B788 0%, #2D6A4F 50%, #52B788 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 6s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-}
-
-/* Card shine effect on hover */
-.card-shine {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-shine::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(82, 183, 136, 0.03) 45%,
-    rgba(82, 183, 136, 0.06) 50%,
-    rgba(82, 183, 136, 0.03) 55%,
-    transparent 60%
-  );
-  transform: translateX(-100%) translateY(-100%);
-  transition: transform 0.8s ease;
-  pointer-events: none;
-}
-
-.card-shine:hover::after {
-  transform: translateX(20%) translateY(20%);
-}
-
-/* Dot grid pattern for light sections */
-.bg-dots {
-  background-image: radial-gradient(circle, rgba(27, 67, 50, 0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Subtle pulse ring effect */
-@keyframes pulseRing {
-  0% { box-shadow: 0 0 0 0 rgba(82, 183, 136, 0.3); }
-  70% { box-shadow: 0 0 0 12px rgba(82, 183, 136, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(82, 183, 136, 0); }
-}
-
-.pulse-ring {
-  animation: pulseRing 3s ease-in-out infinite;
-}
-
-/* Hero entrance animation */
-@keyframes heroFadeUp {
-  0% { opacity: 0; transform: translateY(40px); }
+@keyframes snapIn {
+  0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes heroFadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.hero-animate-1 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
-.hero-animate-2 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
-.hero-animate-3 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
-.hero-animate-4 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both; }
-.hero-animate-5 { animation: heroFadeIn 1s ease-out 0.7s both; }
-
-/* Gradient border glow for dark cards */
-.glow-border {
-  position: relative;
-}
-
-.glow-border::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(82, 183, 136, 0.3), transparent 40%, transparent 60%, rgba(82, 183, 136, 0.15));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-}
-
-.glow-border:hover::before {
-  opacity: 1;
 }
 
 /* NDVI spectrum gradient */
@@ -335,27 +173,4 @@
   transform: rotateX(45deg) rotateZ(-15deg) translateZ(20px);
 }
 
-/* Blur reveal transition for service cards */
-.blur-reveal {
-  opacity: 0;
-  filter: blur(4px);
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
-.blur-reveal.revealed {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
-
-/* Gradient for vegetationsanalys hero */
-.gradient-veg {
-  background:
-    radial-gradient(ellipse at 80% 80%, rgba(26, 152, 80, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 30%, rgba(215, 48, 39, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse at 60% 10%, rgba(145, 207, 96, 0.1) 0%, transparent 40%),
-    linear-gradient(180deg, #071510 0%, #0e251c 50%, #1B4332 100%);
-}
