@@ -51,7 +51,6 @@ export default function Footer() {
             </p>
             <div className="mt-6 space-y-2">
               <a href="mailto:info@timberdrone.se" className="block text-sm font-bold text-accent-500 hover:text-accent-400">info@timberdrone.se</a>
-              <p className="text-sm font-bold text-white/80">Org.nr: 559489-3990</p>
             </div>
           </div>
 
@@ -96,7 +95,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-forest-900 bg-forest-950">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4 py-6">
-          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} TimberDrone AB. Alla rättigheter förbehållna.</p>
+          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6 text-xs font-bold text-white/50">
             <Link href="/integritetspolicy" className="hover:text-white transition-colors">Integritetspolicy</Link>
             <Link href="/cookiepolicy" className="hover:text-white transition-colors">Cookiepolicy</Link>
