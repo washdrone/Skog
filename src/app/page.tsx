@@ -165,9 +165,11 @@ export default function HomePage() {
               <Link
                 key={card.title}
                 href={card.href}
-                className={`group flex flex-col p-8 transition-colors hover:bg-forest-50 focus-visible:bg-forest-50 ${
-                  i !== PERSONA_CARDS.length - 1 ? 'border-b lg:border-b-0 lg:border-r border-slate-200' : ''
-                } ${i === 1 ? 'sm:border-r lg:border-r border-slate-200' : ''}`}
+                className={`group flex flex-col p-8 transition-colors hover:bg-forest-50 focus-visible:bg-forest-50 border-slate-200 ${
+                  i < 2 ? 'border-b' : ''
+                } ${i % 2 === 0 ? 'sm:border-r' : ''} ${
+                  i < 3 ? 'lg:border-r' : ''
+                } lg:border-b-0`}
               >
                 <div className="text-[10px] font-mono text-forest-500 uppercase tracking-widest mb-4">
                   {card.label}
