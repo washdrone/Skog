@@ -108,22 +108,22 @@ export default function SkogsbolagPage() {
             <h2>Tjänster för skogsbolag</h2>
             <ul>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/avverkningsunderlag" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
                   Avverkningsunderlag
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
                 </Link>
               </li>
               <li>
-                <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   NDVI-kartläggning och vegetationsanalys
                 </Link>
               </li>

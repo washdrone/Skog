@@ -1,18 +1,20 @@
 const TRUST_ITEMS = [
   {
-    title: 'EASA-certifierad verksamhet',
+    title: 'Regelefterlevnad',
     description:
-      'Utbildade piloter och en fullt certifierad verksamhet, registrerad enligt Transportstyrelsens och EASA:s flygregler.',
+      'Flygningarna genomförs enligt gällande luftfartsregler. Vi hanterar tillstånd och anmälningar som krävs för varje uppdrag.',
+    /* Tidigare "EASA-certifierad verksamhet" — borttaget eftersom specifik
+       operatörskategori och certifiering inte är verifierad (CONTENT-VERIFICATION G1-G4). */
   },
   {
-    title: 'Teknisk & manuell kvalitetskontroll',
+    title: 'Teknisk kvalitetskontroll',
     description:
-      'Garanterad korrekthet i data innan leverans. Verifierad fotogrammetri minimerar felmarginal i avverkning och värdering.',
+      'Varje leverans kvalitetsgranskas innan den skickas. Fotogrammetrisk bearbetning och radiometrisk kalibrering kontrolleras steg för steg.',
   },
   {
     title: 'Dataintegritet & säkerhet',
     description:
-      'Tydlig gallringspolicy och datalagring på svenska servrar. Resultatet tillhör alltid uppdragsgivaren.',
+      'Tydlig gallringspolicy och datalagring. Resultatet tillhör alltid uppdragsgivaren.',
   },
 ]
 
@@ -24,7 +26,7 @@ export default function TrustBlock() {
           <div className="md:w-1/3">
             <h2 className="text-3xl font-display text-white tracking-tight mb-4">Leveranssäkerhet i fokus</h2>
             <p className="text-white/60 font-body text-sm leading-relaxed">
-              Våra uppdrag kräver precision och pålitlighet. Vi är en trygg partner när markdata och beslutsunderlag utgör kärnan i er analys.
+              Våra uppdrag kräver precision och pålitlighet. Vi är en partner när markdata och beslutsunderlag utgör kärnan i er analys.
             </p>
           </div>
           <div className="md:w-2/3 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

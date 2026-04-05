@@ -1,7 +1,8 @@
 # TimberDrone — Fullständig SEO-, AEO- och Innehållsaudit
 
-> Datum: 2026-04-05
+> Datum: 2026-04-05 (uppdaterad med arkitekturrefaktor)
 > Omfattning: 57 sidor, alla komponenter, metadata, structured data, internlänkning, teknisk SEO
+> Se även: SEO-ARCHITECTURE.md för teknisk dokumentation av det nya SEO-lagret
 
 ---
 

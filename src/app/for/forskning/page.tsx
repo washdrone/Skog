@@ -95,11 +95,11 @@ export default function ForskningPage() {
             <h2>Multispektrala tidsserier</h2>
             <p>
               Med multispektrala sensorer fångar vi data i synligt ljus, rödkant och nära infrarött. Genom återkommande flygningar över samma provytor med identisk metodik byggs tidsserier som möjliggör analys av fenologi, stressförlopp och behandlingseffekter. Läs mer om vår{' '}
-              <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-kartläggning
               </Link>{' '}
               och{' '}
-              <Link href="/vegetationsanalys/uppfoljning-over-tid" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 uppföljning över tid
               </Link>.
             </p>
@@ -112,22 +112,22 @@ export default function ForskningPage() {
             <h2>Relevanta tjänster för forskning</h2>
             <ul>
               <li>
-                <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   NDVI-kartläggning
                 </Link>
               </li>
               <li>
-                <Link href="/vegetationsanalys/stressanalys" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
                   Stressanalys
                 </Link>
               </li>
               <li>
-                <Link href="/vegetationsanalys/uppfoljning-over-tid" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   Uppföljning över tid
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>

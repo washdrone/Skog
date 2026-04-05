@@ -28,6 +28,7 @@ const KUNSKAP_ITEMS = [
 
 const NAV_ITEMS = [
   { label: 'Platser', href: '/platser' },
+  { label: 'Om oss', href: '/om-oss' },
   { label: 'Kontakt', href: '/offert' },
 ]
 

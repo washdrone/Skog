@@ -113,12 +113,12 @@ export default function VasternorrlandPage() {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: 'Areamätning', href: '/areamatning-och-skogsbruk/areamatning' },
-              { label: 'Inventering & översikt', href: '/areamatning-och-skogsbruk/inventering' },
-              { label: 'Avverkningsunderlag', href: '/areamatning-och-skogsbruk/avverkningsunderlag' },
-              { label: 'Skadeinventering', href: '/areamatning-och-skogsbruk/skadeinventering' },
-              { label: 'Planteringsuppföljning', href: '/areamatning-och-skogsbruk/planteringsuppfoljning' },
-              { label: 'NDVI-kartläggning', href: '/vegetationsanalys/ndvi-kartlaggning' },
+              { label: 'Areamätning', href: '/tjanster/skogsinventering' },
+              { label: 'Inventering & översikt', href: '/tjanster/bestandsinventering' },
+              { label: 'Avverkningsunderlag', href: '/tjanster/skogsbruksplan-underlag' },
+              { label: 'Skadeinventering', href: '/tjanster/skadedokumentation' },
+              { label: 'Planteringsuppföljning', href: '/tjanster/planteringsinventering' },
+              { label: 'NDVI-kartläggning', href: '/tjanster/multispektralanalys' },
             ].map((svc) => (
               <Link
                 key={svc.href}

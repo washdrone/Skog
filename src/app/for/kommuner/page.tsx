@@ -90,11 +90,11 @@ export default function KommunerPage() {
             <h2>Miljöövervakning och naturvård</h2>
             <p>
               Med multispektrala flygningar identifierar vi vegetationens hälsotillstånd, upptäcker stressade eller skadade träd och kartlägger artsammansättning på övergripande nivå. Underlaget är värdefullt för naturvårdsbedömningar, uppföljning av skötselplaner och rapportering till länsstyrelse. Läs mer om vår{' '}
-              <Link href="/vegetationsanalys/stressanalys" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
                 stressanalys
               </Link>{' '}
               och{' '}
-              <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-kartläggning
               </Link>.
             </p>
@@ -117,17 +117,17 @@ export default function KommunerPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/skadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
                   Skadeinventering
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
                 </Link>
               </li>

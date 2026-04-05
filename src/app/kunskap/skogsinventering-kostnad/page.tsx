@@ -170,7 +170,7 @@ export default function SkogsinventeringKostnadPage() {
             <li>
               <strong>Bättre beslutsunderlag</strong> — Heltäckande data istället för
               stickprov ger säkrare grund för{' '}
-              <Link href="/areamatning-och-skogsbruk/avverkningsunderlag" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
                 avverkningsplanering
               </Link>{' '}
               och åtgärdsprioriteringar.
@@ -181,10 +181,10 @@ export default function SkogsinventeringKostnadPage() {
             </li>
             <li>
               <strong>Kombinerade analyser</strong> — Samma flygdata kan användas för{' '}
-              <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                 arealmätning
               </Link>,{' '}
-              <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-kartläggning
               </Link>{' '}
               och volymuppskattning.

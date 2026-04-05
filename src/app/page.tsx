@@ -1,7 +1,7 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { organizationSchema, faqSchema } from '@/lib/schema'
+import { buildMetadata } from '@/lib/seo/metadata'
+import { organizationSchema, faqSchema } from '@/lib/seo/schema'
 import Hero from '@/components/Hero'
 import OutputShowcase from '@/components/OutputShowcase'
 import FeatureShowcase from '@/components/FeatureShowcase'
@@ -10,29 +10,12 @@ import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import FAQ from '@/components/FAQ'
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Skogsinventering med Drönare — Multispektralanalys & LiDAR',
   description:
     'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Georefererade data i SWEREF99 TM.',
-  alternates: { canonical: 'https://timberdrone.se' },
-  openGraph: {
-    title: 'TimberDrone — Skogsinventering med Drönare',
-    description:
-      'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
-    url: 'https://timberdrone.se',
-    siteName: 'TimberDrone',
-    locale: 'sv_SE',
-    type: 'website',
-    images: [
-      {
-        url: 'https://timberdrone.se/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'TimberDrone — Skogsinventering med drönare',
-      },
-    ],
-  },
-}
+  path: '/',
+})
 
 const HOME_FAQ_ITEMS = [
   {

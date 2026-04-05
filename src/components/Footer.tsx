@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { COMPANY } from '@/lib/seo/business-data'
 
 const SERVICE_LINKS = [
   { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
@@ -26,6 +27,7 @@ const FORETAG_LINKS = [
   { label: 'För fastighetsköpare', href: '/for/fastighet' },
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
+  { label: 'Om oss', href: '/om-oss' },
   { label: 'Platser', href: '/platser' },
   { label: 'Begär offert', href: '/offert' },
 ]
@@ -51,7 +53,7 @@ export default function Footer() {
               Rikstäckande drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
             </p>
             <div className="mt-6 space-y-2">
-              <a href="mailto:info@timberdrone.se" className="block text-sm font-bold text-accent-500 hover:text-accent-400">info@timberdrone.se</a>
+              <a href={`mailto:${COMPANY.email}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.email}</a>
             </div>
           </div>
 

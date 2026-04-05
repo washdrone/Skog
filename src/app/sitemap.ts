@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Core
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/offert', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/om-oss', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // Tjänster (primär tjänstestruktur)
     { path: '/tjanster', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -58,23 +59,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/platser/skogsinventering-vasternorrland', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/platser/skogsinventering-jamtland', priority: 0.7, changeFrequency: 'monthly' as const },
 
-    // Vegetationsanalys (befintlig struktur)
-    { path: '/vegetationsanalys', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/vegetationsanalys/ndvi-kartlaggning', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/vegetationsanalys/stressanalys', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/vegetationsanalys/uppfoljning-over-tid', priority: 0.7, changeFrequency: 'monthly' as const },
-
-    // Areamätning och skogsbruk (befintlig struktur)
-    { path: '/areamatning-och-skogsbruk', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/areamatning', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/inventering', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/avverkningsunderlag', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/skadeinventering', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/planteringsuppfoljning', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/leveranser', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/faq', priority: 0.5, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/kontakt', priority: 0.6, changeFrequency: 'monthly' as const },
-    /* Case-sidan utesluten tills case är verifierade (se CONTENT-VERIFICATION.md E1-E3) */
+    /*
+     * Legacy paths (/vegetationsanalys/*, /areamatning-och-skogsbruk/*) are
+     * 301-redirected to /tjanster/* via next.config.js. They are intentionally
+     * excluded from the sitemap so Google indexes the canonical targets only.
+     *
+     * Remaining non-redirected legacy pages:
+     */
+    { path: '/areamatning-och-skogsbruk/leveranser', priority: 0.5, changeFrequency: 'monthly' as const },
+    { path: '/areamatning-och-skogsbruk/faq', priority: 0.4, changeFrequency: 'monthly' as const },
+    /* /areamatning-och-skogsbruk/case utesluten tills case är verifierade (CONTENT-VERIFICATION E1-E3) */
 
     // Juridiskt
     { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const },

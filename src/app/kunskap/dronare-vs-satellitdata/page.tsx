@@ -154,7 +154,7 @@ export default function DronareVsSatellitdataPage() {
               <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
                 barkborreangrepp
               </Link>,{' '}
-              <Link href="/areamatning-och-skogsbruk/planteringsuppfoljning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
                 planteringsuppföljning
               </Link>
             </li>
@@ -168,7 +168,7 @@ export default function DronareVsSatellitdataPage() {
             </li>
             <li>
               <strong>Exakta mätningar</strong> —{' '}
-              <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                 arealmätning
               </Link>,
               volymberäkning, stamantal
@@ -203,11 +203,11 @@ export default function DronareVsSatellitdataPage() {
             det bästa resultatet. Satellitdata används för kontinuerlig bevakning och
             trendanalys. När avvikelser upptäcks — eller när detaljerad analys behövs för
             planering — kompletteras med drönarbaserad{' '}
-            <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
               NDVI-kartläggning
             </Link>{' '}
             eller{' '}
-            <Link href="/vegetationsanalys/stressanalys" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
               stressanalys
             </Link>{' '}
             på centimeternivå.

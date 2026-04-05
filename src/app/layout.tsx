@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { SITE_NAME, SITE_URL } from '@/lib/metadata'
-import { websiteSchema } from '@/lib/schema'
+import { COMPANY, OG_DEFAULTS } from '@/lib/seo/business-data'
+import { websiteSchema } from '@/lib/seo/schema'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -18,13 +18,13 @@ import './globals.css'
  */
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(COMPANY.url),
   title: {
-    default: `Skogsinventering & Multispektralanalys med Drönare | ${SITE_NAME}`,
-    template: `%s | ${SITE_NAME}`,
+    default: `Skogsinventering & Multispektralanalys med Drönare | ${COMPANY.name}`,
+    template: `%s | ${COMPANY.name}`,
   },
   description:
-    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG. Nationell täckning.',
+    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
@@ -33,17 +33,20 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   openGraph: {
-    type: 'website',
-    locale: 'sv_SE',
-    siteName: SITE_NAME,
+    type: OG_DEFAULTS.type,
+    locale: OG_DEFAULTS.locale,
+    siteName: COMPANY.name,
     images: [
       {
-        url: `${SITE_URL}/og-default.png`,
-        width: 1200,
-        height: 630,
-        alt: 'TimberDrone — Skogsinventering med drönare',
+        url: `${COMPANY.url}${OG_DEFAULTS.imagePath}`,
+        width: OG_DEFAULTS.imageWidth,
+        height: OG_DEFAULTS.imageHeight,
+        alt: `${COMPANY.name} — Skogsinventering med drönare`,
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
 }
 

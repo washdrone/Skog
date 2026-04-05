@@ -177,7 +177,7 @@ export default function MultispektralVsRGBPage() {
           <ul>
             <li>Ortofoto och visuell dokumentation</li>
             <li>
-              <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                 Arealmätning
               </Link>{' '}
               och gränskartläggning
@@ -189,14 +189,14 @@ export default function MultispektralVsRGBPage() {
           <h3>Välj multispektral när du behöver:</h3>
           <ul>
             <li>
-              <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-kartläggning
               </Link>{' '}
               och vitalitetsbedömning
             </li>
             <li>Tidig stressdetektion och barkborrescreening</li>
             <li>
-              <Link href="/vegetationsanalys/uppfoljning-over-tid" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 Uppföljning över tid
               </Link>{' '}
               med jämförbara data
