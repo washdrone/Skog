@@ -98,7 +98,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-forest-900 bg-forest-950">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4 py-6">
-          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
+          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} {COMPANY.name}. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6 text-xs font-bold text-white/50">
             <Link href="/integritetspolicy" className="hover:text-white transition-colors">Integritetspolicy</Link>
             <Link href="/cookiepolicy" className="hover:text-white transition-colors">Cookiepolicy</Link>

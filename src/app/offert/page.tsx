@@ -1,5 +1,6 @@
 import { createMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
+import { COMPANY } from '@/lib/seo/business-data'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 import Link from 'next/link'
@@ -7,13 +8,13 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Begär offert',
   description:
-    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, areamätning eller vegetationsanalys. Svar inom 24 timmar.',
+    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, areamätning eller vegetationsanalys.',
   path: '/offert',
 })
 
 const PROCESS_STEPS = [
   { number: 1, title: 'Fyll i formulär', description: 'Beskriv ert uppdrag, areal och önskade leveranser.' },
-  { number: 2, title: 'Offert inom 24h', description: 'Vi granskar er förfrågan och återkommer med en prisindikation inom 24 timmar.' },
+  { number: 2, title: 'Vi återkommer', description: 'Vi granskar er förfrågan och återkommer med en prisindikation.' },
   { number: 3, title: 'Bekräfta detaljer', description: 'Vi stämmer av uppdragsdetaljer, areal och tidsplan.' },
   { number: 4, title: 'Vi genomför uppdraget', description: 'Flygning genomförs och underlag levereras enligt överenskommelse.' },
 ]
@@ -42,10 +43,10 @@ export default function OffertPage() {
             Begär en kostnadsfri offert
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-            Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar.
+            Berätta om ert uppdrag så återkommer vi med en prisindikation.
             Fyll i formuläret nedan eller kontakta oss direkt på{' '}
-            <a href="mailto:info@timberdrone.se" className="text-forest-400 hover:text-forest-300 underline">
-              info@timberdrone.se
+            <a href={`mailto:${COMPANY.email}`} className="text-forest-400 hover:text-forest-300 underline">
+              {COMPANY.email}
             </a>.
           </p>
         </div>
@@ -62,11 +63,13 @@ export default function OffertPage() {
             {/* Trust signals sidebar */}
             <aside className="space-y-8">
               <div className="rounded-2xl border border-slate-200 bg-white p-6">
-                <h3 className="font-semibold text-slate-900">Därför TimberDrone</h3>
+                <h3 className="font-semibold text-slate-900">Varför TimberDrone</h3>
                 <ul className="mt-4 space-y-4">
                   {[
-                    { icon: 'clock', text: 'Svar inom 24 timmar' },
-                    { icon: 'map', text: 'Verksamma i hela Sverige' },
+                    /* EJ VERIFIERAD: "Svar inom 24 timmar" (A1) — ersatt med neutral formulering */
+                    { icon: 'clock', text: 'Snabb återkoppling' },
+                    /* EJ VERIFIERAD: "Hela Sverige" (A6) — ersatt med neutral formulering */
+                    { icon: 'map', text: 'Flexibel mobilisering' },
                     { icon: 'layer', text: 'GIS-redo leveranser' },
                     { icon: 'shield', text: 'Ingen bindningstid' },
                   ].map((item) => (
@@ -87,8 +90,8 @@ export default function OffertPage() {
                 <div className="mt-4 space-y-3 text-sm text-slate-600">
                   <p>
                     <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">E-post</span>
-                    <a href="mailto:info@timberdrone.se" className="text-forest-600 hover:text-forest-800">
-                      info@timberdrone.se
+                    <a href={`mailto:${COMPANY.email}`} className="text-forest-600 hover:text-forest-800">
+                      {COMPANY.email}
                     </a>
                   </p>
                 </div>

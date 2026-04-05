@@ -162,3 +162,58 @@ Se `CONTENT-VERIFICATION.md` för fullständig lista. Sammanfattning:
 5. Bekräfta case → återaktivera i sitemap
 6. Skapa OG-bild (1200x630) → `/public/og-default.png`
 7. Migrera till next/font/google vid deploy med nätverksåtkomst
+
+---
+
+## Post-refactor QA (2026-04-05)
+
+### Verifierat
+
+**Redirects (11 st)**
+- Alla destinations existerar som page.tsx-filer
+- Inga redirect-kedjor detekterade
+- Inga destinations är själva redirect-källor
+- Source-filer (page.tsx under legacy-paths) kvarstår som dead code — Next.js
+  prioriterar redirects korrekt
+
+**Internlänkar**
+- Alla komponenter (Header, Footer, CTABand, StickyCTA, OutputShowcase,
+  ServicePageLayout) pekar nu till canonical /tjanster/* targets
+- Alla sidor under /kunskap/*, /for/*, /platser/* pekar till canonical targets
+- Enda kvarvarande legacy-länk: `/areamatning-och-skogsbruk/leveranser` i
+  `/for/skogsbolag/page.tsx` — korrekt, leveranssidan är ej redirectad
+
+**Canonical/metadata**
+- Alla 45 aktiva sidor använder `createMetadata()` eller `buildMetadata()`
+- Legacy-sidor under /areamatning-och-skogsbruk och /vegetationsanalys
+  använder manuella Metadata-objekt men serveras aldrig pga 301-redirects
+- Startsidan migrerad från manuellt objekt till `buildMetadata()`
+
+**Business-data centralisering**
+- `COMPANY.email` används i: CTABand, Footer, offert/page, api/lead/route
+- Kvarvarande hårdkodade e-poster: integritetspolicy, cookiepolicy (juridisk prosa
+  — acceptabelt), 2 filer under redirectade legacy-sidor (ej servade)
+
+**Overifierade affärslöften — neutraliserade**
+- "EASA-certifierad" → "Regelefterlevnad" (TrustBlock)
+- "inom 24 timmar" borttaget från: CTABand, offert/page, tjanster/page, LeadForm
+- "Hela Sverige" neutraliserat på startsida (FAQ + benefits)
+- "1-5 cm" / "Hög" markupplösning → "Centimeternivå" på startsida och tjänstehub
+
+### Fortfarande kräver manuell verifiering
+- "hela Sverige" kvarstår i: /tjanster/page.tsx (hero subheadline),
+  /platser/page.tsx (titel + beskrivning) — detta är regionssidor där
+  formulering sannolikt är rimlig men bör bekräftas (A6)
+- Kvarvarande "24 timmar" i: 3 legacy-sidor (redirectade, ej servade)
+- Case-studier (/areamatning-och-skogsbruk/case) — ej i sitemap, ej länkade
+- Telefonnummer, adress, utrustning, certifieringar — se CONTENT-VERIFICATION.md
+
+### Content-ytor säkra att expandera
+- **Nya /tjanster/*-sidor** — använd `createMetadata()`, `serviceSchema()`,
+  `breadcrumbSchema()`, lägg till i sitemap.ts
+- **Nya /kunskap/*-artiklar** — använd `createMetadata({ ogType: 'article' })`,
+  `faqSchema()`, länka till relaterade /tjanster-sidor
+- **Nya /for/*-målgruppssidor** — använd `createMetadata()`, `breadcrumbSchema()`,
+  länka till relevanta /tjanster-sidor
+- **Nya /platser/*-regionsidor** — använd `createMetadata()`, länka till
+  /tjanster-sidor (ej till legacy-paths)

@@ -223,11 +223,12 @@ export default function TjansterHubPage() {
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Kontakta oss"
-        secondaryCtaHref="/areamatning-och-skogsbruk/kontakt"
+        secondaryCtaHref="/offert"
         stats={[
           { value: '14', label: 'Specialisttjänster' },
-          { value: 'Hög', label: 'Markupplösning' },
-          { value: '24h', label: 'Offert' },
+          /* EJ VERIFIERAD: exakt GSD beror på utrustning — ange specifikt värde när bekräftat */
+          { value: 'Centimeternivå', label: 'Markupplösning' },
+          { value: 'Snabb', label: 'Återkoppling' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}
       />

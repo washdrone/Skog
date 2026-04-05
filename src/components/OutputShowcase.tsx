@@ -7,7 +7,7 @@ const OUTPUTS = [
     description:
       'Sömlösa, georefererade flygbilder med hög markupplösning. Visuell grund för all analys och planering.',
     badges: ['GeoTIFF', 'JPEG2000'],
-    href: '/areamatning-och-skogsbruk/leveranser',
+    href: '/tjanster/ortofoto-kartering',
     image: '/sunny_ortofoto.png',
   },
   {
@@ -15,7 +15,7 @@ const OUTPUTS = [
     description:
       'Polygoner, linjer och punkter med attributdata. Beståndsgränser, hinder, infrastruktur — redo för ert GIS.',
     badges: ['Shapefile', 'GeoPackage', 'GeoJSON'],
-    href: '/areamatning-och-skogsbruk/leveranser',
+    href: '/tjanster/skogsinventering',
     image: '/sunny_vektordata.png',
   },
   {
@@ -23,7 +23,7 @@ const OUTPUTS = [
     description:
       'Multispektral analys som visar växtlighetens vitalitet. Objektiv bedömning av skogshälsa, stress och förändringar.',
     badges: ['GeoTIFF', 'PDF-rapport'],
-    href: '/vegetationsanalys/ndvi-kartlaggning',
+    href: '/tjanster/multispektralanalys',
     image: '/multispectral_ndvi.png',
   },
 ]

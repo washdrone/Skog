@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { COMPANY } from '@/lib/seo/business-data'
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY)
@@ -92,7 +93,7 @@ export async function POST(request: Request) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          source: 'timberdrone.se/areamatning-och-skogsbruk',
+          source: 'timberdrone.se/offert',
           ...data,
           submitted_at: new Date().toISOString(),
         }),
@@ -104,8 +105,8 @@ export async function POST(request: Request) {
     // Send email notification to info@timberdrone.se
     if (process.env.RESEND_API_KEY) {
       const { data: emailResult, error: emailError } = await getResend().emails.send({
-        from: 'Timberdrone Formulär <formular@timberdrone.se>',
-        to: 'info@timberdrone.se',
+        from: `${COMPANY.name} Formulär <formular@timberdrone.se>`,
+        to: COMPANY.email,
         replyTo: data.epost,
         subject: `Offertförfrågan: ${data.foretag} – ${data.uppdragstyp}`,
         html: buildEmailHtml(data),

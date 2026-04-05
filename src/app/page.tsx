@@ -28,7 +28,8 @@ const HOME_FAQ_ITEMS = [
   },
   {
     question: 'Var i Sverige verkar TimberDrone?',
-    answer: 'TimberDrone erbjuder rikstäckande tjänster i hela Sverige — från Skåne till Norrbotten. Vi har kapacitet att mobilisera till alla regioner och anpassar logistiken efter uppdragets lokalisering och omfattning.',
+    answer: 'TimberDrone har kapacitet att mobilisera till olika regioner i Sverige och anpassar logistiken efter uppdragets lokalisering och omfattning. Kontakta oss för att diskutera ert specifika område.',
+    /* EJ VERIFIERAD: "hela Sverige" (A6) — neutraliserat tills rikstäckning bekräftats */
   },
   {
     question: 'Hur skiljer sig drönarbaserad inventering från satellitdata?',
@@ -69,7 +70,7 @@ const BENEFITS = [
   },
   {
     title: 'Rikstäckande nätverk',
-    desc: 'Vi mobiliserar i hela Sverige — från stormskador i syd till inventeringar i norr.',
+    desc: 'Vi mobiliserar till olika regioner — från stormskador i syd till inventeringar i norr.',
   },
   {
     title: 'Branschstandardformat',
