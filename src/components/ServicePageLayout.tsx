@@ -13,7 +13,7 @@ interface ServicePageLayoutProps {
 
 export default function ServicePageLayout({
   breadcrumbLabel,
-  breadcrumbParent = { label: 'Areamätning & skogsbruk', href: '/areamatning-och-skogsbruk' },
+  breadcrumbParent = { label: 'Tjänster', href: '/tjanster' },
   headline,
   intro,
   children,

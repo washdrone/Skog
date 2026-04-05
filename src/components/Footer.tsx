@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { COMPANY } from '@/lib/seo/business-data'
 
 const SERVICE_LINKS = [
   { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
@@ -26,7 +27,9 @@ const FORETAG_LINKS = [
   { label: 'För fastighetsköpare', href: '/for/fastighet' },
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
+  { label: 'Om oss', href: '/om-oss' },
   { label: 'Platser', href: '/platser' },
+  { label: 'Begär offert', href: '/offert' },
 ]
 
 export default function Footer() {
@@ -47,10 +50,10 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-6 text-sm text-white/50 leading-relaxed font-body">
-              Rikstäckande drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
+              Drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
             </p>
             <div className="mt-6 space-y-2">
-              <a href="mailto:info@timberdrone.se" className="block text-sm font-bold text-accent-500 hover:text-accent-400">info@timberdrone.se</a>
+              <a href={`mailto:${COMPANY.email}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.email}</a>
             </div>
           </div>
 
@@ -95,7 +98,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-forest-900 bg-forest-950">
         <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4 py-6">
-          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} TimberDrone. Alla rättigheter förbehållna.</p>
+          <p className="text-xs font-mono text-white/40">&copy; {new Date().getFullYear()} {COMPANY.name}. Alla rättigheter förbehållna.</p>
           <div className="flex gap-6 text-xs font-bold text-white/50">
             <Link href="/integritetspolicy" className="hover:text-white transition-colors">Integritetspolicy</Link>
             <Link href="/cookiepolicy" className="hover:text-white transition-colors">Cookiepolicy</Link>

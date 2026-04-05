@@ -1,18 +1,30 @@
 import type { Metadata } from 'next'
-import { SITE_NAME, SITE_URL } from '@/lib/metadata'
-import { websiteSchema } from '@/lib/schema'
+import { COMPANY, OG_DEFAULTS } from '@/lib/seo/business-data'
+import { websiteSchema } from '@/lib/seo/schema'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
 
+/*
+ * TODO: Migrera till next/font/google för bättre Core Web Vitals.
+ * Kräver nätverksåtkomst vid build. Exempel:
+ *
+ * import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
+ * const playfair = Playfair_Display({ subsets: ['latin'], weight: [...], variable: '--font-playfair' })
+ * const sourceSerif = Source_Serif_4({ subsets: ['latin'], weight: [...], variable: '--font-source-serif' })
+ * const dmSans = DM_Sans({ subsets: ['latin'], weight: [...], variable: '--font-dm-sans' })
+ *
+ * Uppdatera sedan tailwind.config.ts att använda var(--font-playfair) etc.
+ */
+
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(COMPANY.url),
   title: {
-    default: `${SITE_NAME} | Skogsinventering & Multispektralanalys med Drönare i Sverige`,
-    template: `%s | ${SITE_NAME}`,
+    default: `Skogsinventering & Multispektralanalys med Drönare | ${COMPANY.name}`,
+    template: `%s | ${COMPANY.name}`,
   },
   description:
-    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG. Nationell täckning.',
+    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
@@ -21,11 +33,24 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   openGraph: {
-    type: 'website',
-    locale: 'sv_SE',
-    siteName: SITE_NAME,
+    type: OG_DEFAULTS.type,
+    locale: OG_DEFAULTS.locale,
+    siteName: COMPANY.name,
+    images: [
+      {
+        url: `${COMPANY.url}${OG_DEFAULTS.imagePath}`,
+        width: OG_DEFAULTS.imageWidth,
+        height: OG_DEFAULTS.imageHeight,
+        alt: `${COMPANY.name} — Skogsinventering med drönare`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
 }
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,11 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
         />
-        {(process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM') && (
+        {GA_ID && (
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             />
             <script
               dangerouslySetInnerHTML={{
@@ -53,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}', {
+                  gtag('config', '${GA_ID}', {
                     page_path: window.location.pathname,
                   });
                 `,

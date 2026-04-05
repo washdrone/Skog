@@ -174,7 +174,7 @@ export default function LidarVsDronarePage() {
           <ul>
             <li>
               <strong>Ortofoto och visuell dokumentation</strong> — högupplöst RGB-bild för{' '}
-              <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                 arealmätning
               </Link>{' '}
               och gränskartläggning
@@ -205,12 +205,12 @@ export default function LidarVsDronarePage() {
           </p>
           <p>
             För{' '}
-            <Link href="/areamatning-och-skogsbruk/avverkningsunderlag" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
               avverkningsunderlag
             </Link>{' '}
             och exakta volymberäkningar i produktionsskog ger LiDAR det mest tillförlitliga
             resultatet. För uppföljning, dokumentation och{' '}
-            <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
               vegetationsanalys
             </Link>{' '}
             är fotogrammetri ofta tillräcklig och mer kostnadseffektiv.

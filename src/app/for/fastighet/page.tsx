@@ -100,7 +100,7 @@ export default function FastighetPage() {
             <h2>Bedöm skogens hälsa med multispektral analys</h2>
             <p>
               Utöver visuell kartläggning kan vi genomföra multispektral flygning för att bedöma skogens vitalitet. Analysen identifierar stressade träd och områden med nedsatt hälsa som inte alltid syns med blotta ögat — värdefull information innan du binder dig vid ett köp. Läs mer om{' '}
-              <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                 NDVI-kartläggning
               </Link>.
             </p>
@@ -113,22 +113,22 @@ export default function FastighetPage() {
             <h2>Relevanta tjänster</h2>
             <ul>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
                 </Link>
               </li>
               <li>
-                <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   NDVI-kartläggning och hälsoanalys
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/skadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
                   Skadeinventering
                 </Link>
               </li>

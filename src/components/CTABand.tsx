@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { COMPANY } from '@/lib/seo/business-data'
 
 interface CTABandProps {
   headline?: string
@@ -9,7 +10,7 @@ interface CTABandProps {
 
 export default function CTABand({
   headline = 'Kontakta oss',
-  description = 'Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar. Vi arbetar rikstäckande med skogsbolag, förvaltare och myndigheter.',
+  description = 'Berätta om ert uppdrag så återkommer vi med en prisindikation. Vi arbetar med skogsbolag, förvaltare och myndigheter.',
   ctaLabel = 'Begär offert',
   ctaHref = '/offert',
 }: CTABandProps) {
@@ -37,7 +38,7 @@ export default function CTABand({
               </svg>
             </Link>
             <a
-              href="mailto:info@timberdrone.se"
+              href={`mailto:${COMPANY.email}`}
               className="btn-secondary"
             >
               Maila oss

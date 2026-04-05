@@ -46,7 +46,7 @@ export default function StickyCTA() {
         style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
       >
         <Link
-          href="/areamatning-och-skogsbruk/kontakt"
+          href="/offert"
           className="btn-primary text-sm whitespace-nowrap"
         >
           Boka en fri konsultation

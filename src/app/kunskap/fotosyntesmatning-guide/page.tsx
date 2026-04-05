@@ -164,7 +164,7 @@ export default function FotosyntesmatningGuidePage() {
             </li>
             <li>
               <strong>Tillväxtuppföljning</strong> — Följ hur{' '}
-              <Link href="/areamatning-och-skogsbruk/planteringsuppfoljning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
                 nyplanteringar
               </Link>{' '}
               etablerar sig genom att mäta fotosyntetisk kapacitet över tid
@@ -185,7 +185,7 @@ export default function FotosyntesmatningGuidePage() {
           </p>
           <p>
             Vår{' '}
-            <Link href="/vegetationsanalys/stressanalys" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
               stressanalystjänst
             </Link>{' '}
             inkluderar alltid korrekt kalibrering och tolkningsstöd för att säkerställa

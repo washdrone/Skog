@@ -1,7 +1,7 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { organizationSchema, faqSchema } from '@/lib/schema'
+import { buildMetadata } from '@/lib/seo/metadata'
+import { organizationSchema, faqSchema } from '@/lib/seo/schema'
 import Hero from '@/components/Hero'
 import OutputShowcase from '@/components/OutputShowcase'
 import FeatureShowcase from '@/components/FeatureShowcase'
@@ -10,21 +10,12 @@ import ProcessSteps from '@/components/ProcessSteps'
 import CTABand from '@/components/CTABand'
 import FAQ from '@/components/FAQ'
 
-export const metadata: Metadata = {
-  title: 'TimberDrone | Skogsinventering med Drönare — Precision du kan lita på',
+export const metadata = buildMetadata({
+  title: 'Skogsinventering med Drönare — Multispektralanalys & LiDAR',
   description:
-    'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Datan levereras snabbt. Hela Sverige.',
-  alternates: { canonical: 'https://timberdrone.se' },
-  openGraph: {
-    title: 'TimberDrone | Skogsinventering med Drönare — Precision du kan lita på',
-    description:
-      'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
-    url: 'https://timberdrone.se',
-    siteName: 'TimberDrone',
-    locale: 'sv_SE',
-    type: 'website',
-  },
-}
+    'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Georefererade data i SWEREF99 TM.',
+  path: '/',
+})
 
 const HOME_FAQ_ITEMS = [
   {
@@ -37,7 +28,8 @@ const HOME_FAQ_ITEMS = [
   },
   {
     question: 'Var i Sverige verkar TimberDrone?',
-    answer: 'TimberDrone erbjuder rikstäckande tjänster i hela Sverige — från Skåne till Norrbotten. Vi har kapacitet att mobilisera till alla regioner och anpassar logistiken efter uppdragets lokalisering och omfattning.',
+    answer: 'TimberDrone har kapacitet att mobilisera till olika regioner i Sverige och anpassar logistiken efter uppdragets lokalisering och omfattning. Kontakta oss för att diskutera ert specifika område.',
+    /* EJ VERIFIERAD: "hela Sverige" (A6) — neutraliserat tills rikstäckning bekräftats */
   },
   {
     question: 'Hur skiljer sig drönarbaserad inventering från satellitdata?',
@@ -77,8 +69,9 @@ const BENEFITS = [
     desc: 'Varje leverans är daterad, georefererad och arkiverbar — färdig för revision och koldioxidrapportering.',
   },
   {
-    title: 'Rikstäckande nätverk',
-    desc: 'Vi mobiliserar i hela Sverige — från stormskador i syd till inventeringar i norr.',
+    title: 'Flexibel mobilisering',
+    desc: 'Vi mobiliserar till olika regioner — från stormskador i syd till inventeringar i norr.',
+    /* EJ VERIFIERAD: rikstäckning (A6) — använd inte "hela Sverige" utan bekräftelse */
   },
   {
     title: 'Branschstandardformat',
@@ -92,24 +85,28 @@ const PERSONA_CARDS = [
     desc: 'Ha exakt koll på din skog. Identifiera barkborreangrepp, kontrollera beståndsgränser och beräkna volym utan tidsödande fältbesök.',
     href: '/for/skogsagare',
     label: 'Analys för ägare',
+    linkText: 'Tjänster för skogsägare',
   },
   {
     title: 'Distansägare',
     desc: 'Följ utvecklingen digitalt. Få fotogrammetrisk dokumentation av utförda åtgärder och underlag för kolinlagringsberäkning.',
     href: '/for/skogsagare',
     label: 'Översikt',
+    linkText: 'Drönardata för distansägare',
   },
   {
     title: 'Skogsbolag',
-    desc: 'Storskalig datainsamling med multispektrala drönare. Vi erbjuder ramavtalskapacitet för inventering före och efter avverkning.',
+    desc: 'Storskalig datainsamling med multispektrala drönare. Ramavtalskapacitet för inventering före och efter avverkning.',
     href: '/for/skogsbolag',
     label: 'Ramavtal',
+    linkText: 'Tjänster för skogsbolag',
   },
   {
     title: 'Forskning & Förvaltning',
-    desc: 'Rådata, oöverträffad reproducerbarhet och dokumenterade arbetsmetoder. RTK-korrigerad multispektral data och LiDAR.',
+    desc: 'Rådata, dokumenterade arbetsmetoder och reproducerbar metodik. Multispektral data och punktmoln för vetenskaplig analys.',
     href: '/for/forskning',
     label: 'Vetenskaplig data',
+    linkText: 'Drönardata för forskning',
   },
 ]
 
@@ -137,7 +134,8 @@ export default function HomePage() {
           { value: 'Multispektral', label: 'Sensortyp' },
           { value: 'NDVI & RE', label: 'Vegetationsindex' },
           { value: 'SWEREF99 TM', label: 'Koordinatsystem' },
-          { value: '1-5 cm', label: 'Markupplösning' },
+          { value: 'Centimeternivå', label: 'Markupplösning' },
+          /* EJ VERIFIERAD: exakt GSD beror på utrustning och flyghöjd — ange specifikt värde när bekräftat */
         ]}
       />
 
@@ -181,7 +179,7 @@ export default function HomePage() {
                   {card.desc}
                 </p>
                 <div className="mt-6 flex items-center text-sm font-bold text-forest-600">
-                  Läs mer
+                  {card.linkText}
                   <svg className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>

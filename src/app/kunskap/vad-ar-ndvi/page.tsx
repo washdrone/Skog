@@ -156,7 +156,7 @@ export default function VadArNDVIPage() {
             </li>
             <li>
               <strong>Planteringsuppföljning</strong> — verifiera etableringsgrad och tillväxt i{' '}
-              <Link href="/areamatning-och-skogsbruk/planteringsuppfoljning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
                 nyplanterade bestånd
               </Link>
             </li>
@@ -184,7 +184,7 @@ export default function VadArNDVIPage() {
             index ge mer information. NDRE (Normalized Difference Red Edge) är känsligare för
             tidiga klorofyllförändringar. GNDVI fungerar bättre i tät kronslutning där NDVI
             tenderar att mätta. Läs mer i vår{' '}
-            <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
               tjänst för NDVI-kartläggning
             </Link>.
           </p>

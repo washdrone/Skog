@@ -172,11 +172,11 @@ export default function BarkborreTidigtPage() {
             Data från drönarflyg levereras som georefererade kartor med markerade
             riskområden. Dessa kan importeras direkt i GIS-system och används som underlag
             för{' '}
-            <Link href="/areamatning-och-skogsbruk/skadeinventering" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
               skadeinventering
             </Link>{' '}
             och saneringsplanering. Vår{' '}
-            <Link href="/vegetationsanalys/stressanalys" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
               stressanalystjänst
             </Link>{' '}
             är specifikt utformad för denna typ av bevakning.

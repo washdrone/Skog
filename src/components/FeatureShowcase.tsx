@@ -7,7 +7,7 @@ const FEATURES = [
   'Kartlager i branschstandard — Shapefile, GeoTIFF, GeoPackage',
   'Direkt import i QGIS, ArcGIS och verksamhetssystem',
   'Dokumenterad mätosäkerhet under centimeter',
-  'Rikstäckande insatsgrupper klara för uppdrag',
+  'Flexibel mobilisering till olika regioner',
 ]
 
 export default function FeatureShowcase() {

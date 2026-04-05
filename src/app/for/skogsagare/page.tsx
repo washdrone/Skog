@@ -95,7 +95,7 @@ export default function SkogsagarePage() {
             <h2>Dokumentation för försäkring och myndigheter</h2>
             <p>
               Efter storm, snöbrott eller insektsangrepp behöver du snabbt kunna visa skadans omfattning. Våra daterade flygningar ger dig georefererat bildmaterial och skadekartor som godtas av försäkringsbolag och myndigheter. Läs mer om{' '}
-              <Link href="/areamatning-och-skogsbruk/skadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
                 skadeinventering med drönare
               </Link>.
             </p>
@@ -103,7 +103,7 @@ export default function SkogsagarePage() {
             <h2>Planteringsuppföljning och tillväxtkontroll</h2>
             <p>
               Följ upp dina planteringar med regelbundna flygningar. Du ser hur plantorna etableras, var det finns luckor och om hjälpplantering behövs — utan att behöva vandra varje hygge till fots. Vår{' '}
-              <Link href="/areamatning-och-skogsbruk/planteringsuppfoljning" className="text-forest-600 underline hover:text-forest-800">
+              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
                 planteringsuppföljning
               </Link>{' '}
               ger dig konkreta underlag för beslut.
@@ -112,22 +112,22 @@ export default function SkogsagarePage() {
             <h2>Relevanta tjänster</h2>
             <ul>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/skadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
                   Skadeinventering efter storm och insekter
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/planteringsuppfoljning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Planteringsuppföljning
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
                 </Link>
               </li>

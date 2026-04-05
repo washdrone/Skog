@@ -94,9 +94,9 @@ export default function SkogsbolagPage() {
 
             <h2>Integration med befintliga GIS-system</h2>
             <p>
-              All data levereras i standardiserade format — GeoTIFF, GeoPackage, Shapefile — redo att importeras direkt i ArcGIS, QGIS eller ert skogsbruksplaneringssystem. Vi anpassar koordinatsystem, lagerstruktur och namngivning efter era specifikationer. Läs mer om våra{' '}
-              <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
-                leveransformat och dataflöden
+              All data levereras i standardiserade format — GeoTIFF, GeoPackage, Shapefile — redo att importeras direkt i ArcGIS, QGIS eller ert skogsbruksplaneringssystem. Vi anpassar koordinatsystem, lagerstruktur och namngivning efter era specifikationer. Läs mer om{' '}
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsinventering och leveranser
               </Link>.
             </p>
 
@@ -108,22 +108,22 @@ export default function SkogsbolagPage() {
             <h2>Tjänster för skogsbolag</h2>
             <ul>
               <li>
-                <Link href="/areamatning-och-skogsbruk/inventering" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/bestandsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Inventering och beståndsöversikt
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/avverkningsunderlag" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
                   Avverkningsunderlag
                 </Link>
               </li>
               <li>
-                <Link href="/areamatning-och-skogsbruk/areamatning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
                 </Link>
               </li>
               <li>
-                <Link href="/vegetationsanalys/ndvi-kartlaggning" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   NDVI-kartläggning och vegetationsanalys
                 </Link>
               </li>
