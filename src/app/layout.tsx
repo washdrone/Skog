@@ -5,10 +5,22 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
 
+/*
+ * TODO: Migrera till next/font/google för bättre Core Web Vitals.
+ * Kräver nätverksåtkomst vid build. Exempel:
+ *
+ * import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
+ * const playfair = Playfair_Display({ subsets: ['latin'], weight: [...], variable: '--font-playfair' })
+ * const sourceSerif = Source_Serif_4({ subsets: ['latin'], weight: [...], variable: '--font-source-serif' })
+ * const dmSans = DM_Sans({ subsets: ['latin'], weight: [...], variable: '--font-dm-sans' })
+ *
+ * Uppdatera sedan tailwind.config.ts att använda var(--font-playfair) etc.
+ */
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Skogsinventering & Multispektralanalys med Drönare i Sverige`,
+    default: `Skogsinventering & Multispektralanalys med Drönare | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
@@ -24,8 +36,18 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sv_SE',
     siteName: SITE_NAME,
+    images: [
+      {
+        url: `${SITE_URL}/og-default.png`,
+        width: 1200,
+        height: 630,
+        alt: 'TimberDrone — Skogsinventering med drönare',
+      },
+    ],
   },
 }
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,11 +63,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
         />
-        {(process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM') && (
+        {GA_ID && (
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             />
             <script
               dangerouslySetInnerHTML={{
@@ -53,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'}', {
+                  gtag('config', '${GA_ID}', {
                     page_path: window.location.pathname,
                   });
                 `,

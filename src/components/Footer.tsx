@@ -27,6 +27,7 @@ const FORETAG_LINKS = [
   { label: 'För forskning', href: '/for/forskning' },
   { label: 'För kommuner', href: '/for/kommuner' },
   { label: 'Platser', href: '/platser' },
+  { label: 'Begär offert', href: '/offert' },
 ]
 
 export default function Footer() {

@@ -28,7 +28,7 @@ const KUNSKAP_ITEMS = [
 
 const NAV_ITEMS = [
   { label: 'Platser', href: '/platser' },
-  { label: 'Kontakt', href: '/areamatning-och-skogsbruk/kontakt' },
+  { label: 'Kontakt', href: '/offert' },
 ]
 
 export default function Header() {

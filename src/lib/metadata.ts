@@ -16,7 +16,7 @@ export function createMetadata({
 }): Metadata {
   const url = `${SITE_URL}${path}`
   return {
-    title: `${title} | ${SITE_NAME}`,
+    title,
     description,
     alternates: { canonical: url },
     openGraph: {
@@ -26,6 +26,14 @@ export function createMetadata({
       siteName: SITE_NAME,
       locale: 'sv_SE',
       type: 'website',
+      images: [
+        {
+          url: `${SITE_URL}/og-default.png`,
+          width: 1200,
+          height: 630,
+          alt: `${title} — TimberDrone`,
+        },
+      ],
     },
     robots: noIndex ? { index: false, follow: false } : undefined,
   }

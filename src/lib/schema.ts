@@ -1,45 +1,23 @@
 import { SITE_URL } from './metadata'
 
 export function organizationSchema() {
+  /* Organization istället för LocalBusiness — adress och telefon saknas (MÅSTE VERIFIERAS).
+     Byt till LocalBusiness när fullständig NAP (namn, adress, telefon) är bekräftad. */
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Organization',
     name: 'TimberDrone',
     url: SITE_URL,
+    logo: `${SITE_URL}/timberdrone-logo.png`,
     description:
-      'Skogsinventering, multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion med drönare. Kolinlagringsberäkning för ESG. Nationell täckning i hela Sverige.',
+      'Skogsinventering, multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion med drönare. Kolinlagringsberäkning för ESG.',
     email: 'info@timberdrone.se',
     /* MÅSTE VERIFIERAS: telefonnummer — lägg till när bekräftat */
     /* telephone: '+46-XX-XXX XX XX', */
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'SE',
-      /* MÅSTE VERIFIERAS: ort och gatuadress */
+    areaServed: {
+      '@type': 'Country',
+      name: 'Sweden',
     },
-    areaServed: [
-      { '@type': 'Country', name: 'Sweden' },
-      { '@type': 'AdministrativeArea', name: 'Norrbottens län' },
-      { '@type': 'AdministrativeArea', name: 'Västerbottens län' },
-      { '@type': 'AdministrativeArea', name: 'Jämtlands län' },
-      { '@type': 'AdministrativeArea', name: 'Västernorrlands län' },
-      { '@type': 'AdministrativeArea', name: 'Gävleborgs län' },
-      { '@type': 'AdministrativeArea', name: 'Dalarnas län' },
-      { '@type': 'AdministrativeArea', name: 'Värmlands län' },
-      { '@type': 'AdministrativeArea', name: 'Örebro län' },
-      { '@type': 'AdministrativeArea', name: 'Västmanlands län' },
-      { '@type': 'AdministrativeArea', name: 'Uppsala län' },
-      { '@type': 'AdministrativeArea', name: 'Stockholms län' },
-      { '@type': 'AdministrativeArea', name: 'Södermanlands län' },
-      { '@type': 'AdministrativeArea', name: 'Östergötlands län' },
-      { '@type': 'AdministrativeArea', name: 'Jönköpings län' },
-      { '@type': 'AdministrativeArea', name: 'Kronobergs län' },
-      { '@type': 'AdministrativeArea', name: 'Kalmar län' },
-      { '@type': 'AdministrativeArea', name: 'Gotlands län' },
-      { '@type': 'AdministrativeArea', name: 'Blekinge län' },
-      { '@type': 'AdministrativeArea', name: 'Skåne län' },
-      { '@type': 'AdministrativeArea', name: 'Hallands län' },
-      { '@type': 'AdministrativeArea', name: 'Västra Götalands län' },
-    ],
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'info@timberdrone.se',
@@ -72,11 +50,8 @@ export function websiteSchema() {
       name: 'TimberDrone',
       url: SITE_URL,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${SITE_URL}/kunskap?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    /* SearchAction borttagen — ingen sökfunktion finns på sajten.
+       Lägg till igen om /kunskap får sökfunktionalitet. */
   }
 }
 
