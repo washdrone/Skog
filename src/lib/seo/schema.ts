@@ -81,7 +81,7 @@ export function websiteSchema() {
     name: COMPANY.name,
     url: SITE_URL,
     description:
-      'Skogsinventering och multispektralanalys med drönare i hela Sverige.',
+      'Skogsinventering och multispektralanalys med drönare.',
     publisher: {
       '@type': 'Organization',
       name: COMPANY.name,

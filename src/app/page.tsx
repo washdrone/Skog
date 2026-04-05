@@ -69,8 +69,9 @@ const BENEFITS = [
     desc: 'Varje leverans är daterad, georefererad och arkiverbar — färdig för revision och koldioxidrapportering.',
   },
   {
-    title: 'Rikstäckande nätverk',
+    title: 'Flexibel mobilisering',
     desc: 'Vi mobiliserar till olika regioner — från stormskador i syd till inventeringar i norr.',
+    /* EJ VERIFIERAD: rikstäckning (A6) — använd inte "hela Sverige" utan bekräftelse */
   },
   {
     title: 'Branschstandardformat',

@@ -10,7 +10,7 @@ import CTABand from '@/components/CTABand'
 export const metadata = createMetadata({
   title: 'Drönarbaserade tjänster för skogsbruk — 14 specialisttjänster',
   description:
-    'Komplett utbud av drönarbaserade tjänster för skogsbruk: skogsinventering, multispektralanalys, LiDAR, barkborredetektion, kolinlagring & ESG, skadedokumentation, årsavtal och mer. Nationell täckning.',
+    'Komplett utbud av drönarbaserade tjänster för skogsbruk: skogsinventering, multispektralanalys, LiDAR, barkborredetektion, kolinlagring & ESG, skadedokumentation och årsavtal.',
   path: '/tjanster',
 })
 
@@ -219,7 +219,7 @@ export default function TjansterHubPage() {
       <Hero
         badge="Drönarbaserade skogstjänster"
         headline="Drönarbaserade tjänster för skogsbruk — från inventering till ESG"
-        subheadline="Skogsinventering, multispektralanalys, barkborredetektion, kolinlagringsberäkning och skadedokumentation. Vi levererar georefererade kartlager, höjdmodeller och analysrapporter i hela Sverige — från enstaka uppdrag till årsavtal."
+        subheadline="Skogsinventering, multispektralanalys, barkborredetektion, kolinlagringsberäkning och skadedokumentation. Vi levererar georefererade kartlager, höjdmodeller och analysrapporter — från enstaka uppdrag till årsavtal."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Kontakta oss"

@@ -50,7 +50,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-6 text-sm text-white/50 leading-relaxed font-body">
-              Rikstäckande drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
+              Drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
             </p>
             <div className="mt-6 space-y-2">
               <a href={`mailto:${COMPANY.email}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.email}</a>

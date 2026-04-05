@@ -217,3 +217,62 @@ Se `CONTENT-VERIFICATION.md` för fullständig lista. Sammanfattning:
   länka till relevanta /tjanster-sidor
 - **Nya /platser/*-regionsidor** — använd `createMetadata()`, länka till
   /tjanster-sidor (ej till legacy-paths)
+
+---
+
+## Final stabilization before content expansion (2026-04-05)
+
+### Stängda risker
+
+**Geografiska claims (A6)**
+- "hela Sverige", "rikstäckande", "nationell täckning" borttagna från alla aktiva
+  sidor och komponenter: schema.ts, page.tsx (startsida), tjanster/page.tsx,
+  platser/page.tsx, Footer.tsx, FeatureShowcase.tsx
+- Kvarvarande formuleringar som inte är geografiska löften utan kontextuella
+  (t.ex. "från syd till norr") har behållits
+
+**Dead code (legacy-sidor)**
+- 12 page.tsx-filer under redirectade paths borttagna:
+  - /areamatning-och-skogsbruk/ (8 filer: hub, areamatning, inventering,
+    avverkningsunderlag, skadeinventering, planteringsuppfoljning, kontakt, case)
+  - /vegetationsanalys/ (4 filer: hub, ndvi-kartlaggning, stressanalys,
+    uppfoljning-over-tid)
+- Tomma mappar borttagna (/vegetationsanalys/ helt borttagen)
+- Kvarvarande under /areamatning-och-skogsbruk/: leveranser (unikt innehåll)
+  och faq (unikt innehåll) — i sitemap, ej redirectade
+
+**Business-data centralisering**
+- Alla aktiva komponenter och API-routes använder COMPANY.email
+- Hårdkodade e-poster i integritetspolicy/cookiepolicy lämnas medvetet
+  (juridisk prosa där interpolering skulle försämra läsbarhet)
+
+**OG-bild**
+- Path `/og-default.png` refereras konsekvent från en enda plats (business-data.ts)
+- buildMetadata() och layout.tsx propagerar automatiskt
+- **Filen existerar inte fysiskt** — manuell åtgärd krävs
+
+### Manuella verifieringar som fortfarande återstår
+1. Telefonnummer → `COMPANY.phone` i business-data.ts (D2)
+2. Adress → `COMPANY.address` i business-data.ts (D3)
+3. Geografisk täckning — om rikstäckning kan bekräftas, återinför
+   formuleringar med "hela Sverige" (A6)
+4. Svarstid — om "24 timmar" kan bekräftas, återinför på offert-sidan (A1)
+5. Utrustning — drönarmodell, sensormodell, LiDAR-system (F1-F6)
+6. Certifieringar — EASA-kategori, försäkring (G1-G7)
+7. OG-bild — skapa `/public/og-default.png` (1200x630)
+8. Case-studier — verifiera med faktiska kunder (E1-E3)
+
+### Varför kodbasen nu är tryggare för content-expansion
+1. **En sanningskälla:** Alla affärsfakta läses från `business-data.ts` —
+   ändra en gång, uppdateras överallt
+2. **Inga overifierade löften:** Svarstid, täckning, certifiering och GSD
+   är neutraliserade eller borttagna — ny copy kan skrivas utan att ärva
+   gamla risker
+3. **Ingen dead code:** Legacy-sidor borttagna, redirects hanterar inlänkar,
+   inga filer konkurrerar om samma intent
+4. **Konsekvent metadata:** `buildMetadata()` genererar title, canonical,
+   OG, Twitter-kort — nya sidor kan inte missa något
+5. **Konsekvent schema:** Alla generatorer läser från business-data —
+   schema uppgraderas automatiskt när verifierade uppgifter läggs till
+6. **Tydlig internlänkning:** Alla sidor pekar till canonical /tjanster/*
+   targets — inga legacy-path-läckor
