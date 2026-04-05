@@ -94,9 +94,9 @@ export default function SkogsbolagPage() {
 
             <h2>Integration med befintliga GIS-system</h2>
             <p>
-              All data levereras i standardiserade format — GeoTIFF, GeoPackage, Shapefile — redo att importeras direkt i ArcGIS, QGIS eller ert skogsbruksplaneringssystem. Vi anpassar koordinatsystem, lagerstruktur och namngivning efter era specifikationer. Läs mer om våra{' '}
-              <Link href="/areamatning-och-skogsbruk/leveranser" className="text-forest-600 underline hover:text-forest-800">
-                leveransformat och dataflöden
+              All data levereras i standardiserade format — GeoTIFF, GeoPackage, Shapefile — redo att importeras direkt i ArcGIS, QGIS eller ert skogsbruksplaneringssystem. Vi anpassar koordinatsystem, lagerstruktur och namngivning efter era specifikationer. Läs mer om{' '}
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsinventering och leveranser
               </Link>.
             </p>
 

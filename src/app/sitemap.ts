@@ -61,14 +61,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     /*
      * Legacy paths (/vegetationsanalys/*, /areamatning-och-skogsbruk/*) are
-     * 301-redirected to /tjanster/* via next.config.js. They are intentionally
-     * excluded from the sitemap so Google indexes the canonical targets only.
-     *
-     * Remaining non-redirected legacy pages:
+     * 301-redirected to /tjanster/* via next.config.js and their page files
+     * have been removed. No legacy pages remain in the sitemap.
      */
-    { path: '/areamatning-och-skogsbruk/leveranser', priority: 0.5, changeFrequency: 'monthly' as const },
-    { path: '/areamatning-och-skogsbruk/faq', priority: 0.4, changeFrequency: 'monthly' as const },
-    /* /areamatning-och-skogsbruk/case utesluten tills case är verifierade (CONTENT-VERIFICATION E1-E3) */
 
     // Juridiskt
     { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const },
