@@ -15,7 +15,7 @@
 export const COMPANY = {
   name: 'TimberDrone',
   legalName: undefined as string | undefined, // TODO: bekräfta juridiskt namn
-  url: 'https://timberdrone.se',
+  url: 'https://www.timberdrone.se',
   logoPath: '/timberdrone-logo.png',
   email: 'info@timberdrone.se',
 
