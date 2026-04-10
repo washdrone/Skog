@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next'
-
-const BASE_URL = 'https://timberdrone.se'
+import { SITE_URL } from '@/lib/seo'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString().split('T')[0]
@@ -71,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   return pages.map((page) => ({
-    url: `${BASE_URL}${page.path}`,
+    url: `${SITE_URL}${page.path}`,
     lastModified: now,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
