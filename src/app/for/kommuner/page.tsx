@@ -112,7 +112,7 @@ export default function KommunerPage() {
             <h2>Relevanta tjänster</h2>
             <ul>
               <li>
-                <Link href="/vegetationsanalys" className="text-forest-600 underline hover:text-forest-800">
+                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
                   Vegetationsanalys
                 </Link>
               </li>
