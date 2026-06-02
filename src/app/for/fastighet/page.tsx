@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: 'Vilka leveranser ingår i ett due diligence-uppdrag?',
     answer:
-      'Ett typiskt uppdrag omfattar högupplösta ortofoton, georefererade kartlager och en sammanfattande rapport. Vi kan även komplettera med multispektral analys för att bedöma skogens hälsostatus. Exakt leveransomfattning specificeras i offerten baserat på dina behov.',
+      'Ett typiskt uppdrag omfattar högupplösta ortofoton, georefererade kartlager och en sammanfattande rapport. Vi kan även komplettera med skadeinventering för att bedöma skogens status. Exakt leveransomfattning specificeras i offerten baserat på dina behov.',
   },
   {
     question: 'Kan drönardata användas vid förhandling om pris?',
@@ -97,11 +97,11 @@ export default function FastighetPage() {
               Traditionell due diligence vid skogsfastighetsköp förlitar sig ofta på äldre fältdata och subjektiva bedömningar. En drönarflygning ger dig högupplösta ortofoton och georefererade kartlager som visar fastighetens faktiska status. Du kan identifiera avvikelser mellan skogsbruksplanen och verkligheten — exempelvis bestånd som avverkats, skador som inte dokumenterats eller gränser som inte stämmer.
             </p>
 
-            <h2>Bedöm skogens hälsa med multispektral analys</h2>
+            <h2>Bedöm skogens status med skadeinventering</h2>
             <p>
-              Utöver visuell kartläggning kan vi genomföra multispektral flygning för att bedöma skogens vitalitet. Analysen identifierar stressade träd och områden med nedsatt hälsa som inte alltid syns med blotta ögat — värdefull information innan du binder dig vid ett köp. Läs mer om{' '}
-              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-kartläggning
+              Utöver visuell kartläggning kan vi genomföra en skogsskadeinventering för att bedöma skogens skick. Med drönarbilder och bildanalys upptäcker vi skadade träd och områden med avvikelser — värdefull information innan du binder dig vid ett köp. Läs mer om{' '}
+              <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsskadeinventering
               </Link>.
             </p>
 
@@ -123,13 +123,13 @@ export default function FastighetPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                  NDVI-kartläggning och hälsoanalys
+                <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsskadeinventering
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-                  Skadeinventering
+                <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+                  Trädhöjdsmätning
                 </Link>
               </li>
             </ul>

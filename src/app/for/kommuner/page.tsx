@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Drönartjänster för kommuner och myndigheter',
   description:
-    'Drönarbaserad kartläggning och miljöövervakning för kommuner och myndigheter. Urban skog, naturvård, offentlig mark och regelefterlevnad.',
+    'Drönarbaserad kartläggning av skog för kommuner och myndigheter. Tätortsnära skog, beståndsöversikt, skogsskadeinventering och offentlig mark.',
   path: '/for/kommuner',
 })
 
@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Kan ni flyga över tätortsnära skog och parkmark?',
     answer:
-      'Ja. Våra piloter är fullt utbildade enligt EASA-förordningen och vi har tillstånd för att flyga drönare i och nära tätort. Vi koordinerar med berörda parter vid varje uppdrag.',
+      'Ja. Vi planerar flygningar i och nära tätort i enlighet med gällande regler och koordinerar med berörda parter vid varje uppdrag.',
   },
   {
     question: 'Uppfyller era leveranser kraven för offentlig upphandling?',
@@ -24,9 +24,9 @@ const faqItems = [
       'Vi är vana vid att arbeta med offentliga beställare och kan anpassa leveranser efter era kravspecifikationer. Vi erbjuder standardiserade format, fullständig dokumentation och fakturering anpassad för kommunal redovisning.',
   },
   {
-    question: 'Kan drönardata användas för naturvårdsbedömningar?',
+    question: 'Kan drönardata användas som underlag för skötsel av kommunal skog?',
     answer:
-      'Ja. Vår vegetationsanalys med multispektrala sensorer ger underlag för att identifiera skyddsvärda biotoper, bedöma trädkronors hälsotillstånd och följa upp skötselåtgärder i naturreservat och skyddade områden.',
+      'Ja. Med drönarbilder och kartlager får ni underlag för att bedöma trädkronors tillstånd, upptäcka skadade träd och följa upp skötselåtgärder i kommunens skog och grönområden.',
   },
   {
     question: 'Hur hanterar ni GDPR vid flygning över offentlig mark?',
@@ -87,15 +87,15 @@ export default function KommunerPage() {
               TimberDrone hjälper kommuner och myndigheter att kartlägga, övervaka och dokumentera skog och grönområden med drönarbaserad geodata. Vi levererar aktuella underlag för beslut om skötsel, naturvård, exploatering och regelefterlevnad — snabbare och mer kostnadseffektivt än traditionella metoder.
             </p>
 
-            <h2>Miljöövervakning och naturvård</h2>
+            <h2>Översikt och skadeinventering</h2>
             <p>
-              Med multispektrala flygningar identifierar vi vegetationens hälsotillstånd, upptäcker stressade eller skadade träd och kartlägger artsammansättning på övergripande nivå. Underlaget är värdefullt för naturvårdsbedömningar, uppföljning av skötselplaner och rapportering till länsstyrelse. Läs mer om vår{' '}
-              <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-                stressanalys
+              Med drönarbilder och kartlager får ni en aktuell bild av kommunens skog — ni kan upptäcka skadade träd, följa upp skötselplaner och ta fram underlag för beslut. Vid stormfällning eller insektsangrepp kan vi snabbt leverera skadeunderlag. Läs mer om vår{' '}
+              <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsskadeinventering
               </Link>{' '}
               och{' '}
-              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-kartläggning
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsinventering
               </Link>.
             </p>
 
@@ -112,13 +112,8 @@ export default function KommunerPage() {
             <h2>Relevanta tjänster</h2>
             <ul>
               <li>
-                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                  Vegetationsanalys
-                </Link>
-              </li>
-              <li>
-                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-                  Skadeinventering
+                <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsskadeinventering
                 </Link>
               </li>
               <li>
@@ -129,6 +124,11 @@ export default function KommunerPage() {
               <li>
                 <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                   Areamätning
+                </Link>
+              </li>
+              <li>
+                <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+                  Trädhöjdsmätning
                 </Link>
               </li>
             </ul>

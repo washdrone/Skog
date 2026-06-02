@@ -5,26 +5,29 @@ const OUTPUTS = [
   {
     title: 'Ortofoto',
     description:
-      'Sömlösa, georefererade flygbilder med hög markupplösning. Visuell grund för all analys och planering.',
+      'Sömlösa, georefererade flygbilder med hög markupplösning. Visuell grund för inventering, planträkning och skadeavgränsning.',
     badges: ['GeoTIFF', 'JPEG2000'],
-    href: '/tjanster/ortofoto-kartering',
-    image: '/sunny_ortofoto.png',
-  },
-  {
-    title: 'Kartlager & vektordata',
-    description:
-      'Polygoner, linjer och punkter med attributdata. Beståndsgränser, hinder, infrastruktur — redo för ert GIS.',
-    badges: ['Shapefile', 'GeoPackage', 'GeoJSON'],
     href: '/tjanster/skogsinventering',
-    image: '/sunny_vektordata.png',
+    image: '/sunny_ortofoto.png',
+    alt: 'Georefererat ortofoto över skogsbestånd från drönare',
   },
   {
-    title: 'Vegetationsindex (NDVI)',
+    title: 'Höjdmodeller & punktmoln',
     description:
-      'Multispektral analys som visar växtlighetens vitalitet. Objektiv bedömning av skogshälsa, stress och förändringar.',
-    badges: ['GeoTIFF', 'PDF-rapport'],
-    href: '/tjanster/multispektralanalys',
-    image: '/multispectral_ndvi.png',
+      'Kronhöjdsmodell och markmodell ur fotogrammetriskt punktmoln. Underlag för trädhöjd, volym och tillväxt.',
+    badges: ['GeoTIFF', 'LAS/LAZ'],
+    href: '/tjanster/tradhojdsmatning',
+    image: '/sunny_lidar.png',
+    alt: 'Höjdmodell och punktmoln för trädhöjdsmätning med drönare',
+  },
+  {
+    title: 'Bestånds- & skadekartor',
+    description:
+      'Beståndsgränser, plantkartor och avgränsade skadeytor med attributdata och beräknad areal — redo för ert GIS.',
+    badges: ['Shapefile', 'GeoPackage', 'PDF-rapport'],
+    href: '/tjanster/skogsskadeinventering',
+    image: '/sunny_vektordata.png',
+    alt: 'Beståndskarta och skadekarta som vektordata för skogsbruk',
   },
 ]
 
@@ -51,11 +54,11 @@ export default function OutputShowcase() {
             >
               {/* Visual image */}
               <div className="relative aspect-[16/10] w-full bg-forest-900 overflow-hidden">
-                <Image 
-                  src={output.image} 
-                  alt={output.title} 
-                  fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                <Image
+                  src={output.image}
+                  alt={output.alt}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />

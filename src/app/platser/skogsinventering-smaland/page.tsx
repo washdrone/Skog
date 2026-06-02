@@ -16,7 +16,7 @@ const FAQ_ITEMS = [
   {
     question: 'Kan drönare upptäcka granbarkborreangrepp i Småland?',
     answer:
-      'Ja. Med multispektral analys och NDVI-kartläggning kan vi identifiera tidiga tecken på stress i granbestånd innan skadorna syns med blotta ögat. Rött ljus-absorption minskar i angripna träd, vilket ger ett mätbart utslag i vegetationsindex. Tidig detektion gör att ni kan vidta åtgärder innan angreppet sprider sig.',
+      'Ja. Med drönarbilder och bildanalys kan vi upptäcka tidiga tecken på skadade granar i samband med skogsskadeinventering. Tidig upptäckt av granbarkborreangrepp gör att ni kan vidta åtgärder innan angreppet sprider sig.',
   },
   {
     question: 'Arbetar ni med privata skogsägare i Småland?',
@@ -80,7 +80,7 @@ export default function SmalandPage() {
               Småland och stora delar av Götaland har en hög andel skogsmark. Landskapet präglas av tät granskog, kuperad terräng och en hög andel privatägd skogsmark. Många fastigheter har gått i arv i generationer, och behovet av aktuella kartunderlag är stort — inte minst som komplement till skogsbruksplaner som kan vara flera år gamla.
             </p>
             <p>
-              Regionen har under de senaste åren drabbats hårt av granbarkborreangrepp, särskilt efter torrperioder som försvagat granbestånden. Drönarbaserad inventering och multispektral analys ger skogsägare möjlighet att upptäcka stressade träd i ett tidigt skede, innan angreppen sprider sig och orsakar omfattande ekonomiska förluster. Genom NDVI-kartläggning kan vi identifiera områden där vegetationens vitalitet avviker från det normala.
+              Regionen har under de senaste åren drabbats hårt av granbarkborreangrepp, särskilt efter torrperioder som försvagat granbestånden. Drönarbaserad inventering och skogsskadeinventering ger skogsägare möjlighet att upptäcka skadade träd i ett tidigt skede, innan angreppen sprider sig och orsakar omfattande ekonomiska förluster. Med drönarbilder och bildanalys kan vi identifiera områden där bestånden avviker från det normala.
             </p>
             <p>
               Den småskaliga ägarstrukturen i Småland och Götaland innebär att många skogsägare hanterar allt från planering till åtgärder själva, ofta i dialog med skogsbruksplaneledare eller virkesköpare. Drönarbaserade kartlager och ortofoton blir ett värdefullt stöd i den dialogen — en gemensam, aktuell bild av skogstillståndet som alla parter kan utgå ifrån.
@@ -121,9 +121,9 @@ export default function SmalandPage() {
               { label: 'Areamätning', href: '/tjanster/skogsinventering' },
               { label: 'Inventering & översikt', href: '/tjanster/bestandsinventering' },
               { label: 'Avverkningsunderlag', href: '/tjanster/skogsbruksplan-underlag' },
-              { label: 'Skadeinventering', href: '/tjanster/skadedokumentation' },
-              { label: 'Planteringsuppföljning', href: '/tjanster/planteringsinventering' },
-              { label: 'NDVI-kartläggning', href: '/tjanster/multispektralanalys' },
+              { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
+              { label: 'Planträkning', href: '/tjanster/plantrakning' },
+              { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
             ].map((svc) => (
               <Link
                 key={svc.href}

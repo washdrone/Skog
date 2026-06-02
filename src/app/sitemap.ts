@@ -10,36 +10,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/offert', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/om-oss', priority: 0.7, changeFrequency: 'monthly' as const },
 
-    // Tjänster (primär tjänstestruktur)
+    // Tjänster (produktionsskoglig tjänstestruktur)
     { path: '/tjanster', priority: 0.9, changeFrequency: 'weekly' as const },
     { path: '/tjanster/skogsinventering', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/multispektralanalys', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/barkborre-detektering', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/lidar-skanning', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/ortofoto-kartering', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/3d-modellering', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/tradhojdsmatning', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/plantrakning', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/tjanster/skogsskadeinventering', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/tjanster/bestandsinventering', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/skogsbruksplan-underlag', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/fotosyntesmatning', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/planteringsinventering', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/skadedokumentation', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/kolinlagring', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/tjanster/arsavtal', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/jaktkartering', priority: 0.6, changeFrequency: 'monthly' as const },
 
     // Kunskap
     { path: '/kunskap', priority: 0.8, changeFrequency: 'weekly' as const },
-    { path: '/kunskap/vad-ar-ndvi', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/kunskap/barkborre-tidigt', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/kunskap/stormskada-checklista', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kunskap/dronare-vs-satellitdata', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/multispektral-vs-rgb', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kunskap/skogsinventering-kostnad', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/fotosyntesmatning-guide', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kunskap/lidar-vs-dronare', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/kunskap/vad-paverkar-priset', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/kolinlagring-skog-guide', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/kunskap/sasongsguide-skogsinventering', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/stormskada-checklista', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // Kundsegment
     { path: '/for/skogsagare', priority: 0.7, changeFrequency: 'monthly' as const },

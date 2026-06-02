@@ -21,7 +21,7 @@ const faqItems = [
   {
     question: 'Vilken upplösning har Sentinel-2 jämfört med drönare?',
     answer:
-      'Sentinel-2 har 10 m upplösning i sina bästa band (synligt och NIR). En drönarbaserad multispektral sensor ger betydligt högre rumslig upplösning (beroende på utrustning och flyghöjd).',
+      'Sentinel-2 har 10 m upplösning i sina bästa band (synligt och NIR). En drönare ger betydligt högre rumslig upplösning (beroende på utrustning och flyghöjd).',
   },
   {
     question: 'Kostar satellitdata något?',
@@ -154,8 +154,8 @@ export default function DronareVsSatellitdataPage() {
               <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
                 barkborreangrepp
               </Link>,{' '}
-              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
-                planteringsuppföljning
+              <Link href="/tjanster/plantrakning" className="text-forest-600 underline hover:text-forest-800">
+                planträkning
               </Link>
             </li>
             <li>
@@ -190,10 +190,8 @@ export default function DronareVsSatellitdataPage() {
               med drönare
             </li>
             <li>
-              <strong>Låg budget</strong> — gratis data för grundläggande{' '}
-              <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-övervakning
-              </Link>
+              <strong>Låg budget</strong> — gratis satellitdata för grundläggande
+              översiktsbevakning av stora arealer
             </li>
           </ul>
 
@@ -203,14 +201,14 @@ export default function DronareVsSatellitdataPage() {
             det bästa resultatet. Satellitdata används för kontinuerlig bevakning och
             trendanalys. När avvikelser upptäcks — eller när detaljerad analys behövs för
             planering — kompletteras med drönarbaserad{' '}
-            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-              NDVI-kartläggning
+            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsinventering
             </Link>{' '}
             eller{' '}
-            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-              stressanalys
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsskadeinventering
             </Link>{' '}
-            på centimeternivå.
+            på hög upplösning.
           </p>
         </div>
       </article>

@@ -116,9 +116,9 @@ export default function VasternorrlandPage() {
               { label: 'Areamätning', href: '/tjanster/skogsinventering' },
               { label: 'Inventering & översikt', href: '/tjanster/bestandsinventering' },
               { label: 'Avverkningsunderlag', href: '/tjanster/skogsbruksplan-underlag' },
-              { label: 'Skadeinventering', href: '/tjanster/skadedokumentation' },
-              { label: 'Planteringsuppföljning', href: '/tjanster/planteringsinventering' },
-              { label: 'NDVI-kartläggning', href: '/tjanster/multispektralanalys' },
+              { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
+              { label: 'Planträkning', href: '/tjanster/plantrakning' },
+              { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
             ].map((svc) => (
               <Link
                 key={svc.href}

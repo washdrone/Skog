@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: 'Vilken upplösning och noggrannhet kan vi förvänta oss?',
     answer:
-      'Vi flyger med branschledande utrustning — inklusive LiDAR, RTK-positionering och multispektral kamera — som ger ortofoton med hög markupplösning och noggrann positionering. Utrustningen anpassas efter uppdragets krav.',
+      'Upplösning och noggrannhet anpassas efter uppdragets krav och de flygparametrar vi kommer överens om. Vi specificerar förväntad markupplösning och positionering i offerten för varje uppdrag.',
   },
   {
     question: 'Erbjuder ni bulkpriser för stora volymer?',
@@ -123,8 +123,8 @@ export default function SkogsbolagPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                  NDVI-kartläggning och vegetationsanalys
+                <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsskadeinventering
                 </Link>
               </li>
             </ul>

@@ -17,23 +17,50 @@ const nextConfig = {
    */
   async redirects() {
     return [
-      // Areamätning sidor → /tjanster
+      // -------------------------------------------------------------------
+      // Omfokusering 2026: sajten avgränsas till ren produktionsskog.
+      // Off-scope tjänster (ekologi/ESG/vegetationsfjärranalys) samt
+      // mät-/kartprodukter som egna tjänstesidor 301:as till närmaste
+      // produktionsskogliga sida. Sökordsoptimerade slugs ersätter äldre.
+      // -------------------------------------------------------------------
+
+      // Skaderelaterat → samlad skogsskadeinventering
+      { source: '/tjanster/multispektralanalys', destination: '/tjanster/skogsskadeinventering', permanent: true },
+      { source: '/tjanster/barkborre-detektering', destination: '/tjanster/skogsskadeinventering', permanent: true },
+      { source: '/tjanster/skadedokumentation', destination: '/tjanster/skogsskadeinventering', permanent: true },
+
+      // Mät-/kartprodukter (metod, ej egen tjänst) → skogsinventering
+      { source: '/tjanster/fotosyntesmatning', destination: '/tjanster/skogsinventering', permanent: true },
+      { source: '/tjanster/lidar-skanning', destination: '/tjanster/skogsinventering', permanent: true },
+      { source: '/tjanster/3d-modellering', destination: '/tjanster/skogsinventering', permanent: true },
+      { source: '/tjanster/ortofoto-kartering', destination: '/tjanster/skogsinventering', permanent: true },
+
+      // Helt utanför reviret → tjänstehubben
+      { source: '/tjanster/kolinlagring', destination: '/tjanster', permanent: true },
+      { source: '/tjanster/jaktkartering', destination: '/tjanster', permanent: true },
+
+      // Slug-byte → sökordsoptimerad URL
+      { source: '/tjanster/planteringsinventering', destination: '/tjanster/plantrakning', permanent: true },
+
+      // Off-scope kunskapsartiklar → kunskapshubben
+      { source: '/kunskap/vad-ar-ndvi', destination: '/kunskap', permanent: true },
+      { source: '/kunskap/fotosyntesmatning-guide', destination: '/kunskap', permanent: true },
+      { source: '/kunskap/kolinlagring-skog-guide', destination: '/kunskap', permanent: true },
+      { source: '/kunskap/multispektral-vs-rgb', destination: '/kunskap', permanent: true },
+
+      // -------------------------------------------------------------------
+      // Äldre legacy-paths från utvecklingsfasen (behålls, mål uppdaterade)
+      // -------------------------------------------------------------------
       { source: '/areamatning-och-skogsbruk/areamatning', destination: '/tjanster/skogsinventering', permanent: true },
       { source: '/areamatning-och-skogsbruk/inventering', destination: '/tjanster/bestandsinventering', permanent: true },
       { source: '/areamatning-och-skogsbruk/avverkningsunderlag', destination: '/tjanster/skogsbruksplan-underlag', permanent: true },
-      { source: '/areamatning-och-skogsbruk/skadeinventering', destination: '/tjanster/skadedokumentation', permanent: true },
-      { source: '/areamatning-och-skogsbruk/planteringsuppfoljning', destination: '/tjanster/planteringsinventering', permanent: true },
-
-      // Vegetationsanalys sidor → /tjanster
-      { source: '/vegetationsanalys/ndvi-kartlaggning', destination: '/tjanster/multispektralanalys', permanent: true },
-      { source: '/vegetationsanalys/stressanalys', destination: '/tjanster/barkborre-detektering', permanent: true },
-      { source: '/vegetationsanalys/uppfoljning-over-tid', destination: '/tjanster/multispektralanalys', permanent: true },
-
-      // Hub-sidor → /tjanster
+      { source: '/areamatning-och-skogsbruk/skadeinventering', destination: '/tjanster/skogsskadeinventering', permanent: true },
+      { source: '/areamatning-och-skogsbruk/planteringsuppfoljning', destination: '/tjanster/plantrakning', permanent: true },
+      { source: '/vegetationsanalys/ndvi-kartlaggning', destination: '/tjanster/skogsskadeinventering', permanent: true },
+      { source: '/vegetationsanalys/stressanalys', destination: '/tjanster/skogsskadeinventering', permanent: true },
+      { source: '/vegetationsanalys/uppfoljning-over-tid', destination: '/tjanster/skogsinventering', permanent: true },
       { source: '/areamatning-och-skogsbruk', destination: '/tjanster', permanent: true },
       { source: '/vegetationsanalys', destination: '/tjanster', permanent: true },
-
-      // Kontakt → /offert (primär kontaktsida)
       { source: '/areamatning-och-skogsbruk/kontakt', destination: '/offert', permanent: true },
     ]
   },

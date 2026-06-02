@@ -188,11 +188,8 @@ export default function LidarVsDronarePage() {
               fungerar fotogrammetri utmärkt
             </li>
             <li>
-              <strong>Kombination med multispektral</strong> — samma flygning kan ge 3D-data
-              och{' '}
-              <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-kartor
-              </Link>
+              <strong>Bilddokumentation</strong> — samma flygning kan ge både 3D-data
+              och högupplösta ortofoton för dokumentation
             </li>
           </ul>
 
@@ -210,8 +207,8 @@ export default function LidarVsDronarePage() {
             </Link>{' '}
             och exakta volymberäkningar i produktionsskog ger LiDAR det mest tillförlitliga
             resultatet. För uppföljning, dokumentation och{' '}
-            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-              vegetationsanalys
+            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsinventering
             </Link>{' '}
             är fotogrammetri ofta tillräcklig och mer kostnadseffektiv.
           </p>

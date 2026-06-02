@@ -31,7 +31,7 @@ const REGIONS = [
     href: '/platser/skogsinventering-smaland',
     counties: 'Jönköping, Kronoberg, Kalmar samt övriga Götaland',
     description:
-      'Hög skogstäthet, privat ägande och granbarkborreproblematik. Drönarbaserad inventering och multispektral analys för tidig detektion och aktuella beslutsunderlag.',
+      'Hög skogstäthet, privat ägande och granbarkborreproblematik. Drönarbaserad inventering och skadeinventering för tidig upptäckt och aktuella beslutsunderlag.',
   },
   {
     name: 'Stockholm & Uppsala',
@@ -88,7 +88,7 @@ export default function PlatserPage() {
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
             Från Norrbottens fjällnära skogar till Smålands granbestånd. Vi utför drönarbaserad
-            skogsinventering, areamätning och vegetationsanalys i flera regioner.
+            skogsinventering, areamätning och skadeinventering i flera regioner.
           </p>
         </div>
       </header>

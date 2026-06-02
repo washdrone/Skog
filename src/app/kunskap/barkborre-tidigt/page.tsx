@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Upptäck barkborre tidigt med drönare',
   description:
-    'Multispektral drönaranalys kan upptäcka barkborreangrepp (Ips typographus) före visuella symptom. Lär dig om green attack, NDRE-index och flygintervall.',
+    'Drönarbilder och bildanalys kan hjälpa till att upptäcka barkborreangrepp (Ips typographus) tidigt. Lär dig om green attack, red attack och flygintervall.',
   path: '/kunskap/barkborre-tidigt',
 })
 
@@ -16,12 +16,12 @@ const faqItems = [
   {
     question: 'Hur tidigt kan drönare upptäcka barkborre?',
     answer:
-      'Med multispektral analys och NDRE-index kan angrepp upptäckas före visuella symptom (gulnande kronor). Hur tidigt beror på angreppsintensitet, trädslag och förhållanden.',
+      'Med drönarbilder och bildanalys kan angrepp upptäckas i ett tidigt skede, ofta innan skadorna är tydliga från marken. Hur tidigt beror på angreppsintensitet, trädslag och förhållanden.',
   },
   {
     question: 'Vad är skillnaden mellan green attack och red attack?',
     answer:
-      'Green attack är det tidiga stadiet då barken angrips men kronan fortfarande är grön. Red attack är det sena stadiet då kronan gulnar och rodnar. Multispektrala sensorer kan upptäcka green attack medan RGB-kameror först ser red attack.',
+      'Green attack är det tidiga stadiet då barken angrips men kronan fortfarande är grön. Red attack är det sena stadiet då kronan gulnar och rodnar. Återkommande drönarflygningar gör det lättare att fånga angrepp i ett tidigt skede.',
   },
   {
     question: 'Vilken tid på året bör man flyga för barkborredetektion?',
@@ -75,7 +75,7 @@ export default function BarkborreTidigtPage() {
             Upptäck barkborre tidigt med drönare
           </h1>
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
-            Hur multispektral analys identifierar angrepp veckor innan symptomen syns för ögat.
+            Hur drönarflygning och bildanalys hjälper dig att fånga angrepp i ett tidigt skede.
           </p>
         </div>
       </section>
@@ -83,64 +83,51 @@ export default function BarkborreTidigtPage() {
       <article className="section-padding bg-white">
         <div className="container-page max-w-3xl prose-forest">
           <p>
-            Barkborreangrepp (<em>Ips typographus</em>) kan upptäckas betydligt tidigare med
-            multispektral drönaranalys jämfört med visuell inspektion. Den avgörande fördelen
-            ligger i att multispektrala sensorer registrerar förändringar i klorofyll och
-            cellstruktur som sker långt innan kronan ändrar färg. Tidig detektion ger skogsägare
+            Barkborreangrepp (<em>Ips typographus</em>) kan upptäckas tidigare med
+            drönarflygning jämfört med inventering enbart från marken. Fördelen ligger i att
+            återkommande flygningar ger en heltäckande bild av bestånden och gör det lättare att
+            fånga avvikelser i ett tidigt skede. Tidig upptäckt ger skogsägare
             möjlighet att sanera angripna träd innan nästa generation barkborrar svärmar.
           </p>
 
-          <h2>Green attack vs red attack</h2>
+          <h2>Green attack, red attack och grey attack</h2>
           <p>
-            Barkborrens angrepp genomgår två visuellt distinkta faser. Att förstå skillnaden är
-            avgörande för att välja rätt detektionsmetod:
+            Barkborrens angrepp genomgår flera visuellt distinkta faser. Att förstå skillnaden är
+            avgörande för att tolka vad man ser i fält och i drönarbilder:
           </p>
           <table className="w-full text-sm border-collapse my-6">
             <thead>
               <tr className="border-b-2 border-slate-200">
                 <th className="py-3 pr-4 text-left font-semibold text-slate-900">Fas</th>
-                <th className="py-3 pr-4 text-left font-semibold text-slate-900">Visuellt</th>
-                <th className="py-3 pr-4 text-left font-semibold text-slate-900">Multispektralt</th>
+                <th className="py-3 pr-4 text-left font-semibold text-slate-900">Kännetecken</th>
                 <th className="py-3 text-left font-semibold text-slate-900">Tidsram</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Green attack</td>
-                <td className="py-3 pr-4 text-slate-600">Kronan grön, inga synliga symptom</td>
-                <td className="py-3 pr-4 text-slate-600">NDRE och NIR-reflektans minskar mätbart</td>
+                <td className="py-3 pr-4 text-slate-600">Kronan grön, inga tydliga symptom från marken</td>
                 <td className="py-3 text-slate-600">Veckor efter angrepp (varierar)</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Red attack</td>
                 <td className="py-3 pr-4 text-slate-600">Kronan gulnar, sedan rodnar</td>
-                <td className="py-3 pr-4 text-slate-600">Kraftigt minskad NDVI och NDRE</td>
                 <td className="py-3 text-slate-600">Längre tid efter angrepp</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Grey attack</td>
                 <td className="py-3 pr-4 text-slate-600">Barr faller, grått skelett</td>
-                <td className="py-3 pr-4 text-slate-600">Mycket lågt NDVI, barmarkssignal</td>
                 <td className="py-3 text-slate-600">Månader till år</td>
               </tr>
             </tbody>
           </table>
 
-          <h2>NDRE — nyckeln till tidig detektion</h2>
+          <h2>Återkommande flygningar fångar angrepp tidigt</h2>
           <p>
-            NDRE (Normalized Difference Red Edge Index) är det mest effektiva vegetationsindexet
-            för att upptäcka green attack.{' '}
-            <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
-              Till skillnad från NDVI
-            </Link>{' '}
-            använder NDRE Red Edge-bandet istället för rött band {/* MÅSTE VERIFIERAS: sensorspecifikation beror på faktisk utrustning */}. Red Edge är
-            känsligare för subtila förändringar i klorofyllhalt och bladstruktur — precis de
-            förändringar som sker under green attack.
-          </p>
-          <p>
-            I praktiken innebär det att NDRE kan visa en tydlig minskning i ett trädkrona
-            medan NDVI-värdet fortfarande ser normalt ut. Den extra känsligheten gör NDRE
-            till förstahandsvalet vid systematisk barkborrebevakning.
+            Genom att flyga riskbestånd regelbundet under svärmningssäsongen blir det lättare att
+            upptäcka avvikelser i ett tidigt skede. Drönarbilder ger en heltäckande överblick av
+            stora arealer, och förändringar mellan flygningar kan följas över tid. Underlaget
+            används för att rikta fältkontroll och saneringsinsatser dit de behövs.
           </p>
 
           <h2>Rekommenderade flygintervall</h2>
@@ -172,14 +159,11 @@ export default function BarkborreTidigtPage() {
             Data från drönarflyg levereras som georefererade kartor med markerade
             riskområden. Dessa kan importeras direkt i GIS-system och används som underlag
             för{' '}
-            <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-              skadeinventering
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsskadeinventering
             </Link>{' '}
-            och saneringsplanering. Vår{' '}
-            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-              stressanalystjänst
-            </Link>{' '}
-            är specifikt utformad för denna typ av bevakning.
+            och saneringsplanering. Tjänsten är utformad för denna typ av bevakning av
+            granbarkborreangrepp.
           </p>
         </div>
       </article>

@@ -18,11 +18,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur kartläggs beståndsgränser med drönare?',
-    answer: 'Beståndsgränser identifieras genom att kombinera ortofoto (visuella skillnader i krontak), höjdmodell (höjdskillnader mellan bestånd) och eventuellt multispektraldata (artskillnader). Gränserna digitaliseras som vektorpolygoner med areal beräknad i SWEREF99 TM.',
+    answer: 'Beståndsgränser identifieras genom att kombinera ortofoto (visuella skillnader i krontak) och höjdmodell (höjdskillnader mellan bestånd med olika utvecklingsstadier). Gränserna digitaliseras som vektorpolygoner med areal beräknad i SWEREF99 TM.',
   },
   {
     question: 'Kan drönare bestämma trädslag?',
-    answer: 'Med RGB-data kan vi skilja barr från löv. Med multispektral data och tidpunktsanpassade flygningar ökar möjligheten att skilja gran, tall och björk. Artriktigheten beror på tidpunkt, sensortyp och fältverifiering.',
+    answer: 'Med högupplösta drönarbilder kan vi skilja barr från löv. Med tidpunktsanpassade flygningar (t.ex. tidig vår eller höst) ökar möjligheten att skilja gran, tall och björk. Artriktigheten beror på tidpunkt och fältverifiering.',
   },
   {
     question: 'Hur förhåller sig drönarinventering till Skogsstyrelsens krav?',
@@ -69,9 +69,9 @@ export default function BestandsinventeringPage() {
         intro="Beståndsinventering med drönare kartlägger skogens indelning i bestånd med tydliga gränser, trädslag, åldersklassificering och volymuppskattning. Resultatet är georefererade kartlager som utgör grunden för skogsbruksplanering och förvaltning."
         relatedLinks={[
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
+          { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
           { label: 'Skogsbruksplan-underlag', href: '/tjanster/skogsbruksplan-underlag' },
-          { label: 'Ortofoto & kartering', href: '/tjanster/ortofoto-kartering' },
-          { label: 'Multispektralanalys', href: '/tjanster/multispektralanalys' },
+          { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
         ]}
       >
         <h2>Vad är beståndsinventering?</h2>
@@ -96,9 +96,6 @@ export default function BestandsinventeringPage() {
           <li>
             <strong>Höjdmodell (CHM)</strong> — höjdskillnader avgränsar bestånd med olika
             utvecklingsstadier
-          </li>
-          <li>
-            <strong>Multispektraldata</strong> — skiljer trädslag och vitalitetsklass
           </li>
           <li>
             <strong>Trädkronssegmentering</strong> — identifiering av enskilda träd för
@@ -137,14 +134,14 @@ export default function BestandsinventeringPage() {
 
         <p>
           Kombinera beståndsinventering med{' '}
-          <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-            multispektralanalys
+          <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+            trädhöjdsmätning
           </Link>{' '}
-          för att addera hälsobedömning per bestånd, eller med{' '}
-          <Link href="/tjanster/lidar-skanning" className="text-forest-600 underline hover:text-forest-800">
-            LiDAR-skanning
+          för detaljerad höjd- och tillväxtdata per bestånd, eller med{' '}
+          <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+            skogsskadeinventering
           </Link>{' '}
-          för ännu mer exakta höjd- och terrängdata.
+          för att kartlägga skador inom bestånden.
         </p>
       </ServicePageLayout>
 

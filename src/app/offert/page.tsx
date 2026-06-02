@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Begär offert',
   description:
-    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, areamätning eller vegetationsanalys.',
+    'Begär en kostnadsfri offert för drönarbaserad skogsinventering, trädhöjdsmätning, planträkning eller skogsskadeinventering. Rikstäckande i hela Sverige.',
   path: '/offert',
 })
 

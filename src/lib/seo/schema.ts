@@ -31,7 +31,7 @@ export function organizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}${COMPANY.logoPath}`,
     description:
-      'Skogsinventering, multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion med drönare. Kolinlagringsberäkning för ESG.',
+      'Drönarbaserad skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Skogliga beslutsunderlag i hela Sverige.',
     email: COMPANY.email,
     areaServed: {
       '@type': 'Country',
@@ -81,7 +81,7 @@ export function websiteSchema() {
     name: COMPANY.name,
     url: SITE_URL,
     description:
-      'Skogsinventering och multispektralanalys med drönare.',
+      'Drönarbaserad skogsinventering och skogliga beslutsunderlag i hela Sverige.',
     publisher: {
       '@type': 'Organization',
       name: COMPANY.name,

@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: 'Vilka dolda kostnader finns?',
     answer:
-      'De vanligaste tillkommande kostnaderna är mobilisering vid långa avstånd, extra analyspaket (multispektral, LiDAR) och uppföljningsflyg. Vi specificerar alltid alla kostnader i offerten.',
+      'De vanligaste tillkommande kostnaderna är mobilisering vid långa avstånd, extra analyspaket och uppföljningsflyg. Vi specificerar alltid alla kostnader i offerten.',
   },
   {
     question: 'Hur snabbt levereras resultaten?',
@@ -36,7 +36,7 @@ const faqItems = [
   {
     question: 'Kan jag kombinera flera analyser i samma flygning?',
     answer:
-      'Ja, det är ofta kostnadseffektivt att kombinera exempelvis arealmätning och vegetationsanalys i samma uppdrag. Flygningen behöver bara göras en gång och analyskostnaden är marginell i jämförelse.',
+      'Ja, det är ofta kostnadseffektivt att kombinera exempelvis arealmätning och skadeinventering i samma uppdrag. Flygningen behöver bara göras en gång och analyskostnaden är marginell i jämförelse.',
   },
 ]
 
@@ -84,8 +84,8 @@ export default function SkogsinventeringKostnadPage() {
         <div className="container-page max-w-3xl prose-forest">
           <p>
             Kostnaden för skogsinventering med drönare beror på areal, terräng och analystyp.
-            En grundläggande RGB-kartläggning för arealmätning och ortofoto kostar mindre än
-            avancerad multispektral analys eller LiDAR-skanning. Generellt blir drönare mer
+            En grundläggande kartläggning för arealmätning och ortofoto kostar mindre än
+            mer avancerade analyspaket. Generellt blir drönare mer
             kostnadseffektivt ju större areal som kartläggs, eftersom mobiliserings- och
             uppställningskostnaden fördelas på fler hektar.
           </p>
@@ -97,12 +97,8 @@ export default function SkogsinventeringKostnadPage() {
               under 10 hektar dominerar mobiliseringskostnaden.
             </li>
             <li>
-              <strong>Sensortyp</strong> — RGB-flygning är billigast. Multispektral analys
-              (NDVI, NDRE) kostar mer på grund av dyrare sensor och mer avancerad
-              databearbetning.{' '}
-              <Link href="/kunskap/multispektral-vs-rgb" className="text-forest-600 underline hover:text-forest-800">
-                Läs mer om skillnaden
-              </Link>.
+              <strong>Analystyp</strong> — En grundläggande kartläggning är billigast. Mer
+              avancerade analyspaket kostar mer på grund av mer omfattande databearbetning.
             </li>
             <li>
               <strong>Terräng och tillgänglighet</strong> — Kuperad terräng eller svårtillgängliga
@@ -184,8 +180,8 @@ export default function SkogsinventeringKostnadPage() {
               <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
                 arealmätning
               </Link>,{' '}
-              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-kartläggning
+              <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsskadeinventering
               </Link>{' '}
               och volymuppskattning.
             </li>

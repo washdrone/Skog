@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: 'Varför varierar priset så mycket mellan olika uppdrag?',
     answer:
-      'Priset påverkas av en kombination av faktorer: areal, terräng, vilken sensor som krävs (RGB, multispektral eller LiDAR), hur data ska levereras och var fastigheten ligger. Ett litet uppdrag med RGB-ortofoto kostar mindre än en storskalig LiDAR-inventering med fullständig analys.',
+      'Priset påverkas av en kombination av faktorer: areal, terräng, vilken typ av analys som krävs, hur data ska levereras och var fastigheten ligger. Ett litet uppdrag med ortofoto kostar mindre än en storskalig inventering med fullständig analys.',
   },
   {
     question: 'Blir det billigare med ett årsavtal?',
@@ -113,11 +113,11 @@ export default function VadPaverkarPrisetPage() {
                 </td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 font-semibold text-forest-700">Sensortyp</td>
+                <td className="py-3 pr-4 font-semibold text-forest-700">Analystyp</td>
                 <td className="py-3 text-slate-600">
-                  RGB-ortofoto är den mest kostnadseffektiva lösningen. Multispektral sensor
-                  kostar mer men ger vegetationsindex. LiDAR är den dyraste sensortypen
-                  men ger tredimensionell data genom krontaket.
+                  Ortofoto är den mest kostnadseffektiva lösningen. Mer avancerade analyspaket,
+                  exempelvis detaljerad 3D-data och volymberäkning under krontaket, kräver mer
+                  bearbetning och kostar mer.
                 </td>
               </tr>
               <tr>
@@ -145,23 +145,16 @@ export default function VadPaverkarPrisetPage() {
             </tbody>
           </table>
 
-          <h2>Hur sensorvalet påverkar priset</h2>
+          <h2>Hur analystypen påverkar priset</h2>
           <p>
-            Den största enskilda prisfaktorn är ofta vilken sensor som krävs för uppdraget.
-            En enkel RGB-kamera räcker för{' '}
-            <Link href="/tjanster/ortofoto-kartering" className="text-forest-600 underline hover:text-forest-800">
-              ortofoto och kartering
-            </Link>
-            . För vegetationsanalys som{' '}
-            <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
-              NDVI-kartläggning
+            En stor prisfaktor är ofta hur omfattande analys uppdraget kräver.
+            Ett ortofoto och en grundläggande{' '}
+            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsinventering
             </Link>{' '}
-            krävs multispektral sensor. Och för detaljerad{' '}
-            <Link href="/tjanster/lidar-skanning" className="text-forest-600 underline hover:text-forest-800">
-              LiDAR-skanning
-            </Link>{' '}
-            med volymberäkning under krontaket behövs specialiserad utrustning som är dyrare
-            att mobilisera och bearbeta.
+            är de mest kostnadseffektiva lösningarna. Mer avancerade analyspaket — exempelvis
+            detaljerad 3D-data med volymberäkning under krontaket — kräver mer omfattande
+            databearbetning och kostar därför mer.
           </p>
 
           <h2>Skaleffekter vid större arealer</h2>

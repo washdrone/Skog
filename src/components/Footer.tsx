@@ -4,18 +4,17 @@ import { COMPANY } from '@/lib/seo/business-data'
 
 const SERVICE_LINKS = [
   { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
-  { label: 'Multispektralanalys', href: '/tjanster/multispektralanalys' },
-  { label: 'Barkborredetektering', href: '/tjanster/barkborre-detektering' },
-  { label: 'LiDAR-skanning', href: '/tjanster/lidar-skanning' },
-  { label: 'Ortofoto & kartering', href: '/tjanster/ortofoto-kartering' },
-  { label: 'Kolinlagring & ESG', href: '/tjanster/kolinlagring' },
-  { label: 'Skadedokumentation', href: '/tjanster/skadedokumentation' },
+  { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
+  { label: 'Planträkning', href: '/tjanster/plantrakning' },
+  { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
+  { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
+  { label: 'Skogsbruksplan-underlag', href: '/tjanster/skogsbruksplan-underlag' },
   { label: 'Årsavtal', href: '/tjanster/arsavtal' },
 ]
 
 const KUNSKAP_LINKS = [
-  { label: 'Vad är NDVI?', href: '/kunskap/vad-ar-ndvi' },
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
+  { label: 'Stormskada — checklista', href: '/kunskap/stormskada-checklista' },
   { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
   { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
@@ -50,7 +49,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-6 text-sm text-white/50 leading-relaxed font-body">
-              Drönarbaserad skogsinventering, fotogrammetri och multispektral analys.
+              Drönarbaserad skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering — skogliga beslutsunderlag i hela Sverige.
             </p>
             <div className="mt-6 space-y-2">
               <a href={`mailto:${COMPANY.email}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.email}</a>

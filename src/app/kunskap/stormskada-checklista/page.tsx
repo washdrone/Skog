@@ -51,7 +51,7 @@ const howToSteps = [
   },
   {
     name: 'Dokumentera skadan',
-    text: 'Beställ drönarbaserad skadedokumentation med ortofoto och 3D-modell för att kartlägga skadans geografiska utbredning och uppskatta volymer.',
+    text: 'Beställ drönarbaserad skogsskadeinventering med ortofoto och 3D-modell för att kartlägga skadans geografiska utbredning och uppskatta volymer.',
   },
   {
     name: 'Bedöm skadeomfattningen',
@@ -154,8 +154,8 @@ export default function StormskadaChecklistaPage() {
           <h2>Steg 3: Dokumentera med drönare</h2>
           <p>
             Drönarbaserad{' '}
-            <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-              skadedokumentation
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsskadeinventering
             </Link>{' '}
             ger ett objektivt och heltäckande underlag som är svårt att uppnå med
             markbaserad inventering — särskilt när framkomligheten i skogen är kraftigt
@@ -172,7 +172,7 @@ export default function StormskadaChecklistaPage() {
           <p>
             Med drönardata som underlag kan skadeomfattningen analyseras systematiskt.
             Ortofoto visar den geografiska utbredningen och{' '}
-            <Link href="/tjanster/3d-modellering" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
               3D-modeller
             </Link>{' '}
             ger underlag för att beräkna volymer av stormfällt virke. Georefererade kartor
@@ -195,14 +195,14 @@ export default function StormskadaChecklistaPage() {
           <h2>Steg 6: Uppföljning och barkborrekontroll</h2>
           <p>
             Efter upparbetning bör angränsande bestånd övervakas för barkborreangrepp.
-            Planera uppföljande flygningar med{' '}
-            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-              multispektral sensor
+            Planera uppföljande flygningar för{' '}
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsskadeinventering
             </Link>{' '}
-            under våren och sommaren för att tidigt upptäcka stressymtom i angränsande
+            under våren och sommaren för att tidigt upptäcka angrepp i angränsande
             granbestånd. Läs mer om{' '}
             <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
-              tidig barkborredetektion
+              tidig barkborreinventering
             </Link>{' '}
             och{' '}
             <Link href="/kunskap/sasongsguide-skogsinventering" className="text-forest-600 underline hover:text-forest-800">
@@ -232,7 +232,7 @@ export default function StormskadaChecklistaPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-semibold text-forest-700">3</td>
-                <td className="py-3 pr-4 text-slate-600">Drönarbaserad skadedokumentation</td>
+                <td className="py-3 pr-4 text-slate-600">Drönarbaserad skogsskadeinventering</td>
                 <td className="py-3 text-slate-600">Inom dagar</td>
               </tr>
               <tr>
@@ -258,7 +258,7 @@ export default function StormskadaChecklistaPage() {
       <FAQ items={faqItems} />
       <CTABand
         headline="Stormskada? Vi hjälper er snabbt."
-        description="Kontakta oss för akut skadedokumentation med drönare. Vi kan kartlägga skadeområdet och ge underlag för försäkring och åtgärdsplanering."
+        description="Kontakta oss för akut skogsskadeinventering med drönare. Vi kan kartlägga skadeområdet och ge underlag för försäkring och åtgärdsplanering."
         ctaHref="/offert"
       />
     </>
