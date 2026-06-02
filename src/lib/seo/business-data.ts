@@ -64,13 +64,12 @@ export const OG_DEFAULTS = {
 
 export const CAPABILITIES = [
   'Skogsinventering',
-  'Multispektralanalys',
-  'Fotosyntesmätning',
-  'LiDAR-skanning',
-  'Barkborredetektion',
-  'Ortofoto',
-  'Kolinlagringsberäkning',
-  'ESG-rapportering skog',
+  'Trädhöjdsmätning',
+  'Planträkning',
+  'Skogsskadeinventering',
+  'Beståndsinventering',
+  'Virkesförrådsuppskattning',
+  'Underlag för skogsbruksplan',
 ] as const
 
 // ---------------------------------------------------------------------------

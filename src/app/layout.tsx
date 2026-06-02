@@ -20,11 +20,11 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(COMPANY.url),
   title: {
-    default: `Skogsinventering & Multispektralanalys med Drönare | ${COMPANY.name}`,
+    default: `Skogsinventering med drönare i hela Sverige | ${COMPANY.name}`,
     template: `%s | ${COMPANY.name}`,
   },
   description:
-    'Precisionsinventering av skog med drönare. Multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Kolinlagringsberäkning för ESG.',
+    'Drönarbaserad skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Skogliga beslutsunderlag för avverkning och skötsel — rikstäckande.',
   icons: {
     icon: [
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },

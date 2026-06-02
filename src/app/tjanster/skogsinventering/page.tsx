@@ -22,7 +22,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilka trädslag kan identifieras?',
-    answer: 'Med RGB-data kan vi särskilja barrträd från lövträd. Med multispektral data och tidpunktsanpassade flygningar (t.ex. tidig vår eller höst) ökar möjligheten att särskilja gran, tall och björk. Artklassificering förbättras ytterligare med fältverifiering.',
+    answer: 'Med högupplösta drönarbilder kan vi särskilja barrträd från lövträd. Med tidpunktsanpassade flygningar (t.ex. tidig vår eller höst) ökar möjligheten att särskilja gran, tall och björk. Artklassificering förbättras ytterligare med fältverifiering.',
   },
   {
     question: 'Hur stor areal kan inventeras per dag?',
@@ -68,9 +68,9 @@ export default function SkogsinventeringPage() {
         headline="Skogsinventering med drönare"
         intro="Drönarbaserad skogsinventering ger en heltäckande bild av skogsbeståndet — snabbare, billigare och med högre rumslig upplösning än traditionella stickprovsmetoder."
         relatedLinks={[
+          { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
           { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
-          { label: 'LiDAR-skanning', href: '/tjanster/lidar-skanning' },
-          { label: '3D-modellering', href: '/tjanster/3d-modellering' },
+          { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
           { label: 'Skogsbruksplan-underlag', href: '/tjanster/skogsbruksplan-underlag' },
         ]}
       >
@@ -117,14 +117,14 @@ export default function SkogsinventeringPage() {
         <h2>Kombinera med andra tjänster</h2>
         <p>
           Skogsinventering med drönare blir ännu kraftfullare i kombination med{' '}
-          <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-            multispektralanalys
+          <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+            trädhöjdsmätning
           </Link>{' '}
-          för hälsobedömning eller{' '}
-          <Link href="/tjanster/lidar-skanning" className="text-forest-600 underline hover:text-forest-800">
-            LiDAR-skanning
+          för höjd- och tillväxtdata eller{' '}
+          <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+            skogsskadeinventering
           </Link>{' '}
-          för ännu mer detaljerade höjdmodeller. Data kan även användas som underlag för{' '}
+          för att kartlägga storm-, insekts- och torkskador. Data kan även användas som underlag för{' '}
           <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
             skogsbruksplaner
           </Link>.

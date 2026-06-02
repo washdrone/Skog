@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Drönartjänster för skogsägare',
   description:
-    'TimberDrone hjälper privata skogsägare med drönarbaserad inventering, skadedokumentation och planteringsuppföljning. Kostnadseffektiv översikt över din skog.',
+    'TimberDrone hjälper privata skogsägare med drönarbaserad inventering, skogsskadeinventering och planträkning. Kostnadseffektiv översikt över din skog.',
   path: '/for/skogsagare',
 })
 
@@ -95,16 +95,16 @@ export default function SkogsagarePage() {
             <h2>Dokumentation för försäkring och myndigheter</h2>
             <p>
               Efter storm, snöbrott eller insektsangrepp behöver du snabbt kunna visa skadans omfattning. Våra daterade flygningar ger dig georefererat bildmaterial och skadekartor som godtas av försäkringsbolag och myndigheter. Läs mer om{' '}
-              <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-                skadeinventering med drönare
+              <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsskadeinventering med drönare
               </Link>.
             </p>
 
-            <h2>Planteringsuppföljning och tillväxtkontroll</h2>
+            <h2>Planträkning och tillväxtkontroll</h2>
             <p>
               Följ upp dina planteringar med regelbundna flygningar. Du ser hur plantorna etableras, var det finns luckor och om hjälpplantering behövs — utan att behöva vandra varje hygge till fots. Vår{' '}
-              <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
-                planteringsuppföljning
+              <Link href="/tjanster/plantrakning" className="text-forest-600 underline hover:text-forest-800">
+                planträkning
               </Link>{' '}
               ger dig konkreta underlag för beslut.
             </p>
@@ -117,13 +117,13 @@ export default function SkogsagarePage() {
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-                  Skadeinventering efter storm och insekter
+                <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsskadeinventering efter storm och insekter
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
-                  Planteringsuppföljning
+                <Link href="/tjanster/plantrakning" className="text-forest-600 underline hover:text-forest-800">
+                  Planträkning
                 </Link>
               </li>
               <li>

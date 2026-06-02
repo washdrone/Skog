@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Bästa tid för skogsinventering med drönare — säsongsguide',
   description:
-    'Säsongsguide för skogsinventering med drönare. Lär dig vilken tid på året som passar bäst för barkborredetektion, multispektralanalys, ortofoto, LiDAR och planteringsuppföljning.',
+    'Säsongsguide för skogsinventering med drönare. Lär dig vilken tid på året som passar bäst för barkborreinventering, trädhöjdsmätning, ortofoto och planträkning.',
   path: '/kunskap/sasongsguide-skogsinventering',
 })
 
@@ -29,9 +29,9 @@ const faqItems = [
       'Ortofoto under full lövtäckning (juni–juli) ger den mest kompletta bilden av kronskiktet, vilket är viktigt för areaberäkningar, beståndsavgränsning och visuell dokumentation. Utan löv syns marken genom kronorna, vilket ger annorlunda och ofta mindre användbar data för dessa ändamål.',
   },
   {
-    question: 'Kan man göra NDVI-mätning på hösten?',
+    question: 'Kan man göra skadeinventering på hösten?',
     answer:
-      'NDVI-mätning är mest tillförlitlig under aktiv växtsäsong (maj–augusti) när klorofyllaktiviteten är hög. På hösten börjar lövverket ändra färg och falla, vilket påverkar NDVI-värdena och gör det svårare att bedöma vitalitet korrekt.',
+      'Bildbaserad bedömning av skogens skick fungerar bäst under aktiv växtsäsong (maj–augusti) när bestånden är gröna. På hösten börjar lövverket ändra färg och falla, vilket gör det svårare att skilja skadade träd från naturlig höstfärgning.',
   },
   {
     question: 'Hur långt i förväg bör jag boka en drönarinventering?',
@@ -84,9 +84,9 @@ export default function SasongsguideSkogsinventeringPage() {
         <div className="container-page max-w-3xl prose-forest">
           <p>
             Bästa tid för skogsinventering med drönare beror på vilken typ av data som ska
-            samlas in. Barkborredetektion bör göras på våren och sensommaren, multispektralanalys
-            under aktiv växtsäsong, ortofoto vid full lövtäckning och LiDAR-skanning av lövskog
-            under barmarkssäsongen på vintern. Nedan följer en detaljerad säsongsguide.
+            samlas in. Barkborreinventering bör göras på våren och sensommaren, ortofoto vid
+            full lövtäckning och markmodellering av lövskog under barmarkssäsongen på vintern.
+            Nedan följer en detaljerad säsongsguide.
           </p>
 
           <h2>Säsongsöversikt — månad för månad</h2>
@@ -108,16 +108,16 @@ export default function SasongsguideSkogsinventeringPage() {
                 <td className="py-3 pr-4 font-semibold text-forest-700">Mar–Apr</td>
                 <td className="py-3 pr-4 text-slate-600">Barkborre, tidig detektion</td>
                 <td className="py-3 text-slate-600">
-                  Granbarkborren aktiveras vid ca 8 °C. Stressymtom kan upptäckas tidigt
-                  med multispektral sensor innan synliga skador uppstår.
+                  Granbarkborren aktiveras vid ca 8 °C. Tidiga avvikelser kan upptäckas
+                  med drönarbilder innan skadorna är tydliga från marken.
                 </td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-semibold text-forest-700">Maj–Jun</td>
-                <td className="py-3 pr-4 text-slate-600">Fotosyntesmätning, multispektral</td>
+                <td className="py-3 pr-4 text-slate-600">Trädhöjdsmätning, tillväxt</td>
                 <td className="py-3 text-slate-600">
-                  Aktiv fotosyntes ger tydliga NDVI- och NDRE-värden. Bästa perioden för att
-                  bedöma skogshälsa och vitalitet.
+                  Under aktiv växtsäsong syns bestånden tydligt. Bra period för att mäta
+                  trädhöjd och följa tillväxt.
                 </td>
               </tr>
               <tr>
@@ -138,10 +138,10 @@ export default function SasongsguideSkogsinventeringPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-semibold text-forest-700">Sep–Okt</td>
-                <td className="py-3 pr-4 text-slate-600">Planteringsinventering, stormskada</td>
+                <td className="py-3 pr-4 text-slate-600">Planträkning, stormskada</td>
                 <td className="py-3 text-slate-600">
                   Nyplanterade bestånd har etablerat sig. Höststormar kan kräva snabb
-                  skadedokumentation.
+                  skadeinventering.
                 </td>
               </tr>
               <tr>
@@ -155,40 +155,32 @@ export default function SasongsguideSkogsinventeringPage() {
             </tbody>
           </table>
 
-          <h2>Mars–April: tidig barkborredetektion</h2>
+          <h2>Mars–April: tidig barkborreinventering</h2>
           <p>
             Granbarkborren (Ips typographus) är Nordens mest skadegörande skadeinsekt på
             gran. Insekten aktiveras på våren när temperaturen passerar cirka 8 °C och
-            börjar svärma vid omkring 18 °C. Genom att flyga med{' '}
-            <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-              multispektral sensor
-            </Link>{' '}
-            tidigt på säsongen kan stressymtom i klorofyllhalten upptäckas innan angreppen
-            blir synliga med blotta ögat. Läs mer i vår guide om{' '}
+            börjar svärma vid omkring 18 °C. Genom att flyga riskbestånd med drönare
+            tidigt på säsongen kan avvikelser upptäckas innan angreppen
+            är tydliga från marken. Läs mer i vår guide om{' '}
             <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
-              tidig barkborredetektion
+              tidig barkborreinventering
             </Link>.
           </p>
 
-          <h2>Maj–Juni: fotosyntesmätning och vitalitetsbedömning</h2>
+          <h2>Maj–Juni: trädhöjdsmätning och tillväxt</h2>
           <p>
-            Under försommaren är fotosyntesen som mest aktiv, vilket ger starka och
-            tillförlitliga värden vid{' '}
-            <Link href="/kunskap/vad-ar-ndvi" className="text-forest-600 underline hover:text-forest-800">
-              NDVI-kartläggning
+            Under försommaren är bestånden i full växt, vilket gör perioden lämplig för{' '}
+            <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+              trädhöjdsmätning
             </Link>{' '}
-            och NDRE-analys. Det är den bästa perioden för att göra en heltäckande
-            vitalitetsbedömning av skogen och identifiera bestånd som avviker från
-            förväntad hälsa.
+            och uppföljning av tillväxt. Återkommande flygningar över samma bestånd ger
+            jämförbara data över tid och underlag för åtgärdsbeslut.
           </p>
 
           <h2>Juni–Juli: inventering och ortofoto</h2>
           <p>
-            Full lövtäckning gör perioden juni–juli till den optimala tiden för{' '}
-            <Link href="/tjanster/ortofoto-kartering" className="text-forest-600 underline hover:text-forest-800">
-              ortofoto och kartering
-            </Link>
-            . Kronskiktet är komplett, vilket ger bäst underlag för{' '}
+            Full lövtäckning gör perioden juni–juli till den optimala tiden för
+            ortofoto och kartering. Kronskiktet är komplett, vilket ger bäst underlag för{' '}
             <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
               skogsinventering
             </Link>{' '}
@@ -199,31 +191,32 @@ export default function SasongsguideSkogsinventeringPage() {
           <p>
             Granbarkborren kan producera en andra generation under varma somrar. I augusti
             syns sommarens angrepp tydligare och det är lämpligt att göra en{' '}
-            <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-              uppföljande flygning för barkborredetektion
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              uppföljande skogsskadeinventering
             </Link>{' '}
-            för att fånga skador som inte var synliga vid vårskanningen.
+            för att fånga skador som inte var synliga vid vårens flygning.
           </p>
 
           <h2>September–Oktober: plantering och stormskador</h2>
           <p>
             Hösten är rätt tid för{' '}
-            <Link href="/tjanster/planteringsinventering" className="text-forest-600 underline hover:text-forest-800">
-              planteringsinventering
+            <Link href="/tjanster/plantrakning" className="text-forest-600 underline hover:text-forest-800">
+              planträkning
             </Link>{' '}
             — nyplanterade bestånd har haft en växtsäsong att etablera sig och
             överlevnadsgraden kan bedömas. Höststormar kan också kräva snabb{' '}
-            <Link href="/tjanster/skadedokumentation" className="text-forest-600 underline hover:text-forest-800">
-              skadedokumentation
+            <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsskadeinventering
             </Link>{' '}
-            för att underlag till försäkringsärenden och åtgärdsplanering.
+            som underlag till försäkringsärenden och åtgärdsplanering.
           </p>
 
-          <h2>November–Februari: LiDAR under barmarkssäsong</h2>
+          <h2>November–Februari: markmodellering under barmarkssäsong</h2>
           <p>
-            För lövskog är vintern den optimala tiden för{' '}
-            <Link href="/tjanster/lidar-skanning" className="text-forest-600 underline hover:text-forest-800">
-              LiDAR-skanning
+            För lövskog är vintern den optimala tiden för markmodellering med LiDAR som en del
+            av en{' '}
+            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+              skogsinventering
             </Link>
             . Utan löv på träden når en större andel laserpulser marken, vilket ger bättre
             digitala markmodeller och mer detaljerad data om stamstruktur. För barrskog

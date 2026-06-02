@@ -8,30 +8,30 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Drönardata för skogsforskning',
   description:
-    'Högupplöst drönardata för skogsforskning och universitet. Multispektral tidsserie, repeterbar metodik och leverans av rådata i öppna format.',
+    'Högupplöst drönardata för skogsforskning och universitet. Repeterbar metodik, tidsserier och leverans av rådata i öppna format.',
   path: '/for/forskning',
 })
 
 const faqItems = [
   {
-    question: 'Kan ni flyga med multispektrala sensorer?',
+    question: 'Kan ni anpassa datainsamlingen efter vårt forskningsupplägg?',
     answer:
-      'Ja. Vi erbjuder flygningar med multispektrala kamerasystem som fångar band i synligt ljus, rödkant och nära infrarött (NIR). Det möjliggör beräkning av vegetationsindex som NDVI, NDRE och andra index relevanta för er forskning.',
+      'Ja. Vi planerar flyghöjd, överlapp, tidpunkt och täckning utifrån era provytor och frågeställningar. Datainsamlingen dokumenteras fullständigt så att den kan beskrivas och återupprepas i ett forskningssammanhang.',
   },
   {
     question: 'Levererar ni rådata eller bearbetade produkter?',
     answer:
-      'Vi kan leverera båda. Råbilder med fullständig EXIF-metadata och kamerakalibreringsdata levereras för egna bearbetningar. Vi erbjuder även bearbetade produkter som ortofoton, punktmoln och vegetationsindex-kartor.',
+      'Vi kan leverera båda. Råbilder med fullständig EXIF-metadata och kamerakalibreringsdata levereras för egna bearbetningar. Vi erbjuder även bearbetade produkter som ortofoton och punktmoln.',
   },
   {
     question: 'Hur säkerställer ni repeterbarhet mellan flygningar?',
     answer:
-      'Vi dokumenterar flygplan, flyghöjd, överlapp, tidpunkt och väderförhållanden för varje mission. Markerade referenspunkter (GCP) och RTK-positionering ger konsekvent georeferering. Samma parameter-uppsättning används vid återkommande flygningar.',
+      'Vi dokumenterar flygplan, flyghöjd, överlapp, tidpunkt och väderförhållanden för varje mission. Markerade referenspunkter (GCP) ger konsekvent georeferering. Samma parameter-uppsättning används vid återkommande flygningar.',
   },
   {
     question: 'Kan vi använda drönardata i publicerade studier?',
     answer:
-      'Absolut. Vi levererar fullständig metodbeskrivning inklusive utrustning, flyghöjd, GSD, överlapp och bearbetningsparametrar — allt ni behöver för att beskriva datainsamlingen i en vetenskaplig publikation.',
+      'Absolut. Vi levererar fullständig metodbeskrivning inklusive flyghöjd, överlapp och bearbetningsparametrar — allt ni behöver för att beskriva datainsamlingen i en vetenskaplig publikation.',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function ForskningPage() {
               Drönardata för skogsforskning
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-              Högupplöst, repeterbar och väldefinierad drönardata för forskningsprojekt. Vi levererar rådata, multispektrala tidsserier och fullständig metoddokumentation.
+              Högupplöst, repeterbar och väldefinierad drönardata för forskningsprojekt. Vi levererar rådata, tidsserier och fullständig metoddokumentation.
             </p>
             <div className="mt-8">
               <Link href="/offert" className="btn-primary">
@@ -89,18 +89,18 @@ export default function ForskningPage() {
 
             <h2>Högupplöst data med dokumenterad metodik</h2>
             <p>
-              Vi flyger med branschledande utrustning — inklusive LiDAR, RTK-positionering och multispektral kamera — som ger hög markupplösning. Varje flygning dokumenteras med fullständiga parametrar — flyghöjd, överlapp, sensorspecifikation, kalibreringsinformation och väderförhållanden — så att datainsamlingen kan beskrivas exakt i vetenskapliga publikationer.
+              Varje flygning dokumenteras med fullständiga parametrar — flyghöjd, överlapp, kalibreringsinformation och väderförhållanden — så att datainsamlingen kan beskrivas exakt i vetenskapliga publikationer.
             </p>
 
-            <h2>Multispektrala tidsserier</h2>
+            <h2>Tidsserier över provytor</h2>
             <p>
-              Med multispektrala sensorer fångar vi data i synligt ljus, rödkant och nära infrarött. Genom återkommande flygningar över samma provytor med identisk metodik byggs tidsserier som möjliggör analys av fenologi, stressförlopp och behandlingseffekter. Läs mer om vår{' '}
-              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                NDVI-kartläggning
+              Genom återkommande flygningar över samma provytor med identisk metodik byggs tidsserier som möjliggör analys av tillväxt, skadeförlopp och behandlingseffekter över tid. Läs mer om vår{' '}
+              <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+                skogsinventering
               </Link>{' '}
               och{' '}
-              <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                uppföljning över tid
+              <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+                trädhöjdsmätning
               </Link>.
             </p>
 
@@ -112,18 +112,18 @@ export default function ForskningPage() {
             <h2>Relevanta tjänster för forskning</h2>
             <ul>
               <li>
-                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                  NDVI-kartläggning
+                <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsinventering
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-                  Stressanalys
+                <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+                  Skogsskadeinventering
                 </Link>
               </li>
               <li>
-                <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-                  Uppföljning över tid
+                <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+                  Trädhöjdsmätning
                 </Link>
               </li>
               <li>

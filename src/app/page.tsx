@@ -11,9 +11,9 @@ import CTABand from '@/components/CTABand'
 import FAQ from '@/components/FAQ'
 
 export const metadata = buildMetadata({
-  title: 'Skogsinventering med Drönare — Multispektralanalys & LiDAR',
+  title: 'Skogsinventering med drönare i hela Sverige',
   description:
-    'Skogsinventering med drönare — multispektralanalys, fotosyntesmätning, LiDAR och barkborredetektion. Georefererade data i SWEREF99 TM.',
+    'Drönarbaserad skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Georefererade skogliga beslutsunderlag i SWEREF99 TM — rikstäckande.',
   path: '/',
 })
 
@@ -24,20 +24,20 @@ const HOME_FAQ_ITEMS = [
   },
   {
     question: 'Vilka tjänster erbjuder TimberDrone?',
-    answer: 'TimberDrone erbjuder skogsinventering, multispektralanalys, fotosyntesmätning, LiDAR-skanning, barkborredetektion, ortofoto, 3D-modellering, beståndsinventering, planteringsinventering, skadedokumentation, kolinlagring & ESG-underlag, årsavtal och jaktkartering. Alla tjänster levereras som georefererade kartlager i branschstandardformat.',
+    answer: 'TimberDrone erbjuder skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering, samt beståndsinventering, underlag för skogsbruksplan och årsavtal för löpande uppföljning. Alla tjänster levereras som georefererade kartlager i branschstandardformat.',
   },
   {
     question: 'Var i Sverige verkar TimberDrone?',
-    answer: 'TimberDrone har kapacitet att mobilisera till olika regioner i Sverige och anpassar logistiken efter uppdragets lokalisering och omfattning. Kontakta oss för att diskutera ert specifika område.',
-    /* EJ VERIFIERAD: "hela Sverige" (A6) — neutraliserat tills rikstäckning bekräftats */
+    answer: 'TimberDrone arbetar rikstäckande i hela Sverige och anpassar logistiken efter uppdragets lokalisering och omfattning. Kontakta oss för att diskutera ert specifika område.',
+    /* EJ VERIFIERAD: "hela Sverige" (A6) — formuleringen får kvarstå men bekräfta rikstäckning internt */
   },
   {
     question: 'Hur skiljer sig drönarbaserad inventering från satellitdata?',
     answer: 'Drönarbaserad inventering ger betydligt högre rumslig upplösning än satellitdata och möjliggör analys på enskild trädnivå. Drönare påverkas inte av molntäcke och kan flygas på begäran. Satellitdata (t.ex. Sentinel-2 med 10 m upplösning) ger bra överblick men saknar detaljer för trädindividuell analys.',
   },
   {
-    question: 'Kan drönare upptäcka barkborreangrepp tidigt?',
-    answer: 'Ja, multispektral analys kan identifiera stressförändringar i vegetation som orsakas av granbarkborre, ofta innan angreppen är synliga med blotta ögat. Genom att analysera NIR- och Red Edge-reflektans kan stressade träd skiljas från friska.',
+    question: 'Kan drönare upptäcka granbarkborreangrepp?',
+    answer: 'Drönare kan kartlägga granbarkborreangrepp där angreppen ger synliga förändringar i kronorna, till exempel missfärgade eller avbarrade träd. Genom regelbunden flygning kan nya angreppspunkter lokaliseras så att angripna träd kan tas ut i tid. Tidiga, ännu gröna angrepp är svårare att se och kräver ofta kompletterande kontroll på marken.',
   },
   {
     question: 'Hur lång tid tar det att få sina data?',
@@ -48,30 +48,30 @@ const HOME_FAQ_ITEMS = [
 const PROCESS_STEPS = [
   { number: 1, title: 'Kontakt & offert', description: 'Beskriv ert behov — areal, syfte och tidsram. Vi återkommer med en offert.' },
   { number: 2, title: 'Flygning', description: 'Vi mobiliserar till ert område och samlar in georefererade data med drönare.' },
-  { number: 3, title: 'Analys & leverans', description: 'Data bearbetas till kartlager, index och rapporter. Kvalitetskontrollerat och levererat digitalt.' },
+  { number: 3, title: 'Analys & leverans', description: 'Data bearbetas till kartlager, höjdmodeller och rapporter. Kvalitetskontrollerat och levererat digitalt.' },
 ]
 
 const BENEFITS = [
   {
     title: 'Helhetsbild utan fältarbete',
-    desc: 'Kartlägg stora arealer utan att gå varje beståndsgräns till fots. Mätdata i 1-5 cm upplösning över tusentals hektar.',
+    desc: 'Kartlägg stora arealer utan att gå varje beståndsgräns till fots. Mätdata i hög upplösning över hela innehavet.',
   },
   {
     title: 'Faktabaserade beslut',
-    desc: 'Georefererade ortofoton och 3D-modeller ger en exakt nulägesbild — inte uppskattningar, utan lasermätdata.',
+    desc: 'Georefererade ortofoton och höjdmodeller ger en exakt nulägesbild — objektiva mått i stället för uppskattningar.',
   },
   {
     title: 'Tidig skadedetektion',
-    desc: 'Multispektral analys identifierar stressade träd innan skador syns med blotta ögat (NDVI & RE-analys).',
+    desc: 'Återkommande flygningar fångar storm-, insekts- och torkskador i ett tidigt skede, så att åtgärder kan sättas in i tid.',
   },
   {
-    title: 'Spårbarhet & ESG',
-    desc: 'Varje leverans är daterad, georefererad och arkiverbar — färdig för revision och koldioxidrapportering.',
+    title: 'Spårbar dokumentation',
+    desc: 'Varje leverans är daterad, georefererad och arkiverbar — färdig för uppföljning, skadeärenden och planrevision.',
   },
   {
     title: 'Flexibel mobilisering',
-    desc: 'Vi mobiliserar till olika regioner — från stormskador i syd till inventeringar i norr.',
-    /* EJ VERIFIERAD: rikstäckning (A6) — använd inte "hela Sverige" utan bekräftelse */
+    desc: 'Vi mobiliserar rikstäckande — från stormskador i syd till inventeringar i norr.',
+    /* EJ VERIFIERAD: rikstäckning (A6) — bekräfta internt */
   },
   {
     title: 'Branschstandardformat',
@@ -89,21 +89,21 @@ const PERSONA_CARDS = [
   },
   {
     title: 'Distansägare',
-    desc: 'Följ utvecklingen digitalt. Få fotogrammetrisk dokumentation av utförda åtgärder och underlag för kolinlagringsberäkning.',
+    desc: 'Följ utvecklingen digitalt. Få fotogrammetrisk dokumentation av utförda åtgärder och underlag för uppföljning av din skog.',
     href: '/for/skogsagare',
     label: 'Översikt',
     linkText: 'Drönardata för distansägare',
   },
   {
     title: 'Skogsbolag',
-    desc: 'Storskalig datainsamling med multispektrala drönare. Ramavtalskapacitet för inventering före och efter avverkning.',
+    desc: 'Storskalig datainsamling med drönare. Ramavtalskapacitet för inventering före och efter avverkning.',
     href: '/for/skogsbolag',
     label: 'Ramavtal',
     linkText: 'Tjänster för skogsbolag',
   },
   {
     title: 'Forskning & Förvaltning',
-    desc: 'Rådata, dokumenterade arbetsmetoder och reproducerbar metodik. Multispektral data och punktmoln för vetenskaplig analys.',
+    desc: 'Rådata, dokumenterade arbetsmetoder och reproducerbar metodik. Höjddata och punktmoln för vetenskaplig analys.',
     href: '/for/forskning',
     label: 'Vetenskaplig data',
     linkText: 'Drönardata för forskning',
@@ -125,14 +125,14 @@ export default function HomePage() {
       <Hero
         badge="Flygburen skogsinventering"
         headline="Precisionsdata för framtidens skogsbruk"
-        subheadline="Fotogrammetri, LiDAR och multispektralanalys från luften. Vi levererar exakta, georefererade beslutsunderlag direkt till era skogliga system."
+        subheadline="Fotogrammetri och höjddata från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Tjänsteutbud"
         secondaryCtaHref="/tjanster"
         stats={[
-          { value: 'Multispektral', label: 'Sensortyp' },
-          { value: 'NDVI & RE', label: 'Vegetationsindex' },
+          { value: 'Trädhöjd', label: 'Höjd & tillväxt' },
+          { value: 'Volym', label: 'Virkesförråd' },
           { value: 'SWEREF99 TM', label: 'Koordinatsystem' },
           { value: 'Centimeternivå', label: 'Markupplösning' },
           /* EJ VERIFIERAD: exakt GSD beror på utrustning och flyghöjd — ange specifikt värde när bekräftat */
@@ -200,30 +200,30 @@ export default function HomePage() {
               Kritiska beslutsunderlag
             </h2>
             <p className="mt-4 max-w-2xl text-slate-600 font-body">
-              Vi delar in vår verksamhet i skoglig volym- och arealuppskattning samt multispektral hälsoundersökning. Båda integreras sömlöst.
+              Vi delar in verksamheten i skoglig inventering och skadekartläggning. Båda bygger på samma georefererade drönardata och integreras sömlöst.
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            {/* Card 1: Mätning */}
+            {/* Card 1: Inventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/sunny_lidar.png" alt="LiDAR Mätning" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/sunny_lidar.png" alt="Skoglig inventering och höjdmätning med drönare" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />
               </div>
               <div className="p-8 sm:p-10 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-slate-900">Mätning & Geodata</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Inventering & Höjddata</h3>
                   <div className="text-xs font-mono text-slate-400 bg-slate-100 px-2 py-1 rounded-sm border border-slate-200">
-                    RGB / LiDAR
+                    RGB / HÖJD
                   </div>
                 </div>
                 <p className="text-slate-600 font-body leading-relaxed mb-8">
-                  Fotogrammetriskt framställda ortofoton och laserdata (LiDAR) som ger underlag för planering av avverkning, markberedning och röjning.
+                  Fotogrammetriskt framställda ortofoton och höjdmodeller som ger underlag för volym, tillväxt och planering av avverkning, markberedning och röjning.
                 </p>
                 <ul className="space-y-3 mb-10 flex-grow">
-                  {['Arealmätning med centimeterprecision', 'Volymberäkning av bestånd', 'Avverkningsunderlag & gränser', '3D-terrängmodeller (DEM)'].map((s) => (
+                  {['Arealmätning med centimeterprecision', 'Volym- och stamuppskattning', 'Trädhöjd och tillväxt', 'Avverkningsunderlag & gränser'].map((s) => (
                     <li key={s} className="flex items-center gap-3 text-sm text-slate-700 font-body">
                       <div className="h-1 w-1 bg-forest-500 rounded-none" />
                       {s}
@@ -231,32 +231,32 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <div className="pt-6 border-t border-slate-100">
-                  <Link href="/tjanster" className="btn-ghost w-full">
-                    Gå till mättjänster
+                  <Link href="/tjanster/skogsinventering" className="btn-ghost w-full">
+                    Gå till skogsinventering
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Card 2: Vegetationsanalys */}
+            {/* Card 2: Skadeinventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/multispectral_ndvi.png" alt="Multispektral Analys" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/forestry_drone.png" alt="Skogsskadeinventering med drönare efter storm och barkborreangrepp" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-800 transition-all duration-300 group-hover:bg-accent-500" />
               </div>
               <div className="p-8 sm:p-10 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-2xl font-bold text-slate-900">Multispektral Analys</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Skogsskadeinventering</h3>
                   <div className="text-xs font-mono text-slate-400 bg-slate-100 px-2 py-1 rounded-sm border border-slate-200">
-                    NIR / RED EDGE
+                    STORM / INSEKT
                   </div>
                 </div>
                 <p className="text-slate-600 font-body leading-relaxed mb-8">
-                  Användning av vetenskapliga vegetationsindex (NDVI, NDRE) för att identifiera angrepp av granbarkborre och allmän stressnivå i skogen.
+                  Kartläggning av storm-, insekts- och torkskador, inklusive granbarkborre. Avgränsade skadeytor med beräknad areal som underlag för uttag och dokumentation.
                 </p>
                 <ul className="space-y-3 mb-10 flex-grow">
-                  {['Tidig detektion av barkborre', 'Stresskartläggning via fotosyntes', 'Övervakning av plantetablering', 'Identifiering av fukthantering i mark'].map((s) => (
+                  {['Stormfällen och vindfällen', 'Angrepp av granbarkborre', 'Tork- och torkstressskador', 'Skadeavgränsning & arealberäkning'].map((s) => (
                     <li key={s} className="flex items-center gap-3 text-sm text-slate-700 font-body">
                       <div className="h-1 w-1 bg-forest-500 rounded-none" />
                       {s}
@@ -264,8 +264,8 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <div className="pt-6 border-t border-slate-100">
-                  <Link href="/tjanster/multispektralanalys" className="btn-ghost w-full">
-                    Gå till vegetationsanalys
+                  <Link href="/tjanster/skogsskadeinventering" className="btn-ghost w-full">
+                    Gå till skogsskadeinventering
                   </Link>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function HomePage() {
               <div key={item.title} className="relative group pl-6 border-l border-slate-300 hover:border-forest-500 transition-colors">
                 {/* Horizontal marker line */}
                 <div className="absolute top-0 left-0 w-3 h-px bg-slate-300 group-hover:bg-forest-500 transition-colors" />
-                
+
                 <div className="text-[10px] font-mono font-bold text-forest-400 mb-2">0{i + 1}</div>
                 <h3 className="font-bold text-slate-900 text-lg tracking-tight">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600 font-body">{item.desc}</p>
@@ -304,10 +304,10 @@ export default function HomePage() {
 
       <TrustBlock />
       <FAQ items={HOME_FAQ_ITEMS} />
-      
+
       <CTABand
-        headline="Behöver du uppdaterad information om din mark?"
-        description="Vi levererar tekniskt verifierade underlag oavsett om det gäller en årlig beståndsuppdatering, akut skadedokumentation eller ESG-underlag för skogsfonden."
+        headline="Behöver du uppdaterad information om din skog?"
+        description="Vi levererar tekniskt verifierade underlag oavsett om det gäller en årlig beståndsuppdatering, akut skadeinventering efter storm eller underlag för skogsbruksplanen."
       />
     </>
   )

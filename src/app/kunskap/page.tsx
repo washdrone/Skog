@@ -4,19 +4,13 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Kunskap om drönarbaserad skogsanalys — guider och jämförelser',
+  title: 'Kunskap om drönare i skogsbruket — guider och jämförelser',
   description:
-    'Guider och artiklar om NDVI, multispektral analys, barkborredetektion, kolinlagring, LiDAR, satellitdata, säsongsplanering och kostnader för drönarbaserad skogsinventering.',
+    'Guider om skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering med drönare. Barkborre, stormskada, satellitdata, säsong och kostnader.',
   path: '/kunskap',
 })
 
 const articles = [
-  {
-    href: '/kunskap/vad-ar-ndvi',
-    title: 'Vad är NDVI?',
-    description:
-      'Vegetationsindex förklarat — formel, värdeskala och tillämpningar inom skogsbruk.',
-  },
   {
     href: '/kunskap/skogsinventering-kostnad',
     title: 'Vad kostar skogsinventering med drönare?',
@@ -27,19 +21,13 @@ const articles = [
     href: '/kunskap/barkborre-tidigt',
     title: 'Upptäck barkborre tidigt med drönare',
     description:
-      'Hur multispektral analys identifierar angrepp innan de syns för ögat.',
+      'Hur återkommande drönarflygningar hjälper dig hitta granbarkborreangrepp i tid.',
   },
   {
-    href: '/kunskap/multispektral-vs-rgb',
-    title: 'Multispektral vs RGB',
+    href: '/kunskap/stormskada-checklista',
+    title: 'Checklista efter stormskada i skog',
     description:
-      'Skillnaden mellan sensortyper och när du ska välja vilken för skogsanalys.',
-  },
-  {
-    href: '/kunskap/fotosyntesmatning-guide',
-    title: 'Fotosyntetisk aktivitet — mätguide',
-    description:
-      'Så mäter du fotosyntetisk aktivitet i skog med drönare och vegetationsindex.',
+      'Steg-för-steg-guide: vad du ska göra efter stormskada — dokumentation, försäkring och åtgärd.',
   },
   {
     href: '/kunskap/dronare-vs-satellitdata',
@@ -51,31 +39,19 @@ const articles = [
     href: '/kunskap/lidar-vs-dronare',
     title: 'LiDAR vs fotogrammetri',
     description:
-      'Teknisk jämförelse av två metoder för att skapa 3D-modeller av skog.',
+      'Teknisk jämförelse av två metoder för att skapa höjdmodeller av skog.',
   },
   {
     href: '/kunskap/vad-paverkar-priset',
     title: 'Vad påverkar kostnaden för skogsinventering?',
     description:
-      'Vilka faktorer styr priset — areal, terräng, sensortyp, leveransformat och årsavtal.',
-  },
-  {
-    href: '/kunskap/kolinlagring-skog-guide',
-    title: 'Kolinlagring i skog — hur mäts det?',
-    description:
-      'Guide till biomassemätning, CO₂-ekvivalenter och ESG-rapportering med drönardata.',
+      'Vilka faktorer styr priset — areal, terräng, leveransformat och årsavtal.',
   },
   {
     href: '/kunskap/sasongsguide-skogsinventering',
     title: 'Bästa tid för skogsinventering — säsongsguide',
     description:
       'Månad-för-månad-guide till optimal tidpunkt för varje typ av drönarbaserad skogsanalys.',
-  },
-  {
-    href: '/kunskap/stormskada-checklista',
-    title: 'Checklista efter stormskada i skog',
-    description:
-      'Steg-för-steg-guide: vad du ska göra efter stormskada — dokumentation, försäkring och åtgärd.',
   },
 ]
 

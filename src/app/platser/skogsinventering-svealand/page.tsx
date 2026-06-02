@@ -21,7 +21,7 @@ const FAQ_ITEMS = [
   {
     question: 'Passar drönarkartläggning för blandskogar i Svealand?',
     answer:
-      'Absolut. Svealands blandskog med både barr- och lövträd kartläggs effektivt med drönare. Multispektral analys kan dessutom särskilja trädslag och identifiera stressade områden i blandbestånd, vilket ger mer nyanserade beslutsunderlag.',
+      'Absolut. Svealands blandskog med både barr- och lövträd kartläggs effektivt med drönare. Tidpunktsanpassade flygningar kan dessutom hjälpa till att särskilja trädslag och avgränsa skadade områden i blandbestånd, vilket ger mer nyanserade beslutsunderlag.',
   },
   {
     question: 'Hur snabbt kan ni genomföra ett uppdrag i Mälardalsregionen?',
@@ -83,7 +83,7 @@ export default function SvealandPage() {
               Närheten till större städer som Stockholm, Uppsala och Örebro innebär att många skogsägare och förvaltare i regionen har goda möjligheter att dra nytta av drönarbaserade underlag. God tillgänglighet gör att vi kan mobilisera snabbt och leverera färdiga kartlager och ortofoton inom överenskommen tid.
             </p>
             <p>
-              Svealands blandskog ställer specifika krav på inventering. Skillnader mellan trädslag, beståndsgränser i övergångszoner och varierande täthet gör att högupplösta drönardata ger ett betydligt mervärde jämfört med traditionella metoder. Genom multispektral analys kan vi dessutom identifiera tidiga tecken på stress, sjukdomar eller skadedjursangrepp i blandbestånd.
+              Svealands blandskog ställer specifika krav på inventering. Skillnader mellan trädslag, beståndsgränser i övergångszoner och varierande täthet gör att högupplösta drönardata ger ett betydligt mervärde jämfört med traditionella metoder. Med drönarbilder och bildanalys kan vi dessutom upptäcka tidiga tecken på skador eller skadedjursangrepp i blandbestånd.
             </p>
             <p>
               Vi arbetar med skogsbolag, enskilda skogsägare, kommuner och förvaltare i Svealand. Alla leveranser sker i SWEREF99 TM och är redo att importera i pcSKOG, QGIS eller ArcGIS. Oavsett om ert skogsinnehav ligger i Dalarnas fjällnära skogar eller i Södermanlands kulturlandskap anpassar vi uppdraget efter era förhållanden.
@@ -119,9 +119,9 @@ export default function SvealandPage() {
               { label: 'Areamätning', href: '/tjanster/skogsinventering' },
               { label: 'Inventering & översikt', href: '/tjanster/bestandsinventering' },
               { label: 'Avverkningsunderlag', href: '/tjanster/skogsbruksplan-underlag' },
-              { label: 'Skadeinventering', href: '/tjanster/skadedokumentation' },
-              { label: 'Planteringsuppföljning', href: '/tjanster/planteringsinventering' },
-              { label: 'NDVI-kartläggning', href: '/tjanster/multispektralanalys' },
+              { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
+              { label: 'Planträkning', href: '/tjanster/plantrakning' },
+              { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
             ].map((svc) => (
               <Link
                 key={svc.href}

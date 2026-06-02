@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Underlag för skogsbruksplan med drönardata',
   description:
-    'Drönardata som underlag för skogsbruksplan: ortofoto, höjdmodeller, beståndskarta och vegetationsindex. Minska fälttid och få bättre beslutsunderlag.',
+    'Drönardata som underlag för skogsbruksplan: ortofoto, höjdmodeller, beståndskarta och volymdata. Minska fälttid och få bättre beslutsunderlag.',
   path: '/tjanster/skogsbruksplan-underlag',
 })
 
@@ -18,7 +18,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilka delar av skogsbruksplanen kan drönardata bidra till?',
-    answer: 'Drönardata bidrar främst till beståndskartläggning (gränser, areal), beståndsuppskattning (höjd, volym, trädslag), hälsobedömning (vegetationsindex), terränganalys (markmodell, vägar, vattendrag) och dokumentation (ortofoto, 3D-modeller).',
+    answer: 'Drönardata bidrar främst till beståndskartläggning (gränser, areal), beståndsuppskattning (höjd, volym, trädslag), skadeläge (storm-, insekts- och torkskador), terränganalys (markmodell, vägar, vattendrag) och dokumentation (ortofoto, höjdmodeller).',
   },
   {
     question: 'Hur ofta bör drönardata uppdateras?',
@@ -55,7 +55,7 @@ export default function SkogsbruksplanUnderlagPage() {
           __html: JSON.stringify(
             serviceSchema({
               name: 'Underlag för skogsbruksplan med drönardata',
-              description: 'Drönardata som underlag för skogsbruksplan: ortofoto, höjdmodeller, beståndskarta och vegetationsindex.',
+              description: 'Drönardata som underlag för skogsbruksplan: ortofoto, höjdmodeller, beståndskarta och volymdata.',
               url: '/tjanster/skogsbruksplan-underlag',
             })
           ),
@@ -70,12 +70,12 @@ export default function SkogsbruksplanUnderlagPage() {
         breadcrumbLabel="Skogsbruksplan-underlag"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Underlag för skogsbruksplan med drönardata"
-        intro="Drönardata ger bättre underlag för skogsbruksplaner genom att kombinera högupplösta ortofoton, detaljerade höjdmodeller, beståndskartläggning och vegetationsindex. Resultatet är ett faktabaserat beslutsunderlag som minskar fälttid och ökar planens kvalitet."
+        intro="Drönardata ger bättre underlag för skogsbruksplaner genom att kombinera högupplösta ortofoton, detaljerade höjdmodeller, beståndskartläggning och volymdata. Resultatet är ett faktabaserat beslutsunderlag som minskar fälttid och ökar planens kvalitet."
         relatedLinks={[
           { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
-          { label: 'Ortofoto & kartering', href: '/tjanster/ortofoto-kartering' },
-          { label: 'Multispektralanalys', href: '/tjanster/multispektralanalys' },
+          { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
+          { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
         ]}
       >
         <h2>Vad är drönarunderlag för skogsbruksplan?</h2>
@@ -90,11 +90,11 @@ export default function SkogsbruksplanUnderlagPage() {
         <p>Vi levererar ett paket av datalager anpassat för skogsbruksplanering:</p>
         <ul>
           <li>
-            <strong><Link href="/tjanster/ortofoto-kartering" className="text-forest-600 underline hover:text-forest-800">Ortofoto</Link></strong>{' '}
+            <strong><Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">Ortofoto</Link></strong>{' '}
             — aktuell, högupplöst flygbild som underlag för beståndsgränser och visuell bedömning
           </li>
           <li>
-            <strong><Link href="/tjanster/3d-modellering" className="text-forest-600 underline hover:text-forest-800">Höjdmodeller</Link></strong>{' '}
+            <strong><Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">Höjdmodeller</Link></strong>{' '}
             — DSM, DTM och kronhöjdsmodell för trädhöjd, terränganalys och volymuppskattning
           </li>
           <li>
@@ -102,8 +102,8 @@ export default function SkogsbruksplanUnderlagPage() {
             — förslag på beståndsgränser med areal, höjd, trädslag och utvecklingsklass
           </li>
           <li>
-            <strong><Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">Vegetationsindex</Link></strong>{' '}
-            — NDVI/NDRE-kartor för hälsobedömning och prioritering av åtgärder
+            <strong><Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">Skadekartor</Link></strong>{' '}
+            — avgränsade storm-, insekts- och torkskador för prioritering av åtgärder
           </li>
         </ul>
 
@@ -118,8 +118,8 @@ export default function SkogsbruksplanUnderlagPage() {
 
         <h2>Arbetsflöde</h2>
         <ul>
-          <li><strong>Steg 1:</strong> Flygning av fastigheten med RGB- och/eller multispektral kamera</li>
-          <li><strong>Steg 2:</strong> Bearbetning till ortofoto, höjdmodeller och vegetationsindex</li>
+          <li><strong>Steg 1:</strong> Flygning av fastigheten med högupplöst kamera</li>
+          <li><strong>Steg 2:</strong> Bearbetning till ortofoto, höjdmodeller och punktmoln</li>
           <li><strong>Steg 3:</strong> Beståndskartläggning med föreslagna gränser och attributdata</li>
           <li><strong>Steg 4:</strong> Leverans av kartlager i format anpassat för pcSKOG, QGIS eller ArcGIS</li>
           <li><strong>Steg 5:</strong> Planeraren verifierar i fält och kompletterar med manuella mätningar</li>
@@ -130,7 +130,7 @@ export default function SkogsbruksplanUnderlagPage() {
           <li>Ortofoto (GeoTIFF, SWEREF99 TM)</li>
           <li>DSM, DTM, CHM (GeoTIFF)</li>
           <li>Beståndskarta med attribut (GeoPackage/Shapefile)</li>
-          <li>Vegetationsindex-kartor (GeoTIFF)</li>
+          <li>Skadekartor vid behov (GeoPackage/Shapefile)</li>
           <li>Beståndsregister (Excel/CSV)</li>
           <li>Sammanfattande rapport (PDF)</li>
         </ul>

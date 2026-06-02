@@ -51,7 +51,7 @@ export default function FAQ({ items, showHeading = true }: { items: FAQItem[]; s
                 Vanliga frågor
               </h2>
               <div className="max-w-md">
-                <p className="text-slate-600 font-body">Svar på de vanligaste frågorna om drönarbaserade mättjänster, multispektral analys och leveransformat.</p>
+                <p className="text-slate-600 font-body">Svar på de vanligaste frågorna om drönarbaserad skogsinventering, skadekartläggning och leveransformat.</p>
               </div>
             </div>
           </div>

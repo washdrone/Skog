@@ -2,12 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const FEATURES = [
-  'Georefererade ortofoton och LiDAR-data',
-  'Multispektral kamera och RTK-positionering',
+  'Georefererade ortofoton och höjdmodeller',
+  'Högupplöst bildinsamling med RTK-positionering',
   'Kartlager i branschstandard — Shapefile, GeoTIFF, GeoPackage',
   'Direkt import i QGIS, ArcGIS och verksamhetssystem',
-  'Dokumenterad mätosäkerhet under centimeter',
-  'Flexibel mobilisering till olika regioner',
+  'Punktmoln (LAS/LAZ) för höjd- och volymanalys',
+  'Rikstäckande mobilisering i hela Sverige',
 ]
 
 export default function FeatureShowcase() {
@@ -23,7 +23,7 @@ export default function FeatureShowcase() {
               Drönardata i oöverträffad upplösning
             </h2>
             <p className="mt-5 text-slate-600 font-body leading-relaxed">
-              Drönarbaserad inventering utklassar traditionella satellitdata i precision. Genom att flyga under molntäcket fångar vi exakt det ni behöver, exakt när ni behöver det. Markupplösning ner på 1 cm.
+              Drönarbaserad inventering ger betydligt högre rumslig upplösning än satellitdata. Genom att flyga under molntäcket fångar vi exakt det ni behöver, exakt när ni behöver det — med hög markupplösning på den enskilda fastigheten.
             </p>
 
             <ul className="mt-10 border-t border-slate-200">
@@ -45,11 +45,11 @@ export default function FeatureShowcase() {
           {/* Right: Technical framing visual instead of soft blobs */}
           <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
             <div className="tech-frame aspect-[4/5] bg-slate-50 border border-slate-200 shadow-xl overflow-hidden group relative">
-              <Image 
-                src="/multispectral_ndvi.png" 
-                alt="Multispectral NDVI map analysis"
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-105 hue-rotate-15 contrast-125"
+              <Image
+                src="/sunny_ortofoto.png"
+                alt="Georefererat ortofoto över skogsbestånd från drönare"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-forest-950/20 mix-blend-multiply" />
 
@@ -75,10 +75,10 @@ export default function FeatureShowcase() {
 
               {/* Data badges */}
               <div className="absolute bottom-12 left-12 px-3 py-1.5 bg-white border border-slate-200 text-[10px] font-mono font-bold text-slate-700 shadow-sm">
-                RES: 1.5 cm/px
+                SWEREF99 TM
               </div>
               <div className="absolute bottom-12 right-12 px-3 py-1.5 bg-forest-900 border border-forest-800 text-[10px] font-mono font-bold text-accent-500 shadow-sm">
-                MULTISPECTRAL
+                ORTOFOTO
               </div>
             </div>
           </div>

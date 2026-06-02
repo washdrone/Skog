@@ -22,11 +22,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Vilka tjänster kan ingå i ett årsavtal?',
-    answer: 'Alla våra tjänster kan ingå — från skogsinventering och multispektralanalys till barkborredetektering och kolinlagring. Vi sätter ihop ett paket som matchar era specifika behov och skogliga utmaningar.',
+    answer: 'Alla våra produktionsskogliga tjänster kan ingå — skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Vi sätter ihop ett paket som matchar era specifika behov och skogliga utmaningar.',
   },
   {
     question: 'Passar årsavtal för alla storlekar av skogsinnehav?',
-    answer: 'Årsavtal är främst intressant för skogsägare med större innehav eller för de som behöver regelbunden uppföljning, exempelvis vid aktiv barkborreövervakning eller ESG-rapportering. Kontakta oss för att diskutera vad som passar er situation.',
+    answer: 'Årsavtal är främst intressant för skogsägare med större innehav eller för de som behöver regelbunden uppföljning, exempelvis vid aktiv barkborreövervakning eller löpande tillväxtuppföljning. Kontakta oss för att diskutera vad som passar er situation.',
   },
   {
     question: 'Vad är fördelen jämfört med enstaka uppdrag?',
@@ -73,8 +73,8 @@ export default function ArsavtalPage() {
         intro="Få löpande överblick över era skogsinnehav med planerade drönarflygningar under hela året. Årsavtal ger kontinuerlig data, tidsserier och proaktiv förvaltning — istället för punktinsatser."
         relatedLinks={[
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
-          { label: 'Multispektralanalys', href: '/tjanster/multispektralanalys' },
-          { label: 'Barkborredetektering', href: '/tjanster/barkborre-detektering' },
+          { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
+          { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },
         ]}
       >
         <h2>Varför årsavtal?</h2>
@@ -90,8 +90,8 @@ export default function ArsavtalPage() {
         <p>
           Vi skräddarsyr ett avtal utifrån era behov, skogsinnehavets storlek och vilka
           parametrar ni vill övervaka. Flygningar planeras vid tidpunkter som ger mest
-          värde — exempelvis tidig sommar för barkborredetektion, sensommar för
-          vitalitetsbedömning och höst för volymskattning.
+          värde — exempelvis tidig sommar för skadeövervakning av barkborre, barmarkssäsong
+          för planträkning och höst för volym- och höjduppföljning.
           {/* MÅSTE VERIFIERAS: faktiska avtalsmodeller, prissättning och tidsplaner */}
         </p>
         <ul>
@@ -114,29 +114,30 @@ export default function ArsavtalPage() {
           <li>Tidsserier som visar förändringar och trender i skogstillståndet</li>
           <li>Tidig upptäckt av skador, angrepp och stressfaktorer</li>
           <li>Proaktiv förvaltning istället för reaktiva insatser</li>
-          <li>Data för ESG-rapportering och hållbarhetsredovisning</li>
+          <li>Objektiv, daterad dokumentation av skogens utveckling</li>
           <li>Förenklad planering — flygningar är redan inbokade</li>
         </ul>
 
         <h2>Tjänster som kan ingå</h2>
         <p>
-          Alla våra tjänster kan ingå i ett årsavtal. Vanliga kombinationer inkluderar{' '}
+          Alla våra produktionsskogliga tjänster kan ingå i ett årsavtal. Vanliga kombinationer
+          inkluderar{' '}
           <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
             skogsinventering
           </Link>{' '}
           för volymuppföljning,{' '}
-          <Link href="/tjanster/barkborre-detektering" className="text-forest-600 underline hover:text-forest-800">
-            barkborredetektering
+          <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
+            skogsskadeinventering
           </Link>{' '}
-          under sommarhalvåret och{' '}
-          <Link href="/tjanster/multispektralanalys" className="text-forest-600 underline hover:text-forest-800">
-            multispektralanalys
+          för skadeövervakning under sommarhalvåret och{' '}
+          <Link href="/tjanster/tradhojdsmatning" className="text-forest-600 underline hover:text-forest-800">
+            trädhöjdsmätning
           </Link>{' '}
-          för vitalitetsbedömning. Vi kan även integrera{' '}
-          <Link href="/tjanster/kolinlagring" className="text-forest-600 underline hover:text-forest-800">
-            kolinlagringsberäkning
+          för tillväxtuppföljning. Vi kan även följa upp föryngringen med{' '}
+          <Link href="/tjanster/plantrakning" className="text-forest-600 underline hover:text-forest-800">
+            planträkning
           </Link>{' '}
-          för er hållbarhetsrapportering.
+          på nyplanterade hyggen.
         </p>
 
         <h2>Leveranser</h2>
