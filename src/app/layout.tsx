@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
 import { COMPANY, OG_DEFAULTS } from '@/lib/seo/business-data'
 import { websiteSchema } from '@/lib/seo/schema'
 import Header from '@/components/Header'
@@ -6,16 +7,28 @@ import Footer from '@/components/Footer'
 import './globals.css'
 
 /*
- * TODO: Migrera till next/font/google för bättre Core Web Vitals.
- * Kräver nätverksåtkomst vid build. Exempel:
- *
- * import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
- * const playfair = Playfair_Display({ subsets: ['latin'], weight: [...], variable: '--font-playfair' })
- * const sourceSerif = Source_Serif_4({ subsets: ['latin'], weight: [...], variable: '--font-source-serif' })
- * const dmSans = DM_Sans({ subsets: ['latin'], weight: [...], variable: '--font-dm-sans' })
- *
- * Uppdatera sedan tailwind.config.ts att använda var(--font-playfair) etc.
+ * Self-hostade typsnitt via next/font/google — eliminerar render-blockerande
+ * extern <link> till Google Fonts och ger bättre Core Web Vitals (LCP/CLS).
+ * Exponeras som CSS-variabler och konsumeras av tailwind.config.ts.
  */
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-source-serif',
+  display: 'swap',
+})
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(COMPANY.url),
@@ -54,14 +67,8 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-D0DFLHDVJM'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="sv" className="antialiased">
+    <html lang="sv" className={`antialiased ${playfair.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
