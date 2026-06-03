@@ -136,42 +136,6 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* NDVI spectrum gradient */
-.ndvi-gradient {
-  background: linear-gradient(90deg, #d73027 0%, #fc8d59 20%, #fee08b 40%, #d9ef8b 60%, #91cf60 80%, #1a9850 100%);
-}
-
-/* NDVI shimmer animation */
-@keyframes ndviShimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-.ndvi-shimmer {
-  background: linear-gradient(90deg,
-    #d73027 0%, #fc8d59 15%, #fee08b 30%, #d9ef8b 45%, #91cf60 60%, #1a9850 75%,
-    #d73027 100%
-  );
-  background-size: 200% 100%;
-  animation: ndviShimmer 8s linear infinite;
-}
-
-/* Layer stack 3D perspective */
-.layer-stack {
-  perspective: 800px;
-  transform-style: preserve-3d;
-}
-
-.layer-card {
-  transform: rotateX(45deg) rotateZ(-15deg);
-  transform-style: preserve-3d;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.layer-card:hover {
-  transform: rotateX(45deg) rotateZ(-15deg) translateZ(20px);
-}
-
 /* Subtle grid background for hero/header sections */
 .bg-grid {
   background-image:
