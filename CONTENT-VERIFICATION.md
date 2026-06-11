@@ -18,7 +18,7 @@
 | A3 | "Omflygning utan extra kostnad" (vid kvalitetsbrist) | Leveranser-sidan | EJ VERIFIERAD | | |
 | A4 | "Ombokning utan extra kostnad" (vid dåligt väder) | FAQ | EJ VERIFIERAD | | |
 | A5 | "Kostnadsfri prisuppskattning" | FAQ | EJ VERIFIERAD | | |
-| A6 | "Hela Sverige" (geografisk täckning) | Startsida meta, målgrupper, CTABand, footer, FAQ, kontaktsida, FeatureShowcase | EJ VERIFIERAD | | |
+| A6 | "Hela Sverige" (geografisk täckning) | Startsida meta, målgrupper, CTABand, footer, FAQ, kontaktsida, FeatureShowcase | VERIFIERAD — rikstäckande | Ägaren | 2026-06-11 |
 
 ### Om ett affärslöfte inte stämmer:
 - Ändra till korrekt formulering på ALLA ställen (se kolumn "Var det används")

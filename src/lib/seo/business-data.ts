@@ -45,11 +45,10 @@ export const SOCIAL_PROFILES: { platform: string; url: string }[] = [
 // Service area
 // ---------------------------------------------------------------------------
 
-/** Geographic coverage — CONTENT-VERIFICATION A6: "Hela Sverige" EJ VERIFIERAD */
+/** Geographic coverage — rikstäckande, verifierad av ägaren 2026-06-11 (A6) */
 export const SERVICE_AREA = {
   country: 'Sweden',
   countryCode: 'SE',
-  // TODO: Specificera faktiska regioner om full rikstäckning inte kan bekräftas
 } as const
 
 // ---------------------------------------------------------------------------

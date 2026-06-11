@@ -106,16 +106,12 @@ direkta citerbara svar i första stycket (AEO), interna länkar med beskrivande 
 
 ## Kräver Johans beslut
 
-1. **Geografiskt verksamhetsområde — konflikt.** Briefen anger "Göteborg/Västsverige", men hela
-   sajten (titlar, platssidor Norrland–Småland, schema `areaServed: Sweden`) säger rikstäckande,
-   och CONTENT-VERIFICATION A6 markerar "Hela Sverige" som EJ VERIFIERAD. Jag har **behållit**
-   rikstäckande (sajtens befintliga, konsekventa positionering) och inte lagt till några nya
-   "hela Sverige"-påståenden. Bekräfta: rikstäckande eller Västsverige? Om Västsverige ska
-   platssidorna omprövas.
+1. ~~Geografiskt verksamhetsområde~~ — **AVKLARAT.** Ägaren bekräftade 2026-06-11 att
+   verksamheten är rikstäckande. CONTENT-VERIFICATION A6 är markerad som verifierad och
+   EJ VERIFIERAD-markeringarna för rikstäckning är borttagna ur koden.
 2. **og:image-design.** Nuvarande bild är en korrekt dimensionerad, varumärkad placeholder.
    Vill du ha en designad variant (foto/ortofoto + logotyp), ev. per kategori?
-3. **D1/A6 i CONTENT-VERIFICATION.md** kvarstår: bekräfta att info@timberdrone.se tar emot mail,
-   samt rikstäckningen (punkt 1).
+3. **D1 i CONTENT-VERIFICATION.md** kvarstår: bekräfta att info@timberdrone.se tar emot mail.
 4. **Sociala profiler** (LinkedIn/YouTube) — läggs i `SOCIAL_PROFILES` när konton finns.
 5. **Titelbyten** (M2) ändrar redan indexerade snippets — bör bevakas i Search Console 2–4 veckor.
 
