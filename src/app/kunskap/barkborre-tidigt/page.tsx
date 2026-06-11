@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
@@ -11,6 +11,13 @@ export const metadata = createMetadata({
     'Drönarbilder och bildanalys kan hjälpa till att upptäcka barkborreangrepp (Ips typographus) tidigt. Lär dig om green attack, red attack och flygintervall.',
   path: '/kunskap/barkborre-tidigt',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function BarkborreTidigtPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Upptäck barkborre tidigt med drönare',
+              description:
+                'Drönarbilder och bildanalys kan hjälpa till att upptäcka barkborreangrepp (Ips typographus) tidigt. Lär dig om green attack, red attack och flygintervall.',
+              url: '/kunskap/barkborre-tidigt',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function BarkborreTidigtPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             Hur drönarflygning och bildanalys hjälper dig att fånga angrepp i ett tidigt skede.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 

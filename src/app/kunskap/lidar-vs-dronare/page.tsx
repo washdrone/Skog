@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
@@ -11,6 +11,13 @@ export const metadata = createMetadata({
     'LiDAR och fotogrammetri skapar 3D-modeller av skog på olika sätt. Jämförelse av noggrannhet, kostnad, penetration genom krontak och bästa användningsområden.',
   path: '/kunskap/lidar-vs-dronare',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function LidarVsDronarePage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'LiDAR vs fotogrammetri — jämförelse för skogsdata',
+              description:
+                'LiDAR och fotogrammetri skapar 3D-modeller av skog på olika sätt. Jämförelse av noggrannhet, kostnad, penetration genom krontak och bästa användningsområden.',
+              url: '/kunskap/lidar-vs-dronare',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function LidarVsDronarePage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             Två metoder för att skapa 3D-modeller av skog — med olika styrkor och kostnadsbilder.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 

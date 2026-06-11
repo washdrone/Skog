@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Kunskap om drönare i skogsbruket — guider och jämförelser',
+  title: 'Kunskap om drönare i skogsbruket',
   description:
     'Guider om skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering med drönare. Barkborre, stormskada, satellitdata, säsong och kostnader.',
   path: '/kunskap',

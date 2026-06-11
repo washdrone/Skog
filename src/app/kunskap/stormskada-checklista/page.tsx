@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema, howToSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, howToSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
@@ -11,6 +11,13 @@ export const metadata = createMetadata({
     'Steg-för-steg-checklista efter stormskada i skog. Dokumentation, försäkringsanmälan, skadeomfattning med drönare och åtgärdsplanering.',
   path: '/kunskap/stormskada-checklista',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -102,6 +109,22 @@ export default function StormskadaChecklistaPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Checklista efter stormskada i skog — vad ska du göra?',
+              description:
+                'Steg-för-steg-checklista efter stormskada i skog. Dokumentation, försäkringsanmälan, skadeomfattning med drönare och åtgärdsplanering.',
+              url: '/kunskap/stormskada-checklista',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -117,6 +140,7 @@ export default function StormskadaChecklistaPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             En steg-för-steg-guide för skogsägare som drabbats av stormskada.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 
