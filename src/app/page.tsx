@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata } from '@/lib/seo/metadata'
-import { organizationSchema, faqSchema } from '@/lib/seo/schema'
+import { faqSchema } from '@/lib/seo/schema'
 import Hero from '@/components/Hero'
 import OutputShowcase from '@/components/OutputShowcase'
 import FeatureShowcase from '@/components/FeatureShowcase'
@@ -113,10 +113,6 @@ const PERSONA_CARDS = [
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(HOME_FAQ_ITEMS)) }}

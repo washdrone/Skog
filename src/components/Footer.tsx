@@ -53,6 +53,9 @@ export default function Footer() {
             </p>
             <div className="mt-6 space-y-2">
               <a href={`mailto:${COMPANY.email}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.email}</a>
+              {COMPANY.phone && (
+                <a href={`tel:${COMPANY.phone.replace(/[\s-]/g, '')}`} className="block text-sm font-bold text-accent-500 hover:text-accent-400">{COMPANY.phone}</a>
+              )}
             </div>
           </div>
 

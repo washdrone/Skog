@@ -94,6 +94,14 @@ export default function OffertPage() {
                       {COMPANY.email}
                     </a>
                   </p>
+                  {COMPANY.phone && (
+                    <p>
+                      <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">Telefon</span>
+                      <a href={`tel:${COMPANY.phone.replace(/[\s-]/g, '')}`} className="text-forest-600 hover:text-forest-800">
+                        {COMPANY.phone}
+                      </a>
+                    </p>
+                  )}
                 </div>
               </div>
             </aside>

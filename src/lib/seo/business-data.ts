@@ -14,13 +14,19 @@
 
 export const COMPANY = {
   name: 'TimberDrone',
-  legalName: undefined as string | undefined, // TODO: bekräfta juridiskt namn
+  /*
+   * Ägarens beslut 2026-06-11: TimberDrone profileras som fristående
+   * varumärke — juridiskt bolagsnamn, org.nr och adress utelämnas på
+   * sajten och i strukturerad data.
+   */
+  legalName: undefined as string | undefined,
+  orgNumber: undefined as string | undefined,
   url: 'https://www.timberdrone.se',
   logoPath: '/timberdrone-logo.png',
   email: 'info@timberdrone.se',
 
-  // TODO: lägg till när verifierat (CONTENT-VERIFICATION D2, D3)
-  phone: undefined as string | undefined,
+  /* Verifierad av ägaren 2026-06-11 (CONTENT-VERIFICATION D2) */
+  phone: '076-309 66 96' as string | undefined,
   address: undefined as
     | { street: string; postalCode: string; city: string; country: string }
     | undefined,
@@ -53,7 +59,7 @@ export const SERVICE_AREA = {
 export const OG_DEFAULTS = {
   locale: 'sv_SE' as const,
   type: 'website' as const,
-  imagePath: '/og-default.png', // TODO: skapa denna bild (1200 x 630)
+  imagePath: '/og-default.png', // 1200 x 630 — genererad placeholder, kan ersättas med designad variant
   imageWidth: 1200,
   imageHeight: 630,
 } as const

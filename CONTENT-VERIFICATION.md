@@ -67,8 +67,8 @@
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
 | D1 | E-post: info@timberdrone.se | Schema, CTABand, kontaktsida | EJ VERIFIERAD | | |
-| D2 | Telefonnummer — **SAKNAS HELT** | schema.ts (kommentar), kontaktsida (placeholder) | SAKNAS | | |
-| D3 | Företagsadress — **SAKNAS HELT** | schema.ts (kommentar) | SAKNAS | | |
+| D2 | Telefon: 076-309 66 96 | business-data.ts, schema, footer, om-oss, offert | VERIFIERAD | Ägaren | 2026-06-11 |
+| D3 | Juridiskt bolagsnamn/org.nr/adress | — | UTELÄMNAS — ägarens beslut: TimberDrone profileras fristående, inga bolagsuppgifter på sajten | Ägaren | 2026-06-11 |
 | D4 | Sociala medier: LinkedIn, YouTube, Instagram | Footer (href="#" — placeholder) | SAKNAS | | |
 | D5 | Domän: timberdrone.se | Alla canonical-URLer, sitemap, robots | EJ VERIFIERAD | | |
 
