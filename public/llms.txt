@@ -1,0 +1,33 @@
+# TimberDrone
+
+> TimberDrone utför drönarbaserad skogsinventering i Sverige. Tjänsterna omfattar skogsinventering, trädhöjdsmätning, planträkning, skogsskadeinventering, beståndsinventering, underlag för skogsbruksplan och årsavtal för löpande skogsövervakning. Leveranser sker som georefererade kartlager (GeoTIFF, GeoPackage, Shapefile, LAS/LAZ) i SWEREF99 TM (EPSG:3006).
+
+Kontakt: info@timberdrone.se, 076-309 66 96.
+
+TimberDrone arbetar med produktionsskog — beslutsunderlag för avverkning, skötsel och skadehantering. Sajten täcker inte ekologisk fjärranalys, ESG-rapportering eller karterings-/mättjänster utanför skogsbruket.
+
+## Tjänster
+
+- [Skogsinventering med drönare](https://www.timberdrone.se/tjanster/skogsinventering): Heltäckande kartläggning av volym, stamantal, trädslag och beståndsgränser.
+- [Trädhöjdsmätning](https://www.timberdrone.se/tjanster/tradhojdsmatning): Objektiv höjd- och tillväxtdata från kronhöjdsmodeller.
+- [Planträkning](https://www.timberdrone.se/tjanster/plantrakning): Kontroll av föryngring och plantöverlevnad efter plantering.
+- [Skogsskadeinventering](https://www.timberdrone.se/tjanster/skogsskadeinventering): Kartläggning av storm-, insekts- och torkskador, inklusive granbarkborre.
+- [Beståndsinventering](https://www.timberdrone.se/tjanster/bestandsinventering): Beståndsgränser och beståndsvisa trädparametrar.
+- [Underlag för skogsbruksplan](https://www.timberdrone.se/tjanster/skogsbruksplan-underlag): Aktuella drönardata som grund för skogsbruksplaner.
+- [Årsavtal](https://www.timberdrone.se/tjanster/arsavtal): Löpande skogsövervakning med återkommande flygningar.
+
+## Kunskap
+
+- [Vad kostar skogsinventering med drönare?](https://www.timberdrone.se/kunskap/skogsinventering-kostnad)
+- [Upptäck barkborre tidigt med drönare](https://www.timberdrone.se/kunskap/barkborre-tidigt)
+- [Checklista efter stormskada i skog](https://www.timberdrone.se/kunskap/stormskada-checklista)
+- [Drönare vs satellitdata för skogsbruk](https://www.timberdrone.se/kunskap/dronare-vs-satellitdata)
+- [LiDAR vs fotogrammetri](https://www.timberdrone.se/kunskap/lidar-vs-dronare)
+- [Bästa tid för skogsinventering — säsongsguide](https://www.timberdrone.se/kunskap/sasongsguide-skogsinventering)
+
+## Övrigt
+
+- [Tjänsteöversikt](https://www.timberdrone.se/tjanster)
+- [Regioner](https://www.timberdrone.se/platser)
+- [Om TimberDrone](https://www.timberdrone.se/om-oss)
+- [Begär offert](https://www.timberdrone.se/offert)
