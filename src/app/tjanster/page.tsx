@@ -8,7 +8,7 @@ import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 
 export const metadata = createMetadata({
-  title: 'Drönartjänster för skogsbruk — inventering & skadekartläggning',
+  title: 'Drönartjänster för skogsbruk — inventering & skador',
   description:
     'Drönarbaserade tjänster för skogsbruk: skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Skogliga beslutsunderlag i hela Sverige.',
   path: '/tjanster',

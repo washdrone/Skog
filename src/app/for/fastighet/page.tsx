@@ -6,7 +6,7 @@ import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Drönartjänster för skogsfastighetsköpare — due diligence med drönare',
+  title: 'Drönartjänster för skogsfastighetsköpare',
   description:
     'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet. TimberDrone levererar oberoende drönardata för due diligence.',
   path: '/for/fastighet',

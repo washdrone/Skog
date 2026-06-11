@@ -1,9 +1,15 @@
 import { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/seo'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date().toISOString().split('T')[0]
+/*
+ * Verkliga ändringsdatum (från git-historik) istället för byggdatum.
+ * Uppdatera datumet för en sida när dess innehåll faktiskt ändras —
+ * ett lastmod som ändras vid varje deploy ger Google felaktiga signaler.
+ */
+const CONTENT_UPDATED = '2026-06-11'
+const LEGAL_UPDATED = '2026-03-06'
 
+export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     // Core
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
@@ -54,13 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
      */
 
     // Juridiskt
-    { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const },
-    { path: '/cookiepolicy', priority: 0.3, changeFrequency: 'yearly' as const },
+    { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const, lastmod: LEGAL_UPDATED },
+    { path: '/cookiepolicy', priority: 0.3, changeFrequency: 'yearly' as const, lastmod: LEGAL_UPDATED },
   ]
 
   return pages.map((page) => ({
     url: `${SITE_URL}${page.path}`,
-    lastModified: now,
+    lastModified: (page as { lastmod?: string }).lastmod ?? CONTENT_UPDATED,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }))

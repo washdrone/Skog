@@ -6,7 +6,7 @@ import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare i Stockholms- och Uppsalaregionen',
+  title: 'Skogsinventering med drönare i Stockholm & Uppsala',
   description:
     'Drönarbaserad skogsinventering i Stockholms och Uppsala län. Vi hanterar tätortsnära skog, mindre skiften och kommunal mark med hänsyn till flygzoner och regelverk.',
   path: '/platser/skogsinventering-stockholm',

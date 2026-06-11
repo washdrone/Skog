@@ -5,7 +5,7 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Årsavtal & löpande skogsövervakning — förvaltning med drönare',
+  title: 'Årsavtal — löpande skogsövervakning med drönare',
   description:
     'Årsavtal för löpande skogsövervakning med drönare. Planerade flygningar under året ger kontinuerlig uppföljning av tillväxt, skador och skogstillstånd.',
   path: '/tjanster/arsavtal',
