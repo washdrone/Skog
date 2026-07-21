@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { buildMetadata } from '@/lib/seo/metadata'
-import { organizationSchema, breadcrumbSchema } from '@/lib/seo/schema'
+import { breadcrumbSchema } from '@/lib/seo/schema'
 import { COMPANY, COORDINATE_SYSTEM, DELIVERY_FORMATS } from '@/lib/seo/business-data'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABand from '@/components/CTABand'
@@ -15,10 +15,6 @@ export const metadata = buildMetadata({
 export default function OmOssPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -151,11 +147,10 @@ export default function OmOssPage() {
                   {COMPANY.email}
                 </a>
               </p>
-              {/* TODO: lägg till telefonnummer när verifierat (CONTENT-VERIFICATION D2) */}
               {COMPANY.phone && (
                 <p className="text-slate-700 font-body">
                   <strong>Telefon:</strong>{' '}
-                  <a href={`tel:${COMPANY.phone}`} className="text-forest-600 hover:text-forest-700 font-bold">
+                  <a href={`tel:${COMPANY.phone.replace(/[\s-]/g, '')}`} className="text-forest-600 hover:text-forest-700 font-bold">
                     {COMPANY.phone}
                   </a>
                 </p>

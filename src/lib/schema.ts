@@ -9,4 +9,5 @@ export {
   faqSchema,
   breadcrumbSchema,
   howToSchema,
+  articleSchema,
 } from './seo/schema'

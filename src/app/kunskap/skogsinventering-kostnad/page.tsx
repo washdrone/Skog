@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
@@ -11,6 +11,13 @@ export const metadata = createMetadata({
     'Kostnaden för drönarbaserad skogsinventering beror på areal, terräng och analystyp. Läs om prisfaktorer, jämförelse med traditionella metoder och ROI.',
   path: '/kunskap/skogsinventering-kostnad',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function SkogsinventeringKostnadPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Vad kostar skogsinventering med drönare?',
+              description:
+                'Kostnaden för drönarbaserad skogsinventering beror på areal, terräng och analystyp. Läs om prisfaktorer, jämförelse med traditionella metoder och ROI.',
+              url: '/kunskap/skogsinventering-kostnad',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function SkogsinventeringKostnadPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             Prisfaktorer, jämförelse med traditionella metoder och avkastningsperspektiv.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 

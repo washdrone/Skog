@@ -1,16 +1,23 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Vad påverkar kostnaden för skogsinventering med drönare?',
+  title: 'Vad påverkar priset på skogsinventering?',
   description:
     'Kostnaden för skogsinventering med drönare beror på areal, terräng, sensortyp, leveransformat och avtal. Läs vilka faktorer som påverkar priset.',
   path: '/kunskap/vad-paverkar-priset',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function VadPaverkarPrisetPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Vad påverkar kostnaden för skogsinventering med drönare?',
+              description:
+                'Kostnaden för skogsinventering med drönare beror på areal, terräng, sensortyp, leveransformat och avtal. Läs vilka faktorer som påverkar priset.',
+              url: '/kunskap/vad-paverkar-priset',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function VadPaverkarPrisetPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             En genomgång av de faktorer som avgör priset — utan att gissa på siffror.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 

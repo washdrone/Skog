@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
@@ -11,6 +11,13 @@ export const metadata = createMetadata({
     'Drönare och satelliter kompletterar varandra i skogsbruket. Jämförelse av upplösning, kostnad, täckning, frekvens och molnberoende för skogsanalys.',
   path: '/kunskap/dronare-vs-satellitdata',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function DronareVsSatellitdataPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Drönare vs satellitdata för skogsbruk',
+              description:
+                'Drönare och satelliter kompletterar varandra i skogsbruket. Jämförelse av upplösning, kostnad, täckning, frekvens och molnberoende för skogsanalys.',
+              url: '/kunskap/dronare-vs-satellitdata',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function DronareVsSatellitdataPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             En detaljerad jämförelse av två datakällor med olika styrkor och begränsningar.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 

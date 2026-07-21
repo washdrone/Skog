@@ -19,6 +19,14 @@ import {
 
 const SITE_URL = COMPANY.url
 
+/*
+ * Stable @id-noder som knyter ihop JSON-LD-grafen över hela sajten.
+ * Organization/WebSite emitteras globalt i layout.tsx; övriga scheman
+ * refererar hit istället för att duplicera företagsdata.
+ */
+export const ORG_ID = `${SITE_URL}/#organization`
+export const WEBSITE_ID = `${SITE_URL}/#website`
+
 // ---------------------------------------------------------------------------
 // Organization
 // ---------------------------------------------------------------------------
@@ -27,9 +35,13 @@ export function organizationSchema() {
   const base: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': ORG_ID,
     name: COMPANY.name,
     url: SITE_URL,
-    logo: `${SITE_URL}${COMPANY.logoPath}`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}${COMPANY.logoPath}`,
+    },
     description:
       'Drönarbaserad skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Skogliga beslutsunderlag i hela Sverige.',
     email: COMPANY.email,
@@ -46,12 +58,22 @@ export function organizationSchema() {
     knowsAbout: [...CAPABILITIES],
   }
 
-  // Add phone when verified
+  if (COMPANY.legalName) {
+    base.legalName = COMPANY.legalName
+  }
+
+  if (COMPANY.orgNumber) {
+    base.identifier = {
+      '@type': 'PropertyValue',
+      propertyID: 'Organisationsnummer',
+      value: COMPANY.orgNumber,
+    }
+  }
+
   if (COMPANY.phone) {
     base.telephone = COMPANY.phone
   }
 
-  // Add address when verified — at that point, change @type to LocalBusiness
   if (COMPANY.address) {
     base.address = {
       '@type': 'PostalAddress',
@@ -62,7 +84,6 @@ export function organizationSchema() {
     }
   }
 
-  // Add social profiles when available
   if (SOCIAL_PROFILES.length > 0) {
     base.sameAs = SOCIAL_PROFILES.map((p) => p.url)
   }
@@ -78,15 +99,13 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': WEBSITE_ID,
     name: COMPANY.name,
     url: SITE_URL,
+    inLanguage: 'sv-SE',
     description:
       'Drönarbaserad skogsinventering och skogliga beslutsunderlag i hela Sverige.',
-    publisher: {
-      '@type': 'Organization',
-      name: COMPANY.name,
-      url: SITE_URL,
-    },
+    publisher: { '@id': ORG_ID },
     // TODO: add SearchAction when /kunskap gains a search feature
   }
 }
@@ -108,13 +127,10 @@ export function serviceSchema({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name,
+    serviceType: name,
     description,
     url: `${SITE_URL}${url}`,
-    provider: {
-      '@type': 'Organization',
-      name: COMPANY.name,
-      url: SITE_URL,
-    },
+    provider: { '@id': ORG_ID },
     areaServed: {
       '@type': 'Country',
       name: SERVICE_AREA.country,
@@ -155,6 +171,41 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       name: item.name,
       item: `${SITE_URL}${item.url}`,
     })),
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Article (kunskapsartiklar/guider)
+// ---------------------------------------------------------------------------
+
+export function articleSchema({
+  headline,
+  description,
+  url,
+  datePublished,
+  dateModified,
+}: {
+  headline: string
+  description: string
+  /** Path starting with `/`, e.g. `/kunskap/barkborre-tidigt` */
+  url: string
+  /** ISO date, e.g. '2026-03-05' */
+  datePublished: string
+  /** ISO date — ska matcha synligt "Senast uppdaterad"-datum på sidan */
+  dateModified: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url: `${SITE_URL}${url}`,
+    mainEntityOfPage: `${SITE_URL}${url}`,
+    inLanguage: 'sv-SE',
+    datePublished,
+    dateModified,
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
   }
 }
 

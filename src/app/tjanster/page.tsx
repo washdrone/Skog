@@ -8,7 +8,7 @@ import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 
 export const metadata = createMetadata({
-  title: 'Drönartjänster för skogsbruk — inventering & skadekartläggning',
+  title: 'Drönartjänster för skogsbruk — inventering & skador',
   description:
     'Drönarbaserade tjänster för skogsbruk: skogsinventering, trädhöjdsmätning, planträkning och skogsskadeinventering. Skogliga beslutsunderlag i hela Sverige.',
   path: '/tjanster',
@@ -107,7 +107,6 @@ const FAQ_ITEMS = [
   {
     question: 'Verkar ni i hela Sverige?',
     answer: 'Ja, vi arbetar rikstäckande och anpassar logistiken efter uppdragets lokalisering och omfattning. Kontakta oss för att diskutera ert specifika område.',
-    /* EJ VERIFIERAD: "hela Sverige" (A6) — formuleringen får kvarstå men bekräfta rikstäckning internt */
   },
 ]
 

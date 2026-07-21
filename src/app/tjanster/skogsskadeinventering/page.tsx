@@ -5,7 +5,7 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsskadeinventering med drönare — storm, insekt & torka',
+  title: 'Skogsskadeinventering med drönare — storm & insekt',
   description:
     'Skogsskadeinventering med drönare kartlägger storm-, insekts- och torkskador, inklusive granbarkborre. Snabbt skadeunderlag — rikstäckande i hela Sverige.',
   path: '/tjanster/skogsskadeinventering',

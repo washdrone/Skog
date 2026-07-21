@@ -68,8 +68,8 @@ export default function OffertPage() {
                   {[
                     /* EJ VERIFIERAD: "Svar inom 24 timmar" (A1) — ersatt med neutral formulering */
                     { icon: 'clock', text: 'Snabb återkoppling' },
-                    /* EJ VERIFIERAD: "Hela Sverige" (A6) — ersatt med neutral formulering */
-                    { icon: 'map', text: 'Flexibel mobilisering' },
+                    /* Rikstäckning verifierad av ägaren 2026-06-11 (A6) */
+                    { icon: 'map', text: 'Rikstäckande i hela Sverige' },
                     { icon: 'layer', text: 'GIS-redo leveranser' },
                     { icon: 'shield', text: 'Ingen bindningstid' },
                   ].map((item) => (
@@ -94,6 +94,14 @@ export default function OffertPage() {
                       {COMPANY.email}
                     </a>
                   </p>
+                  {COMPANY.phone && (
+                    <p>
+                      <span className="block text-xs font-medium uppercase tracking-wider text-slate-500">Telefon</span>
+                      <a href={`tel:${COMPANY.phone.replace(/[\s-]/g, '')}`} className="text-forest-600 hover:text-forest-800">
+                        {COMPANY.phone}
+                      </a>
+                    </p>
+                  )}
                 </div>
               </div>
             </aside>

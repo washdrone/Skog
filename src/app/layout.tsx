@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
 import { COMPANY, OG_DEFAULTS } from '@/lib/seo/business-data'
-import { websiteSchema } from '@/lib/seo/schema'
+import { organizationSchema, websiteSchema } from '@/lib/seo/schema'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -69,6 +69,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sv" className={`antialiased ${playfair.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
       <head>
+        {/* Organization + WebSite emitteras globalt; sidscheman refererar via @id */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}

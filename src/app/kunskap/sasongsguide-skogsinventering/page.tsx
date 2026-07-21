@@ -1,16 +1,23 @@
 import { createMetadata } from '@/lib/metadata'
-import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema, articleSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Bästa tid för skogsinventering med drönare — säsongsguide',
+  title: 'Bästa tid för skogsinventering med drönare',
   description:
     'Säsongsguide för skogsinventering med drönare. Lär dig vilken tid på året som passar bäst för barkborreinventering, trädhöjdsmätning, ortofoto och planträkning.',
   path: '/kunskap/sasongsguide-skogsinventering',
 })
+
+/* Från git-historik — uppdatera vid faktisk innehållsändring (synligt datum + Article-schema) */
+const ARTICLE_DATES = {
+  published: '2026-03-05',
+  modified: '2026-06-02',
+  modifiedDisplay: '2 juni 2026',
+}
 
 const faqItems = [
   {
@@ -62,6 +69,22 @@ export default function SasongsguideSkogsinventeringPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleSchema({
+              headline: 'Bästa tid för skogsinventering med drönare — säsongsguide',
+              description:
+                'Säsongsguide för skogsinventering med drönare. Lär dig vilken tid på året som passar bäst för barkborreinventering, trädhöjdsmätning, ortofoto och planträkning.',
+              url: '/kunskap/sasongsguide-skogsinventering',
+              datePublished: ARTICLE_DATES.published,
+              dateModified: ARTICLE_DATES.modified,
+            })
+          ),
+        }}
+      />
+
       <Breadcrumbs
         items={[
           { label: 'Kunskap', href: '/kunskap' },
@@ -77,6 +100,7 @@ export default function SasongsguideSkogsinventeringPage() {
           <p className="mt-5 text-lg text-white/60 leading-relaxed">
             Rätt tidpunkt ger bättre data. Här är en översikt av när varje typ av drönarinventering ger bäst resultat.
           </p>
+          <p className="mt-4 text-sm font-mono text-white/40">Senast uppdaterad: {ARTICLE_DATES.modifiedDisplay}</p>
         </div>
       </section>
 
