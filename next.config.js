@@ -17,6 +17,13 @@ const nextConfig = {
    */
   async redirects() {
     return [
+      // Förhindra att Vercel-aliaset indexeras som dubblett av produktionsdomänen
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'inspektion-gh3q.vercel.app' }],
+        destination: 'https://www.timberdrone.se/:path*',
+        permanent: true,
+      },
       // -------------------------------------------------------------------
       // Omfokusering 2026: sajten avgränsas till ren produktionsskog.
       // Off-scope tjänster (ekologi/ESG/vegetationsfjärranalys) samt
@@ -62,6 +69,9 @@ const nextConfig = {
       { source: '/areamatning-och-skogsbruk', destination: '/tjanster', permanent: true },
       { source: '/vegetationsanalys', destination: '/tjanster', permanent: true },
       { source: '/areamatning-och-skogsbruk/kontakt', destination: '/offert', permanent: true },
+      // Catch-all för övriga legacy-underpaths (t.ex. /leveranser som gav 404)
+      { source: '/areamatning-och-skogsbruk/:path*', destination: '/tjanster', permanent: true },
+      { source: '/vegetationsanalys/:path*', destination: '/tjanster', permanent: true },
     ]
   },
 
