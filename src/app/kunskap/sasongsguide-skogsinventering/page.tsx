@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Bästa tid för skogsinventering med drönare',
   description:
-    'Säsongsguide för skogsinventering med drönare. Lär dig vilken tid på året som passar bäst för barkborreinventering, trädhöjdsmätning, ortofoto och planträkning.',
+    'Säsongsguide för skogsinventering med drönare. Vilken tid på året som passar bäst för barkborreinventering, trädhöjdsmätning och planträkning.',
   path: '/kunskap/sasongsguide-skogsinventering',
 })
 

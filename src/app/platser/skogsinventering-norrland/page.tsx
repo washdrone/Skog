@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Norrland',
   description:
-    'Drönarbaserad skogsinventering i Norrland — Norrbotten, Västerbotten, Jämtland, Västernorrland och Gävleborg. Vi hanterar stora arealer, avlägsna skogsområden och korta flygsäsonger.',
+    'Drönarbaserad skogsinventering i Norrland — Norrbotten, Västerbotten, Jämtland, Västernorrland och Gävleborg. Stora arealer och korta flygsäsonger.',
   path: '/platser/skogsinventering-norrland',
 })
 

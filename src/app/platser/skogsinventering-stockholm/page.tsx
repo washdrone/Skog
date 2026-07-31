@@ -7,9 +7,9 @@ import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare i Stockholm & Uppsala',
+  title: 'Skogsinventering med drönare i Stockholm',
   description:
-    'Drönarbaserad skogsinventering i Stockholms och Uppsala län. Vi hanterar tätortsnära skog, mindre skiften och kommunal mark med hänsyn till flygzoner och regelverk.',
+    'Drönarbaserad skogsinventering i Stockholms och Uppsala län. Tätortsnära skog, mindre skiften och kommunal mark med hänsyn till flygzoner.',
   path: '/platser/skogsinventering-stockholm',
 })
 

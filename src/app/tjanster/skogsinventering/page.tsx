@@ -5,9 +5,9 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare — snabbare och mer exakt',
+  title: 'Skogsinventering med drönare',
   description:
-    'Skogsinventering med drönare ger snabbare och mer exakt data om volym, stamantal, trädslag och beståndsgränser. Georefererade kartlager levererade i SWEREF99 TM.',
+    'Skogsinventering med drönare ger snabbare och mer exakt data om volym, stamantal, trädslag och beståndsgränser. Kartlager i SWEREF99 TM.',
   path: '/tjanster/skogsinventering',
 })
 

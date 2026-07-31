@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Västernorrland',
   description:
-    'Drönarbaserad skogsinventering i Västernorrland. Vi kartlägger stora skogsinnehav i Ångermanland och Medelpad — anpassat för tunga skogsbruksregioner med långa avstånd.',
+    'Drönarbaserad skogsinventering i Västernorrland. Vi kartlägger stora skogsinnehav i Ångermanland och Medelpad — anpassat för långa avstånd.',
   path: '/platser/skogsinventering-vasternorrland',
 })
 

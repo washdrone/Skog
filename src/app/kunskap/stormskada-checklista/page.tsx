@@ -6,7 +6,7 @@ import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Checklista efter stormskada i skog — vad ska du göra?',
+  title: 'Checklista efter stormskada i skog',
   description:
     'Steg-för-steg-checklista efter stormskada i skog. Dokumentation, försäkringsanmälan, skadeomfattning med drönare och åtgärdsplanering.',
   path: '/kunskap/stormskada-checklista',

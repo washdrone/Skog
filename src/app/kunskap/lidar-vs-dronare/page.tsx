@@ -6,9 +6,9 @@ import CTABand from '@/components/CTABand'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'LiDAR vs fotogrammetri — jämförelse för skogsdata',
+  title: 'LiDAR vs fotogrammetri för skogsdata',
   description:
-    'LiDAR och fotogrammetri skapar 3D-modeller av skog på olika sätt. Jämförelse av noggrannhet, kostnad, penetration genom krontak och bästa användningsområden.',
+    'LiDAR och fotogrammetri skapar 3D-modeller av skog på olika sätt. Jämförelse av noggrannhet, kostnad, penetration genom krontak och användning.',
   path: '/kunskap/lidar-vs-dronare',
 })
 

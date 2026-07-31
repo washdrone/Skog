@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Svealand',
   description:
-    'Drönarbaserad skogsinventering i Svealand — Dalarna, Värmland, Örebro, Västmanland, Uppsala, Södermanland och Stockholm. Blandskog, god tillgänglighet och närhet till storstäder.',
+    'Drönarbaserad skogsinventering i Svealand — Dalarna, Värmland, Örebro, Västmanland, Uppsala, Södermanland och Stockholm. Blandskog och korta avstånd.',
   path: '/platser/skogsinventering-svealand',
 })
 

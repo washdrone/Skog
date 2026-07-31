@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Jämtland',
   description:
-    'Drönarbaserad skogsinventering i Jämtlands län. Vi kartlägger fjällnära skogar, stora sammanhängande skogsarealer och svårtillgänglig terräng i Jämtland och Härjedalen.',
+    'Drönarbaserad skogsinventering i Jämtlands län. Fjällnära skogar, stora sammanhängande arealer och svårtillgänglig terräng i Jämtland och Härjedalen.',
   path: '/platser/skogsinventering-jamtland',
 })
 

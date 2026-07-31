@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Dalarna',
   description:
-    'Drönarbaserad skogsinventering i Dalarna. Vi kartlägger privat och bolagsägd skog i ett av Sveriges mest skogrika län — från Siljansbygden till fjällnära skogar.',
+    'Drönarbaserad skogsinventering i Dalarna. Vi kartlägger privat och bolagsägd skog — från Siljansbygden till de fjällnära skogarna i norr.',
   path: '/platser/skogsinventering-dalarna',
 })
 
