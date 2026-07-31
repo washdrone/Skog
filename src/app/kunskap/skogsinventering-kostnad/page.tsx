@@ -177,7 +177,7 @@ export default function SkogsinventeringKostnadPage() {
               <tr>
                 <td className="py-3 pr-4 font-semibold text-forest-700">Leveransformat</td>
                 <td className="py-3 text-slate-600">
-                  Rådata (ortofoto, punktmoln) i GeoTIFF är billigare. Analyserade produkter med
+                  Rådata (ortofoto som GeoTIFF, punktmoln som LAS/LAZ) är billigare. Analyserade produkter med
                   volymberäkningar, hälsokartor eller rapporter med tolkningsstöd kräver mer
                   bearbetningstid.
                 </td>
