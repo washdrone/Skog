@@ -86,11 +86,17 @@ const PERSONA_CARDS = [
     linkText: 'Tjänster för skogsägare',
   },
   {
-    title: 'Distansägare',
-    desc: 'Följ utvecklingen digitalt. Få fotogrammetrisk dokumentation av utförda åtgärder och underlag för uppföljning av din skog.',
-    href: '/for/skogsagare',
-    label: 'Översikt',
-    linkText: 'Drönardata för distansägare',
+    /*
+     * Kortet pekade tidigare på /for/skogsagare — samma mål som kortet ovanför.
+     * /for/fastighet saknade helt ingång från startsidan trots att den är en av
+     * de få sidor Google faktiskt indexerat. Texten är hämtad från sidans egen
+     * ingress, inga nya påståenden har lagts till.
+     */
+    title: 'Fastighetsköpare',
+    desc: 'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet.',
+    href: '/for/fastighet',
+    label: 'Due diligence',
+    linkText: 'Drönardata för fastighetsköpare',
   },
   {
     title: 'Skogsbolag',
@@ -118,7 +124,7 @@ export default function HomePage() {
 
       <Hero
         badge="Flygburen skogsinventering"
-        headline="Precisionsdata för framtidens skogsbruk"
+        headline="Skogsinventering med drönare — precisionsdata för svenskt skogsbruk"
         subheadline="Fotogrammetri och höjddata från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
         ctaLabel="Begär offert"
         ctaHref="/offert"
