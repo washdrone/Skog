@@ -49,6 +49,7 @@ export default function FeatureShowcase() {
                 src="/sunny_ortofoto.png"
                 alt="Georefererat ortofoto över skogsbestånd från drönare"
                 fill
+                sizes="(min-width: 1024px) 50vw, (min-width: 640px) 512px, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-forest-950/20 mix-blend-multiply" />

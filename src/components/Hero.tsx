@@ -26,7 +26,20 @@ export default function Hero({
     <section className="relative overflow-hidden bg-forest-900 pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 border-b border-forest-800">
       {/* Subtle organic forest texture in the background to make it less sterile/dark */}
       <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
-        <Image src="/sunny_ortofoto.png" alt="Forest background texture" fill className="object-cover" priority />
+        {/*
+          * Rent dekorativ bakgrundstextur (opacity 10 %, mix-blend-overlay).
+          * Tom alt enligt WCAG — skärmläsare ska hoppa över den.
+          * priority borttagen: bilden är inte LCP-element och konkurrerade
+          * tidigare om bandbredd med hjältebilden till höger.
+          */}
+        <Image
+          src="/sunny_ortofoto.png"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
       <div className="absolute inset-0 bg-mapping-grid opacity-[0.05] pointer-events-none" />
       
@@ -82,8 +95,9 @@ export default function Hero({
             <div className="tech-frame aspect-[4/3] w-full border-forest-800 bg-forest-900 shadow-2xl relative group">
               <Image 
                 src="/forestry_drone.png" 
-                alt="Industrial drone over Swedish forest"
-                fill 
+                alt="Drönare för skogsinventering i flygning över svensk barrskog"
+                fill
+                sizes="(min-width: 1024px) 50vw, (min-width: 640px) 512px, 100vw"
                 className="object-cover opacity-80 mix-blend-luminosity transition-all duration-700 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105"
                 priority
               />

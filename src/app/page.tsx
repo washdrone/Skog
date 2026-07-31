@@ -208,7 +208,7 @@ export default function HomePage() {
             {/* Card 1: Inventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/sunny_lidar.png" alt="Skoglig inventering och höjdmätning med drönare" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/sunny_lidar.png" alt="Skoglig inventering och höjdmätning med drönare" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />
               </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
             {/* Card 2: Skadeinventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/forestry_drone.png" alt="Skogsskadeinventering med drönare efter storm och barkborreangrepp" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/forestry_drone.png" alt="Skogsskadeinventering med drönare efter storm och barkborreangrepp" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-800 transition-all duration-300 group-hover:bg-accent-500" />
               </div>

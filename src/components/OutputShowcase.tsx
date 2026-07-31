@@ -58,6 +58,7 @@ export default function OutputShowcase() {
                   src={output.image}
                   alt={output.alt}
                   fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
