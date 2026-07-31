@@ -42,12 +42,6 @@ const articles = [
       'Teknisk jämförelse av två metoder för att skapa höjdmodeller av skog.',
   },
   {
-    href: '/kunskap/vad-paverkar-priset',
-    title: 'Vad påverkar kostnaden för skogsinventering?',
-    description:
-      'Vilka faktorer styr priset — areal, terräng, leveransformat och årsavtal.',
-  },
-  {
     href: '/kunskap/sasongsguide-skogsinventering',
     title: 'Bästa tid för skogsinventering — säsongsguide',
     description:

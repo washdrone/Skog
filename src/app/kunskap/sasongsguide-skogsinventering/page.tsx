@@ -253,7 +253,7 @@ export default function SasongsguideSkogsinventeringPage() {
             Genom att planera flygningar efter säsong får ni bättre data och mer
             kostnadseffektiva uppdrag. Ett årsavtal med planerade inventeringstillfällen
             säkerställer att varje flygning sker vid optimal tidpunkt. Läs mer om{' '}
-            <Link href="/kunskap/vad-paverkar-priset" className="text-forest-600 underline hover:text-forest-800">
+            <Link href="/kunskap/skogsinventering-kostnad" className="text-forest-600 underline hover:text-forest-800">
               vad som påverkar kostnaden
             </Link>{' '}
             för skogsinventering med drönare.

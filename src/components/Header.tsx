@@ -18,7 +18,7 @@ const SERVICE_ITEMS = [
 const KUNSKAP_ITEMS = [
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
   { label: 'Stormskada — checklista', href: '/kunskap/stormskada-checklista' },
-  { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
+  { label: 'Vad kostar det?', href: '/kunskap/skogsinventering-kostnad' },
   { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
   { label: 'Alla artiklar →', href: '/kunskap' },

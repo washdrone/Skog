@@ -49,6 +49,9 @@ const nextConfig = {
       // Slug-byte → sökordsoptimerad URL
       { source: '/tjanster/planteringsinventering', destination: '/tjanster/plantrakning', permanent: true },
 
+      // Sammanslagen 2026-07-31: samma sökintention som skogsinventering-kostnad
+      { source: '/kunskap/vad-paverkar-priset', destination: '/kunskap/skogsinventering-kostnad', permanent: true },
+
       // Off-scope kunskapsartiklar → kunskapshubben
       { source: '/kunskap/vad-ar-ndvi', destination: '/kunskap', permanent: true },
       { source: '/kunskap/fotosyntesmatning-guide', destination: '/kunskap', permanent: true },
