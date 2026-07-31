@@ -3,6 +3,7 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
@@ -131,6 +132,9 @@ export default function DalarnaPage() {
           </div>
         </div>
       </section>
+
+      <RegionLinks current="dalarna" />
+
 
       <FAQ items={FAQ_ITEMS} />
       <CTABand ctaHref="/offert" />
