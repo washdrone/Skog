@@ -8,7 +8,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Drönartjänster för skogsfastighetsköpare',
   description:
-    'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet. TimberDrone levererar oberoende drönardata för due diligence.',
+    'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet. Oberoende drönardata för due diligence.',
   path: '/for/fastighet',
 })
 

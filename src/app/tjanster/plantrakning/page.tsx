@@ -5,9 +5,9 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Planträkning med drönare — kontrollera föryngringen',
+  title: 'Planträkning med drönare',
   description:
-    'Planträkning med drönare ger heltäckande kontroll av plantantal, täthet och luckor efter plantering. Objektivt återväxtunderlag — rikstäckande i hela Sverige.',
+    'Planträkning med drönare ger heltäckande kontroll av plantantal, täthet och luckor efter plantering. Objektivt återväxtunderlag — hela Sverige.',
   path: '/tjanster/plantrakning',
 })
 

@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata = createMetadata({
   title: 'Beståndsinventering med drönare',
   description:
-    'Beståndsinventering med drönare: beståndsgränser, trädslag, åldersklassificering och volym per bestånd. Georefererade kartlager som underlag för skogsbruksplan.',
+    'Beståndsinventering med drönare: beståndsgränser, trädslag, åldersklass och volym per bestånd. Georefererade kartlager för skogsbruksplanen.',
   path: '/tjanster/bestandsinventering',
 })
 

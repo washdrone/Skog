@@ -3,12 +3,13 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Svealand',
   description:
-    'Drönarbaserad skogsinventering i Svealand — Dalarna, Värmland, Örebro, Västmanland, Uppsala, Södermanland och Stockholm. Blandskog, god tillgänglighet och närhet till storstäder.',
+    'Drönarbaserad skogsinventering i Svealand — Dalarna, Värmland, Örebro, Västmanland, Uppsala, Södermanland och Stockholm. Blandskog och korta avstånd.',
   path: '/platser/skogsinventering-svealand',
 })
 
@@ -134,6 +135,9 @@ export default function SvealandPage() {
           </div>
         </div>
       </section>
+
+      <RegionLinks current="svealand" />
+
 
       <FAQ items={FAQ_ITEMS} />
       <CTABand ctaHref="/offert" />

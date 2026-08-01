@@ -1,64 +1,89 @@
 import { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/seo'
+import LASTMOD from '@/lib/seo/lastmod.json'
+
+/*
+ * Sitemap-policy (Google Search Central, "Build and submit a sitemap"):
+ *
+ *   "Google ignores <priority> and <changefreq> values."
+ *   "Google uses the <lastmod> value if it's consistently and verifiably accurate."
+ *   https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+ *
+ * Därför:
+ *  - priority och changefreq utelämnas helt — de tillför inget för Google
+ *    och gör sitemappen svårare att lita på.
+ *  - lastmod hämtas från lastmod.json, som genereras ur git-historiken
+ *    (`npm run seo:lastmod`) och därmed speglar faktiska innehållsändringar.
+ *
+ * Kör `npm run seo:lastmod` efter varje innehållsändring, annars blir
+ * datumen inaktuella och Google slutar lita på dem.
+ */
+
+const lastmodMap = LASTMOD as Record<string, string>
+
+/**
+ * Sidor som ska indexeras, i den ordning de hör ihop strukturellt.
+ * Legacy-paths (/vegetationsanalys/*, /areamatning-och-skogsbruk/*) 301:as
+ * via next.config.js och ska aldrig ligga här.
+ */
+const PAGES = [
+  // Kärna
+  '/',
+  '/offert',
+  '/om-oss',
+
+  // Tjänster
+  '/tjanster',
+  '/tjanster/skogsinventering',
+  '/tjanster/tradhojdsmatning',
+  '/tjanster/plantrakning',
+  '/tjanster/skogsskadeinventering',
+  '/tjanster/bestandsinventering',
+  '/tjanster/skogsbruksplan-underlag',
+  '/tjanster/arsavtal',
+
+  // Kunskap
+  '/kunskap',
+  '/kunskap/skogsinventering-kostnad',
+  '/kunskap/barkborre-tidigt',
+  '/kunskap/stormskada-checklista',
+  '/kunskap/dronare-vs-satellitdata',
+  '/kunskap/lidar-vs-dronare',
+  '/kunskap/sasongsguide-skogsinventering',
+
+  // Kundsegment
+  '/for/skogsagare',
+  '/for/skogsbolag',
+  '/for/fastighet',
+  '/for/forskning',
+  '/for/kommuner',
+
+  // Platser
+  '/platser',
+  '/platser/skogsinventering-norrland',
+  '/platser/skogsinventering-svealand',
+  '/platser/skogsinventering-smaland',
+  '/platser/skogsinventering-stockholm',
+  '/platser/skogsinventering-dalarna',
+  '/platser/skogsinventering-vasternorrland',
+  '/platser/skogsinventering-jamtland',
+
+  // Juridiskt
+  '/integritetspolicy',
+  '/cookiepolicy',
+] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = [
-    // Core
-    { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
-    { path: '/offert', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/om-oss', priority: 0.7, changeFrequency: 'monthly' as const },
+  return PAGES.map((path) => {
+    const entry: MetadataRoute.Sitemap[number] = {
+      url: path === '/' ? SITE_URL : `${SITE_URL}${path}`,
+    }
 
-    // Tjänster (produktionsskoglig tjänstestruktur)
-    { path: '/tjanster', priority: 0.9, changeFrequency: 'weekly' as const },
-    { path: '/tjanster/skogsinventering', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/tradhojdsmatning', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/plantrakning', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/skogsskadeinventering', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/bestandsinventering', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/skogsbruksplan-underlag', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/tjanster/arsavtal', priority: 0.7, changeFrequency: 'monthly' as const },
+    const lastModified = lastmodMap[path]
+    if (lastModified) {
+      entry.lastModified = lastModified
+    }
 
-    // Kunskap
-    { path: '/kunskap', priority: 0.8, changeFrequency: 'weekly' as const },
-    { path: '/kunskap/barkborre-tidigt', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/stormskada-checklista', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/dronare-vs-satellitdata', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/skogsinventering-kostnad', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/lidar-vs-dronare', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/vad-paverkar-priset', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/kunskap/sasongsguide-skogsinventering', priority: 0.7, changeFrequency: 'monthly' as const },
-
-    // Kundsegment
-    { path: '/for/skogsagare', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/for/skogsbolag', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/for/forskning', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: '/for/kommuner', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: '/for/fastighet', priority: 0.6, changeFrequency: 'monthly' as const },
-
-    // Platser (regionala)
-    { path: '/platser', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-norrland', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-svealand', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-smaland', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-stockholm', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-dalarna', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-vasternorrland', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/platser/skogsinventering-jamtland', priority: 0.7, changeFrequency: 'monthly' as const },
-
-    /*
-     * Legacy paths (/vegetationsanalys/*, /areamatning-och-skogsbruk/*) are
-     * 301-redirected to /tjanster/* via next.config.js and their page files
-     * have been removed. No legacy pages remain in the sitemap.
-     */
-
-    // Juridiskt
-    { path: '/integritetspolicy', priority: 0.3, changeFrequency: 'yearly' as const },
-    { path: '/cookiepolicy', priority: 0.3, changeFrequency: 'yearly' as const },
-  ]
-
-  return pages.map((page) => ({
-    url: page.path === '/' ? SITE_URL : `${SITE_URL}${page.path}`,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }))
+    return entry
+  })
 }

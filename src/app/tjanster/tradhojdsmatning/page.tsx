@@ -5,7 +5,7 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Trädhöjdsmätning med drönare — höjd- och tillväxtdata',
+  title: 'Trädhöjdsmätning med drönare',
   description:
     'Trädhöjdsmätning med drönare ger objektiv höjd- och tillväxtdata för hela beståndet. Heltäckande höjdmodeller från luften — rikstäckande i hela Sverige.',
   path: '/tjanster/tradhojdsmatning',

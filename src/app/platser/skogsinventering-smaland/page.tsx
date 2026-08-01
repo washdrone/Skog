@@ -3,12 +3,13 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare i Småland & Götaland',
+  title: 'Skogsinventering med drönare i Småland',
   description:
-    'Drönarbaserad skogsinventering i Småland och Götaland — Jönköping, Kronoberg, Kalmar och övriga Götaland. Hög skogstäthet, privat ägande och granbarkborreproblematik.',
+    'Drönarbaserad skogsinventering i Småland och Götaland — Jönköping, Kronoberg och Kalmar. Hög skogstäthet, privat ägande och granbarkborre.',
   path: '/platser/skogsinventering-smaland',
 })
 
@@ -136,6 +137,9 @@ export default function SmalandPage() {
           </div>
         </div>
       </section>
+
+      <RegionLinks current="smaland" />
+
 
       <FAQ items={FAQ_ITEMS} />
       <CTABand ctaHref="/offert" />

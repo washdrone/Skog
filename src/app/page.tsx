@@ -86,11 +86,17 @@ const PERSONA_CARDS = [
     linkText: 'Tjänster för skogsägare',
   },
   {
-    title: 'Distansägare',
-    desc: 'Följ utvecklingen digitalt. Få fotogrammetrisk dokumentation av utförda åtgärder och underlag för uppföljning av din skog.',
-    href: '/for/skogsagare',
-    label: 'Översikt',
-    linkText: 'Drönardata för distansägare',
+    /*
+     * Kortet pekade tidigare på /for/skogsagare — samma mål som kortet ovanför.
+     * /for/fastighet saknade helt ingång från startsidan trots att den är en av
+     * de få sidor Google faktiskt indexerat. Texten är hämtad från sidans egen
+     * ingress, inga nya påståenden har lagts till.
+     */
+    title: 'Fastighetsköpare',
+    desc: 'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet.',
+    href: '/for/fastighet',
+    label: 'Due diligence',
+    linkText: 'Drönardata för fastighetsköpare',
   },
   {
     title: 'Skogsbolag',
@@ -118,7 +124,7 @@ export default function HomePage() {
 
       <Hero
         badge="Flygburen skogsinventering"
-        headline="Precisionsdata för framtidens skogsbruk"
+        headline="Skogsinventering med drönare — precisionsdata för svenskt skogsbruk"
         subheadline="Fotogrammetri och höjddata från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
         ctaLabel="Begär offert"
         ctaHref="/offert"
@@ -202,7 +208,7 @@ export default function HomePage() {
             {/* Card 1: Inventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/sunny_lidar.png" alt="Skoglig inventering och höjdmätning med drönare" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/sunny_lidar.png" alt="Skoglig inventering och höjdmätning med drönare" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-600 transition-all duration-300 group-hover:bg-accent-500" />
               </div>
@@ -235,7 +241,7 @@ export default function HomePage() {
             {/* Card 2: Skadeinventering */}
             <div className="panel flex flex-col group overflow-hidden">
               <div className="relative h-56 w-full bg-forest-900 overflow-hidden">
-                <Image src="/forestry_drone.png" alt="Skogsskadeinventering med drönare efter storm och barkborreangrepp" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/forestry_drone.png" alt="Skogsskadeinventering med drönare efter storm och barkborreangrepp" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-forest-900/10 mix-blend-multiply" />
                 <div className="absolute top-0 left-0 h-1 w-full bg-forest-800 transition-all duration-300 group-hover:bg-accent-500" />
               </div>

@@ -12,12 +12,18 @@ const SERVICE_LINKS = [
   { label: 'Årsavtal', href: '/tjanster/arsavtal' },
 ]
 
+/*
+ * Sidfoten listar samtliga kunskapsartiklar. Tidigare saknades
+ * skogsinventering-kostnad och lidar-vs-dronare i både meny och sidfot,
+ * vilket gjorde dem beroende av enbart /kunskap-hubben för intern länkning.
+ */
 const KUNSKAP_LINKS = [
+  { label: 'Vad kostar skogsinventering?', href: '/kunskap/skogsinventering-kostnad' },
   { label: 'Barkborre — tidig upptäckt', href: '/kunskap/barkborre-tidigt' },
   { label: 'Stormskada — checklista', href: '/kunskap/stormskada-checklista' },
-  { label: 'Vad påverkar priset?', href: '/kunskap/vad-paverkar-priset' },
   { label: 'Säsongsguide', href: '/kunskap/sasongsguide-skogsinventering' },
   { label: 'Drönare vs satellitdata', href: '/kunskap/dronare-vs-satellitdata' },
+  { label: 'LiDAR vs fotogrammetri', href: '/kunskap/lidar-vs-dronare' },
 ]
 
 const FORETAG_LINKS = [

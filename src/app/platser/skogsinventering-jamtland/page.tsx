@@ -3,12 +3,13 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Jämtland',
   description:
-    'Drönarbaserad skogsinventering i Jämtlands län. Vi kartlägger fjällnära skogar, stora sammanhängande skogsarealer och svårtillgänglig terräng i Jämtland och Härjedalen.',
+    'Drönarbaserad skogsinventering i Jämtlands län. Fjällnära skogar, stora sammanhängande arealer och svårtillgänglig terräng i Jämtland och Härjedalen.',
   path: '/platser/skogsinventering-jamtland',
 })
 
@@ -131,6 +132,9 @@ export default function JamtlandPage() {
           </div>
         </div>
       </section>
+
+      <RegionLinks current="jamtland" />
+
 
       <FAQ items={FAQ_ITEMS} />
       <CTABand ctaHref="/offert" />

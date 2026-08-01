@@ -3,12 +3,13 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FAQ from '@/components/FAQ'
 import CTABand from '@/components/CTABand'
+import RegionLinks from '@/components/RegionLinks'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
   title: 'Skogsinventering med drönare i Dalarna',
   description:
-    'Drönarbaserad skogsinventering i Dalarna. Vi kartlägger privat och bolagsägd skog i ett av Sveriges mest skogrika län — från Siljansbygden till fjällnära skogar.',
+    'Drönarbaserad skogsinventering i Dalarna. Vi kartlägger privat och bolagsägd skog — från Siljansbygden till de fjällnära skogarna i norr.',
   path: '/platser/skogsinventering-dalarna',
 })
 
@@ -131,6 +132,9 @@ export default function DalarnaPage() {
           </div>
         </div>
       </section>
+
+      <RegionLinks current="dalarna" />
+
 
       <FAQ items={FAQ_ITEMS} />
       <CTABand ctaHref="/offert" />
