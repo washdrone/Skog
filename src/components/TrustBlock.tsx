@@ -4,9 +4,9 @@ const TRUST_ITEMS = [
   {
     title: 'Regelefterlevnad',
     description:
-      'Flygningarna genomförs enligt gällande luftfartsregler. Vi hanterar tillstånd och anmälningar som krävs för varje uppdrag.',
-    /* Tidigare "EASA-certifierad verksamhet" — borttaget eftersom specifik
-       operatörskategori och certifiering inte är verifierad (CONTENT-VERIFICATION G1-G4). */
+      'Flygningarna genomförs enligt EASA:s drönarregelverk och Transportstyrelsens föreskrifter. Vi hanterar tillstånd och anmälningar som krävs för varje uppdrag.',
+    /* Formulering verifierad av ägaren 2026-08-03: "enligt EASA och
+       Transportstyrelsen" — ange ej specifik operatörskategori eller certifikat. */
   },
   {
     title: 'Teknisk kvalitetskontroll',

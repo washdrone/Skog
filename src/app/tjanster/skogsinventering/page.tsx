@@ -87,7 +87,9 @@ export default function SkogsinventeringPage() {
         <p>
           Drönaren flyger systematiskt över området med hög överlapp (80 % fram, 70 % sida) och
           samlar in hundratals georefererade bilder. Bilderna bearbetas med fotogrammetrisk
-          mjukvara till ortofoto och punktmoln. Från punktmolnet extraheras trädparametrar:
+          mjukvara till ortofoto och punktmoln. När uppdraget kräver noggrann markmodell även
+          under tätt krontak — till exempel för terränganalys — flyger vi istället med
+          drönarburen LiDAR. Från punktmolnet extraheras trädparametrar:
         </p>
         <ul>
           <li><strong>Trädhöjd</strong> — beräknas som skillnaden mellan ytmodell (DSM) och markmodell (DTM)</li>

@@ -125,7 +125,7 @@ export default function HomePage() {
       <Hero
         badge="Flygburen skogsinventering"
         headline="Skogsinventering med drönare — precisionsdata för svenskt skogsbruk"
-        subheadline="Fotogrammetri och höjddata från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
+        subheadline="Fotogrammetri och LiDAR från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Tjänsteutbud"
@@ -134,8 +134,8 @@ export default function HomePage() {
           { value: 'Trädhöjd', label: 'Höjd & tillväxt' },
           { value: 'Volym', label: 'Virkesförråd' },
           { value: 'SWEREF99 TM', label: 'Koordinatsystem' },
-          { value: 'Centimeternivå', label: 'Markupplösning' },
-          /* EJ VERIFIERAD: exakt GSD beror på utrustning och flyghöjd — ange specifikt värde när bekräftat */
+          /* GSD beräknad ur verifierad utrustning (DJI Matrice 4E), ägaren 2026-08-03 */
+          { value: '2–3 cm/pixel', label: 'Markupplösning (GSD)' },
         ]}
       />
 

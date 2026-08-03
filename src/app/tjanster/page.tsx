@@ -156,8 +156,8 @@ export default function TjansterHubPage() {
         secondaryCtaHref="/offert"
         stats={[
           { value: '7', label: 'Skogstjänster' },
-          /* EJ VERIFIERAD: exakt GSD beror på utrustning — ange specifikt värde när bekräftat */
-          { value: 'Centimeternivå', label: 'Markupplösning' },
+          /* GSD beräknad ur verifierad utrustning (DJI Matrice 4E), ägaren 2026-08-03 */
+          { value: '2–3 cm/pixel', label: 'Markupplösning (GSD)' },
           { value: 'Snabb', label: 'Återkoppling' },
           { value: 'SWEREF99', label: 'Koordinatsystem' },
         ]}

@@ -236,6 +236,16 @@ export default function LidarVsDronarePage() {
             </Link>{' '}
             är fotogrammetri ofta tillräcklig och mer kostnadseffektiv.
           </p>
+          {/* Utrustning verifierad av ägaren 2026-08-03 — båda metoderna finns i egen drift */}
+          <p>
+            TimberDrone flyger båda metoderna: fotogrammetri med högupplöst RGB-kamera
+            och drönarburen LiDAR med RTK-positionering. Vi hjälper er att välja den
+            metod som passar uppdragets mål och budget —{' '}
+            <Link href="/offert" className="text-forest-600 underline hover:text-forest-800">
+              beskriv ert behov
+            </Link>{' '}
+            så föreslår vi rätt upplägg.
+          </p>
         </div>
       </article>
 

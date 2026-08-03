@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { buildMetadata } from '@/lib/seo/metadata'
 import { breadcrumbSchema } from '@/lib/seo/schema'
-import { COMPANY, COORDINATE_SYSTEM, DELIVERY_FORMATS } from '@/lib/seo/business-data'
+import { COMPANY, COORDINATE_SYSTEM, DELIVERY_FORMATS, EQUIPMENT } from '@/lib/seo/business-data'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABand from '@/components/CTABand'
 
@@ -38,7 +38,7 @@ export default function OmOssPage() {
             </h1>
             <p className="mt-6 text-lg text-slate-600 font-body leading-relaxed">
               TimberDrone levererar drönarbaserad datainsamling och analys för produktionsskogsbruk.
-              Vi arbetar med fotogrammetri, drönarbilder och geodatabearbetning
+              Vi arbetar med fotogrammetri, LiDAR-skanning och geodatabearbetning
               för att skapa beslutsunderlag åt skogsägare, skogsbolag, förvaltare och forskare.
             </p>
           </div>
@@ -82,7 +82,43 @@ export default function OmOssPage() {
               </div>
               <div className="panel p-6">
                 <h3 className="text-sm font-bold text-slate-900 mb-2">Leveransformat</h3>
-                <p className="text-sm text-slate-600 font-body">{DELIVERY_FORMATS.join(', ')}</p>
+                <p className="text-sm text-slate-600 font-body">
+                  {DELIVERY_FORMATS.join(', ')} — andra format efter överenskommelse
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Utrustning — verifierad av ägaren 2026-08-03 */}
+      <section className="bg-cream-100 section-padding border-b border-slate-200">
+        <div className="container-page">
+          <div className="max-w-3xl">
+            <h2 className="text-heading-xl text-slate-900 font-display tracking-tight mb-6">
+              Utrustning och programvara
+            </h2>
+            <p className="text-slate-600 font-body leading-relaxed mb-8">
+              Vi flyger enterprise-plattformarna {EQUIPMENT.drones.join(' och ')} med
+              RTK-positionering för centimeternoggrann georeferering. Datainsamlingen
+              sker med högupplöst RGB-kamera för fotogrammetri och med drönarburen
+              LiDAR när uppdraget kräver markmodeller under krontak. Med
+              vidvinkelkameran uppnås en markupplösning på typiskt {EQUIPMENT.typicalGsd}.
+            </p>
+            <div className="grid gap-6 sm:grid-cols-3">
+              <div className="panel p-6">
+                <h3 className="text-sm font-bold text-slate-900 mb-2">Drönare</h3>
+                <p className="text-sm text-slate-600 font-body">{EQUIPMENT.drones.join(', ')}</p>
+              </div>
+              <div className="panel p-6">
+                <h3 className="text-sm font-bold text-slate-900 mb-2">Sensorer & positionering</h3>
+                <p className="text-sm text-slate-600 font-body">
+                  Högupplöst RGB, LiDAR, RTK-GNSS
+                </p>
+              </div>
+              <div className="panel p-6">
+                <h3 className="text-sm font-bold text-slate-900 mb-2">Processmjukvara</h3>
+                <p className="text-sm text-slate-600 font-body">{EQUIPMENT.software.join(', ')}</p>
               </div>
             </div>
           </div>
@@ -90,7 +126,7 @@ export default function OmOssPage() {
       </section>
 
       {/* Arbetsmetod */}
-      <section className="bg-cream-100 section-padding border-b border-slate-200">
+      <section className="bg-white section-padding border-b border-slate-200">
         <div className="container-page">
           <div className="max-w-3xl">
             <h2 className="text-heading-xl text-slate-900 font-display tracking-tight mb-6">
@@ -107,14 +143,16 @@ export default function OmOssPage() {
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">2. Datainsamling</h3>
                 <p className="text-slate-600 font-body leading-relaxed">
-                  Flygning genomförs med överlappande bildserier. Alla data georefereras.
+                  Flygning genomförs med överlappande bildserier eller LiDAR-skanning.
+                  Alla data georefereras med RTK-positionering.
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">3. Bearbetning</h3>
                 <p className="text-slate-600 font-body leading-relaxed">
-                  Rådata bearbetas fotogrammetriskt till ortofoton, punktmoln och kartlager
-                  som ligger till grund för skogliga beslutsunderlag.
+                  Rådata från kamera och LiDAR bearbetas i Pix4D och Agisoft Metashape
+                  till ortofoton, punktmoln och kartlager som ligger till grund för
+                  skogliga beslutsunderlag.
                 </p>
               </div>
               <div>
@@ -131,7 +169,7 @@ export default function OmOssPage() {
       </section>
 
       {/* Kontakt */}
-      <section className="bg-white section-padding border-b border-slate-200">
+      <section className="bg-cream-100 section-padding border-b border-slate-200">
         <div className="container-page">
           <div className="max-w-3xl">
             <h2 className="text-heading-xl text-slate-900 font-display tracking-tight mb-6">
