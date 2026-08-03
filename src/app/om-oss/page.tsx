@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { buildMetadata } from '@/lib/seo/metadata'
 import { breadcrumbSchema } from '@/lib/seo/schema'
 import { COMPANY, COORDINATE_SYSTEM, DELIVERY_FORMATS, EQUIPMENT } from '@/lib/seo/business-data'
@@ -113,7 +114,7 @@ export default function OmOssPage() {
               <div className="panel p-6">
                 <h3 className="text-sm font-bold text-slate-900 mb-2">Sensorer & positionering</h3>
                 <p className="text-sm text-slate-600 font-body">
-                  Högupplöst RGB, LiDAR, RTK-GNSS
+                  Högupplöst RGB, LiDAR (DJI Zenmuse), RTK-GNSS
                 </p>
               </div>
               <div className="panel p-6">
@@ -168,8 +169,62 @@ export default function OmOssPage() {
         </div>
       </section>
 
-      {/* Kontakt */}
+      {/* Exempel ur verkliga leveranser — bilderna bekräftade som egna av ägaren
+          2026-08-03; texterna beskriver bilderna, inga uppdragsdetaljer anges */}
       <section className="bg-cream-100 section-padding border-b border-slate-200">
+        <div className="container-page">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-heading-xl text-slate-900 font-display tracking-tight mb-4">
+              Exempel ur verkliga leveranser
+            </h2>
+            <p className="text-slate-600 font-body leading-relaxed">
+              Bilderna nedan är hämtade ur våra egna flygningar och visar de tre
+              huvudtyper av underlag vi levererar.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                image: '/sunny_ortofoto.png',
+                alt: 'Ortofoto över skogsbestånd, framställt ur egna drönarbilder',
+                title: 'Ortofoto',
+                text: 'Ett skalriktigt, georefererat flygfoto sammansatt av hundratals överlappande drönarbilder. Här syns beståndsgränser, luckor, vägar och vattendrag med en detaljnivå som gör det möjligt att mäta areal och avstånd direkt i bilden.',
+              },
+              {
+                image: '/sunny_lidar.png',
+                alt: 'Höjddata och punktmoln över skog, visualiserad ur egen flygning',
+                title: 'Höjddata & punktmoln',
+                text: 'Visualisering av skogens tredimensionella struktur. Ur punktmolnet tas ytmodell, markmodell och kronhöjdsmodell fram — grunden för trädhöjd, volymuppskattning och tillväxtuppföljning över hela arealen.',
+              },
+              {
+                image: '/sunny_vektordata.png',
+                alt: 'Beståndskarta som vektordata, framställd ur egen drönarkartering',
+                title: 'Vektordata & kartlager',
+                text: 'Färdiga kartlager med avgränsade ytor och attributdata, redo att öppnas i QGIS, ArcGIS eller skogliga verksamhetssystem. Beståndsgränser, skadeytor och arealberäkningar levereras i format som passar ert arbetsflöde.',
+              },
+            ].map((item) => (
+              <figure key={item.title} className="panel overflow-hidden flex flex-col">
+                <div className="relative aspect-[16/10] w-full bg-forest-900">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="p-6">
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-slate-600 font-body leading-relaxed">{item.text}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Kontakt */}
+      <section className="bg-white section-padding border-b border-slate-200">
         <div className="container-page">
           <div className="max-w-3xl">
             <h2 className="text-heading-xl text-slate-900 font-display tracking-tight mb-6">

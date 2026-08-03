@@ -13,8 +13,8 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| A1 | "Prisindikation/offert inom 24 timmar" | Startsida stats, hub stats, kontaktsida (3 ställen), FAQ, CTABand, LeadForm success-meddelande, processteget "Uppdragsdialog" (2 ställen) | EJ VERIFIERAD | | |
-| A2 | "Normal leveranstid 3–5 arbetsdagar" | Leveranser-sidan, FAQ, FeatureShowcase | EJ VERIFIERAD | | |
+| A1 | "Svar/prisindikation inom 24 timmar" | Offertsidan (hero, processteg, sidopanel), LeadForm-bekräftelse | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| A2 | Leveranstid | — | INGET LÖFTE — ägarens besked 2026-08-03: varierar med uppdragets storlek; neutrala formuleringar behålls | Ägaren (chat) | 2026-08-03 |
 | A3 | "Omflygning utan extra kostnad" (vid kvalitetsbrist) | Leveranser-sidan | EJ VERIFIERAD | | |
 | A4 | "Ombokning utan extra kostnad" (vid dåligt väder) | FAQ | EJ VERIFIERAD | | |
 | A5 | "Kostnadsfri prisuppskattning/offert" | FAQ, offertsidan | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
@@ -103,7 +103,7 @@
 | F3 | "5-bands multispektral sensor" med specifika våglängder (~475, ~560, ~668, ~717, ~842 nm) | Multispektralanalys, vegetationsanalys | EJ VERIFIERAD — verkar vara MicaSense men aldrig namngivet | | |
 | F4 | "DLS" (Downwelling Light Sensor) nämns | Vegetationsanalys, uppföljning-sidor | EJ VERIFIERAD — sensortyp/modell ej specificerad | | |
 | F5 | RTK-kapacitet | om-oss, skogsinventering | VERIFIERAD — RTK bekräftad (specifikt GNSS-system ej namngivet) | Ägaren (chat) | 2026-08-03 |
-| F6 | LiDAR-kapacitet finns i egen drift | om-oss, skogsinventering, lidar-vs-dronare | VERIFIERAD — sensormodell EJ specificerad: ange aldrig modell, punkttäthet eller noggrannhetstal | Ägaren (chat) | 2026-08-03 |
+| F6 | LiDAR: DJI Zenmuse-serien | om-oss, skogsinventering, lidar-vs-dronare | VERIFIERAD (märke) — exakt L-modell ej angiven: ange aldrig punkttäthet/noggrannhetstal | Ägaren (chat) | 2026-08-03 |
 | F7 | Processmjukvara: Pix4D och Agisoft Metashape | om-oss | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 
 ### Vad som behövs:
@@ -171,8 +171,8 @@
 
 - **Bilder**: `sunny_ortofoto.png`, `sunny_lidar.png`, `sunny_vektordata.png` m.fl. är bekräftade som egna flygningar/leveranser — får presenteras som verkliga exempel.
 - **Personer**: Inga personer ska namnges på om-oss eller i författarsignaler — ägarens beslut.
-- **Svars-/leveranstider**: Fortsatt obesvarat — inga tidslöften får läggas in.
-- **Case**: Ej besvarat — inga case publiceras.
+- **Svarstid**: "Svar inom 24 timmar" verifierad och återinförd på offertsidan. Leveranstid: inget löfte (varierar med storlek).
+- **Case**: Ägarens beslut 2026-08-03: inga uppdragsbeskrivningar, men de egna bilderna får visas med beskrivande text — sektion "Exempel ur verkliga leveranser" tillagd på om-oss.
 - **Google Search Console**: Domänen verifierad och sitemap inskickad enligt ägaren.
 - **Google Business Profile**: Finns ej; ägaren vill skapa en (extern åtgärd).
 - **GA4**: Mät-ID G-D0DFLHDVJM bekräftat med reservation ("bör stämma").

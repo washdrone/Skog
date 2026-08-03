@@ -89,8 +89,9 @@ export const EQUIPMENT = {
   drones: ['DJI Matrice 400', 'DJI Matrice 4E'] as const,
   /** RTK-positionering bekräftad (F5) */
   rtk: true,
-  /** LiDAR-kapacitet bekräftad (F6) — sensormodell EJ specificerad, ange ej modell/punkttäthet */
-  lidar: true,
+  /** LiDAR bekräftad (F6): DJI Zenmuse-serien (ägaren 2026-08-03). Exakt
+      L-modell EJ specificerad — ange aldrig punkttäthet eller noggrannhetstal. */
+  lidar: 'DJI Zenmuse' as const,
   /** Processmjukvara bekräftad av ägaren 2026-08-03 (F7) */
   software: ['Pix4D', 'Agisoft Metashape'] as const,
   /*
