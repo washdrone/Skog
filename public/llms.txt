@@ -4,7 +4,7 @@
 
 Kontakt: info@timberdrone.se, 076-309 66 96.
 
-Utrustning: DJI Matrice 400 och DJI Matrice 4E med RTK-positionering, högupplöst RGB-kamera (typisk markupplösning 2–3 cm/pixel vid 80–120 m flyghöjd) och drönarburen LiDAR. Bearbetning i Pix4D och Agisoft Metashape. Verksamheten bedrivs enligt EASA:s drönarregelverk och Transportstyrelsens föreskrifter.
+Utrustning: DJI Matrice 400 och DJI Matrice 4E med RTK-positionering, högupplöst RGB-kamera (typisk markupplösning 2–3 cm/pixel vid 80–120 m flyghöjd) och LiDAR-sensorn DJI Zenmuse L2 (upp till 5 returer per puls, 240 000 punkter/s, 4 cm vertikal noggrannhet vid 150 m enligt DJI:s specifikation). Bearbetning i Pix4D och Agisoft Metashape. Verksamheten bedrivs enligt EASA:s drönarregelverk och Transportstyrelsens föreskrifter.
 
 TimberDrone arbetar med produktionsskog — beslutsunderlag för avverkning, skötsel och skadehantering. Sajten täcker inte ekologisk fjärranalys, ESG-rapportering eller karterings-/mättjänster utanför skogsbruket.
 

@@ -103,7 +103,7 @@
 | F3 | "5-bands multispektral sensor" med specifika våglängder (~475, ~560, ~668, ~717, ~842 nm) | Multispektralanalys, vegetationsanalys | EJ VERIFIERAD — verkar vara MicaSense men aldrig namngivet | | |
 | F4 | "DLS" (Downwelling Light Sensor) nämns | Vegetationsanalys, uppföljning-sidor | EJ VERIFIERAD — sensortyp/modell ej specificerad | | |
 | F5 | RTK-kapacitet | om-oss, skogsinventering | VERIFIERAD — RTK bekräftad (specifikt GNSS-system ej namngivet) | Ägaren (chat) | 2026-08-03 |
-| F6 | LiDAR: DJI Zenmuse-serien | om-oss, skogsinventering, lidar-vs-dronare | VERIFIERAD (märke) — exakt L-modell ej angiven: ange aldrig punkttäthet/noggrannhetstal | Ägaren (chat) | 2026-08-03 |
+| F6 | LiDAR: DJI Zenmuse L2 (5 returer, 240 000 pkt/s, 4 cm vertikal noggrannhet vid 150 m — DJI:s specifikation som källa) | om-oss, lidar-vs-dronare, llms.txt | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 | F7 | Processmjukvara: Pix4D och Agisoft Metashape | om-oss | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 
 ### Vad som behövs:

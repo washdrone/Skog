@@ -102,9 +102,11 @@ export default function OmOssPage() {
             <p className="text-slate-600 font-body leading-relaxed mb-8">
               Vi flyger enterprise-plattformarna {EQUIPMENT.drones.join(' och ')} med
               RTK-positionering för centimeternoggrann georeferering. Datainsamlingen
-              sker med högupplöst RGB-kamera för fotogrammetri och med drönarburen
-              LiDAR när uppdraget kräver markmodeller under krontak. Med
-              vidvinkelkameran uppnås en markupplösning på typiskt {EQUIPMENT.typicalGsd}.
+              sker med högupplöst RGB-kamera för fotogrammetri och med LiDAR-sensorn
+              DJI Zenmuse L2 när uppdraget kräver markmodeller under krontak — L2:an
+              registrerar upp till fem returer per laserpuls och 240&nbsp;000 punkter
+              per sekund, vilket gör att laserdata når marken även genom täta kronor.
+              Med vidvinkelkameran uppnås en markupplösning på typiskt {EQUIPMENT.typicalGsd}.
             </p>
             <div className="grid gap-6 sm:grid-cols-3">
               <div className="panel p-6">
@@ -114,7 +116,7 @@ export default function OmOssPage() {
               <div className="panel p-6">
                 <h3 className="text-sm font-bold text-slate-900 mb-2">Sensorer & positionering</h3>
                 <p className="text-sm text-slate-600 font-body">
-                  Högupplöst RGB, LiDAR (DJI Zenmuse), RTK-GNSS
+                  Högupplöst RGB, LiDAR (DJI Zenmuse L2), RTK-GNSS
                 </p>
               </div>
               <div className="panel p-6">
