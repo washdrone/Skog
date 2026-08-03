@@ -13,11 +13,11 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| A1 | "Prisindikation/offert inom 24 timmar" | Startsida stats, hub stats, kontaktsida (3 ställen), FAQ, CTABand, LeadForm success-meddelande, processteget "Uppdragsdialog" (2 ställen) | EJ VERIFIERAD | | |
-| A2 | "Normal leveranstid 3–5 arbetsdagar" | Leveranser-sidan, FAQ, FeatureShowcase | EJ VERIFIERAD | | |
+| A1 | "Svar/prisindikation inom 24 timmar" | Offertsidan (hero, processteg, sidopanel), LeadForm-bekräftelse | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| A2 | Leveranstid | — | INGET LÖFTE — ägarens besked 2026-08-03: varierar med uppdragets storlek; neutrala formuleringar behålls | Ägaren (chat) | 2026-08-03 |
 | A3 | "Omflygning utan extra kostnad" (vid kvalitetsbrist) | Leveranser-sidan | EJ VERIFIERAD | | |
 | A4 | "Ombokning utan extra kostnad" (vid dåligt väder) | FAQ | EJ VERIFIERAD | | |
-| A5 | "Kostnadsfri prisuppskattning" | FAQ | EJ VERIFIERAD | | |
+| A5 | "Kostnadsfri prisuppskattning/offert" | FAQ, offertsidan | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 | A6 | "Hela Sverige" (geografisk täckning) | Startsida meta, målgrupper, CTABand, footer, FAQ, kontaktsida, FeatureShowcase | VERIFIERAD — rikstäckande | Ägaren | 2026-06-11 |
 
 ### Om ett affärslöfte inte stämmer:
@@ -30,10 +30,10 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| B1 | "2–5 cm markupplösning (GSD)" | Startsida stats, hub stats, FeatureShowcase (2 ställen), FAQ | EJ VERIFIERAD | | |
+| B1 | Markupplösning: "2–3 cm/pixel vid 80–120 m" (beräknad ur DJI Matrice 4E vidvinkelkamera, 4/3" 20 MP, 24 mm ekv.) | Startsida stats, hub stats, jämförelsetabeller | VERIFIERAD — beräkning godkänd av ägaren | Ägaren (chat) | 2026-08-03 |
 | B2 | "10–100 hektar per flygning" | Startsida stats, hub stats, FeatureShowcase, FAQ | EJ VERIFIERAD | | |
-| B3 | "SWEREF99 TM som standardkoordinatsystem" | Startsida stats, hub stats, leveranser, FAQ | EJ VERIFIERAD | | |
-| B4 | Leveransformat: Shapefile, GeoPackage, GeoJSON, KML, GeoTIFF, JPEG2000, PDF, LAS | Leveranser-sidan, FAQ, FeatureShowcase, tjänstesidor | EJ VERIFIERAD | | |
+| B3 | "SWEREF99 TM som standardkoordinatsystem" | Startsida stats, hub stats, leveranser, FAQ | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| B4 | Leveransformat: GeoTIFF, GeoPackage, Shapefile, LAS/LAZ (standardexport ur Pix4D/Metashape; skräddarsytt möjligt) | Sajten genomgående | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 | B5 | "DTM/DSM baserad på fotogrammetri" (valbart tillägg) | Leveranser-sidan | EJ VERIFIERAD | | |
 | B6 | "3D-modell" (valbart tillägg) | Leveranser-sidan | EJ VERIFIERAD | | |
 | B7 | "Volymberäkning (virkesvältor, jordmassor)" (valbart tillägg) | Leveranser-sidan | EJ VERIFIERAD | | |
@@ -49,10 +49,10 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| C1 | "Flygning sker enligt Transportstyrelsens regler och luftfartsförordningen" | FAQ | EJ VERIFIERAD | | |
-| C2 | "Vi ansvarar för alla nödvändiga tillstånd och anmälningar" | FAQ | EJ VERIFIERAD | | |
-| C3 | "Särskilt tillstånd nära flygplatser/militära zoner — vi hanterar det" | FAQ | EJ VERIFIERAD | | |
-| C4 | GDPR-text vid formulär: "Vi delar aldrig dina uppgifter med tredje part" | LeadForm | EJ VERIFIERAD | | |
+| C1 | "Enligt EASA:s drönarregelverk och Transportstyrelsens föreskrifter" | TrustBlock, FAQ | VERIFIERAD — ägarens formulering: "skriv enligt EASA och Transportstyrelsen" | Ägaren (chat) | 2026-08-03 |
+| C2 | "Vi ansvarar för alla nödvändiga tillstånd och anmälningar" | FAQ | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| C3 | "Särskilt tillstånd nära flygplatser/militära zoner — vi hanterar det" | FAQ, Stockholmssidan | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| C4 | GDPR-text vid formulär | LeadForm | JUSTERAD 2026-08-03 — matchar nu integritetspolicyn (leverantörer som krävs för leverans undantas) | Ägaren (chat) | 2026-08-03 |
 
 ### Regulatoriskt att dubbelkolla:
 - Vilken operatörskategori (Open/Specific/Certified)?
@@ -66,11 +66,11 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| D1 | E-post: info@timberdrone.se | Schema, CTABand, kontaktsida | EJ VERIFIERAD | | |
+| D1 | E-post: info@timberdrone.se | Schema, CTABand, kontaktsida | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 | D2 | Telefon: 076-309 66 96 | business-data.ts, schema, footer, om-oss, offert | VERIFIERAD | Ägaren | 2026-06-11 |
 | D3 | Juridiskt bolagsnamn/org.nr/adress | — | UTELÄMNAS — ägarens beslut: TimberDrone profileras fristående, inga bolagsuppgifter på sajten | Ägaren | 2026-06-11 |
-| D4 | Sociala medier: LinkedIn, YouTube, Instagram | Footer (href="#" — placeholder) | SAKNAS | | |
-| D5 | Domän: timberdrone.se | Alla canonical-URLer, sitemap, robots | EJ VERIFIERAD | | |
+| D4 | Sociala medier | — | FINNS EJ — ägarens besked 2026-08-03: inga profiler; utelämnas | Ägaren (chat) | 2026-08-03 |
+| D5 | Domän: www.timberdrone.se | Alla canonical-URLer, sitemap, robots | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 
 ### Vad som behövs:
 - Bekräfta att info@timberdrone.se tar emot mail
@@ -98,13 +98,13 @@
 
 | # | Påstående | Var det används | Status | Verifierad av | Datum |
 |---|-----------|-----------------|--------|---------------|-------|
-| F1 | Ingen drönarmodell nämns någonstans | Hela sajten — kapacitetspåståenden saknar grund | SAKNAS | | |
+| F1 | Drönare: DJI Matrice 400 och DJI Matrice 4E | om-oss, llms.txt | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 | F2 | Ingen kameramodell/sensormodell nämns | Multispektral-, ortofoto-, LiDAR-sidor | SAKNAS | | |
 | F3 | "5-bands multispektral sensor" med specifika våglängder (~475, ~560, ~668, ~717, ~842 nm) | Multispektralanalys, vegetationsanalys | EJ VERIFIERAD — verkar vara MicaSense men aldrig namngivet | | |
 | F4 | "DLS" (Downwelling Light Sensor) nämns | Vegetationsanalys, uppföljning-sidor | EJ VERIFIERAD — sensortyp/modell ej specificerad | | |
-| F5 | RTK/PPK-kapacitet nämns | Ortofoto, skogsbolag-sidor | EJ VERIFIERAD — inget GNSS-system specificerat | | |
-| F6 | LiDAR-kapacitet erbjuds som tjänst | Header, LiDAR-sidan | EJ VERIFIERAD — inget LiDAR-system specificerat | | |
-| F7 | Ingen processmjukvara nämns (Pix4D, Metashape etc.) | Hela sajten | SAKNAS | | |
+| F5 | RTK-kapacitet | om-oss, skogsinventering | VERIFIERAD — RTK bekräftad (specifikt GNSS-system ej namngivet) | Ägaren (chat) | 2026-08-03 |
+| F6 | LiDAR: DJI Zenmuse L2 (5 returer, 240 000 pkt/s, 4 cm vertikal noggrannhet vid 150 m — DJI:s specifikation som källa) | om-oss, lidar-vs-dronare, llms.txt | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
+| F7 | Processmjukvara: Pix4D och Agisoft Metashape | om-oss | VERIFIERAD | Ägaren (chat) | 2026-08-03 |
 
 ### Vad som behövs:
 - Bekräfta vilken/vilka drönarmodeller som används
@@ -128,7 +128,7 @@
 | G6 | "Vi följer Integritetsskyddsmyndighetens riktlinjer" | Kommun-sidan | EJ VERIFIERAD | | |
 | G7 | "Ansikten och registreringsskyltar suddas automatiskt" | Kommun-sidan | EJ VERIFIERAD — kräver specifik mjukvara | | |
 
-### Vad som behövs:
+### Ägarens beslut 2026-08-03: skriv endast "enligt EASA och Transportstyrelsen" — inga specifika kategorier/certifikat på sajten.
 - Bekräfta operatörskategori och tillstånd
 - Bekräfta pilotcertifieringar
 - Bekräfta försäkringstyp och -omfattning
@@ -164,3 +164,16 @@
 | I4 | Riktiga bilder | public/images/ är tomt — gradienter används som placeholder | MEDEL |
 | I5 | Google Analytics-konfiguration | NEXT_PUBLIC_GA_ID saknas (ingen spårning) | HÖG |
 | I6 | Lead-webhook/email-notifiering | LEAD_WEBHOOK_URL & LEAD_NOTIFY_EMAIL ej konfigurerade | HÖG |
+
+---
+
+## Uppdatering 2026-08-03 (ägarens svar via chat)
+
+- **Bilder**: `sunny_ortofoto.png`, `sunny_lidar.png`, `sunny_vektordata.png` m.fl. är bekräftade som egna flygningar/leveranser — får presenteras som verkliga exempel.
+- **Personer**: Inga personer ska namnges på om-oss eller i författarsignaler — ägarens beslut.
+- **Svarstid**: "Svar inom 24 timmar" verifierad och återinförd på offertsidan. Leveranstid: inget löfte (varierar med storlek).
+- **Case**: Ägarens beslut 2026-08-03: inga uppdragsbeskrivningar, men de egna bilderna får visas med beskrivande text — sektion "Exempel ur verkliga leveranser" tillagd på om-oss.
+- **Google Search Console**: Domänen verifierad och sitemap inskickad enligt ägaren.
+- **Google Business Profile**: Finns ej; ägaren vill skapa en (extern åtgärd).
+- **GA4**: Mät-ID G-D0DFLHDVJM bekräftat med reservation ("bör stämma").
+- **OG-bild**: Designad variant framtagen 2026-08-03 (ersätter genererad placeholder).

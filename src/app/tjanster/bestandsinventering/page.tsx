@@ -94,7 +94,7 @@ export default function BestandsinventeringPage() {
             <strong>Ortofoto</strong> — visuell identifiering av kronskikt, luckor och gränser
           </li>
           <li>
-            <strong>Höjdmodell (CHM)</strong> — höjdskillnader avgränsar bestånd med olika
+            <strong>Kronhöjdsmodell (CHM)</strong> — höjdskillnader avgränsar bestånd med olika
             utvecklingsstadier
           </li>
           <li>

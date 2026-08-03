@@ -44,7 +44,6 @@ export default function KommunerPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: 'Hem', url: '/' },
-              { name: 'Kundsegment', url: '#' },
               { name: 'Kommuner och myndigheter', url: '/for/kommuner' },
             ])
           ),
@@ -123,7 +122,7 @@ export default function KommunerPage() {
               </li>
               <li>
                 <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
-                  Areamätning
+                  Arealmätning
                 </Link>
               </li>
               <li>

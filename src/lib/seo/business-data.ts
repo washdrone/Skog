@@ -58,7 +58,7 @@ export const SERVICE_AREA = {
 export const OG_DEFAULTS = {
   locale: 'sv_SE' as const,
   type: 'website' as const,
-  imagePath: '/og-default.png', // 1200 x 630 — genererad placeholder, kan ersättas med designad variant
+  imagePath: '/og-default.jpg', // 1200 x 630 — designad 2026-08-03 (eget ortofoto som bakgrund)
   imageWidth: 1200,
   imageHeight: 630,
 } as const
@@ -75,7 +75,35 @@ export const CAPABILITIES = [
   'Beståndsinventering',
   'Virkesförrådsuppskattning',
   'Underlag för skogsbruksplan',
+  /* Metoder — utrustning verifierad av ägaren 2026-08-03 */
+  'Drönarfotogrammetri',
+  'LiDAR-skanning',
 ] as const
+
+// ---------------------------------------------------------------------------
+// Equipment — verifierad av ägaren 2026-08-03 (CONTENT-VERIFICATION F1/F5/F6)
+// ---------------------------------------------------------------------------
+
+export const EQUIPMENT = {
+  /** Drönarplattformar, bekräftade av ägaren 2026-08-03 */
+  drones: ['DJI Matrice 400', 'DJI Matrice 4E'] as const,
+  /** RTK-positionering bekräftad (F5) */
+  rtk: true,
+  /** LiDAR bekräftad (F6): DJI Zenmuse L2 (ägaren 2026-08-03).
+      Specifikationer får anges med DJI som källa: upp till 5 returer,
+      240 000 punkter/s (enkelretur), 4 cm vertikal / 5 cm horisontell
+      noggrannhet vid 150 m enligt DJI:s specifikation. */
+  lidar: 'DJI Zenmuse L2' as const,
+  /** Processmjukvara bekräftad av ägaren 2026-08-03 (F7) */
+  software: ['Pix4D', 'Agisoft Metashape'] as const,
+  /*
+   * Typisk markupplösning (GSD) för vidvinkelkameran på DJI Matrice 4E:
+   * 4/3-tums CMOS, 20 MP, 24 mm ekvivalent brännvidd -> ca 2,7 cm/pixel
+   * vid 100 m flyghöjd (beräknat ur sensorgeometrin, ägaren godkände
+   * beräkning ur bekräftad utrustning 2026-08-03). Anges som intervall.
+   */
+  typicalGsd: '2–3 cm/pixel vid 80–120 m flyghöjd',
+} as const
 
 // ---------------------------------------------------------------------------
 // Coordinate system (used across the site; generally accepted as correct)
@@ -84,7 +112,8 @@ export const CAPABILITIES = [
 export const COORDINATE_SYSTEM = 'SWEREF99 TM (EPSG:3006)'
 
 // ---------------------------------------------------------------------------
-// Delivery formats (CONTENT-VERIFICATION B4 — EJ VERIFIERAD, men rimligt)
+// Delivery formats (CONTENT-VERIFICATION B4 — verifierad 2026-08-03:
+// standardformat ur Pix4D/Metashape, skräddarsydda format möjliga)
 // ---------------------------------------------------------------------------
 
 export const DELIVERY_FORMATS = [

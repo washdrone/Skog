@@ -11,11 +11,18 @@ export default function robots(): MetadataRoute.Robots {
     'Bingbot',
     'GPTBot',
     'ChatGPT-User',
+    'OAI-SearchBot',
     'ClaudeBot',
     'Claude-Web',
     'anthropic-ai',
     'PerplexityBot',
+    'Perplexity-User',
     'Google-Extended',
+    'Applebot',
+    'Applebot-Extended',
+    'Meta-ExternalAgent',
+    'Amazonbot',
+    'DuckAssistBot',
   ]
 
   return {

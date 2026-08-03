@@ -1,4 +1,4 @@
-import { createMetadata } from '@/lib/metadata'
+import { createMetadata, SITE_URL } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
@@ -47,6 +47,12 @@ const articles = [
     description:
       'Månad-för-månad-guide till optimal tidpunkt för varje typ av drönarbaserad skogsanalys.',
   },
+  {
+    href: '/kunskap/ordlista',
+    title: 'Ordlista — begrepp inom drönarbaserad skogsdata',
+    description:
+      'Definitioner av ortofoto, punktmoln, DSM, DTM, CHM, GSD, RTK, GNSS och andra centrala begrepp.',
+  },
 ]
 
 export default function KunskapPage() {
@@ -61,6 +67,24 @@ export default function KunskapPage() {
               { name: 'Kunskap', url: '/kunskap' },
             ])
           ),
+        }}
+      />
+      {/* ItemList över hubbens artiklar — hjälper sökmotorer att förstå
+          kunskapsbanken som en samling och koppla artiklarna till den */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Kunskap om drönarbaserad skogsanalys',
+            itemListElement: articles.map((article, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: article.title,
+              url: `${SITE_URL}${article.href}`,
+            })),
+          }),
         }}
       />
 

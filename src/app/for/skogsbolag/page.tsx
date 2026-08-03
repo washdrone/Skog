@@ -44,7 +44,6 @@ export default function SkogsbolagPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: 'Hem', url: '/' },
-              { name: 'Kundsegment', url: '#' },
               { name: 'Skogsbolag', url: '/for/skogsbolag' },
             ])
           ),
@@ -119,7 +118,7 @@ export default function SkogsbolagPage() {
               </li>
               <li>
                 <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
-                  Areamätning
+                  Arealmätning
                 </Link>
               </li>
               <li>

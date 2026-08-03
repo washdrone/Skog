@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 
 const PROCESS_STEPS = [
   { number: 1, title: 'Fyll i formulär', description: 'Beskriv ert uppdrag, areal och önskade leveranser.' },
-  { number: 2, title: 'Vi återkommer', description: 'Vi granskar er förfrågan och återkommer med en prisindikation.' },
+  { number: 2, title: 'Vi återkommer', description: 'Vi granskar er förfrågan och återkommer med en prisindikation inom 24 timmar.' },
   { number: 3, title: 'Bekräfta detaljer', description: 'Vi stämmer av uppdragsdetaljer, areal och tidsplan.' },
   { number: 4, title: 'Vi genomför uppdraget', description: 'Flygning genomförs och underlag levereras enligt överenskommelse.' },
 ]
@@ -43,7 +43,7 @@ export default function OffertPage() {
             Begär en kostnadsfri offert
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-            Berätta om ert uppdrag så återkommer vi med en prisindikation.
+            Berätta om ert uppdrag så återkommer vi med en prisindikation inom 24 timmar.
             Fyll i formuläret nedan eller kontakta oss direkt på{' '}
             <a href={`mailto:${COMPANY.email}`} className="text-forest-400 hover:text-forest-300 underline">
               {COMPANY.email}
@@ -66,8 +66,8 @@ export default function OffertPage() {
                 <h3 className="font-semibold text-slate-900">Varför TimberDrone</h3>
                 <ul className="mt-4 space-y-4">
                   {[
-                    /* EJ VERIFIERAD: "Svar inom 24 timmar" (A1) — ersatt med neutral formulering */
-                    { icon: 'clock', text: 'Snabb återkoppling' },
+                    /* A1 verifierad av ägaren 2026-08-03: svar inom 24 timmar */
+                    { icon: 'clock', text: 'Svar inom 24 timmar' },
                     /* Rikstäckning verifierad av ägaren 2026-06-11 (A6) */
                     { icon: 'map', text: 'Rikstäckande i hela Sverige' },
                     { icon: 'layer', text: 'GIS-redo leveranser' },

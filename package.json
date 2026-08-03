@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "seo:audit": "node scripts/seo-audit.mjs",
-    "seo:lastmod": "node scripts/generate-lastmod.mjs"
+    "seo:lastmod": "node scripts/generate-lastmod.mjs",
+    "seo:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "repository": {
     "type": "git",

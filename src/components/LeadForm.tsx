@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react'
 import { events } from '@/lib/analytics'
 
 const UPPDRAG_OPTIONS = [
-  'Areamätning',
+  'Arealmätning',
   'Inventering/beståndsgränser',
   'Avverkningsunderlag',
   'Skadeinventering',
@@ -102,7 +102,7 @@ export default function LeadForm() {
           </svg>
         </div>
         <h3 className="text-xl font-bold text-slate-900">Tack för din förfrågan</h3>
-        <p className="mt-3 text-slate-600">Vi har tagit emot er förfrågan och återkommer med en prisindikation. Vi bekräftar uppdragsdetaljer, areal och tidsplan via e-post.</p>
+        <p className="mt-3 text-slate-600">Vi har tagit emot er förfrågan och återkommer med en prisindikation inom 24 timmar. Vi bekräftar uppdragsdetaljer, areal och tidsplan via e-post.</p>
       </div>
     )
   }
@@ -179,7 +179,9 @@ export default function LeadForm() {
         <label htmlFor="meddelande" className={labelClass}>Övrig information</label>
         <textarea id="meddelande" name="meddelande" rows={4} value={formData.meddelande} onChange={handleChange} placeholder="Beskriv eventuella detaljer kring uppdraget, terräng, tillgänglighet eller andra önskemål." className={inputClass} />
       </div>
-      <p className="text-xs text-slate-400">Genom att skicka detta formulär godkänner du att vi lagrar dina uppgifter för att hantera din förfrågan. Vi delar aldrig dina uppgifter med tredje part.</p>
+      {/* Formulering justerad 2026-08-03: leads behandlas tekniskt av e-postleverantör
+          (Resend) — absolut "delas aldrig med tredje part" var därför inte korrekt */}
+      <p className="text-xs text-slate-400">Genom att skicka detta formulär godkänner du att vi lagrar dina uppgifter för att hantera din förfrågan. Uppgifterna används aldrig i marknadsföringssyfte och lämnas inte vidare utöver de leverantörer som krävs för att besvara dig. Läs mer i vår <a href="/integritetspolicy" className="underline hover:text-slate-600">integritetspolicy</a>.</p>
       <button type="submit" disabled={status === 'submitting'} className="btn-primary w-full text-base disabled:cursor-not-allowed disabled:opacity-60">
         {status === 'submitting' ? (
           <><svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Skickar...</>

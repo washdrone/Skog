@@ -41,7 +41,10 @@ export default function OutputShowcase() {
             Era underlag — redo att använda
           </h2>
           <p className="mt-4 text-slate-600 font-body leading-relaxed">
-            Alla leveranser är georefererade, kvalitetskontrollerade och levereras i branschstandardformat.
+            Alla leveranser är georefererade, kvalitetskontrollerade och levereras i
+            branschstandardformat. Exemplen nedan är hämtade ur våra egna flygningar
+            och leveranser.
+            {/* Bilderna bekräftade som egna leveranser av ägaren 2026-08-03 */}
           </p>
         </div>
 

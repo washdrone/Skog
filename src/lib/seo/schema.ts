@@ -210,6 +210,40 @@ export function articleSchema({
 }
 
 // ---------------------------------------------------------------------------
+// DefinedTermSet (ordlista/begreppssida)
+// ---------------------------------------------------------------------------
+
+export function definedTermSetSchema({
+  name,
+  description,
+  url,
+  terms,
+}: {
+  name: string
+  description: string
+  /** Path starting with `/`, e.g. `/kunskap/ordlista` */
+  url: string
+  terms: { term: string; definition: string }[]
+}) {
+  const setId = `${SITE_URL}${url}#termset`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': setId,
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    inLanguage: 'sv-SE',
+    hasDefinedTerm: terms.map((t) => ({
+      '@type': 'DefinedTerm',
+      name: t.term,
+      description: t.definition,
+      inDefinedTermSet: setId,
+    })),
+  }
+}
+
+// ---------------------------------------------------------------------------
 // HowTo
 // ---------------------------------------------------------------------------
 

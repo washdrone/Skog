@@ -50,6 +50,7 @@ const PAGES = [
   '/kunskap/dronare-vs-satellitdata',
   '/kunskap/lidar-vs-dronare',
   '/kunskap/sasongsguide-skogsinventering',
+  '/kunskap/ordlista',
 
   // Kundsegment
   '/for/skogsagare',

@@ -15,12 +15,12 @@ const FAQ_ITEMS = [
   {
     question: 'Hur noggrann är trädhöjdsmätning med drönare?',
     answer:
-      'Trädhöjd beräknas som skillnaden mellan en kronhöjdsmodell (DSM) och en markmodell (DTM). Noggrannheten beror på flyghöjd, bildöverlapp, markvegetation och hur väl markytan syns mellan kronorna. För att säkerställa kvaliteten kalibreras höjderna mot kontrollmätningar i fält.' /* MÅSTE VERIFIERAS: ange specifik höjdnoggrannhet först när den är bekräftad mot faktisk utrustning */,
+      'Trädhöjd beräknas som skillnaden mellan en ytmodell (DSM) och en markmodell (DTM). Noggrannheten beror på flyghöjd, bildöverlapp, markvegetation och hur väl markytan syns mellan kronorna. För att säkerställa kvaliteten kalibreras höjderna mot kontrollmätningar i fält.' /* MÅSTE VERIFIERAS: ange specifik höjdnoggrannhet först när den är bekräftad mot faktisk utrustning */,
   },
   {
     question: 'Hur går trädhöjdsmätning med drönare till?',
     answer:
-      'Drönaren flyger systematiskt över beståndet med högt bildöverlapp och samlar in georefererade bilder. Bilderna bearbetas fotogrammetriskt till ett punktmoln, varifrån en kronhöjdsmodell och en markmodell tas fram. Skillnaden mellan modellerna ger trädens höjd över hela arealen.',
+      'Drönaren flyger systematiskt över beståndet med högt bildöverlapp och samlar in georefererade bilder. Bilderna bearbetas fotogrammetriskt till ett punktmoln, varifrån en ytmodell och en markmodell tas fram. Skillnaden mellan modellerna ger trädens höjd över hela arealen.',
   },
   {
     question: 'Kan ni mäta höjden på enskilda träd?',
@@ -105,14 +105,14 @@ export default function TradhojdsmatningPage() {
 
         <h2>Så beräknas höjden</h2>
         <p>
-          Höjden tas fram genom att två modeller jämförs: en kronhöjdsmodell som beskriver
+          Höjden tas fram genom att två modeller jämförs: en ytmodell som beskriver
           vegetationens översta yta och en markmodell som beskriver marknivån under träden.
           Skillnaden mellan dem är trädens höjd.
         </p>
         <ul>
-          <li><strong>Kronhöjdsmodell (DSM)</strong> — beräknas ur det fotogrammetriska punktmolnet</li>
+          <li><strong>Ytmodell (DSM)</strong> — beräknas ur det fotogrammetriska punktmolnet</li>
           <li><strong>Markmodell (DTM)</strong> — marknivån som syns mellan och under kronorna</li>
-          <li><strong>Höjdmodell (CHM)</strong> — DSM minus DTM ger trädens höjd över hela arealen</li>
+          <li><strong>Kronhöjdsmodell (CHM)</strong> — DSM minus DTM ger trädens höjd över hela arealen</li>
           <li><strong>Höjd per träd</strong> — där enskilda kronor kan urskiljas segmenteras de och en höjd beräknas per träd</li>
         </ul>
 

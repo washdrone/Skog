@@ -45,7 +45,7 @@ export default function SvealandPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: 'Hem', url: '/' },
-              { name: 'Platser', url: '#' },
+              { name: 'Platser', url: '/platser' },
               { name: 'Svealand', url: '/platser/skogsinventering-svealand' },
             ])
           ),
@@ -117,7 +117,7 @@ export default function SvealandPage() {
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: 'Areamätning', href: '/tjanster/skogsinventering' },
+              { label: 'Arealmätning', href: '/tjanster/skogsinventering' },
               { label: 'Inventering & översikt', href: '/tjanster/bestandsinventering' },
               { label: 'Avverkningsunderlag', href: '/tjanster/skogsbruksplan-underlag' },
               { label: 'Skogsskadeinventering', href: '/tjanster/skogsskadeinventering' },

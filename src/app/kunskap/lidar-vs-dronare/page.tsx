@@ -26,9 +26,9 @@ const faqItems = [
       'Fotogrammetri har svårt att mäta markhöjd under tät kronslutning eftersom kameran bara ser det som är synligt ovanifrån. LiDAR-pulser kan däremot penetrera krontak och ge markmodeller även i tät skog.',
   },
   {
-    question: 'Vilken metod ger bäst trädshöjdsdata?',
+    question: 'Vilken metod ger bäst trädhöjdsdata?',
     answer:
-      'Båda metoderna ger bra trädshöjdsdata för krontopparna. LiDAR är dock överlägsen för höjdmätning i flerskiktad skog och för att bestämma markhöjd under krontak, vilket ger mer exakta stamhöjder.',
+      'Båda metoderna ger bra trädhöjdsdata för krontopparna. LiDAR är dock överlägsen för höjdmätning i flerskiktad skog och för att bestämma markhöjd under krontak, vilket ger mer exakta stamhöjder.',
   },
   {
     question: 'Kostar LiDAR-skanning mer än fotogrammetri?',
@@ -131,8 +131,9 @@ export default function LidarVsDronarePage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Punkttäthet</td>
-                <td className="py-3 pr-4 text-slate-600">Hög (varierar med sensor och flyghöjd) {/* MÅSTE VERIFIERAS */}</td>
-                <td className="py-3 text-slate-600">Hög ytnära (varierar med GSD och överlapp) {/* MÅSTE VERIFIERAS */}</td>
+                {/* DJI Zenmuse L2-spec (enterprise.dji.com/zenmuse-l2/specs) — utrustning verifierad 2026-08-03 */}
+                <td className="py-3 pr-4 text-slate-600">Upp till 240 000 punkter/s, 5 returer per puls (DJI Zenmuse L2)</td>
+                <td className="py-3 text-slate-600">Hög ytnära (varierar med GSD och överlapp)</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Penetration av krontak</td>
@@ -146,8 +147,8 @@ export default function LidarVsDronarePage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Höjdnoggrannhet</td>
-                <td className="py-3 pr-4 text-slate-600">Hög (varierar med utrustning och förhållanden) {/* MÅSTE VERIFIERAS */}</td>
-                <td className="py-3 text-slate-600">Lägre än LiDAR (varierar med GSD) {/* MÅSTE VERIFIERAS */}</td>
+                <td className="py-3 pr-4 text-slate-600">4 cm vertikalt vid 150 m enligt DJI:s specifikation för Zenmuse L2</td>
+                <td className="py-3 text-slate-600">Lägre än LiDAR (varierar med GSD)</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Färginformation</td>
@@ -186,7 +187,7 @@ export default function LidarVsDronarePage() {
             </li>
             <li>
               <strong>Volymskattning</strong> — beräkning av beståndsvolym baserat på
-              krontaksmodell och markmodell
+              kronhöjdsmodell och markmodell
             </li>
             <li>
               <strong>Hydrologisk modellering</strong> — exakta markmodeller för
@@ -219,10 +220,11 @@ export default function LidarVsDronarePage() {
 
           <h2>Noggrannhet i praktiken</h2>
           <p>
-            I tät produktionsskog ger drönarbaserad
-            LiDAR markmodeller med hög noggrannhet {/* MÅSTE VERIFIERAS */}. Fotogrammetri ger i samma förhållanden
-            betydligt sämre markmodell, men mäter krontoppshöjder med god
-            noggrannhet {/* MÅSTE VERIFIERAS */}. Vid öppen eller gles skog minskar skillnaden avsevärt.
+            I tät produktionsskog ger drönarbaserad LiDAR markmodeller med hög
+            noggrannhet — sensorn vi flyger, DJI Zenmuse L2, anges av tillverkaren
+            till 4 cm vertikal noggrannhet vid 150 m flyghöjd. Fotogrammetri ger i
+            samma förhållanden betydligt sämre markmodell, men mäter krontoppshöjder
+            med god noggrannhet. Vid öppen eller gles skog minskar skillnaden avsevärt.
           </p>
           <p>
             För{' '}
@@ -235,6 +237,16 @@ export default function LidarVsDronarePage() {
               skogsinventering
             </Link>{' '}
             är fotogrammetri ofta tillräcklig och mer kostnadseffektiv.
+          </p>
+          {/* Utrustning verifierad av ägaren 2026-08-03 — båda metoderna finns i egen drift */}
+          <p>
+            TimberDrone flyger båda metoderna: fotogrammetri med högupplöst RGB-kamera
+            och LiDAR med DJI Zenmuse L2 och RTK-positionering. Vi hjälper er att välja den
+            metod som passar uppdragets mål och budget —{' '}
+            <Link href="/offert" className="text-forest-600 underline hover:text-forest-800">
+              beskriv ert behov
+            </Link>{' '}
+            så föreslår vi rätt upplägg.
           </p>
         </div>
       </article>

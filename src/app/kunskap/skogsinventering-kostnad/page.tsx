@@ -234,7 +234,7 @@ export default function SkogsinventeringKostnadPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Upplösning</td>
-                <td className="py-3 pr-4 text-slate-600">Centimeternivå (beroende på utrustning och flyghöjd) {/* MÅSTE VERIFIERAS */}</td>
+                <td className="py-3 pr-4 text-slate-600">Typiskt 2–3 cm/pixel vid 80–120 m flyghöjd</td>
                 <td className="py-3 text-slate-600">Trädnivå i provytor</td>
               </tr>
               <tr>
