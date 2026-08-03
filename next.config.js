@@ -97,6 +97,20 @@ const nextConfig = {
         source: '/:path*',
         headers: [
           { key: 'X-Robots-Tag', value: 'index, follow' },
+          // Säkerhetsheaders — påverkar Trust-signaler och skyddar besökare
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
+        ],
+      },
+      {
+        // API-rutter ska aldrig indexeras (robots.txt blockerar crawl,
+        // men noindex-headern täcker även URL:er som nås via extern länk)
+        source: '/api/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
         ],
       },
     ]

@@ -44,7 +44,6 @@ export default function ForskningPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: 'Hem', url: '/' },
-              { name: 'Kundsegment', url: '#' },
               { name: 'Skogsforskning', url: '/for/forskning' },
             ])
           ),

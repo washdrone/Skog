@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABand from '@/components/CTABand'
 
 export const metadata = buildMetadata({
-  title: 'Om TimberDrone — Drönarbaserad skogsinventering',
+  title: 'Om oss — drönarbaserad skogsinventering',
   description:
     'TimberDrone levererar drönarbaserad skogsinventering och geodata för produktionsskogsbruk. Läs om vår metodik och våra tjänster.',
   path: '/om-oss',

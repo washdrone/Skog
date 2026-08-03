@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const TRUST_ITEMS = [
   {
     title: 'Regelefterlevnad',
@@ -28,6 +30,15 @@ export default function TrustBlock() {
             <p className="text-white/60 font-body text-sm leading-relaxed">
               Våra uppdrag kräver precision och pålitlighet. Vi är en partner när markdata och beslutsunderlag utgör kärnan i er analys.
             </p>
+            <Link
+              href="/om-oss"
+              className="mt-4 inline-flex items-center text-sm font-bold text-accent-500 hover:text-accent-400 transition-colors"
+            >
+              Läs mer om vår metodik
+              <svg className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
           </div>
           <div className="md:w-2/3 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {TRUST_ITEMS.map((item, i) => (

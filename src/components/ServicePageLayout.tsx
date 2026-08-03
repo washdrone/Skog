@@ -74,6 +74,24 @@ export default function ServicePageLayout({
                   </Link>
                 ))}
               </div>
+              {/* Kontextuella länkar upp till hubbarna — tjänstesidorna länkade
+                  tidigare bara sidledes, vilket lämnade /tjanster, /kunskap och
+                  /platser utan inlänkar i brödinnehåll */}
+              <p className="mt-8 text-center text-sm text-slate-600 font-body">
+                Se hela vårt utbud på{' '}
+                <Link href="/tjanster" className="font-bold text-forest-600 hover:text-forest-700">
+                  tjänsteöversikten
+                </Link>
+                , fördjupa dig i{' '}
+                <Link href="/kunskap" className="font-bold text-forest-600 hover:text-forest-700">
+                  kunskapsbanken
+                </Link>{' '}
+                eller läs om{' '}
+                <Link href="/platser" className="font-bold text-forest-600 hover:text-forest-700">
+                  var i Sverige vi arbetar
+                </Link>
+                .
+              </p>
             </div>
           </section>
         )}

@@ -1,5 +1,5 @@
 import { createMetadata } from '@/lib/metadata'
-import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { serviceSchema, breadcrumbSchema, faqSchema, howToSchema } from '@/lib/schema'
 import ServicePageLayout from '@/components/ServicePageLayout'
 import FAQ from '@/components/FAQ'
 import Link from 'next/link'
@@ -64,6 +64,26 @@ export default function SkogsbruksplanUnderlagPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQ_ITEMS)) }}
+      />
+      {/* Speglar det synliga arbetsflödet under H2 "Arbetsflöde" */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            howToSchema({
+              name: 'Så tas drönarunderlag till skogsbruksplan fram',
+              description:
+                'Arbetsflödet från flygning till leverans av kartlager som underlag för skogsbruksplan.',
+              steps: [
+                { name: 'Flygning', text: 'Flygning av fastigheten med högupplöst kamera.' },
+                { name: 'Bearbetning', text: 'Bearbetning till ortofoto, höjdmodeller och punktmoln.' },
+                { name: 'Beståndskartläggning', text: 'Beståndskartläggning med föreslagna gränser och attributdata.' },
+                { name: 'Leverans', text: 'Leverans av kartlager i format anpassat för pcSKOG, QGIS eller ArcGIS.' },
+                { name: 'Fältverifiering', text: 'Planeraren verifierar i fält och kompletterar med manuella mätningar.' },
+              ],
+            })
+          ),
+        }}
       />
 
       <ServicePageLayout

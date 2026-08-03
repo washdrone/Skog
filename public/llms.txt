@@ -24,6 +24,15 @@ TimberDrone arbetar med produktionsskog — beslutsunderlag för avverkning, sk�
 - [Drönare vs satellitdata för skogsbruk](https://www.timberdrone.se/kunskap/dronare-vs-satellitdata)
 - [LiDAR vs fotogrammetri](https://www.timberdrone.se/kunskap/lidar-vs-dronare)
 - [Bästa tid för skogsinventering — säsongsguide](https://www.timberdrone.se/kunskap/sasongsguide-skogsinventering)
+- [Ordlista — begrepp inom drönarbaserad skogsdata](https://www.timberdrone.se/kunskap/ordlista): Definitioner av ortofoto, punktmoln, fotogrammetri, LiDAR, DSM, DTM, CHM, GSD, RTK, GNSS m.fl.
+
+## Målgrupper
+
+- [För skogsägare](https://www.timberdrone.se/for/skogsagare)
+- [För skogsbolag och förvaltare](https://www.timberdrone.se/for/skogsbolag)
+- [För fastighetsägare](https://www.timberdrone.se/for/fastighet)
+- [För forskning](https://www.timberdrone.se/for/forskning)
+- [För kommuner](https://www.timberdrone.se/for/kommuner)
 
 ## Övrigt
 

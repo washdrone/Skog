@@ -237,12 +237,8 @@ export default function SasongsguideSkogsinventeringPage() {
 
           <h2>November–Februari: markmodellering under barmarkssäsong</h2>
           <p>
-            För lövskog är vintern den optimala tiden för markmodellering med LiDAR som en del
-            av en{' '}
-            <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
-              skogsinventering
-            </Link>
-            . Utan löv på träden når en större andel laserpulser marken, vilket ger bättre
+            För lövskog är vintern den optimala tiden för markmodellering med LiDAR.
+            Utan löv på träden når en större andel laserpulser marken, vilket ger bättre
             digitala markmodeller och mer detaljerad data om stamstruktur. För barrskog
             spelar säsongen mindre roll eftersom barren sitter kvar året runt, men
             snöfria förhållanden underlättar logistiken.

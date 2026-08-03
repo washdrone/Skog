@@ -88,7 +88,7 @@ export default function PlatserPage() {
           </h1>
           <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
             Från Norrbottens fjällnära skogar till Smålands granbestånd. Vi utför drönarbaserad
-            skogsinventering, areamätning och skadeinventering i flera regioner.
+            skogsinventering, arealmätning och skadeinventering i flera regioner.
           </p>
         </div>
       </header>

@@ -90,7 +90,7 @@ export default function SkogsinventeringPage() {
           mjukvara till ortofoto och punktmoln. Från punktmolnet extraheras trädparametrar:
         </p>
         <ul>
-          <li><strong>Trädhöjd</strong> — beräknas som skillnaden mellan kronhöjdsmodell (DSM) och markmodell (DTM)</li>
+          <li><strong>Trädhöjd</strong> — beräknas som skillnaden mellan ytmodell (DSM) och markmodell (DTM)</li>
           <li><strong>Stamantal</strong> — identifieras via trädkronssegmentering i punktmolnet</li>
           <li><strong>Krondiameter</strong> — mäts från segmenterade trädkronor</li>
           <li><strong>Volymuppskattning</strong> — beräknas med allometriska modeller kalibrerade mot fältprovytor</li>

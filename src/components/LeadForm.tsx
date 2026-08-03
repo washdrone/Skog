@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react'
 import { events } from '@/lib/analytics'
 
 const UPPDRAG_OPTIONS = [
-  'Areamätning',
+  'Arealmätning',
   'Inventering/beståndsgränser',
   'Avverkningsunderlag',
   'Skadeinventering',

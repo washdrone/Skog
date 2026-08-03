@@ -26,9 +26,9 @@ const faqItems = [
       'Fotogrammetri har svårt att mäta markhöjd under tät kronslutning eftersom kameran bara ser det som är synligt ovanifrån. LiDAR-pulser kan däremot penetrera krontak och ge markmodeller även i tät skog.',
   },
   {
-    question: 'Vilken metod ger bäst trädshöjdsdata?',
+    question: 'Vilken metod ger bäst trädhöjdsdata?',
     answer:
-      'Båda metoderna ger bra trädshöjdsdata för krontopparna. LiDAR är dock överlägsen för höjdmätning i flerskiktad skog och för att bestämma markhöjd under krontak, vilket ger mer exakta stamhöjder.',
+      'Båda metoderna ger bra trädhöjdsdata för krontopparna. LiDAR är dock överlägsen för höjdmätning i flerskiktad skog och för att bestämma markhöjd under krontak, vilket ger mer exakta stamhöjder.',
   },
   {
     question: 'Kostar LiDAR-skanning mer än fotogrammetri?',
@@ -186,7 +186,7 @@ export default function LidarVsDronarePage() {
             </li>
             <li>
               <strong>Volymskattning</strong> — beräkning av beståndsvolym baserat på
-              krontaksmodell och markmodell
+              kronhöjdsmodell och markmodell
             </li>
             <li>
               <strong>Hydrologisk modellering</strong> — exakta markmodeller för

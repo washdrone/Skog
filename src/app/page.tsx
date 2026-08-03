@@ -187,6 +187,16 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+
+          {/* /for/kommuner saknade tidigare helt ingång från startsidan,
+              till skillnad från övriga fyra segmentsidor */}
+          <p className="mt-8 text-sm text-slate-600 font-body">
+            Vi arbetar även med{' '}
+            <Link href="/for/kommuner" className="font-bold text-forest-600 hover:text-forest-700">
+              kommuner och offentliga markförvaltare
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -303,6 +313,48 @@ export default function HomePage() {
       </section>
 
       <TrustBlock />
+
+      {/* Kontextuella ingångar till kunskaps- och platsklustren — nåddes
+          tidigare enbart via header/footer från startsidan */}
+      <section className="bg-white section-padding border-b border-slate-200">
+        <div className="container-page">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="panel p-8 sm:p-10 flex flex-col">
+              <span className="badge">Kunskapsbank</span>
+              <h2 className="mt-4 text-2xl font-bold text-slate-900">
+                Guider om skogsinventering med drönare
+              </h2>
+              <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-600 font-body">
+                Vad kostar en inventering? Hur upptäcks barkborreangrepp tidigt? När passar
+                LiDAR respektive fotogrammetri? Kunskapsbanken samlar våra guider och
+                jämförelser för skogliga beslut.
+              </p>
+              <div className="mt-6">
+                <Link href="/kunskap" className="btn-ghost">
+                  Till kunskapsbanken
+                </Link>
+              </div>
+            </div>
+            <div className="panel p-8 sm:p-10 flex flex-col">
+              <span className="badge">Verksamhetsområden</span>
+              <h2 className="mt-4 text-2xl font-bold text-slate-900">
+                Skogsinventering i hela Sverige
+              </h2>
+              <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-600 font-body">
+                Vi mobiliserar rikstäckande — från Småland till Norrland. Läs om hur vi
+                arbetar i olika delar av landet och vad som är typiskt för skogsbruket i
+                respektive region.
+              </p>
+              <div className="mt-6">
+                <Link href="/platser" className="btn-ghost">
+                  Se våra verksamhetsområden
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FAQ items={HOME_FAQ_ITEMS} />
 
       <CTABand
