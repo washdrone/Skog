@@ -123,6 +123,7 @@ export default function HomePage() {
       />
 
       <Hero
+        deliveryPreview
         badge="Flygburen skogsinventering"
         headline="Skogsinventering med drönare för planering och uppföljning"
         subheadline="TimberDrone tar fram kartor, höjdmodeller och skogliga analyser för skogsägare och förvaltare. Få underlag inför beståndsplanering, skadeinventering och uppföljning av föryngring. Vi utför uppdrag i hela Sverige."
@@ -138,6 +139,8 @@ export default function HomePage() {
           { value: '2–3 cm/pixel', label: 'Markupplösning (GSD)' },
         ]}
       />
+
+      <OutputShowcase />
 
       <ProcessSteps steps={PROCESS_STEPS} />
 
@@ -284,7 +287,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <OutputShowcase />
       <FeatureShowcase />
 
       {/* Benefits section — Structured Grid Layout */}

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 interface HeroProps {
+  deliveryPreview?: boolean
   badge?: string
   headline: string
   subheadline: string
@@ -13,6 +14,7 @@ interface HeroProps {
 }
 
 export default function Hero({
+  deliveryPreview = false,
   badge,
   headline,
   subheadline,
@@ -24,23 +26,6 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-forest-900 pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 border-b border-forest-800">
-      {/* Subtle organic forest texture in the background to make it less sterile/dark */}
-      <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
-        {/*
-          * Rent dekorativ bakgrundstextur (opacity 10 %, mix-blend-overlay).
-          * Tom alt enligt WCAG — skärmläsare ska hoppa över den.
-          * priority borttagen: bilden är inte LCP-element och konkurrerade
-          * tidigare om bandbredd med hjältebilden till höger.
-          */}
-        <Image
-          src="/sunny_ortofoto.png"
-          alt=""
-          aria-hidden="true"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
       <div className="absolute inset-0 bg-mapping-grid opacity-[0.05] pointer-events-none" />
       
       <div className="container-page relative z-10">
@@ -92,6 +77,18 @@ export default function Hero({
 
           {/* Right: Technical framing / Data visualization */}
           <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-none">
+            {deliveryPreview ? (
+              <figure className="overflow-hidden rounded-2xl border border-forest-700 bg-white shadow-2xl">
+                <a href="/images/services/tradhojdsmatning.webp" target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-500" aria-label="Visa trädhöjdsmätningen i större format (ny flik)">
+                  <Image src="/images/services/tradhojdsmatning.webp" alt="Punktmoln med vertikal mätlinje för trädhöjd" width={1672} height={941} sizes="(min-width: 1280px) 592px, (min-width: 1024px) calc(50vw - 48px), (min-width: 640px) 512px, calc(100vw - 32px)" className="h-auto w-full" priority />
+                </a>
+                <figcaption className="p-5 sm:p-6">
+                  <p className="font-bold text-slate-900">Från flygbilder till höjdunderlag</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">Så kan en leverans se ut. Mätvärdena är exempelvärden.</p>
+                  <Link href="/tjanster/tradhojdsmatning" className="mt-4 inline-block text-sm font-bold text-forest-700 underline underline-offset-4">Läs om trädhöjdsmätning</Link>
+                </figcaption>
+              </figure>
+            ) : (
             <div className="tech-frame aspect-[4/3] w-full border-forest-800 bg-forest-900 shadow-2xl relative group">
               <Image 
                 src="/forestry_drone.png" 
@@ -112,6 +109,7 @@ export default function Hero({
               <div className="absolute inset-0 bg-mapping-grid opacity-10" />
               
             </div>
+            )}
           </div>
           
         </div>
