@@ -5,16 +5,15 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Skogsinventering med drönare',
-  description:
-    'Skogsinventering med drönare ger snabbare och mer exakt data om volym, stamantal, trädslag och beståndsgränser. Kartlager i SWEREF99 TM.',
+  title: 'Skogsinventering med drönare och kartunderlag',
+  description: 'Få aktuella kartunderlag och skogliga analyser inför planering och uppföljning. Läs om leverans, metod och förutsättningar. Begär offert på inventering.',
   path: '/tjanster/skogsinventering',
 })
 
 const FAQ_ITEMS = [
   {
     question: 'Hur skiljer sig drönarbaserad skogsinventering från traditionell inventering?',
-    answer: 'Traditionell inventering bygger på stickprov i provytor, medan drönarbaserad inventering kartlägger hela arealen. Det ger en heltäckande bild utan extrapolering och minskar fälttiden avsevärt. Drönardata kompletterar — snarare än ersätter — fältprovytor.',
+    answer: 'Traditionell inventering bygger på stickprov i provytor, medan drönarbaserad inventering kartlägger hela arealen. Kartbilden täcker området, men volym och stamantal är modellbaserade uppskattningar som behöver bedömas mot fältdata. Drönardata kompletterar — snarare än ersätter — fältprovytor.',
   },
   {
     question: 'Vilken noggrannhet kan förväntas vid skogsinventering med drönare?',
@@ -51,7 +50,7 @@ export default function SkogsinventeringPage() {
           __html: JSON.stringify(
             serviceSchema({
               name: 'Skogsinventering med drönare',
-              description: 'Snabbare och mer exakt skogsinventering med drönare. Volym, stamantal, trädslag och beståndsgränser kartlagda från luften.',
+              description: 'Skogsinventering med drönare för kartunderlag och skogliga analyser. Omfattning och kvalitet avgränsas per uppdrag.',
               url: '/tjanster/skogsinventering',
             })
           ),
@@ -63,10 +62,11 @@ export default function SkogsinventeringPage() {
       />
 
       <ServicePageLayout
+        serviceId="skogsinventering"
         breadcrumbLabel="Skogsinventering"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
-        headline="Skogsinventering med drönare"
-        intro="Drönarbaserad skogsinventering ger en heltäckande bild av skogsbeståndet — snabbare, billigare och med högre rumslig upplösning än traditionella stickprovsmetoder."
+        headline="Skogsinventering med drönare för bättre beslutsunderlag"
+        intro="Få en aktuell överblick över skogen inför planering och uppföljning. TimberDrone samlar in drönardata och tar fram kartunderlag och analyser utifrån uppdragets mål. I offerten avgränsar vi området, vilka uppgifter som ska levereras och hur materialet ska användas."
         relatedLinks={[
           { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
           { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
@@ -85,7 +85,7 @@ export default function SkogsinventeringPage() {
 
         <h2>Metodik</h2>
         <p>
-          Drönaren flyger systematiskt över området med hög överlapp (80 % fram, 70 % sida) och
+          Drönaren flyger systematiskt över området med överlapp anpassat efter uppdraget och
           samlar in hundratals georefererade bilder. Bilderna bearbetas med fotogrammetrisk
           mjukvara till ortofoto och punktmoln. När uppdraget kräver noggrann markmodell även
           under tätt krontak — till exempel för terränganalys — flyger vi istället med
@@ -93,7 +93,7 @@ export default function SkogsinventeringPage() {
         </p>
         <ul>
           <li><strong>Trädhöjd</strong> — beräknas som skillnaden mellan ytmodell (DSM) och markmodell (DTM)</li>
-          <li><strong>Stamantal</strong> — identifieras via trädkronssegmentering i punktmolnet</li>
+          <li><strong>Stamantal</strong> — uppskattas från identifierbara trädkronor; dolda och understående träd kan saknas</li>
           <li><strong>Krondiameter</strong> — mäts från segmenterade trädkronor</li>
           <li><strong>Volymuppskattning</strong> — beräknas med allometriska modeller kalibrerade mot fältprovytor</li>
         </ul>

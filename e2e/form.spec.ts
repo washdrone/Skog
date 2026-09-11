@@ -25,11 +25,12 @@ test.describe('Lead Form (Offert)', () => {
   test('select dropdowns work', async ({ page }) => {
     const uppdragstyp = page.locator('#uppdragstyp')
     await expect(uppdragstyp).toBeVisible()
-    await uppdragstyp.selectOption('Areamätning')
-    await expect(uppdragstyp).toHaveValue('Areamätning')
+    await uppdragstyp.selectOption('Skogsinventering')
+    await expect(uppdragstyp).toHaveValue('Skogsinventering')
   })
 
   test('checkboxes can be toggled', async ({ page }) => {
+    await page.getByText('Format och tillägg (valfritt)', { exact: true }).click()
     const checkbox = page.locator('input[type="checkbox"]').first()
     await checkbox.scrollIntoViewIfNeeded()
     await expect(checkbox).toBeVisible()

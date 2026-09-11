@@ -52,16 +52,16 @@ const PROCESS_STEPS = [
 
 const BENEFITS = [
   {
-    title: 'Helhetsbild utan fältarbete',
+    title: 'Överblick inför fältarbete',
     desc: 'Kartlägg stora arealer utan att gå varje beståndsgräns till fots. Mätdata i hög upplösning över hela innehavet.',
   },
   {
     title: 'Faktabaserade beslut',
-    desc: 'Georefererade ortofoton och höjdmodeller ger en exakt nulägesbild — objektiva mått i stället för uppskattningar.',
+    desc: 'Georefererade ortofoton och höjdmodeller ger en aktuell kartbild som kompletterar fältmätningar och skogliga uppskattningar.',
   },
   {
-    title: 'Tidig skadedetektion',
-    desc: 'Återkommande flygningar fångar storm-, insekts- och torkskador i ett tidigt skede, så att åtgärder kan sättas in i tid.',
+    title: 'Kartlägg synliga skador',
+    desc: 'Återkommande flygningar kan visa förändringar i kronorna och hjälpa dig prioritera kontroll i fält.',
   },
   {
     title: 'Spårbar dokumentation',
@@ -73,14 +73,14 @@ const BENEFITS = [
   },
   {
     title: 'Branschstandardformat',
-    desc: 'Shapefile, GeoPackage, GeoTIFF, LAS/LAZ — importeras direkt i QGIS, ArcGIS och skogliga verksamhetssystem.',
+    desc: 'Shapefile, GeoPackage, GeoTIFF, LAS/LAZ — format och attribut stäms av mot ert GIS eller planeringssystem.',
   },
 ]
 
 const PERSONA_CARDS = [
   {
     title: 'Skogsägare',
-    desc: 'Ha exakt koll på din skog. Identifiera barkborreangrepp, kontrollera beståndsgränser och beräkna volym utan tidsödande fältbesök.',
+    desc: 'Få överblick över din skog, synliga skador och beståndsgränser inför fortsatt planering och fältkontroll.',
     href: '/for/skogsagare',
     label: 'Analys för ägare',
     linkText: 'Tjänster för skogsägare',
@@ -93,7 +93,7 @@ const PERSONA_CARDS = [
      * ingress, inga nya påståenden har lagts till.
      */
     title: 'Fastighetsköpare',
-    desc: 'Verifiera virkesvolymer, skogens hälsa och beståndsgränser inför köp eller försäljning av skogsfastighet.',
+    desc: 'Komplettera bedömningen av virkesförråd, synliga skador och beståndsgränser inför köp eller försäljning av skogsfastighet.',
     href: '/for/fastighet',
     label: 'Due diligence',
     linkText: 'Drönardata för fastighetsköpare',
@@ -124,8 +124,8 @@ export default function HomePage() {
 
       <Hero
         badge="Flygburen skogsinventering"
-        headline="Skogsinventering med drönare — precisionsdata för svenskt skogsbruk"
-        subheadline="Fotogrammetri och LiDAR från luften. Vi levererar exakta, georefererade beslutsunderlag för inventering, tillväxt och skadeläge direkt till era skogliga system — rikstäckande i hela Sverige."
+        headline="Skogsinventering med drönare för planering och uppföljning"
+        subheadline="TimberDrone tar fram kartor, höjdmodeller och skogliga analyser för skogsägare och förvaltare. Få underlag inför beståndsplanering, skadeinventering och uppföljning av föryngring. Vi utför uppdrag i hela Sverige."
         ctaLabel="Begär offert"
         ctaHref="/offert"
         secondaryCtaLabel="Tjänsteutbud"
@@ -233,7 +233,7 @@ export default function HomePage() {
                   Fotogrammetriskt framställda ortofoton och höjdmodeller som ger underlag för volym, tillväxt och planering av avverkning, markberedning och röjning.
                 </p>
                 <ul className="space-y-3 mb-10 flex-grow">
-                  {['Arealmätning med centimeterprecision', 'Volym- och stamuppskattning', 'Trädhöjd och tillväxt', 'Avverkningsunderlag & gränser'].map((s) => (
+                  {['Arealmätning med georefererat kartunderlag', 'Volym- och stamuppskattning', 'Trädhöjd och tillväxt', 'Avverkningsunderlag & gränser'].map((s) => (
                     <li key={s} className="flex items-center gap-3 text-sm text-slate-700 font-body">
                       <div className="h-1 w-1 bg-forest-500 rounded-none" />
                       {s}

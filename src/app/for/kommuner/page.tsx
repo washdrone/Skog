@@ -100,12 +100,12 @@ export default function KommunerPage() {
 
             <h2>Urban skog och parkförvaltning</h2>
             <p>
-              Tätortsnära skog och parkmark kräver regelbunden tillsyn. Drönarflygning ger snabb översikt av trädkronors tillstånd, identifierar riskträd och dokumenterar förändringar över tid. Resultaten integreras med era befintliga förvaltningssystem i standardiserade GIS-format.
+              Tätortsnära skog och parkmark kräver regelbunden tillsyn. Drönarflygning ger snabb översikt av trädkronors tillstånd, visar synliga avvikelser som kan motivera bedömning på plats av sakkunnig och dokumenterar förändringar över tid. Resultaten integreras med era befintliga förvaltningssystem i standardiserade GIS-format.
             </p>
 
             <h2>Offentlig mark och regelefterlevnad</h2>
             <p>
-              Vi levererar daterade, georefererade kartlager som dokumenterar tillståndet på kommunal mark. Underlaget kan användas för samråd med Skogsstyrelsen, länsstyrelse och andra myndigheter, samt för att säkerställa att lagkrav kring naturhänsyn och miljöskydd uppfylls.
+              Vi levererar daterade, georefererade kartlager som dokumenterar tillståndet på kommunal mark. Underlaget kan användas för samråd med Skogsstyrelsen, länsstyrelse och andra myndigheter, som ett av flera underlag i arbetet med naturhänsyn och miljöskydd.
             </p>
 
             <h2>Relevanta tjänster</h2>

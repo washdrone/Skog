@@ -23,7 +23,7 @@ const faqItems = [
   {
     question: 'Hur tidigt kan drönare upptäcka barkborre?',
     answer:
-      'Med drönarbilder och bildanalys kan angrepp upptäckas i ett tidigt skede, ofta innan skadorna är tydliga från marken. Hur tidigt beror på angreppsintensitet, trädslag och förhållanden.',
+      'Drönarbilder kan visa synliga förändringar i trädkronorna. Tidiga angrepp kan sakna sådana förändringar och behöver kontrolleras på marken, till exempel genom att leta efter borrmjöl på stammen.',
   },
   {
     question: 'Vad är skillnaden mellan green attack och red attack?',
@@ -114,6 +114,7 @@ export default function BarkborreTidigtPage() {
             möjlighet att sanera angripna träd innan nästa generation barkborrar svärmar.
           </p>
 
+          <p>För kontroll på marken, se <a href="https://www.skogsstyrelsen.se/bruka-skog/skogsskador/insektsskador/">Skogsstyrelsens information om insektsskador</a>. Synliga kronförändringar är ett komplement till denna kontroll.</p>
           <h2>Green attack, red attack och grey attack</h2>
           <p>
             Barkborrens angrepp genomgår flera visuellt distinkta faser. Att förstå skillnaden är

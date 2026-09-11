@@ -20,10 +20,14 @@ interface LeadData {
   meddelande: string
 }
 
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]!))
+}
+
 function buildEmailHtml(data: LeadData): string {
   const row = (label: string, value: string) =>
     value && value !== '-'
-      ? `<tr><td style="padding:6px 12px;font-weight:600;vertical-align:top">${label}</td><td style="padding:6px 12px">${value}</td></tr>`
+      ? `<tr><td style="padding:6px 12px;font-weight:600;vertical-align:top">${label}</td><td style="padding:6px 12px">${escapeHtml(value)}</td></tr>`
       : ''
 
   return `
@@ -51,10 +55,27 @@ function isValidEmail(email: string): boolean {
 
 export async function POST(request: Request) {
   try {
-    const data: LeadData = await request.json()
+    const raw = await request.json().catch(() => null)
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) {
+      return NextResponse.json({ error: 'Ogiltig förfrågan.' }, { status: 400 })
+    }
+    const stringFields = ['foretag', 'kontaktperson', 'epost', 'omrade', 'fastighetsbeteckning', 'uppdragstyp', 'areal', 'tidsram', 'meddelande'] as const
+    for (const key of stringFields) {
+      if (raw[key] !== undefined && (typeof raw[key] !== 'string' || raw[key].length > 5000)) {
+        return NextResponse.json({ error: 'Kontrollera formulärfälten.' }, { status: 400 })
+      }
+      raw[key] = (raw[key] || '').trim()
+    }
+    for (const key of ['leverans', 'tillagg']) {
+      if (raw[key] !== undefined && (!Array.isArray(raw[key]) || raw[key].length > 10 || raw[key].some((value: unknown) => typeof value !== 'string' || value.length > 200))) {
+        return NextResponse.json({ error: 'Ogiltiga leveransval.' }, { status: 400 })
+      }
+      raw[key] = raw[key] || []
+    }
+    const data: LeadData = raw
 
     // Validate required fields
-    if (!data.foretag || !data.kontaktperson || !data.epost || !data.uppdragstyp) {
+    if (!data.kontaktperson || !data.epost || !data.uppdragstyp) {
       return NextResponse.json(
         { error: 'Obligatoriska fält saknas.' },
         { status: 400 }
@@ -68,61 +89,38 @@ export async function POST(request: Request) {
       )
     }
 
-    // Basic honeypot / rate-limit check could be added here.
-
-    // Log the lead (replace with CRM/webhook integration)
-    console.log('[LEAD]', {
-      timestamp: new Date().toISOString(),
-      foretag: data.foretag,
-      kontaktperson: data.kontaktperson,
-      epost: data.epost,
-      omrade: data.omrade || '-',
-      fastighetsbeteckning: data.fastighetsbeteckning || '-',
-      uppdragstyp: data.uppdragstyp,
-      areal: data.areal || '-',
-      leverans: data.leverans?.length ? data.leverans.join(', ') : '-',
-      tillagg: data.tillagg?.length ? data.tillagg.join(', ') : '-',
-      tidsram: data.tidsram || '-',
-      meddelande: data.meddelande || '-',
-    })
-
-    // If a webhook URL is configured, forward the lead
+    let delivered = false
     const webhookUrl = process.env.LEAD_WEBHOOK_URL
     if (webhookUrl) {
-      await fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          source: 'timberdrone.se/offert',
-          ...data,
-          submitted_at: new Date().toISOString(),
-        }),
-      }).catch((err) => {
-        console.error('[LEAD WEBHOOK ERROR]', err)
-      })
+      try {
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...data, source: 'timberdrone.se/offert', submitted_at: new Date().toISOString() }),
+          signal: AbortSignal.timeout(10000),
+        })
+        delivered = response.ok
+      } catch { console.error('[LEAD] Webhook delivery failed') }
     }
 
     // Send email notification to info@timberdrone.se
     if (process.env.RESEND_API_KEY) {
-      const { data: emailResult, error: emailError } = await getResend().emails.send({
-        from: `${COMPANY.name} Formulär <formular@timberdrone.se>`,
-        to: COMPANY.email,
-        replyTo: data.epost,
-        subject: `Offertförfrågan: ${data.foretag} – ${data.uppdragstyp}`,
-        html: buildEmailHtml(data),
-      })
+      try {
+        const { data: emailResult, error: emailError } = await getResend().emails.send({
+          from: `${COMPANY.name} Formulär <formular@timberdrone.se>`,
+          to: COMPANY.email,
+          replyTo: data.epost,
+          subject: `Offertförfrågan: ${data.foretag || data.kontaktperson} – ${data.uppdragstyp}`,
+          html: buildEmailHtml(data),
+        })
 
-      if (emailError) {
-        console.error('[LEAD EMAIL ERROR]', emailError)
-        return NextResponse.json(
-          { success: false, error: 'E-post kunde inte skickas.', detail: emailError.message },
-          { status: 502 }
-        )
-      }
+        if (!emailError && emailResult?.id) delivered = true
+        else console.error('[LEAD] Email delivery failed')
+      } catch { console.error('[LEAD] Email delivery failed') }
+    }
 
-      console.log('[LEAD EMAIL SENT]', emailResult?.id)
-    } else {
-      console.warn('[LEAD] RESEND_API_KEY not set — skipping email')
+    if (!delivered) {
+      return NextResponse.json({ success: false, error: 'Förfrågan kunde inte tas emot. Kontakta oss via e-post eller telefon.' }, { status: 502 })
     }
 
     return NextResponse.json({ success: true })

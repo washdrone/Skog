@@ -109,7 +109,7 @@ export default function LidarVsDronarePage() {
           <p>
             LiDAR och fotogrammetri är två tekniker för att skapa 3D-modeller av skog. LiDAR
             (Light Detection and Ranging) sänder laserpulser och mäter returtiden för att
-            beräkna avstånd med millimeterprecision. Fotogrammetri rekonstruerar 3D-struktur
+            beräkna avstånd med laserpulser. Fotogrammetri rekonstruerar 3D-struktur
             från överlappande fotografier. Båda kan monteras på drönare, men de ger olika
             typer av data med olika styrkor och begränsningar.
           </p>
@@ -130,10 +130,10 @@ export default function LidarVsDronarePage() {
                 <td className="py-3 text-slate-600">Bildmatchning (passiv sensor)</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 font-medium text-slate-700">Punkttäthet</td>
+                <td className="py-3 pr-4 font-medium text-slate-700">Mätpunkter per sekund (mäthastighet)</td>
                 {/* DJI Zenmuse L2-spec (enterprise.dji.com/zenmuse-l2/specs) — utrustning verifierad 2026-08-03 */}
                 <td className="py-3 pr-4 text-slate-600">Upp till 240 000 punkter/s, 5 returer per puls (DJI Zenmuse L2)</td>
-                <td className="py-3 text-slate-600">Hög ytnära (varierar med GSD och överlapp)</td>
+                <td className="py-3 text-slate-600">Ej direkt jämförbart; punkter beräknas ur bilder</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Penetration av krontak</td>
@@ -147,7 +147,7 @@ export default function LidarVsDronarePage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Höjdnoggrannhet</td>
-                <td className="py-3 pr-4 text-slate-600">4 cm vertikalt vid 150 m enligt DJI:s specifikation för Zenmuse L2</td>
+                <td className="py-3 pr-4 text-slate-600">Tillverkarens testvärden gäller särskilda mätförhållanden, inte garanterad noggrannhet i skog</td>
                 <td className="py-3 text-slate-600">Lägre än LiDAR (varierar med GSD)</td>
               </tr>
               <tr>
@@ -220,19 +220,14 @@ export default function LidarVsDronarePage() {
 
           <h2>Noggrannhet i praktiken</h2>
           <p>
-            I tät produktionsskog ger drönarbaserad LiDAR markmodeller med hög
-            noggrannhet — sensorn vi flyger, DJI Zenmuse L2, anges av tillverkaren
-            till 4 cm vertikal noggrannhet vid 150 m flyghöjd. Fotogrammetri ger i
-            samma förhållanden betydligt sämre markmodell, men mäter krontoppshöjder
-            med god noggrannhet. Vid öppen eller gles skog minskar skillnaden avsevärt.
+            LiDAR kan ge fler observationer av marken under krontaket än fotogrammetri. DJI:s angivna noggrannhet för Zenmuse L2 bygger på särskilda testförhållanden och är ingen garanti för höjd- eller volymnoggrannhet i skog. Krontäckning, markträffar, flygparametrar och kontrollmätningar påverkar resultatet. Se <a href="https://enterprise.dji.com/zenmuse-l2/specs">DJI:s specifikation och testvillkor</a>.
           </p>
           <p>
             För{' '}
             <Link href="/tjanster/skogsbruksplan-underlag" className="text-forest-600 underline hover:text-forest-800">
               avverkningsunderlag
             </Link>{' '}
-            och exakta volymberäkningar i produktionsskog ger LiDAR det mest tillförlitliga
-            resultatet. För uppföljning, dokumentation och{' '}
+            och volymuppskattningar i produktionsskog behöver metod och fältunderlag väljas utifrån uppdraget. För uppföljning, dokumentation och{' '}
             <Link href="/tjanster/skogsinventering" className="text-forest-600 underline hover:text-forest-800">
               skogsinventering
             </Link>{' '}

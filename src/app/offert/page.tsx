@@ -19,7 +19,7 @@ const PROCESS_STEPS = [
   { number: 4, title: 'Vi genomför uppdraget', description: 'Flygning genomförs och underlag levereras enligt överenskommelse.' },
 ]
 
-export default function OffertPage() {
+export default function OffertPage({ searchParams }: { searchParams: { tjanst?: string } }) {
   return (
     <>
       <script
@@ -57,7 +57,7 @@ export default function OffertPage() {
           <div className="grid gap-12 lg:grid-cols-3">
             {/* Form */}
             <div className="lg:col-span-2">
-              <LeadForm />
+              <LeadForm serviceId={searchParams.tjanst} />
             </div>
 
             {/* Trust signals sidebar */}
@@ -71,7 +71,7 @@ export default function OffertPage() {
                     /* Rikstäckning verifierad av ägaren 2026-06-11 (A6) */
                     { icon: 'map', text: 'Rikstäckande i hela Sverige' },
                     { icon: 'layer', text: 'GIS-redo leveranser' },
-                    { icon: 'shield', text: 'Ingen bindningstid' },
+                    { icon: 'shield', text: 'Förfrågan är ingen beställning' },
                   ].map((item) => (
                     <li key={item.text} className="flex items-start gap-3">
                       <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-forest-50 text-forest-600">

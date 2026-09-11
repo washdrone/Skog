@@ -67,6 +67,7 @@ export default function ArsavtalPage() {
       />
 
       <ServicePageLayout
+        serviceId="arsavtal"
         breadcrumbLabel="Årsavtal"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Årsavtal & löpande skogsövervakning"

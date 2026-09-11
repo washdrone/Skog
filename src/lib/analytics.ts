@@ -16,7 +16,10 @@ export function trackEvent(
 /* Pre-defined events for the forestry section */
 export const events = {
   formStart: () => trackEvent('form_start', { form_name: 'lead_skog' }),
-  formSubmit: () => trackEvent('form_submit', { form_name: 'lead_skog' }),
+  formSubmit: () => {
+    trackEvent('form_submit', { form_name: 'lead_skog' })
+    trackEvent('generate_lead', { form_name: 'lead_skog' })
+  },
   clickEmail: () => trackEvent('click_email'),
   clickBook: () => trackEvent('click_book'),
   scrollDepth: (pct: number) => trackEvent('scroll_depth', { percent: pct }),

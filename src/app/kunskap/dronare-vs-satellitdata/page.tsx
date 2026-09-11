@@ -109,10 +109,11 @@ export default function DronareVsSatellitdataPage() {
           <p>
             Drönare och satelliter kompletterar varandra i skogsbruket. Satellitdata ger
             regelbunden överblick av stora landskap till låg eller ingen kostnad, medan
-            drönarbaserad fjärranalys erbjuder centimeternoggrann data för specifika bestånd.
+            drönarbaserad fjärranalys erbjuder bilder med hög markupplösning för specifika bestånd.
             Rätt val — eller kombination — beror på areal, detaljbehov, tidskrav och budget.
           </p>
 
+          <p>Jämförelsen beskriver olika sensortyper generellt. Multispektrala band och kalibreringspaneler förutsätter sådan utrustning och beskriver inte automatiskt TimberDrones leverans. Ange vilken analys du behöver i din förfrågan.</p>
           <h2>Detaljerad jämförelse</h2>
           <table className="w-full text-sm border-collapse my-6">
             <thead>
@@ -150,7 +151,7 @@ export default function DronareVsSatellitdataPage() {
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-slate-700">Spektralband</td>
-                <td className="py-3 pr-4 text-slate-600">5–6 band (typisk sensor)</td>
+                <td className="py-3 pr-4 text-slate-600">Beror på sensor; RGB och multispektrala kameror skiljer sig</td>
                 <td className="py-3 text-slate-600">13 band (Sentinel-2)</td>
               </tr>
               <tr>

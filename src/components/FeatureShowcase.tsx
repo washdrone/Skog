@@ -23,7 +23,7 @@ export default function FeatureShowcase() {
               Drönardata i oöverträffad upplösning
             </h2>
             <p className="mt-5 text-slate-600 font-body leading-relaxed">
-              Drönarbaserad inventering ger betydligt högre rumslig upplösning än satellitdata. Genom att flyga under molntäcket fångar vi exakt det ni behöver, exakt när ni behöver det — med hög markupplösning på den enskilda fastigheten.
+              Drönarbaserad inventering ger betydligt högre rumslig upplösning än satellitdata. Genom att flyga under molntäcket samlar vi in aktuella data när väder och flygförutsättningar tillåter — med hög markupplösning på den enskilda fastigheten.
             </p>
 
             <ul className="mt-10 border-t border-slate-200">

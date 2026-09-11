@@ -5,9 +5,8 @@ import FAQ from '@/components/FAQ'
 import Link from 'next/link'
 
 export const metadata = createMetadata({
-  title: 'Underlag för skogsbruksplan med drönardata',
-  description:
-    'Drönardata som underlag för skogsbruksplan: ortofoto, höjdmodeller, beståndskarta och volymdata. Minska fälttid och få bättre beslutsunderlag.',
+  title: 'Drönarunderlag för skogsbruksplan',
+  description: 'Aktuella kartor, höjdmodeller och beståndsunderlag för skogsbruksplanering. Läs om leveranser och hur de kompletterar planarbetet. Begär offert.',
   path: '/tjanster/skogsbruksplan-underlag',
 })
 
@@ -26,7 +25,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Hur integreras drönardata med pcSKOG och andra planeringssystem?',
-    answer: 'Alla leveranser georefereras i SWEREF99 TM och levereras i standardformat (GeoPackage, Shapefile, GeoTIFF) som kan importeras direkt i pcSKOG, Heureka, QGIS och ArcGIS. Beståndsregister levereras som Excel/CSV med fält anpassade för import.',
+    answer: 'Alla leveranser georefereras i SWEREF99 TM och levereras i standardformat (GeoPackage, Shapefile, GeoTIFF) Format, attribut och koordinatsystem behöver stämmas av med mottagaren inför import i pcSKOG, Heureka eller GIS. Ange system och version i förfrågan.',
   },
   {
     question: 'Vad kostar drönarunderlag för skogsbruksplan?',
@@ -87,10 +86,11 @@ export default function SkogsbruksplanUnderlagPage() {
       />
 
       <ServicePageLayout
+        serviceId="skogsbruksplan-underlag"
         breadcrumbLabel="Skogsbruksplan-underlag"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
-        headline="Underlag för skogsbruksplan med drönardata"
-        intro="Drönardata ger bättre underlag för skogsbruksplaner genom att kombinera högupplösta ortofoton, detaljerade höjdmodeller, beståndskartläggning och volymdata. Resultatet är ett faktabaserat beslutsunderlag som minskar fälttid och ökar planens kvalitet."
+        headline="Drönarunderlag för skogsbruksplanering"
+        intro="Ge planläggaren aktuella kartor och skogliga data att arbeta vidare med. TimberDrone tar fram drönarbaserade underlag för beståndsavgränsning, höjdanalys och dokumentation. Leveransen kompletterar planläggarens bedömningar och fältarbete."
         relatedLinks={[
           { label: 'Beståndsinventering', href: '/tjanster/bestandsinventering' },
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },

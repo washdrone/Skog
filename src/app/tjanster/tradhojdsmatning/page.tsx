@@ -83,6 +83,7 @@ export default function TradhojdsmatningPage() {
       />
 
       <ServicePageLayout
+        serviceId="tradhojdsmatning"
         breadcrumbLabel="Trädhöjdsmätning"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Trädhöjdsmätning med drönare"
