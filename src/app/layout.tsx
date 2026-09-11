@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
 import { COMPANY, OG_DEFAULTS } from '@/lib/seo/business-data'
 import { organizationSchema, websiteSchema } from '@/lib/seo/schema'
@@ -80,11 +81,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {GA_ID && (
           <>
-            <script
-              async
+            <Script
+              strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             />
-            <script
+            <Script
+              id="google-analytics-init"
+              strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
