@@ -1,3 +1,4 @@
+import DeliveryImage from '@/components/DeliveryImage'
 import { createMetadata } from '@/lib/metadata'
 import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema'
 import ServicePageLayout from '@/components/ServicePageLayout'
@@ -125,6 +126,8 @@ export default function PlantrakningPage() {
           <li>Minskad fälttid jämfört med manuell planträkning</li>
           <li>Samma hyggen kan följas upp över tid</li>
         </ul>
+
+        <DeliveryImage kind="plantrakning" />
 
         <h2>Leveranser</h2>
         <ul>
