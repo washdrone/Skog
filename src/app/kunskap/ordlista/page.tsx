@@ -1,3 +1,4 @@
+import DeliveryImage from '@/components/DeliveryImage'
 import { createMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 import { definedTermSetSchema } from '@/lib/seo/schema'
@@ -196,6 +197,7 @@ export default function OrdlistaPage() {
                 <dt className="text-lg font-bold text-slate-900">{entry.term}</dt>
                 <dd className="mt-2 text-slate-600 font-body leading-relaxed">
                   {entry.definition}
+                  {entry.term === 'NDVI' && <DeliveryImage kind="multispektral" />}
                   {entry.link && (
                     <>
                       {' '}

@@ -1,3 +1,4 @@
+import DeliveryImage from '@/components/DeliveryImage'
 import { createMetadata } from '@/lib/metadata'
 import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema'
 import ServicePageLayout from '@/components/ServicePageLayout'
@@ -125,6 +126,8 @@ export default function TradhojdsmatningPage() {
           <li>Underlag för avverknings-, gallrings- och röjningsbeslut</li>
           <li>Objektiv dokumentation av beståndets tillstånd</li>
         </ul>
+
+        <DeliveryImage kind="tradhojdsmatning" />
 
         <h2>Leveranser</h2>
         <ul>
