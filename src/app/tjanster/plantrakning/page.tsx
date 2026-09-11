@@ -30,7 +30,7 @@ const FAQ_ITEMS = [
   {
     question: 'Kan drönare ersätta manuell planträkning i provytor?',
     answer:
-      'Drönarbaserad räkning ger en heltäckande bild av hela hygget i stället för stickprov i provytor, vilket gör resultatet mer representativt och visar exakt var luckorna finns. Den ersätter inte all fältkontroll, men minskar behovet av manuell inventering avsevärt.',
+      'Drönarbaserad räkning ger en heltäckande bild av hela hygget i stället för stickprov i provytor, vilket gör resultatet mer representativt och visar områden med möjliga luckor. Den ersätter inte all fältkontroll, men minskar behovet av manuell inventering avsevärt.',
   },
   {
     question: 'Vilka trädslag fungerar planträkning för?',
@@ -83,10 +83,11 @@ export default function PlantrakningPage() {
       />
 
       <ServicePageLayout
+        serviceId="plantrakning"
         breadcrumbLabel="Planträkning"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Planträkning med drönare"
-        intro="Planträkning med drönare ger en heltäckande och objektiv kontroll av föryngringen efter plantering — plantantal per hektar, täthet och en karta över luckorna, utan tidskrävande manuella stickprov. Rikstäckande i hela Sverige."
+        intro="Följ upp föryngringen med en karta över synliga plantor och luckor. Små eller vegetationsdolda plantor kan missas, så flygtid och kompletterande fältkontroll behöver anpassas efter området. Vi arbetar i hela Sverige."
         relatedLinks={[
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
           { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
@@ -120,7 +121,7 @@ export default function PlantrakningPage() {
         <ul>
           <li>Heltäckande räkning i stället för stickprov i provytor</li>
           <li>Objektiv och daterad dokumentation av föryngringen</li>
-          <li>Luckkarta som visar exakt var hjälpplantering behövs</li>
+          <li>Luckkarta som stöd för fältkontroll inför hjälpplantering</li>
           <li>Minskad fälttid jämfört med manuell planträkning</li>
           <li>Samma hyggen kan följas upp över tid</li>
         </ul>

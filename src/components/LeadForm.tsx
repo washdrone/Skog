@@ -1,16 +1,10 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { SERVICES } from '@/lib/services'
 import { events } from '@/lib/analytics'
 
-const UPPDRAG_OPTIONS = [
-  'Arealmätning',
-  'Inventering/beståndsgränser',
-  'Avverkningsunderlag',
-  'Skadeinventering',
-  'Planteringsuppföljning',
-  'Annat',
-]
+const UPPDRAG_OPTIONS = [...SERVICES.map(service => service.label), 'Hjälp mig välja', 'Annat']
 
 const LEVERANS_OPTIONS = [
   'Kartlager (Shapefile/GeoPackage)',
@@ -47,13 +41,13 @@ interface FormData {
   meddelande: string
 }
 
-const inputClass = 'mt-1.5 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-body shadow-sm transition-all placeholder:text-slate-400 focus:border-forest-400 focus:outline-none focus:ring-2 focus:ring-forest-400/20'
+const inputClass = 'mt-1.5 block w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-body shadow-sm transition-all placeholder:text-slate-500 focus:border-forest-400 focus:outline-none focus:ring-2 focus:ring-forest-400/20'
 const labelClass = 'block text-sm font-medium text-slate-700'
 
-export default function LeadForm() {
+export default function LeadForm({ serviceId }: { serviceId?: string }) {
   const [formData, setFormData] = useState<FormData>({
     foretag: '', kontaktperson: '', epost: '',
-    omrade: '', fastighetsbeteckning: '', uppdragstyp: '',
+    omrade: '', fastighetsbeteckning: '', uppdragstyp: SERVICES.find(service => service.id === serviceId)?.label || '',
     areal: '', leverans: [], tillagg: [], tidsram: '', meddelande: '',
   })
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -77,6 +71,7 @@ export default function LeadForm() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    setErrorDetail(null)
     setStatus('submitting')
     try {
       const res = await fetch('/api/lead', {
@@ -95,7 +90,7 @@ export default function LeadForm() {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl border border-forest-200 bg-forest-50 p-10 text-center">
+      <div className="rounded-2xl border border-forest-200 bg-forest-50 p-10 text-center" role="status">
         <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-forest-100">
           <svg className="h-8 w-8 text-forest-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -108,20 +103,27 @@ export default function LeadForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div>
+        <label htmlFor="uppdragstyp" className={labelClass}>Typ av uppdrag <span className="text-red-500">*</span></label>
+        <select id="uppdragstyp" name="uppdragstyp" required value={formData.uppdragstyp} onChange={handleChange} className={inputClass}>
+          <option value="">Välj typ av uppdrag</option>
+          {UPPDRAG_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
+        </select>
+      </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="foretag" className={labelClass}>Företag / Organisation <span className="text-red-500">*</span></label>
-          <input type="text" id="foretag" name="foretag" required value={formData.foretag} onChange={handleChange} className={inputClass} />
+          <label htmlFor="foretag" className={labelClass}>Företag / organisation (valfritt)</label>
+          <input type="text" id="foretag" name="foretag" autoComplete="organization" value={formData.foretag} onChange={handleChange} className={inputClass} />
         </div>
         <div>
           <label htmlFor="kontaktperson" className={labelClass}>Kontaktperson <span className="text-red-500">*</span></label>
-          <input type="text" id="kontaktperson" name="kontaktperson" required value={formData.kontaktperson} onChange={handleChange} className={inputClass} />
+          <input type="text" id="kontaktperson" name="kontaktperson" autoComplete="name" required value={formData.kontaktperson} onChange={handleChange} className={inputClass} />
         </div>
       </div>
       <div>
         <label htmlFor="epost" className={labelClass}>E-postadress <span className="text-red-500">*</span></label>
-        <input type="email" id="epost" name="epost" required value={formData.epost} onChange={handleChange} className={inputClass} />
+        <input type="email" id="epost" name="epost" autoComplete="email" required value={formData.epost} onChange={handleChange} className={inputClass} />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
@@ -134,19 +136,15 @@ export default function LeadForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="uppdragstyp" className={labelClass}>Typ av uppdrag <span className="text-red-500">*</span></label>
-        <select id="uppdragstyp" name="uppdragstyp" required value={formData.uppdragstyp} onChange={handleChange} className={inputClass}>
-          <option value="">Välj typ av uppdrag</option>
-          {UPPDRAG_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
-        </select>
-      </div>
-      <div>
         <label htmlFor="areal" className={labelClass}>Uppskattad areal (ha)</label>
         <input type="text" id="areal" name="areal" value={formData.areal} onChange={handleChange} placeholder="t.ex. 50 ha eller 'vet ej'" className={inputClass} />
       </div>
+      <details className="rounded-xl border border-slate-200 p-4 space-y-5">
+        <summary className="cursor-pointer font-semibold">Format och tillägg (valfritt)</summary>
+        <p className="text-sm text-slate-600">Osäker? Lämna dessa val tomma så hjälper vi dig välja en lämplig leverans.</p>
       <div>
         <span className={labelClass}>Önskad leverans</span>
-        <p className="mt-1 text-xs text-slate-400">Välj ett eller flera format</p>
+        <p className="mt-1 text-sm text-slate-600">Välj ett eller flera format</p>
         <div className="mt-2 grid gap-2 sm:grid-cols-2">
           {LEVERANS_OPTIONS.map((opt) => (
             <label key={opt} className="flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm transition-all hover:border-forest-300 hover:bg-forest-50/50 has-[:checked]:border-forest-500 has-[:checked]:bg-forest-50 cursor-pointer">
@@ -158,7 +156,7 @@ export default function LeadForm() {
       </div>
       <div>
         <span className={labelClass}>Tilläggstjänster</span>
-        <p className="mt-1 text-xs text-slate-400">Valfritt — välj eventuella tillägg</p>
+        <p className="mt-1 text-sm text-slate-600">Valfritt — välj eventuella tillägg</p>
         <div className="mt-2 grid gap-2 sm:grid-cols-2">
           {TILLAGG_OPTIONS.map((opt) => (
             <label key={opt} className="flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm transition-all hover:border-forest-300 hover:bg-forest-50/50 has-[:checked]:border-forest-500 has-[:checked]:bg-forest-50 cursor-pointer">
@@ -168,20 +166,22 @@ export default function LeadForm() {
           ))}
         </div>
       </div>
+      </details>
       <div>
         <label htmlFor="tidsram" className={labelClass}>Önskad tidsram</label>
         <select id="tidsram" name="tidsram" value={formData.tidsram} onChange={handleChange} className={inputClass}>
-          <option value="">Välj tidsram</option>
+          <option value="">Välj önskad tidsram</option>
           {TIDSRAM_OPTIONS.map((opt) => (<option key={opt} value={opt}>{opt}</option>))}
         </select>
+        <p className="mt-2 text-sm text-slate-600">Tidsramen är ett önskemål. Vi bekräftar vad som är möjligt innan uppdraget bokas.</p>
       </div>
       <div>
-        <label htmlFor="meddelande" className={labelClass}>Övrig information</label>
-        <textarea id="meddelande" name="meddelande" rows={4} value={formData.meddelande} onChange={handleChange} placeholder="Beskriv eventuella detaljer kring uppdraget, terräng, tillgänglighet eller andra önskemål." className={inputClass} />
+        <label htmlFor="meddelande" className={labelClass}>Vad behöver du få svar på?</label>
+        <textarea id="meddelande" name="meddelande" rows={4} value={formData.meddelande} onChange={handleChange} placeholder="Beskriv beslutet du ska fatta eller problemet du vill undersöka." className={inputClass} />
       </div>
       {/* Formulering justerad 2026-08-03: leads behandlas tekniskt av e-postleverantör
           (Resend) — absolut "delas aldrig med tredje part" var därför inte korrekt */}
-      <p className="text-xs text-slate-400">Genom att skicka detta formulär godkänner du att vi lagrar dina uppgifter för att hantera din förfrågan. Uppgifterna används aldrig i marknadsföringssyfte och lämnas inte vidare utöver de leverantörer som krävs för att besvara dig. Läs mer i vår <a href="/integritetspolicy" className="underline hover:text-slate-600">integritetspolicy</a>.</p>
+      <p className="text-sm text-slate-600">Genom att skicka detta formulär godkänner du att vi lagrar dina uppgifter för att hantera din förfrågan. Uppgifterna används aldrig i marknadsföringssyfte och lämnas inte vidare utöver de leverantörer som krävs för att besvara dig. Läs mer i vår <a href="/integritetspolicy" className="underline hover:text-slate-600">integritetspolicy</a>.</p>
       <button type="submit" disabled={status === 'submitting'} className="btn-primary w-full text-base disabled:cursor-not-allowed disabled:opacity-60">
         {status === 'submitting' ? (
           <><svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg> Skickar...</>
@@ -190,7 +190,7 @@ export default function LeadForm() {
         )}
       </button>
       {status === 'error' && (
-        <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+        <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-700" role="alert">
           Något gick fel. Försök igen eller kontakta oss direkt via e-post.
           {errorDetail && <p className="mt-1 text-xs text-red-500">{errorDetail}</p>}
         </div>

@@ -113,6 +113,7 @@ export default function SasongsguideSkogsinventeringPage() {
             Nedan följer en detaljerad säsongsguide.
           </p>
 
+          <p>För kontroll på marken, se <a href="https://www.skogsstyrelsen.se/bruka-skog/skogsskador/insektsskador/">Skogsstyrelsens information om insektsskador</a>. Synliga kronförändringar är ett komplement till denna kontroll.</p>
           <h2>Säsongsöversikt — månad för månad</h2>
           <p className="text-sm text-slate-500 italic">
             Tabellen visar de mest lämpliga perioderna för respektive inventeringstyp i mellersta
@@ -130,10 +131,9 @@ export default function SasongsguideSkogsinventeringPage() {
             <tbody className="divide-y divide-slate-100">
               <tr>
                 <td className="py-3 pr-4 font-semibold text-forest-700">Mar–Apr</td>
-                <td className="py-3 pr-4 text-slate-600">Barkborre, tidig detektion</td>
+                <td className="py-3 pr-4 text-slate-600">Överblick och planering av fältkontroll</td>
                 <td className="py-3 text-slate-600">
-                  Granbarkborren aktiveras vid ca 8 °C. Tidiga avvikelser kan upptäckas
-                  med drönarbilder innan skadorna är tydliga från marken.
+                  Flygtid väljs efter snö, väder och lokala förhållanden. Tidiga barkborreangrepp behöver kontrolleras i fält.
                 </td>
               </tr>
               <tr>
@@ -179,13 +179,9 @@ export default function SasongsguideSkogsinventeringPage() {
             </tbody>
           </table>
 
-          <h2>Mars–April: tidig barkborreinventering</h2>
+          <h2>Vår: planera kontroll av riskbestånd</h2>
           <p>
-            Granbarkborren (Ips typographus) är Nordens mest skadegörande skadeinsekt på
-            gran. Insekten aktiveras på våren när temperaturen passerar cirka 8 °C och
-            börjar svärma vid omkring 18 °C. Genom att flyga riskbestånd med drönare
-            tidigt på säsongen kan avvikelser upptäckas innan angreppen
-            är tydliga från marken. Läs mer i vår guide om{' '}
+            Tidiga angrepp kan ge tecken på stammen innan kronan ändrar färg. En drönarflygning kan därför inte ersätta kontroll i fält. Följ lokala förhållanden och aktuell information från Skogsstyrelsen. Läs mer i vår guide om{' '}
             <Link href="/kunskap/barkborre-tidigt" className="text-forest-600 underline hover:text-forest-800">
               tidig barkborreinventering
             </Link>.

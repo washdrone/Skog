@@ -1,8 +1,11 @@
+import ServiceDecisionGuide from './ServiceDecisionGuide'
+import ServiceReference from './ServiceReference'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import CTABand from '@/components/CTABand'
 
 interface ServicePageLayoutProps {
+  serviceId?: string
   breadcrumbLabel: string
   breadcrumbParent?: { label: string; href: string }
   headline: string
@@ -12,6 +15,7 @@ interface ServicePageLayoutProps {
 }
 
 export default function ServicePageLayout({
+  serviceId,
   breadcrumbLabel,
   breadcrumbParent = { label: 'Tjänster', href: '/tjanster' },
   headline,
@@ -41,7 +45,7 @@ export default function ServicePageLayout({
               {intro}
             </p>
             <div className="mt-8">
-              <Link href="/offert" className="btn-primary">
+              <Link href={serviceId ? `/offert?tjanst=${serviceId}` : "/offert"} className="btn-primary">
                 Begär offert
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -54,7 +58,9 @@ export default function ServicePageLayout({
         {/* Content */}
         <div className="section-padding">
           <div className="container-page max-w-3xl prose-forest">
+            {serviceId && <ServiceDecisionGuide serviceId={serviceId} />}
             {children}
+            {serviceId && <ServiceReference serviceId={serviceId} />}
           </div>
         </div>
 
@@ -97,7 +103,7 @@ export default function ServicePageLayout({
         )}
       </article>
 
-      <CTABand />
+      <CTABand ctaHref={serviceId ? `/offert?tjanst=${serviceId}` : "/offert"} />
     </>
   )
 }

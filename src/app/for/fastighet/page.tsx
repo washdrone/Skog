@@ -72,7 +72,7 @@ export default function FastighetPage() {
               Drönartjänster för skogsfastighetsköpare
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-              Verifiera virkesvolymer, beståndsgränser och skogens hälsa innan du skriver på. TimberDrone levererar oberoende drönardata som ger dig ett tryggt beslutsunderlag vid köp eller försäljning av skogsfastighet.
+              Komplettera bedömningen av virkesförråd, beståndsgränser och synliga skador inför ett fastighetsbeslut. TimberDrone levererar oberoende drönardata som ger dig ett tryggt beslutsunderlag vid köp eller försäljning av skogsfastighet.
             </p>
             <div className="mt-8">
               <Link href="/offert" className="btn-primary">

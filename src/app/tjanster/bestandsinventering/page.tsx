@@ -63,6 +63,7 @@ export default function BestandsinventeringPage() {
       />
 
       <ServicePageLayout
+        serviceId="bestandsinventering"
         breadcrumbLabel="Beståndsinventering"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
         headline="Beståndsinventering med drönare"

@@ -59,7 +59,7 @@ export default function Hero({
               {headline}
             </h1>
 
-            <p className="mt-6 text-lg leading-relaxed text-white/50 font-body sm:text-xl">
+            <p className="mt-6 text-lg leading-relaxed text-white/80 font-body sm:text-xl">
               {subheadline}
             </p>
 
@@ -83,7 +83,7 @@ export default function Hero({
                 {stats.map((stat, i) => (
                   <div key={i}>
                     <p className="text-xl font-bold text-white tracking-tight">{stat.value}</p>
-                    <p className="mt-1 text-xs font-mono text-white/40 uppercase tracking-wider">{stat.label}</p>
+                    <p className="mt-1 text-xs font-mono text-white/70 uppercase tracking-wider">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -111,21 +111,6 @@ export default function Hero({
               {/* Map grid simulation */}
               <div className="absolute inset-0 bg-mapping-grid opacity-10" />
               
-              {/* Mock data overlay elements */}
-              <div className="absolute top-8 right-8 flex flex-col gap-2">
-                <div className="bg-forest-950/80 border border-forest-800 px-3 py-1.5 text-[10px] font-mono text-accent-500">
-                  LAT 59.3293 N
-                </div>
-                <div className="bg-forest-950/80 border border-forest-800 px-3 py-1.5 text-[10px] font-mono text-accent-500">
-                  LON 18.0686 E
-                </div>
-              </div>
-              
-              <div className="absolute bottom-8 left-8">
-                <div className="bg-forest-950/80 border border-forest-800 px-4 py-2 text-xs font-mono text-white/70">
-                  <span className="text-accent-500 font-bold mr-2">SYS</span> ACTIVE_SCAN
-                </div>
-              </div>
             </div>
           </div>
           

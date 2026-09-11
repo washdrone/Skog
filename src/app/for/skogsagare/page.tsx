@@ -67,7 +67,7 @@ export default function SkogsagarePage() {
               Drönartjänster för skogsägare
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-              TimberDrone ger dig som privat skogsägare kostnadseffektiv överblick, exakt inventering och dokumentation av din skogsfastighet — utan att du behöver trampa igenom varenda bestånd.
+              TimberDrone ger dig som privat skogsägare kostnadseffektiv överblick, aktuella kartunderlag och dokumentation av din skogsfastighet — utan att du behöver trampa igenom varenda bestånd.
             </p>
             <div className="mt-8">
               <Link href="/offert" className="btn-primary">
@@ -93,7 +93,7 @@ export default function SkogsagarePage() {
 
             <h2>Dokumentation för försäkring och myndigheter</h2>
             <p>
-              Efter storm, snöbrott eller insektsangrepp behöver du snabbt kunna visa skadans omfattning. Våra daterade flygningar ger dig georefererat bildmaterial och skadekartor som godtas av försäkringsbolag och myndigheter. Läs mer om{' '}
+              Efter storm, snöbrott eller insektsangrepp behöver du snabbt kunna visa skadans omfattning. Våra daterade flygningar ger dig georefererat bildmaterial och skadekartor som kan användas vid kontakt med försäkringsbolag och myndigheter. Kontrollera mottagarens krav på dokumentation. Läs mer om{' '}
               <Link href="/tjanster/skogsskadeinventering" className="text-forest-600 underline hover:text-forest-800">
                 skogsskadeinventering med drönare
               </Link>.

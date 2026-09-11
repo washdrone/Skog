@@ -6,8 +6,7 @@ import Link from 'next/link'
 
 export const metadata = createMetadata({
   title: 'Skogsskadeinventering med drönare',
-  description:
-    'Skogsskadeinventering med drönare kartlägger storm-, insekts- och torkskador, inklusive granbarkborre. Snabbt skadeunderlag — rikstäckande i hela Sverige.',
+  description: 'Kartlägg synliga storm-, tork- och insektsskador i skog med drönare. Få underlag för fortsatt kontroll och planering. Beskriv området och begär offert.',
   path: '/tjanster/skogsskadeinventering',
 })
 
@@ -83,10 +82,11 @@ export default function SkogsskadeinventeringPage() {
       />
 
       <ServicePageLayout
+        serviceId="skogsskadeinventering"
         breadcrumbLabel="Skogsskadeinventering"
         breadcrumbParent={{ label: 'Tjänster', href: '/tjanster' }}
-        headline="Skogsskadeinventering med drönare"
-        intro="Skogsskadeinventering med drönare kartlägger storm-, insekts- och torkskador — inklusive granbarkborre — snabbt och heltäckande. Du får en georefererad skadekarta med areal och position som underlag för åtgärder. Rikstäckande i hela Sverige."
+        headline="Kartlägg skogsskador med drönare"
+        intro="Få en överblick över synliga skador efter storm, torka eller misstänkta insektsangrepp. Kartunderlaget hjälper dig avgränsa berörda områden och planera fortsatt kontroll. Tidiga barkborreangrepp kan vara svåra att se från luften och behöver bedömas i fält."
         relatedLinks={[
           { label: 'Skogsinventering', href: '/tjanster/skogsinventering' },
           { label: 'Trädhöjdsmätning', href: '/tjanster/tradhojdsmatning' },
